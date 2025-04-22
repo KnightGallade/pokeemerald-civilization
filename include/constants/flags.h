@@ -1222,19 +1222,19 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
+#define FLAG_VISITED_PALLET_TOWN                                    0x493 // Unused Flag
+#define FLAG_VISITED_VIRIDIAN_CITY                                  0x494 // Unused Flag
+#define FLAG_VISITED_PEWTER_CITY                                    0x495 // Unused Flag
+#define FLAG_VISITED_CERULEAN_CITY                                  0x496 // Unused Flag
+#define FLAG_VISITED_LAVENDER_TOWN                                  0x497 // Unused Flag
+#define FLAG_VISITED_VERMILION_CITY                                 0x498 // Unused Flag
+#define FLAG_VISITED_CELADON_CITY                                   0x499 // Unused Flag
+#define FLAG_VISITED_FUCHSIA_CITY                                   0x49A // Unused Flag
+#define FLAG_VISITED_CINNABAR_ISLAND                                0x49B // Unused Flag
+#define FLAG_VISITED_INDIGO_PLATEAU_EXTERIOR                        0x49C // Unused Flag
+#define FLAG_VISITED_SAFFRON_CITY                                   0x49D // Unused Flag
+#define FLAG_VISITED_ROUTE4_POKEMON_CENTER                          0x49E // Unused Flag
+#define FLAG_VISITED_ROUTE10_POKEMON_CENTER                         0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
@@ -1387,8 +1387,8 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_VISITED_PALLET_TOWN                    (SYSTEM_FLAGS + 0x21) // Originally unused Flag
-#define FLAG_VISITED_VIRIDIAN_CITY                  (SYSTEM_FLAGS + 0x22) // Originally unused Flag
+#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Originally unused Flag
+#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Originally unused Flag
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
