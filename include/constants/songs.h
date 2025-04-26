@@ -546,6 +546,67 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 
+// Added FRLG music
+#define MUS_FRLG_FOLLOW_ME          610
+#define MUS_FRLG_GAME_CORNER        611
+#define MUS_FRLG_ROCKET_HIDEOUT     612
+#define MUS_FRLG_GYM                613
+#define MUS_FRLG_INTRO_FIGHT        614
+#define MUS_FRLG_CINNABAR           615
+#define MUS_FRLG_LAVENDER           616
+#define MUS_FRLG_ENCOUNTER_ROCKET   617
+#define MUS_FRLG_ENCOUNTER_GIRL     618
+#define MUS_FRLG_ENCOUNTER_BOY      619
+#define MUS_FRLG_HALL_OF_FAME       620
+#define MUS_FRLG_VIRIDIAN_FOREST    621
+#define MUS_FRLG_MT_MOON            622
+#define MUS_FRLG_POKE_MANSION       623
+#define MUS_FRLG_ROUTE1             624
+#define MUS_FRLG_ROUTE24            625
+#define MUS_FRLG_ROUTE3             626
+#define MUS_FRLG_ROUTE11            627
+#define MUS_FRLG_VICTORY_ROAD       628
+#define MUS_FRLG_VS_GYM_LEADER      629
+#define MUS_FRLG_VS_TRAINER         630
+#define MUS_FRLG_VS_WILD            631
+#define MUS_FRLG_VS_CHAMPION        632
+#define MUS_FRLG_PALLET             633
+#define MUS_FRLG_OAK_LAB            634
+#define MUS_FRLG_OAK                635
+#define MUS_FRLG_POKE_CENTER        636
+#define MUS_FRLG_SS_ANNE            637
+#define MUS_FRLG_SURF               638
+#define MUS_FRLG_POKE_TOWER         639
+#define MUS_FRLG_SILPH              640
+#define MUS_FRLG_FUCHSIA            641
+#define MUS_FRLG_CELADON            642
+#define MUS_FRLG_VICTORY_TRAINER    643
+#define MUS_FRLG_VICTORY_WILD       644
+#define MUS_FRLG_VICTORY_GYM_LEADER 645
+#define MUS_FRLG_VERMILLION         646
+#define MUS_FRLG_PEWTER             647
+#define MUS_FRLG_ENCOUNTER_RIVAL    648
+#define MUS_FRLG_RIVAL_EXIT         649
+#define MUS_FRLG_GAME_FREAK         650
+#define MUS_FRLG_UNION_ROOM         651
+#define MUS_FRLG_NET_CENTER         652
+#define MUS_FRLG_MYSTERY_GIFT       653
+#define MUS_FRLG_SEVII_CAVE         654
+#define MUS_FRLG_TEACHY_TV_SHOW     655
+#define MUS_FRLG_SEVII_ROUTE        656
+#define MUS_FRLG_SEVII_DUNGEON      657
+#define MUS_FRLG_SEVII_123          658
+#define MUS_FRLG_SEVII_45           659
+#define MUS_FRLG_SEVII_67           660
+#define MUS_FRLG_VS_DEOXYS          661
+#define MUS_FRLG_VS_MEWTWO          662
+#define MUS_FRLG_VS_LEGEND          663
+#define MUS_FRLG_ENCOUNTER_GYM_LEADER  664
+#define MUS_FRLG_ENCOUNTER_DEOXYS      665
+#define MUS_FRLG_TRAINER_TOWER         666
+#define MUS_FRLG_SLOW_PALLET           667
+#define MUS_FRLG_TEACHY_TV_MENU        668
+
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
 #define MUS_NONE                    0xFFFF
