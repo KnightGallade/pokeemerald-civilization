@@ -242,11 +242,99 @@
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
+// Adding FRLG overworld sprites
+#define OBJ_EVENT_GFX_FRLG_LITTLE_BOY            241
+#define OBJ_EVENT_GFX_FRLG_LITTLE_GIRL           242
+#define OBJ_EVENT_GFX_FRLG_YOUNGSTER             243
+#define OBJ_EVENT_GFX_FRLG_BOY                   244
+#define OBJ_EVENT_GFX_FRLG_BUG_CATCHER           245
+#define OBJ_EVENT_GFX_FRLG_SITTING_BOY           246
+#define OBJ_EVENT_GFX_FRLG_LASS                  247
+#define OBJ_EVENT_GFX_FRLG_WOMAN_1               248
+#define OBJ_EVENT_GFX_FRLG_BATTLE_GIRL           249
+#define OBJ_EVENT_GFX_FRLG_MAN                   250
+#define OBJ_EVENT_GFX_FRLG_ROCKER                251
+#define OBJ_EVENT_GFX_FRLG_FAT_MAN               252
+#define OBJ_EVENT_GFX_FRLG_WOMAN_2               253
+#define OBJ_EVENT_GFX_FRLG_BEAUTY                254
+#define OBJ_EVENT_GFX_FRLG_BALDING_MAN           255
+#define OBJ_EVENT_GFX_FRLG_WOMAN_3               256
+#define OBJ_EVENT_GFX_FRLG_OLD_MAN_1             257
+#define OBJ_EVENT_GFX_FRLG_OLD_MAN_2             258
+#define OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN    259
+#define OBJ_EVENT_GFX_FRLG_OLD_WOMAN             260
+#define OBJ_EVENT_GFX_FRLG_TUBER_M_WATER         261
+#define OBJ_EVENT_GFX_FRLG_TUBER_F               262
+#define OBJ_EVENT_GFX_FRLG_TUBER_M_LAND          263
+#define OBJ_EVENT_GFX_FRLG_CAMPER                264
+#define OBJ_EVENT_GFX_FRLG_PICNICKER             265
+#define OBJ_EVENT_GFX_FRLG_COOLTRAINER_M         266
+#define OBJ_EVENT_GFX_FRLG_COOLTRAINER_F         267
+#define OBJ_EVENT_GFX_FRLG_SWIMMER_M_WATER       268
+#define OBJ_EVENT_GFX_FRLG_SWIMMER_F_WATER       269
+#define OBJ_EVENT_GFX_FRLG_SWIMMER_M_LAND        270
+#define OBJ_EVENT_GFX_FRLG_SWIMMER_F_LAND        271
+#define OBJ_EVENT_GFX_FRLG_WORKER_M              272
+#define OBJ_EVENT_GFX_FRLG_WORKER_F              273
+#define OBJ_EVENT_GFX_FRLG_ROCKET_M              274
+#define OBJ_EVENT_GFX_FRLG_ROCKET_F              275
+#define OBJ_EVENT_GFX_FRLG_GBA_KID               276
+#define OBJ_EVENT_GFX_FRLG_SUPER_NERD            277
+#define OBJ_EVENT_GFX_FRLG_BIKER                 278
+#define OBJ_EVENT_GFX_FRLG_BLACKBELT             279
+#define OBJ_EVENT_GFX_FRLG_SCIENTIST             280
+#define OBJ_EVENT_GFX_FRLG_HIKER                 281
+#define OBJ_EVENT_GFX_FRLG_FISHER                282
+#define OBJ_EVENT_GFX_FRLG_CHANNELER             283
+#define OBJ_EVENT_GFX_FRLG_CHEF                  284
+#define OBJ_EVENT_GFX_FRLG_POLICEMAN             285
+#define OBJ_EVENT_GFX_FRLG_GENTLEMAN             286
+#define OBJ_EVENT_GFX_FRLG_SAILOR                287
+#define OBJ_EVENT_GFX_FRLG_CAPTAIN               288
+#define OBJ_EVENT_GFX_FRLG_NURSE                 289
+#define OBJ_EVENT_GFX_FRLG_CABLE_CLUB_RECEPTIONIST      290
+#define OBJ_EVENT_GFX_FRLG_UNION_ROOM_RECEPTIONIST      291
+#define OBJ_EVENT_GFX_FRLG_UNUSED_MALE_RECEPTIONIST     292
+#define OBJ_EVENT_GFX_FRLG_CLERK                 293
+#define OBJ_EVENT_GFX_FRLG_MG_DELIVERYMAN        294
+#define OBJ_EVENT_GFX_FRLG_TRAINER_TOWER_DUDE    295
+#define OBJ_EVENT_GFX_FRLG_PROF_OAK              296
+#define OBJ_EVENT_GFX_FRLG_BLUE                  297
+#define OBJ_EVENT_GFX_FRLG_BILL                  298
+#define OBJ_EVENT_GFX_FRLG_LANCE                 299
+#define OBJ_EVENT_GFX_FRLG_AGATHA                300
+#define OBJ_EVENT_GFX_FRLG_DAISY                 301
+#define OBJ_EVENT_GFX_FRLG_LORELEI               302
+#define OBJ_EVENT_GFX_FRLG_MR_FUJI               303
+#define OBJ_EVENT_GFX_FRLG_BRUNO                 304
+#define OBJ_EVENT_GFX_FRLG_BROCK                 305
+#define OBJ_EVENT_GFX_FRLG_MISTY                 306
+#define OBJ_EVENT_GFX_FRLG_LT_SURGE              307
+#define OBJ_EVENT_GFX_FRLG_ERIKA                 308
+#define OBJ_EVENT_GFX_FRLG_KOGA                  309
+#define OBJ_EVENT_GFX_FRLG_SABRINA               310
+#define OBJ_EVENT_GFX_FRLG_BLAINE                311
+#define OBJ_EVENT_GFX_FRLG_GIOVANNI              312
+#define OBJ_EVENT_GFX_FRLG_MOM                   313
+#define OBJ_EVENT_GFX_FRLG_CELIO                 314
+#define OBJ_EVENT_GFX_FRLG_TEACHY_TV_HOST        315
+#define OBJ_EVENT_GFX_FRLG_GYM_GUY               316
+// Probably not all necessary
+#define OBJ_EVENT_GFX_FRLG_FOSSIL                317
+#define OBJ_EVENT_GFX_FRLG_RUBY                  318
+#define OBJ_EVENT_GFX_FRLG_SAPPHIRE              319
+#define OBJ_EVENT_GFX_FRLG_OLD_AMBER             320
+#define OBJ_EVENT_GFX_FRLG_METEORITE             321
+#define OBJ_EVENT_GFX_FRLG_LAPRAS_DOLL           322
+#define OBJ_EVENT_GFX_FRLG_SEAGALLOP             323
+// TODO - add support for the SS Anne
+// #define OBJ_EVENT_GFX_FRLG_SS_ANNE               324
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        241
+// TODO - add one for the SS Anne once added, it should be one more than last
+#define NUM_OBJ_EVENT_GFX                        324
 
 
 // These are dynamic object gfx ids.
@@ -383,6 +471,18 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+// Adding FRLG overworld sprites
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_BLUE           0x1125
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_PINK           0x1126
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_GREEN          0x1127
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_WHITE          0x1128
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_BLUE_REFLECTION          0x1129
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_PINK_REFLECTION          0x112A
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_GREEN_REFLECTION         0x112B
+#define OBJ_EVENT_PAL_TAG_FRLG_NPC_WHITE_REFLECTION         0x112C
+#define OBJ_EVENT_PAL_TAG_FRLG_METEORITE          0x112D
+#define OBJ_EVENT_PAL_TAG_FRLG_SEAGALLOP          0x112E
+#define OBJ_EVENT_PAL_TAG_FRLG_SS_ANNE            0x112F
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

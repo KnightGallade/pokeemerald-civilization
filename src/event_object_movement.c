@@ -512,6 +512,19 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
+    // Adding FRLG overworld sprites
+    {gObjectEventPal_FRLG_NpcBlue,          OBJ_EVENT_PAL_TAG_FRLG_NPC_BLUE},
+    {gObjectEventPal_FRLG_NpcPink,          OBJ_EVENT_PAL_TAG_FRLG_NPC_PINK},
+    {gObjectEventPal_FRLG_NpcGreen,         OBJ_EVENT_PAL_TAG_FRLG_NPC_GREEN},
+    {gObjectEventPal_FRLG_NpcWhite,         OBJ_EVENT_PAL_TAG_FRLG_NPC_WHITE},
+    {gObjectEventPal_FRLG_NpcBlueReflection,          OBJ_EVENT_PAL_TAG_FRLG_NPC_BLUE_REFLECTION},
+    {gObjectEventPal_FRLG_NpcPinkReflection,          OBJ_EVENT_PAL_TAG_FRLG_NPC_PINK_REFLECTION},
+    {gObjectEventPal_FRLG_NpcGreenReflection,         OBJ_EVENT_PAL_TAG_FRLG_NPC_GREEN_REFLECTION},
+    {gObjectEventPal_FRLG_NpcWhiteReflection,         OBJ_EVENT_PAL_TAG_FRLG_NPC_WHITE_REFLECTION},
+    {gObjectEventPal_FRLG_Meteorite,        OBJ_EVENT_PAL_TAG_FRLG_METEORITE},
+    {gObjectEventPal_FRLG_Seagallop,        OBJ_EVENT_PAL_TAG_FRLG_SEAGALLOP},
+    {gObjectEventPal_FRLG_SSAnne,           OBJ_EVENT_PAL_TAG_FRLG_SS_ANNE},
+
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
