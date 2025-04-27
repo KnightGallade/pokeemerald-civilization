@@ -1,4 +1,12 @@
-raw `
-Route22_MapScripts::
-	.byte 0
-`
+const LOCALID_RIVAL = 1
+
+mapscripts Route22_MapScripts {}
+
+script Route22_EventScript_LeagueGateSign{
+	msgbox(Route22_Text_LeagueGateSign, MSGBOX_SIGN)
+}
+
+text Route22_Text_LeagueGateSign {
+	"POKéMON LEAGUE\n"
+	"Front Gate"
+}

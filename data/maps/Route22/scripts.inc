@@ -1,6 +1,14 @@
-# 1 "data/maps/Route22/scripts.pory"
-
-# 2 "data/maps/Route22/scripts.pory"
 Route22_MapScripts::
-# 3 "data/maps/Route22/scripts.pory"
 	.byte 0
+
+
+Route22_EventScript_LeagueGateSign::
+# 6 "data/maps/Route22/scripts.pory"
+	msgbox Route22_Text_LeagueGateSign, MSGBOX_SIGN
+	return
+
+
+Route22_Text_LeagueGateSign::
+# 9 "data/maps/Route22/scripts.pory"
+	.string "POKéMON LEAGUE\n"
+	.string "Front Gate$"
