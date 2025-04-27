@@ -611,67 +611,6 @@ gSongTable::
 	song ph_nurse_blend, 2, 2
 	song ph_nurse_held, 2, 2
 	song ph_nurse_solo, 2, 2
-	@ added FRLG music
-	song mus_frlg_follow_me, 0, 0
-	song mus_frlg_game_corner, 0, 0
-	song mus_frlg_rocket_hideout, 0, 0
-	song mus_frlg_gym, 0, 0
-	song mus_frlg_intro_fight, 0, 0
-	song mus_frlg_cinnabar, 0, 0
-	song mus_frlg_lavender, 0, 0
-	song mus_frlg_encounter_rocket, 0, 0
-	song mus_frlg_encounter_girl, 0, 0
-	song mus_frlg_encounter_boy, 0, 0
-	song mus_frlg_hall_of_fame, 0, 0
-	song mus_frlg_viridian_forest, 0, 0
-	song mus_frlg_mt_moon, 0, 0
-	song mus_frlg_poke_mansion, 0, 0
-	song mus_frlg_route1, 0, 0
-	song mus_frlg_route24, 0, 0
-	song mus_frlg_route3, 0, 0
-	song mus_frlg_route11, 0, 0
-	song mus_frlg_victory_road, 0, 0
-	song mus_frlg_vs_gym_leader, 0, 0
-	song mus_frlg_vs_trainer, 0, 0
-	song mus_frlg_vs_wild, 0, 0
-	song mus_frlg_vs_champion, 0, 0
-	song mus_frlg_pallet, 0, 0
-	song mus_frlg_oak_lab, 0, 0
-	song mus_frlg_oak, 0, 0
-	song mus_frlg_poke_center, 0, 0
-	song mus_frlg_ss_anne, 0, 0
-	@ TODO - would like surf music to change between Kanto and Hoenn routes
-	song mus_frlg_surf, 0, 0
-	song mus_frlg_poke_tower, 0, 0
-	song mus_frlg_silph, 0, 0
-	song mus_frlg_fuchsia, 0, 0
-	song mus_frlg_celadon, 0, 0
-	song mus_frlg_victory_trainer, 0, 0
-	song mus_frlg_victory_wild, 0, 0
-	song mus_frlg_victory_gym_leader, 0, 0
-	song mus_frlg_vermillion, 0, 0
-	song mus_frlg_pewter, 0, 0
-	song mus_frlg_encounter_rival, 0, 0
-	song mus_frlg_rival_exit, 0, 0
-	song mus_frlg_game_freak, 0, 0
-	song mus_frlg_union_room, 0, 0
-	song mus_frlg_net_center, 0, 0
-	song mus_frlg_mystery_gift, 0, 0
-	song mus_frlg_sevii_cave, 0, 0
-	song mus_frlg_teachy_tv_show, 0, 0
-	song mus_frlg_sevii_route, 0, 0
-	song mus_frlg_sevii_dungeon, 0, 0
-	song mus_frlg_sevii_123, 0, 0
-	song mus_frlg_sevii_45, 0, 0
-	song mus_frlg_sevii_67, 0, 0
-	song mus_frlg_vs_deoxys, 0, 0
-	song mus_frlg_vs_mewtwo, 0, 0
-	song mus_frlg_vs_legend, 0, 0
-	song mus_frlg_encounter_gym_leader, 0, 0
-	song mus_frlg_encounter_deoxys, 0, 0
-	song mus_frlg_trainer_tower, 0, 0
-	song mus_frlg_slow_pallet, 0, 0
-	song mus_frlg_teachy_tv_menu, 0, 0
 
 	.align 2
 dummy_song_header:
