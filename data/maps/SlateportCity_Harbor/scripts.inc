@@ -587,7 +587,7 @@ SlateportCity_Harbor_EventScript_CaptStern::
 # 294 "data/maps/SlateportCity_Harbor/scripts.pory"
 	faceplayer
 # 295 "data/maps/SlateportCity_Harbor/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, SlateportCity_Harbor_EventScript_CaptSternFerryOrScannerComment
+	goto_if_set FLAG_HOENN_BADGE07_GET, SlateportCity_Harbor_EventScript_CaptSternFerryOrScannerComment
 # 296 "data/maps/SlateportCity_Harbor/scripts.pory"
 	goto_if_set FLAG_EVIL_TEAM_ESCAPED_STERN_SPOKE, SlateportCity_Harbor_EventScript_NeedDive
 # 297 "data/maps/SlateportCity_Harbor/scripts.pory"

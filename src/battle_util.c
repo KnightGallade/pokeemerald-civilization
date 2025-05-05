@@ -8600,24 +8600,24 @@ u8 GetAttackerObedienceForAction()
         return OBEYS;
     if (B_OBEDIENCE_MECHANICS < GEN_8 && !IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
         return OBEYS;
-    if (FlagGet(FLAG_BADGE08_GET)) // Rain Badge, ignore obedience altogether
+    if (FlagGet(FLAG_HOENN_BADGE08_GET)) // Rain Badge, ignore obedience altogether
         return OBEYS;
 
     obedienceLevel = 10;
 
-    if (FlagGet(FLAG_BADGE01_GET)) // Stone Badge
+    if (FlagGet(FLAG_HOENN_BADGE01_GET)) // Stone Badge
         obedienceLevel = 20;
-    if (FlagGet(FLAG_BADGE02_GET)) // Knuckle Badge
+    if (FlagGet(FLAG_HOENN_BADGE02_GET)) // Knuckle Badge
         obedienceLevel = 30;
-    if (FlagGet(FLAG_BADGE03_GET)) // Dynamo Badge
+    if (FlagGet(FLAG_HOENN_BADGE03_GET)) // Dynamo Badge
         obedienceLevel = 40;
-    if (FlagGet(FLAG_BADGE04_GET)) // Heat Badge
+    if (FlagGet(FLAG_HOENN_BADGE04_GET)) // Heat Badge
         obedienceLevel = 50;
-    if (FlagGet(FLAG_BADGE05_GET)) // Balance Badge
+    if (FlagGet(FLAG_HOENN_BADGE05_GET)) // Balance Badge
         obedienceLevel = 60;
-    if (FlagGet(FLAG_BADGE06_GET)) // Feather Badge
+    if (FlagGet(FLAG_HOENN_BADGE06_GET)) // Feather Badge
         obedienceLevel = 70;
-    if (FlagGet(FLAG_BADGE07_GET)) // Mind Badge
+    if (FlagGet(FLAG_HOENN_BADGE07_GET)) // Mind Badge
         obedienceLevel = 80;
 
     if (B_OBEDIENCE_MECHANICS >= GEN_8
@@ -9894,9 +9894,9 @@ static inline u32 CalcAttackStat(struct DamageCalculationData *damageCalcData, u
 
     // The offensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 1st badge and 7th badges.
     // Having the 1st badge boosts physical attack while having the 7th badge boosts special attack.
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerAtk) && IsBattleMovePhysical(move))
+    if (ShouldGetStatBadgeBoost(FLAG_HOENN_BADGE01_GET, battlerAtk) && IsBattleMovePhysical(move))
         modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.1));
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerAtk) && IsBattleMoveSpecial(move))
+    if (ShouldGetStatBadgeBoost(FLAG_HOENN_BADGE07_GET, battlerAtk) && IsBattleMoveSpecial(move))
         modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.1));
 
     return uq4_12_multiply_by_int_half_down(modifier, atkStat);
@@ -10067,9 +10067,9 @@ static inline u32 CalcDefenseStat(struct DamageCalculationData *damageCalcData, 
 
     // The defensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 5th badge and 7th badges.
     // Having the 5th badge boosts physical defense while having the 7th badge boosts special defense.
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE05_GET, battlerDef) && IsBattleMovePhysical(move))
+    if (ShouldGetStatBadgeBoost(FLAG_HOENN_BADGE05_GET, battlerDef) && IsBattleMovePhysical(move))
         modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.1));
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerDef) && IsBattleMoveSpecial(move))
+    if (ShouldGetStatBadgeBoost(FLAG_HOENN_BADGE07_GET, battlerDef) && IsBattleMoveSpecial(move))
         modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.1));
 
     return uq4_12_multiply_by_int_half_down(modifier, defStat);

@@ -29,7 +29,7 @@ EverGrandeCity_PokemonCenter_1F_OnTransition:
 # 15 "data/maps/EverGrandeCity_PokemonCenter_1F/scripts.pory"
 EverGrandeCity_PokemonCenter_1F_EventScript_TryShowScott::
 # 16 "data/maps/EverGrandeCity_PokemonCenter_1F/scripts.pory"
-	goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_HOENN_BADGE06_GET, Common_EventScript_NopReturn
 # 17 "data/maps/EverGrandeCity_PokemonCenter_1F/scripts.pory"
 	clearflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 # 18 "data/maps/EverGrandeCity_PokemonCenter_1F/scripts.pory"

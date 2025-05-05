@@ -17,7 +17,7 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
 # 9 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear
 # 10 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
+	goto_if_set FLAG_HOENN_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
 # 11 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot, MSGBOX_DEFAULT
 # 12 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"

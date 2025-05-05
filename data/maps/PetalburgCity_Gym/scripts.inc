@@ -765,7 +765,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 # 383 "data/maps/PetalburgCity_Gym/scripts.pory"
 	setvar VAR_PETALBURG_GYM_STATE, 7
 # 384 "data/maps/PetalburgCity_Gym/scripts.pory"
-	setflag FLAG_BADGE05_GET
+	setflag FLAG_HOENN_BADGE05_GET
 # 385 "data/maps/PetalburgCity_Gym/scripts.pory"
 	special ResetHealLocationFromDewford
 # 386 "data/maps/PetalburgCity_Gym/scripts.pory"
@@ -2247,7 +2247,7 @@ PetalburgCity_Gym_EventScript_LeftGymStatue::
 # 1124 "data/maps/PetalburgCity_Gym/scripts.pory"
 	lockall
 # 1125 "data/maps/PetalburgCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
 # 1126 "data/maps/PetalburgCity_Gym/scripts.pory"
 	goto PetalburgCity_Gym_EventScript_GymStatue
 # 1127 "data/maps/PetalburgCity_Gym/scripts.pory"
@@ -2259,7 +2259,7 @@ PetalburgCity_Gym_EventScript_RightGymStatue::
 # 1130 "data/maps/PetalburgCity_Gym/scripts.pory"
 	lockall
 # 1131 "data/maps/PetalburgCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified
 # 1132 "data/maps/PetalburgCity_Gym/scripts.pory"
 	goto PetalburgCity_Gym_EventScript_GymStatue
 # 1133 "data/maps/PetalburgCity_Gym/scripts.pory"

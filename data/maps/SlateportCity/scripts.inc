@@ -573,7 +573,7 @@ SlateportCity_EventScript_SternsShipyardSign::
 # 287 "data/maps/SlateportCity/scripts.pory"
 	goto_if_set FLAG_SYS_GAME_CLEAR, SlateportCity_EventScript_SternsShipyardFerryComplete
 # 288 "data/maps/SlateportCity/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, SlateportCity_EventScript_SternsShipyardNearsCompletion
+	goto_if_set FLAG_HOENN_BADGE07_GET, SlateportCity_EventScript_SternsShipyardNearsCompletion
 # 289 "data/maps/SlateportCity/scripts.pory"
 	msgbox SlateportCity_Text_SternsShipyardWantedSign, MSGBOX_DEFAULT
 # 290 "data/maps/SlateportCity/scripts.pory"

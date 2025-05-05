@@ -133,7 +133,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 # 67 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	setflag FLAG_DEFEATED_LAVARIDGE_GYM
 # 68 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-	setflag FLAG_BADGE04_GET
+	setflag FLAG_HOENN_BADGE04_GET
 # 69 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	addvar VAR_PETALBURG_GYM_STATE, 1
 # 70 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
@@ -335,7 +335,7 @@ LavaridgeTown_Gym_1F_EventScript_LeftGymStatue::
 # 168 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	lockall
 # 169 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-	goto_if_set FLAG_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
 # 170 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	goto LavaridgeTown_Gym_1F_EventScript_GymStatue
 # 171 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
@@ -347,7 +347,7 @@ LavaridgeTown_Gym_1F_EventScript_RightGymStatue::
 # 174 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	lockall
 # 175 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-	goto_if_set FLAG_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE04_GET, LavaridgeTown_Gym_1F_EventScript_GymStatueCertified
 # 176 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	goto LavaridgeTown_Gym_1F_EventScript_GymStatue
 # 177 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"

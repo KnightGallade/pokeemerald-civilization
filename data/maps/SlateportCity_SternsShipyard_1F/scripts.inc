@@ -17,7 +17,7 @@ SlateportCity_SternsShipyard_1F_EventScript_Dock::
 # 9 "data/maps/SlateportCity_SternsShipyard_1F/scripts.pory"
 	goto_if_set FLAG_SYS_GAME_CLEAR, SlateportCity_SternsShipyard_1F_EventScript_FerryReady
 # 10 "data/maps/SlateportCity_SternsShipyard_1F/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, SlateportCity_SternsShipyard_1F_EventScript_BrineyJoined
+	goto_if_set FLAG_HOENN_BADGE07_GET, SlateportCity_SternsShipyard_1F_EventScript_BrineyJoined
 # 11 "data/maps/SlateportCity_SternsShipyard_1F/scripts.pory"
 	goto_if_set FLAG_DELIVERED_DEVON_GOODS, SlateportCity_SternsShipyard_1F_EventScript_NeedVeteran
 # 12 "data/maps/SlateportCity_SternsShipyard_1F/scripts.pory"

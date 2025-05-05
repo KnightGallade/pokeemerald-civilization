@@ -69,7 +69,7 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 # 35 "data/maps/FortreeCity_Gym/scripts.pory"
 	setflag FLAG_DEFEATED_FORTREE_GYM
 # 36 "data/maps/FortreeCity_Gym/scripts.pory"
-	setflag FLAG_BADGE06_GET
+	setflag FLAG_HOENN_BADGE06_GET
 # 37 "data/maps/FortreeCity_Gym/scripts.pory"
 	setvar VAR_0x8008, 6
 # 38 "data/maps/FortreeCity_Gym/scripts.pory"
@@ -233,7 +233,7 @@ FortreeCity_Gym_EventScript_LeftGymStatue::
 # 117 "data/maps/FortreeCity_Gym/scripts.pory"
 	lockall
 # 118 "data/maps/FortreeCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
 # 119 "data/maps/FortreeCity_Gym/scripts.pory"
 	goto FortreeCity_Gym_EventScript_GymStatue
 # 120 "data/maps/FortreeCity_Gym/scripts.pory"
@@ -245,7 +245,7 @@ FortreeCity_Gym_EventScript_RightGymStatue::
 # 123 "data/maps/FortreeCity_Gym/scripts.pory"
 	lockall
 # 124 "data/maps/FortreeCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE06_GET, FortreeCity_Gym_EventScript_GymStatueCertified
 # 125 "data/maps/FortreeCity_Gym/scripts.pory"
 	goto FortreeCity_Gym_EventScript_GymStatue
 # 126 "data/maps/FortreeCity_Gym/scripts.pory"

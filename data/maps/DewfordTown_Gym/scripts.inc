@@ -301,7 +301,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 # 151 "data/maps/DewfordTown_Gym/scripts.pory"
 	setflag FLAG_DEFEATED_DEWFORD_GYM
 # 152 "data/maps/DewfordTown_Gym/scripts.pory"
-	setflag FLAG_BADGE02_GET
+	setflag FLAG_HOENN_BADGE02_GET
 # 153 "data/maps/DewfordTown_Gym/scripts.pory"
 	addvar VAR_PETALBURG_GYM_STATE, 1
 # 154 "data/maps/DewfordTown_Gym/scripts.pory"
@@ -529,7 +529,7 @@ DewfordTown_Gym_EventScript_LeftGymStatue::
 # 265 "data/maps/DewfordTown_Gym/scripts.pory"
 	lockall
 # 266 "data/maps/DewfordTown_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
 # 267 "data/maps/DewfordTown_Gym/scripts.pory"
 	goto DewfordTown_Gym_EventScript_GymStatue
 # 268 "data/maps/DewfordTown_Gym/scripts.pory"
@@ -541,7 +541,7 @@ DewfordTown_Gym_EventScript_RightGymStatue::
 # 271 "data/maps/DewfordTown_Gym/scripts.pory"
 	lockall
 # 272 "data/maps/DewfordTown_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE02_GET, DewfordTown_Gym_EventScript_GymStatueCertified
 # 273 "data/maps/DewfordTown_Gym/scripts.pory"
 	goto DewfordTown_Gym_EventScript_GymStatue
 # 274 "data/maps/DewfordTown_Gym/scripts.pory"

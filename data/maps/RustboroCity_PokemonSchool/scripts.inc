@@ -335,7 +335,7 @@ RustboroCity_PokemonSchool_EventScript_Scott::
 # 168 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
 	goto_if_set FLAG_MET_SCOTT_RUSTBORO, RustboroCity_PokemonSchool_EventScript_ScottSpokeAlready
 # 169 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_PokemonSchool_EventScript_ScottGreetHasBadge
+	goto_if_set FLAG_HOENN_BADGE01_GET, RustboroCity_PokemonSchool_EventScript_ScottGreetHasBadge
 # 170 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
 	msgbox RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut, MSGBOX_DEFAULT
 # 171 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
@@ -351,7 +351,7 @@ RustboroCity_PokemonSchool_EventScript_Scott::
 # 176 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
 RustboroCity_PokemonSchool_EventScript_ScottSpokeAlready::
 # 177 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_PokemonSchool_EventScript_ScottNoticeBadge
+	goto_if_set FLAG_HOENN_BADGE01_GET, RustboroCity_PokemonSchool_EventScript_ScottNoticeBadge
 # 178 "data/maps/RustboroCity_PokemonSchool/scripts.pory"
 	msgbox RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown, MSGBOX_DEFAULT
 # 179 "data/maps/RustboroCity_PokemonSchool/scripts.pory"

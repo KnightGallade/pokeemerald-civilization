@@ -39,9 +39,9 @@ BirthIsland_Exterior_OnTransition:
 # 20 "data/maps/BirthIsland_Exterior/scripts.pory"
 	setvar VAR_DEOXYS_ROCK_LEVEL, 0
 # 21 "data/maps/BirthIsland_Exterior/scripts.pory"
-	call_if_set FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
+	call_if_set FLAG_CAUGHT_DEOXYS, BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
 # 22 "data/maps/BirthIsland_Exterior/scripts.pory"
-	call_if_unset FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle
+	call_if_unset FLAG_CAUGHT_DEOXYS, BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle
 # 23 "data/maps/BirthIsland_Exterior/scripts.pory"
 	end
 # 24 "data/maps/BirthIsland_Exterior/scripts.pory"
@@ -193,7 +193,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 # 97 "data/maps/BirthIsland_Exterior/scripts.pory"
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, BirthIsland_Exterior_EventScript_RanFromDeoxys
 # 98 "data/maps/BirthIsland_Exterior/scripts.pory"
-	setflag FLAG_BATTLED_DEOXYS
+	setflag FLAG_CAUGHT_DEOXYS
 # 99 "data/maps/BirthIsland_Exterior/scripts.pory"
 	release
 # 100 "data/maps/BirthIsland_Exterior/scripts.pory"

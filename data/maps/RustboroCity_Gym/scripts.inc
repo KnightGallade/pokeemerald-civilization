@@ -37,7 +37,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 # 19 "data/maps/RustboroCity_Gym/scripts.pory"
 	setflag FLAG_DEFEATED_RUSTBORO_GYM
 # 20 "data/maps/RustboroCity_Gym/scripts.pory"
-	setflag FLAG_BADGE01_GET
+	setflag FLAG_HOENN_BADGE01_GET
 # 21 "data/maps/RustboroCity_Gym/scripts.pory"
 	setvar VAR_RUSTBORO_CITY_STATE, 1
 # 22 "data/maps/RustboroCity_Gym/scripts.pory"
@@ -141,7 +141,7 @@ RustboroCity_Gym_EventScript_LeftGymStatue::
 # 71 "data/maps/RustboroCity_Gym/scripts.pory"
 	lockall
 # 72 "data/maps/RustboroCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE01_GET, RustboroCity_Gym_EventScript_GymStatueCertified
 # 73 "data/maps/RustboroCity_Gym/scripts.pory"
 	goto RustboroCity_Gym_EventScript_GymStatue
 # 74 "data/maps/RustboroCity_Gym/scripts.pory"
@@ -153,7 +153,7 @@ RustboroCity_Gym_EventScript_RightGymStatue::
 # 77 "data/maps/RustboroCity_Gym/scripts.pory"
 	lockall
 # 78 "data/maps/RustboroCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE01_GET, RustboroCity_Gym_EventScript_GymStatueCertified
 # 79 "data/maps/RustboroCity_Gym/scripts.pory"
 	goto RustboroCity_Gym_EventScript_GymStatue
 # 80 "data/maps/RustboroCity_Gym/scripts.pory"

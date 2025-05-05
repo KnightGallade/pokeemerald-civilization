@@ -173,7 +173,7 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 # 87 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
 # 88 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
-	goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
+	goto_if_unset FLAG_HOENN_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
 # 89 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 # 90 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
@@ -195,7 +195,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 # 98 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	setflag FLAG_DEFEATED_SOOTOPOLIS_GYM
 # 99 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_HOENN_BADGE08_GET
 # 100 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 # 101 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
@@ -315,7 +315,7 @@ SootopolisCity_Gym_1F_EventScript_LeftGymStatue::
 # 158 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	lockall
 # 159 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
-	goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified
 # 160 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	goto SootopolisCity_Gym_1F_EventScript_GymStatue
 # 161 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
@@ -327,7 +327,7 @@ SootopolisCity_Gym_1F_EventScript_RightGymStatue::
 # 164 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	lockall
 # 165 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
-	goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified
 # 166 "data/maps/SootopolisCity_Gym_1F/scripts.pory"
 	goto SootopolisCity_Gym_1F_EventScript_GymStatue
 # 167 "data/maps/SootopolisCity_Gym_1F/scripts.pory"

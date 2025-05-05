@@ -4756,7 +4756,7 @@ u32 GetBattlerTotalSpeedStatArgs(u32 battler, u32 ability, u32 holdEffect)
 
     // player's badge boost
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
-        && ShouldGetStatBadgeBoost(FLAG_BADGE03_GET, battler)
+        && ShouldGetStatBadgeBoost(FLAG_HOENN_BADGE03_GET, battler)
         && GetBattlerSide(battler) == B_SIDE_PLAYER)
     {
         speed = (speed * 110) / 100;

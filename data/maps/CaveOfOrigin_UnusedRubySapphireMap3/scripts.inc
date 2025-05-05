@@ -11,6 +11,6 @@ CaveOfOrigin_UnusedRubySapphireMap3_MapScripts::
 # 6 "data/maps/CaveOfOrigin_UnusedRubySapphireMap3/scripts.pory"
 CaveOfOrigin_UnusedRubySapphireMap3_OnTransition:
 # 7 "data/maps/CaveOfOrigin_UnusedRubySapphireMap3/scripts.pory"
-	call_if_set FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE, CaveOfOrigin_EventScript_DisableTriggers
+	@ call_if_set FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE, CaveOfOrigin_EventScript_DisableTriggers
 # 8 "data/maps/CaveOfOrigin_UnusedRubySapphireMap3/scripts.pory"
 	end

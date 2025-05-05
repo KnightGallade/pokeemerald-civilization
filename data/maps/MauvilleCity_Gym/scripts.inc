@@ -187,7 +187,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 # 94 "data/maps/MauvilleCity_Gym/scripts.pory"
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 # 95 "data/maps/MauvilleCity_Gym/scripts.pory"
-	setflag FLAG_BADGE03_GET
+	setflag FLAG_HOENN_BADGE03_GET
 # 96 "data/maps/MauvilleCity_Gym/scripts.pory"
 	addvar VAR_PETALBURG_GYM_STATE, 1
 # 97 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -477,7 +477,7 @@ MauvilleCity_Gym_EventScript_LeftGymStatue::
 # 239 "data/maps/MauvilleCity_Gym/scripts.pory"
 	lockall
 # 240 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE03_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE03_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
 # 241 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto MauvilleCity_Gym_EventScript_GymStatue
 # 242 "data/maps/MauvilleCity_Gym/scripts.pory"
@@ -489,7 +489,7 @@ MauvilleCity_Gym_EventScript_RightGymStatue::
 # 245 "data/maps/MauvilleCity_Gym/scripts.pory"
 	lockall
 # 246 "data/maps/MauvilleCity_Gym/scripts.pory"
-	goto_if_set FLAG_BADGE03_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_HOENN_BADGE03_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
 # 247 "data/maps/MauvilleCity_Gym/scripts.pory"
 	goto MauvilleCity_Gym_EventScript_GymStatue
 # 248 "data/maps/MauvilleCity_Gym/scripts.pory"

@@ -85,7 +85,7 @@ LilycoveCity_PokemonCenter_1F_EventScript_Maniac::
 # 43 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	faceplayer
 # 44 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
+	goto_if_set FLAG_HOENN_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
 # 45 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels, MSGBOX_DEFAULT
 # 46 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"

@@ -125,7 +125,7 @@ LilycoveCity_EventScript_Girl::
 # 63 "data/maps/LilycoveCity/scripts.pory"
 	faceplayer
 # 64 "data/maps/LilycoveCity/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_EventScript_GirlAquaGone
+	goto_if_set FLAG_HOENN_BADGE07_GET, LilycoveCity_EventScript_GirlAquaGone
 # 65 "data/maps/LilycoveCity/scripts.pory"
 	msgbox LilycoveCity_Text_StrangeCaveInCove, MSGBOX_DEFAULT
 # 66 "data/maps/LilycoveCity/scripts.pory"
@@ -235,7 +235,7 @@ LilycoveCity_EventScript_ExpertM2::
 # 118 "data/maps/LilycoveCity/scripts.pory"
 	faceplayer
 # 119 "data/maps/LilycoveCity/scripts.pory"
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_EventScript_ExpertM2AquaGone
+	goto_if_set FLAG_HOENN_BADGE07_GET, LilycoveCity_EventScript_ExpertM2AquaGone
 # 120 "data/maps/LilycoveCity/scripts.pory"
 	msgbox LilycoveCity_Text_TeamAquaRenovatedCavern, MSGBOX_DEFAULT
 # 121 "data/maps/LilycoveCity/scripts.pory"
@@ -657,7 +657,7 @@ LilycoveCity_EventScript_DefeatedMay::
 # 329 "data/maps/LilycoveCity/scripts.pory"
 	setvar VAR_RESULT, FALSE
 # 330 "data/maps/LilycoveCity/scripts.pory"
-	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
+	call_if_set FLAG_HOENN_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
 # 331 "data/maps/LilycoveCity/scripts.pory"
 	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_MayCollectBadges
 # 332 "data/maps/LilycoveCity/scripts.pory"
@@ -675,7 +675,7 @@ LilycoveCity_EventScript_DefeatedMay::
 # 338 "data/maps/LilycoveCity/scripts.pory"
 LilycoveCity_EventScript_CheckFinalBadge::
 # 339 "data/maps/LilycoveCity/scripts.pory"
-	goto_if_set FLAG_BADGE08_GET, LilycoveCity_EventScript_HasFinalBadge
+	goto_if_set FLAG_HOENN_BADGE08_GET, LilycoveCity_EventScript_HasFinalBadge
 # 340 "data/maps/LilycoveCity/scripts.pory"
 	return
 # 341 "data/maps/LilycoveCity/scripts.pory"
@@ -721,7 +721,7 @@ LilycoveCity_EventScript_DefeatedBrendan::
 # 361 "data/maps/LilycoveCity/scripts.pory"
 	setvar VAR_RESULT, FALSE
 # 362 "data/maps/LilycoveCity/scripts.pory"
-	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
+	call_if_set FLAG_HOENN_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
 # 363 "data/maps/LilycoveCity/scripts.pory"
 	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_BrendanCollectBadges
 # 364 "data/maps/LilycoveCity/scripts.pory"

@@ -99,7 +99,7 @@ EverGrandeCity_PokemonLeague_1F_Pokemart:
 # 50 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 
 # 51 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
-@ The door guards only check for FLAG_BADGE06_GET because Winonas badge is the only one that can be skipped
+@ The door guards only check for FLAG_HOENN_BADGE06_GET because Winonas badge is the only one that can be skipped
 # 52 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 @ Its assumed the player has the remaining badges
 # 53 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
@@ -121,7 +121,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 # 61 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	delay 120
 # 62 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
-	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
+	goto_if_unset FLAG_HOENN_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
 # 63 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"
 	closemessage
 # 64 "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.pory"

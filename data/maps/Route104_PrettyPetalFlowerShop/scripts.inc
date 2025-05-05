@@ -19,7 +19,7 @@ Route104_PrettyPetalFlowerShop_OnTransition:
 # 10 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 # 11 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	goto_if_unset FLAG_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
+	goto_if_unset FLAG_HOENN_BADGE03_GET, Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner
 # 12 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	setflag FLAG_TEMP_1
 # 13 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"

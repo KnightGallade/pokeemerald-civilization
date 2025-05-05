@@ -839,7 +839,7 @@ static void SetDataFromTrainerCard(void)
     if (sData->trainerCard.battleTowerWins || sData->trainerCard.battleTowerStraightWins)
         sData->hasBattleTowerWins++;
 
-    for (i = 0, badgeFlag = FLAG_BADGE01_GET; badgeFlag < FLAG_BADGE01_GET + NUM_BADGES; badgeFlag++, i++)
+    for (i = 0, badgeFlag = FLAG_HOENN_BADGE01_GET; badgeFlag < FLAG_HOENN_BADGE01_GET + NUM_BADGES; badgeFlag++, i++)
     {
         if (FlagGet(badgeFlag))
             sData->badgeCount[i]++;

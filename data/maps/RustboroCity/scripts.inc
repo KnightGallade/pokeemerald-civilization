@@ -331,7 +331,7 @@ RustboroCity_EventScript_Man1::
 # 166 "data/maps/RustboroCity/scripts.pory"
 	faceplayer
 # 167 "data/maps/RustboroCity/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, RustboroCity_EventScript_Man1HaveBadge
+	goto_if_set FLAG_HOENN_BADGE01_GET, RustboroCity_EventScript_Man1HaveBadge
 # 168 "data/maps/RustboroCity/scripts.pory"
 	msgbox RustboroCity_Text_HaveYouChallengedGym, MSGBOX_DEFAULT
 # 169 "data/maps/RustboroCity/scripts.pory"
