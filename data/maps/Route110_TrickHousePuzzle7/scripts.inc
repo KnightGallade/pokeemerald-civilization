@@ -149,7 +149,7 @@ Route110_TrickHousePuzzle7_EventScript_SetSwitch5MetatilesOff::
 # 75 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 Route110_TrickHousePuzzle7_OnTransition:
 # 76 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
-	goto_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_TeleportedTransition
+	@ goto_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_TeleportedTransition
 # 77 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	@ clearflag FLAG_TRICK_HOUSE_PUZZLE_7_SWITCH_1
 # 78 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
@@ -173,7 +173,7 @@ Route110_TrickHousePuzzle7_EventScript_TeleportedTransition::
 # 87 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 Route110_TrickHousePuzzle7_OnLoad:
 # 88 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
-	call_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_UpdateSwitchMetatiles
+	@ call_if_eq VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_UpdateSwitchMetatiles
 # 89 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	end
 # 90 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
@@ -181,7 +181,7 @@ Route110_TrickHousePuzzle7_OnLoad:
 # 91 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 Route110_TrickHousePuzzle7_OnFrame:
 # 92 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
-	map_script_2 VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_ClearState2
+	@ map_script_2 VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1, Route110_TrickHousePuzzle7_EventScript_ClearState2
 # 93 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	.2byte 0
 # 94 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
@@ -189,7 +189,7 @@ Route110_TrickHousePuzzle7_OnFrame:
 # 95 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 Route110_TrickHousePuzzle7_EventScript_ClearState2::
 # 96 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
-	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 0
+	@ setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 0
 # 97 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	end
 # 98 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
@@ -223,7 +223,7 @@ Route110_TrickHousePuzzle7_EventScript_TeleportPad::
 # 112 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	lockall
 # 113 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
-	setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1
+	@ setvar VAR_TRICK_HOUSE_PUZZLE_7_STATE_2, 1
 # 114 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
 	warpteleport MAP_ROUTE110_TRICK_HOUSE_PUZZLE7, 3, 19
 # 115 "data/maps/Route110_TrickHousePuzzle7/scripts.pory"
