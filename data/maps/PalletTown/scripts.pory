@@ -64,4 +64,63 @@ PalletTown_Text_TownSign::
 
 PalletTown_Text_PressStartToOpenMenu::
 	.string "TRAINER TIPS\p"
-	.string "Press START to open the MENU!$"`
+	.string "Press START to open the MENU!$"
+`
+
+const LOCALID_CELEBI = 3
+
+script PalletTown_EventScript_Talk_To_Celebi {
+	lockall
+	applymovement(LOCALID_CELEBI, moves(face_player, emote_exclamation_mark))
+	msgbox(PalletTown_EventScript_Ask_Celebi, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PalletTown_EventScript_Celebi_Back_In_Time)
+	msgbox(PalletTown_EventScript_Refuse_Celebi, MSGBOX_NPC)
+	releaseall
+	end
+}
+
+script PalletTown_EventScript_Celebi_Back_In_Time {
+	fadenewbgm(MUS_CAVE_OF_ORIGIN)
+	msgbox(LittlerootTown_EventScript_Accepted_Celebi, MSGBOX_NPC)
+	setvar(VAR_RESULT, 2)
+	special(DoOrbEffect)
+	lockall
+	delay(150)
+	playmoncry(SPECIES_CELEBI, CRY_MODE_ENCOUNTER)
+	special(FadeOutOrbEffect)
+	lockall
+	delay(30)
+	waitmoncry
+	playse(SE_SHINY)
+	checkplayergender
+	goto_if_eq(VAR_RESULT, MALE, PalletTown_EventScript_Celebi_Male)
+	goto_if_eq(VAR_RESULT, FEMALE, PalletTown_EventScript_Celebi_Female)
+}
+
+script PalletTown_EventScript_Celebi_Male {
+	setrespawn(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F)
+	warpteleport(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 1, 4)
+	releaseall
+	end
+}
+
+script PalletTown_EventScript_Celebi_Female {
+	setrespawn(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
+	warpteleport(MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 7, 4)
+	releaseall
+	end
+}
+
+text PalletTown_EventScript_Ask_Celebi {
+	"It appears Celebi wants you to \n"
+	"follow it...\l"
+	"Do you wish to go with Celebi?"
+}
+
+text PalletTown_EventScript_Refuse_Celebi {
+	"Yeah, FireRed is pretty cool."
+}
+
+text PalletTown_EventScript_Accepted_Celebi {
+	"You enter a different reality..."
+}

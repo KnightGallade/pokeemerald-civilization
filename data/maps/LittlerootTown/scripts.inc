@@ -2040,3 +2040,75 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_EventScript_Talk_To_Celebi::
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	applymovement 9, LittlerootTown_EventScript_Talk_To_Celebi_Movement_0
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Ask_Celebi, MSGBOX_YESNO
+# 1030 "data/maps/LittlerootTown/scripts.pory"
+	goto_if_eq VAR_RESULT, YES, LittlerootTown_EventScript_Celebi_Back_In_Time
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Refuse_Celebi, MSGBOX_NPC
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	end
+
+
+LittlerootTown_EventScript_Celebi_Back_In_Time::
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	fadenewbgm MUS_CAVE_OF_ORIGIN
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_Accepted_Celebi, MSGBOX_NPC
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	setvar VAR_RESULT, 2
+# 1040 "data/maps/LittlerootTown/scripts.pory"
+	special DoOrbEffect
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+	delay 150
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+# 1044 "data/maps/LittlerootTown/scripts.pory"
+	special FadeOutOrbEffect
+# 1045 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1046 "data/maps/LittlerootTown/scripts.pory"
+	delay 30
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	waitmoncry
+# 1048 "data/maps/LittlerootTown/scripts.pory"
+	playse SE_SHINY
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	setrespawn HEAL_LOCATION_PALLET_TOWN
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	warpteleport MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 5
+# 1051 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	end
+
+
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_EventScript_Talk_To_Celebi_Movement_0:
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	face_player
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	emote_exclamation_mark
+	step_end
+
+LittlerootTown_EventScript_Ask_Celebi::
+# 1055 "data/maps/LittlerootTown/scripts.pory"
+	.string "It appears Celebi wants you to \n"
+	.string "follow it...\l"
+	.string "Do you wish to go with Celebi?$"
+
+LittlerootTown_EventScript_Refuse_Celebi::
+# 1061 "data/maps/LittlerootTown/scripts.pory"
+	.string "Yeah, Emerald is pretty cool.$"
+
+LittlerootTown_EventScript_Accepted_Celebi::
+# 1065 "data/maps/LittlerootTown/scripts.pory"
+	.string "You enter a different reality...$"

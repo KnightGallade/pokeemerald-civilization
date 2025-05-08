@@ -1021,3 +1021,47 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+const LOCALID_CELEBI = 9
+
+script LittlerootTown_EventScript_Talk_To_Celebi {
+	lockall
+	applymovement(LOCALID_CELEBI, moves(face_player, emote_exclamation_mark))
+	msgbox(LittlerootTown_EventScript_Ask_Celebi, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, LittlerootTown_EventScript_Celebi_Back_In_Time)
+	msgbox(LittlerootTown_EventScript_Refuse_Celebi, MSGBOX_NPC)
+	releaseall
+	end
+}
+
+script LittlerootTown_EventScript_Celebi_Back_In_Time {
+	fadenewbgm(MUS_CAVE_OF_ORIGIN)
+	msgbox(LittlerootTown_EventScript_Accepted_Celebi, MSGBOX_NPC)
+	setvar(VAR_RESULT, 2)
+	special(DoOrbEffect)
+	lockall
+	delay(150)
+	playmoncry(SPECIES_CELEBI, CRY_MODE_ENCOUNTER)
+	special(FadeOutOrbEffect)
+	lockall
+	delay(30)
+	waitmoncry
+	playse(SE_SHINY)
+	setrespawn(HEAL_LOCATION_PALLET_TOWN)
+	warpteleport(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 5)
+	releaseall
+	end
+}
+
+text LittlerootTown_EventScript_Ask_Celebi {
+	"It appears Celebi wants you to \n"
+	"follow it...\l"
+	"Do you wish to go with Celebi?"
+}
+
+text LittlerootTown_EventScript_Refuse_Celebi {
+	"Yeah, Emerald is pretty cool."
+}
+
+text LittlerootTown_EventScript_Accepted_Celebi {
+	"You enter a different reality..."
+}

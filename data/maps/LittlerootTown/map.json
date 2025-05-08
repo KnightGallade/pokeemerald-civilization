@@ -123,6 +123,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CELEBI)",
+      "x": 17,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_EventScript_Talk_To_Celebi",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -137,21 +150,14 @@
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_warp_id": "1"
     },
     {
       "x": 7,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 11,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
       "dest_warp_id": "0"
     }
   ],
