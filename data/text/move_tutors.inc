@@ -235,3 +235,287 @@ MoveTutor_Text_ExplosionTaught:
 	.string "to ignite my own EXPLOSION…\p"
 	.string "Maybe it's because deep down,\n"
 	.string "I would rather stay here…$"
+
+@ Added FRLG move tutors
+
+MoveTutor_Kanto_Text_DoubleEdgeTeach::
+    .string "You should be proud of yourself,\n"
+    .string "having battled your way through\l"
+    .string "VICTORY ROAD so courageously.\p"
+    .string "In recognition of your feat,\n"
+    .string "I'll teach you DOUBLE-EDGE.\p"
+    .string "Would you like me to teach that\n"
+    .string "technique?$"
+
+MoveTutor_Kanto_Text_DoubleEdgeDeclined::
+    .string "I'll teach you the technique\n"
+    .string "anytime.$"
+
+MoveTutor_Kanto_Text_DoubleEdgeWhichMon::
+    .string "Which POKéMON should I teach\n"
+    .string "DOUBLE-EDGE?$"
+
+MoveTutor_Kanto_Text_DoubleEdgeTaught::
+    .string "Keep that drive going for the\n"
+    .string "POKéMON LEAGUE!\p"
+    .string "Take a run at them and knock 'em\n"
+    .string "out!$"
+
+MoveTutor_Kanto_Text_ThunderWaveTeach::
+    .string "Eeek!\n"
+    .string "No! Stop! Help!\p"
+    .string "Oh, you're not with TEAM ROCKET.\n"
+    .string "I'm sorry, I thought…\p"
+    .string "Will you forgive me if I teach\n"
+    .string "you the THUNDER WAVE technique?$"
+
+MoveTutor_Kanto_Text_ThunderWaveDeclined::
+    .string "Oh…\n"
+    .string "But THUNDER WAVE is convenient…$"
+
+MoveTutor_Kanto_Text_ThunderWaveWhichMon::
+    .string "Which POKéMON should I teach\n"
+    .string "THUNDER WAVE?$"
+
+MoveTutor_Kanto_Text_ThunderWaveTaught::
+    .string "THUNDER WAVE causes paralysis in\n"
+    .string "the target POKéMON.\p"
+    .string "A paralyzed POKéMON may be unable\n"
+    .string "to move in battle.\p"
+    .string "It's an ELECTRIC-type move, so it\n"
+    .string "won't work on some POKéMON.$"
+
+MoveTutor_Kanto_Text_RockSlideTeach::
+    .string "When you're up on a rocky mountain\n"
+    .string "like this, rockslides are a threat.\p"
+    .string "Can you imagine?\n"
+    .string "Boulders tumbling down on you?\p"
+    .string "That'd be, like, waaaaaaaaaaah!\n"
+    .string "Total terror!\p"
+    .string "You don't seem to be scared.\n"
+    .string "Want to try using ROCK SLIDE?$"
+
+MoveTutor_Kanto_Text_RockSlideDeclined::
+    .string "Oh, so you are scared after all.$"
+
+MoveTutor_Kanto_Text_RockSlideWhichMon::
+    .string "Which POKéMON should I teach\n"
+    .string "ROCK SLIDE?$"
+
+MoveTutor_Kanto_Text_RockSlideTaught::
+    .string "It might be scary to use it in this\n"
+    .string "tunnel…$"
+
+MoveTutor_Kanto_Text_MetronomeTeach::
+    .string "Tch-tch-tch!\n"
+    .string "I'll teach you a nifty move.\p"
+    .string "Teach it to a POKéMON, and watch\n"
+    .string "the fun unfold!\p"
+    .string "It's a move called METRONOME.\n"
+    .string "Does it strike your fancy?$"
+
+MoveTutor_Kanto_Text_MetronomeDeclined::
+    .string "I tell you, it's a lot of fun!$"
+
+MoveTutor_Kanto_Text_MetronomeWhichMon::
+    .string "Okay!\n"
+    .string "Which POKéMON should I teach?$"
+
+MoveTutor_Kanto_Text_MetronomeTaught::
+    .string "Tch-tch-tch!\n"
+    .string "That's the sound of a METRONOME.\p"
+    .string "It tweaks your POKéMON's brain into\n"
+    .string "using moves it doesn't even know.$"
+
+MoveTutor_Kanto_Text_MimicTeach::
+    .string "Oh wow!\n"
+    .string "A POKé DOLL!\p"
+    .string "For me?\n"
+    .string "Thank you!\p"
+    .string "You know what?\n"
+    .string "I can teach the move MIMIC.$"
+
+MoveTutor_Kanto_Text_MimicDeclined::
+    .string "Don't you like MIMIC?$"
+
+MoveTutor_Kanto_Text_MimicWhichMon::
+    .string "I really love MIMIC!\n"
+    .string "Who's going to learn it?$"
+
+MoveTutor_Kanto_Text_MimicTaughtMale::
+    .string "{PLAYER}: Hi!\n"
+    .string "Thanks for earlier!\p"
+    .string "{PLAYER}: Pardon?\p"
+    .string "{PLAYER}: Is it that fun to mimic my\n"
+    .string "every move?\p"
+    .string "COPYCAT: You bet!\n"
+    .string "It's a scream!$"
+
+MoveTutor_Kanto_Text_MimicTaughtFemale::
+    .string "{PLAYER}: Hi!\n"
+    .string "Thanks for what you did for us.\p"
+    .string "{PLAYER}: Pardon?\p"
+    .string "{PLAYER}: Is it really that fun to\n"
+    .string "copy what I say and do?\p"
+    .string "COPYCAT: You bet!\n"
+    .string "It's a scream!$"
+
+MoveTutor_Kanto_Text_MegaPunchTeach::
+    .string "A punch of roaring ferocity!\p"
+    .string "Packed with destructive power!\p"
+    .string "When the chips are down,\n"
+    .string "MEGA PUNCH is the ultimate attack!\l"
+    .string "You agree, yes?\p"
+    .string "Now!\n"
+    .string "Let me teach it to your POKéMON!$"
+
+MoveTutor_Kanto_Text_MegaPunchDeclined::
+    .string "You'll be back when you understand\n"
+    .string "the worth of MEGA PUNCH.$"
+
+MoveTutor_Kanto_Text_MegaPunchWhichMon::
+    .string "Fine!\n"
+    .string "Which POKéMON will learn it?$"
+
+MoveTutor_Kanto_Text_MegaPunchTaught::
+    .string "Now, we are comrades in the way of\n"
+    .string "punching!\p"
+    .string "You should go before you're seen\n"
+    .string "by the misguided fool who trains\l"
+    .string "only his silly kicking over there.$"
+
+MoveTutor_Kanto_Text_MegaKickTeach::
+    .string "A kick of brutal ferocity!\p"
+    .string "Packed with destructive power!\p"
+    .string "When you get right down to it,\n"
+    .string "MEGA KICK is the ultimate attack!\l"
+    .string "Don't you agree?\p"
+    .string "Okay!\n"
+    .string "I'll teach it to your POKéMON!$"
+
+MoveTutor_Kanto_Text_MegaKickDeclined::
+    .string "You'll come crawling back when you\n"
+    .string "realize the value of MEGA KICK.$"
+
+MoveTutor_Kanto_Text_MegaKickWhichMon::
+    .string "All right!\n"
+    .string "Which POKéMON wants to learn it?$"
+
+MoveTutor_Kanto_Text_MegaKickTaught::
+    .string "Now, we are soul mates in the way\n"
+    .string "of kicking!\p"
+    .string "You should run before you're seen\n"
+    .string "by the deluded nitwit who trains\l"
+    .string "only simple punching over there.$"
+
+MoveTutor_Kanto_Text_DreamEaterTeach::
+    .string "Yawn!\n"
+    .string "I must have dozed off in the sun.\p"
+    .string "I had this weird dream about\n"
+    .string "a DROWZEE eating my dream.\p"
+    .string "And…\n"
+    .string "I learned how to eat dreams…\p"
+    .string "Oogh, this is too spooky!\p"
+    .string "Let me teach it to a POKéMON so\n"
+    .string "I can forget about it!$"
+
+MoveTutor_Kanto_Text_DreamEaterDeclined::
+    .string "…Snore…$"
+
+MoveTutor_Kanto_Text_DreamEaterWhichMon::
+    .string "Which POKéMON wants to learn\n"
+    .string "DREAM EATER?$"
+
+MoveTutor_Kanto_Text_DreamEaterTaught::
+    .string "…ZZZ…\n"
+    .string "I…can't eat…anymore…$"
+
+MoveTutor_Kanto_Text_SoftboiledTeach::
+    .string "Hello, there!\p"
+    .string "I've seen you about, but I never\n"
+    .string "had a chance to chat.\p"
+    .string "It must be good luck that brought\n"
+    .string "us together finally.\p"
+    .string "I'd like to celebrate by teaching\n"
+    .string "you the move SOFTBOILED.$"
+
+MoveTutor_Kanto_Text_SoftboiledDeclined::
+    .string "I'll always be keeping an eye out\n"
+    .string "for you.\p"
+    .string "I hope we can chat again.$"
+
+MoveTutor_Kanto_Text_SoftboiledWhichMon::
+    .string "So, who's the POKéMON that gets\n"
+    .string "the chance to learn SOFTBOILED?$"
+
+MoveTutor_Kanto_Text_SoftboiledTaught::
+    .string "I wish you the best of luck!$"
+
+MoveTutor_Kanto_Text_SubstituteTeach::
+    .string "Aww, I wish I was a KANGASKHAN\n"
+    .string "baby.\p"
+    .string "I'd love to be a substitute for the\n"
+    .string "baby…\p"
+    .string "And snuggle in the mother\n"
+    .string "KANGASKHAN's belly pouch.\p"
+    .string "But only POKéMON can use the\n"
+    .string "technique SUBSTITUTE…\p"
+    .string "Want me to teach SUBSTITUTE to\n"
+    .string "one of your POKéMON?$"
+
+MoveTutor_Kanto_Text_SubstituteDeclined::
+    .string "Oh, really?\n"
+    .string "SUBSTITUTE seems so fun…$"
+
+MoveTutor_Kanto_Text_SubstituteWhichMon::
+    .string "Which POKéMON wants to learn\n"
+    .string "SUBSTITUTE?$"
+
+MoveTutor_Kanto_Text_SubstituteTaught::
+    .string "Boy, what I'd give to crawl inside\n"
+    .string "a KANGASKHAN belly pouch…$"
+
+MoveTutor_Kanto_Text_SeismicTossTeach::
+    .string "The secrets of space…\n"
+    .string "The mysteries of earth…\p"
+    .string "There are so many things about\n"
+    .string "which we know so little.\p"
+    .string "But that should spur us to study\n"
+    .string "harder, not toss in the towel.\p"
+    .string "The only thing you should toss…\p"
+    .string "Well, how about SEISMIC TOSS?\n"
+    .string "Should I teach that to a POKéMON?$"
+
+MoveTutor_Kanto_Text_SeismicTossDeclined::
+    .string "Is that so?\n"
+    .string "I'm sure you'll be back for it.$"
+
+MoveTutor_Kanto_Text_SeismicTossWhichMon::
+    .string "Which POKéMON wants to learn\n"
+    .string "SEISMIC TOSS?$"
+
+MoveTutor_Kanto_Text_SeismicTossTaught::
+    .string "I hope you won't toss in the towel.\n"
+    .string "Keep it up.$"
+
+MoveTutor_Kanto_Text_CounterTeach::
+    .string "Oh, hi!\n"
+    .string "I finally finished POKéMON.\p"
+    .string "Not done yet? How about I teach\n"
+    .string "you a good move?\p"
+    .string "The move I have in mind is\n"
+    .string "COUNTER.\p"
+    .string "Not like the one I'm leaning on,\n"
+    .string "mind you!$"
+
+MoveTutor_Kanto_Text_CounterDeclined::
+    .string "You're not interested? Come see\n"
+    .string "me if you change your mind.$"
+
+MoveTutor_Kanto_Text_CounterWhichMon::
+    .string "Which POKéMON should I teach\n"
+    .string "COUNTER to?$"
+
+MoveTutor_Kanto_Text_CounterTaught::
+    .string "Are you using that COUNTER move\n"
+    .string "I taught your POKéMON?$"
