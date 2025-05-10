@@ -523,7 +523,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_FRLG_NpcWhiteReflection,         OBJ_EVENT_PAL_TAG_FRLG_NPC_WHITE_REFLECTION},
     {gObjectEventPal_FRLG_Meteorite,        OBJ_EVENT_PAL_TAG_FRLG_METEORITE},
     {gObjectEventPal_FRLG_Seagallop,        OBJ_EVENT_PAL_TAG_FRLG_SEAGALLOP},
-    {gObjectEventPal_FRLG_SSAnne,           OBJ_EVENT_PAL_TAG_FRLG_SS_ANNE},
+    // TODO - add the SS Anne
+    // {gObjectEventPal_FRLG_SSAnne,           OBJ_EVENT_PAL_TAG_FRLG_SS_ANNE},
 
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},

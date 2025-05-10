@@ -563,3 +563,7 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special EnterCode
 	def_special GetCodeFeedback
+	@ FRLG specials
+	def_special DaisyMassageServices
+	@ TODO - add for all regions
+	def_special HasAllMons

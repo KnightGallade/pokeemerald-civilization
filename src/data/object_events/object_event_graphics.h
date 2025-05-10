@@ -466,7 +466,11 @@ const u16 gObjectEventPic_FRLG_Sapphire[] = INCBIN_U16("graphics/object_events/p
 const u16 gObjectEventPic_FRLG_OldAmber[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/old_amber.4bpp");
 const u16 gObjectEventPic_FRLG_LaprasDoll[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/lapras_doll.4bpp");
 const u16 gObjectEventPic_FRLG_Seagallop[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/seagallop.4bpp");
-const u16 gObjectEventPic_FRLG_SSAnne[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/ss_anne.4bpp");
+const u16 gObjectEventPic_FRLG_Pokedex[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/pokedex.4bpp");
+const u16 gObjectEventPic_FRLG_TownMap[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/town_map.4bpp");
+
+// TODO - add the SS Anne
+// const u16 gObjectEventPic_FRLG_SSAnne[] = INCBIN_U16("graphics/object_events/pics/FRLG/misc/ss_anne.4bpp");
 // Adding FRLG overworld palettes
 const u16 gObjectEventPal_FRLG_NpcBlue[] = INCBIN_U16("graphics/object_events/palettes/FRLG/npc_blue.gbapal");
 const u16 gObjectEventPal_FRLG_NpcPink[] = INCBIN_U16("graphics/object_events/palettes/FRLG/npc_pink.gbapal");
@@ -478,7 +482,8 @@ const u16 gObjectEventPal_FRLG_NpcGreenReflection[] = INCBIN_U16("graphics/objec
 const u16 gObjectEventPal_FRLG_NpcWhiteReflection[] = INCBIN_U16("graphics/object_events/palettes/FRLG/npc_white_reflection.gbapal");
 const u16 gObjectEventPal_FRLG_Meteorite[] = INCBIN_U16("graphics/object_events/palettes/FRLG/meteorite.gbapal");
 const u16 gObjectEventPal_FRLG_Seagallop[] = INCBIN_U16("graphics/object_events/palettes/FRLG/seagallop.gbapal");
-const u16 gObjectEventPal_FRLG_SSAnne[] = INCBIN_U16("graphics/object_events/palettes/FRLG//ss_anne.gbapal");
+// TODO - add the SS Anne
+// const u16 gObjectEventPal_FRLG_SSAnne[] = INCBIN_U16("graphics/object_events/palettes/FRLG//ss_anne.gbapal");
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");

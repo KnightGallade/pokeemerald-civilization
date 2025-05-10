@@ -4359,3 +4359,18 @@ void GetCodeFeedback(void)
     else
         gSpecialVar_Result = 0;
 }
+
+// FRLG function
+// TODO - figure out where to put this
+void RunMassageCooldownStepCounter(void)
+{
+    u16 count = VarGet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER);
+    if (count < 500)
+        VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, count + 1);
+}
+
+void DaisyMassageServices(void)
+{
+    AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
+    VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
+}

@@ -42178,3 +42178,99 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16877
+    [DIFFICULTY_NORMAL][TRAINER_RIVAL_OAKS_LAB_SQUIRTLE] =
+    {
+#line 16878
+        .trainerName = _("{RIVAL}"),
+#line 16879
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 16880
+        .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
+        .encounterMusic_gender =
+#line 16882
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 16883
+        .doubleBattle = FALSE,
+#line 16884
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16886
+            .species = SPECIES_SQUIRTLE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16888
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16887
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16890
+    [DIFFICULTY_NORMAL][TRAINER_RIVAL_OAKS_LAB_BULBASAUR] =
+    {
+#line 16891
+        .trainerName = _("{RIVAL}"),
+#line 16892
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 16893
+        .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
+        .encounterMusic_gender =
+#line 16895
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 16896
+        .doubleBattle = FALSE,
+#line 16897
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16899
+            .species = SPECIES_BULBASAUR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16901
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16900
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16903
+    [DIFFICULTY_NORMAL][TRAINER_RIVAL_OAKS_LAB_CHARMANDER] =
+    {
+#line 16904
+        .trainerName = _("{RIVAL}"),
+#line 16905
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 16906
+        .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
+        .encounterMusic_gender =
+#line 16908
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 16909
+        .doubleBattle = FALSE,
+#line 16910
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16912
+            .species = SPECIES_CHARMANDER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16914
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16913
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

@@ -2,3 +2,7 @@ pokeemerald
 pokeemerald-expansion
 poryscript
 porymap
+
+
+-----
+need to add town map and pokedex objects to graphics

@@ -327,6 +327,8 @@
 #define OBJ_EVENT_GFX_FRLG_METEORITE             321
 #define OBJ_EVENT_GFX_FRLG_LAPRAS_DOLL           322
 #define OBJ_EVENT_GFX_FRLG_SEAGALLOP             323
+#define OBJ_EVENT_GFX_FRLG_TOWN_MAP              324
+#define OBJ_EVENT_GFX_FRLG_POKEDEX               325
 // TODO - add support for the SS Anne
 // #define OBJ_EVENT_GFX_FRLG_SS_ANNE               324
 
@@ -334,7 +336,7 @@
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 // TODO - add one for the SS Anne once added, it should be one more than last
-#define NUM_OBJ_EVENT_GFX                        324
+#define NUM_OBJ_EVENT_GFX                        326
 
 
 // These are dynamic object gfx ids.

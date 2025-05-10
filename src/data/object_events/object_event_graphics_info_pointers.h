@@ -323,6 +323,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_OldAmb
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_Meteorite;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_LaprasDoll;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_Seagallop;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_TownMap;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_Pokedex;
 // TODO - Add support for SS Anne
 // extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_SSAnne;
 
@@ -660,6 +662,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FRLG_METEORITE] =           &gObjectEventGraphicsInfo_FRLG_Meteorite,
     [OBJ_EVENT_GFX_FRLG_LAPRAS_DOLL] =         &gObjectEventGraphicsInfo_FRLG_LaprasDoll,
     [OBJ_EVENT_GFX_FRLG_SEAGALLOP] =           &gObjectEventGraphicsInfo_FRLG_Seagallop,
+    [OBJ_EVENT_GFX_FRLG_TOWN_MAP] =            &gObjectEventGraphicsInfo_FRLG_TownMap,
+    [OBJ_EVENT_GFX_FRLG_POKEDEX] =             &gObjectEventGraphicsInfo_FRLG_Pokedex,
     // TODO - add support for the SS Anne
     // [OBJ_EVENT_GFX_FRLG_SS_ANNE] =             &gObjectEventGraphicsInfo_FRLG_SSAnne,
 };

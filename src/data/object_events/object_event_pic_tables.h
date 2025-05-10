@@ -2323,15 +2323,24 @@ static const struct SpriteFrameImage sPicTable_FRLG_Seagallop[] = {
     overworld_frame(gObjectEventPic_FRLG_Seagallop, 4, 16, 0),
 };
 
-static const struct SpriteFrameImage sPicTable_FRLG_SSAnne[] = {
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
-    overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+static const struct SpriteFrameImage sPicTable_FRLG_TownMap[] = {
+    overworld_frame(gObjectEventPic_FRLG_TownMap, 2, 2, 0),
 };
+
+static const struct SpriteFrameImage sPicTable_FRLG_Pokedex[] = {
+    overworld_frame(gObjectEventPic_FRLG_Pokedex, 2, 2, 0),
+};
+
+// TODO - add the SS Anne
+// static const struct SpriteFrameImage sPicTable_FRLG_SSAnne[] = {
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+//     overworld_frame(gObjectEventPic_FRLG_SSAnne, 8, 16, 0),
+// };
 

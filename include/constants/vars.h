@@ -279,6 +279,8 @@
 #define VAR_MYSTERY_GIFT_5                                                       0x4103
 #define VAR_MYSTERY_GIFT_6                                                       0x4104
 #define VAR_MYSTERY_GIFT_7                                                       0x4105
+// TODO - change variables around
+#define VAR_MASSAGE_COOLDOWN_STEP_COUNTER                                        0x4106
 
 
 #define VARS_END                                         VAR_MYSTERY_GIFT_7

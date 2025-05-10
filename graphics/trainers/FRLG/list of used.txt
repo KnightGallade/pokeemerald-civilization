@@ -1,0 +1,3 @@
+Keeping this list of used trainer sprites, since there will probably be a sprite only in the Sevii Islands:
+
+rival_early

@@ -2510,3 +2510,6 @@
 	compare \a, \b
 	cant_see_if 5
 	.endm
+
+	@ added from FRLG
+	@ TODO - put more work here, I want to have a generic battle method where whiting out is OK

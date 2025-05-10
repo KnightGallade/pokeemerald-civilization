@@ -918,9 +918,10 @@ gText_PlayerHouseBootPC::
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
 
-gText_UnusedNicknameReceivedPokemon::
-	.string "Want to give a nickname to\n"
-	.string "the {STR_VAR_2} you received?$"
+@ Changed unused text to FRLG text
+gText_GiveNicknameToThisMon::
+	.string "Do you want to give a nickname to\n"
+	.string "this {STR_VAR_1}?$"
 
 gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
