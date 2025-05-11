@@ -1144,7 +1144,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 # 727 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
 # 728 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
+	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
 # 729 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_Text_OakExplainCatching
 # 730 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -1555,7 +1555,7 @@ PalletTown_ProfessorOaksLab_EventScript_GivePlayerMoreBalls::
 # 989 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex
 # 990 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
+	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
 # 991 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setflag FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL
 # 992 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -1971,7 +1971,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 # 1257 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
 # 1258 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	call PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene
+	call_if_set FLAG_OPENED_START_MENU, PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene
 # 1259 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	release
 	end
@@ -2187,115 +2187,115 @@ PalletTown_ProfessorOaksLab_EventScript_RightSignAlt::
 
 
 PokedexRating_EventScript_RateInPerson::
-# 1963 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1967 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	call_if_set FLAG_OAK_SAW_DEX_COMPLETION, PokedexRating_EventScript_DexCompleteIntro
-# 1964 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1968 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	call_if_unset FLAG_OAK_SAW_DEX_COMPLETION, PokedexRating_EventScript_NormalIntro
-# 1965 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1969 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	call PokedexRating_EventScript_Rate
 	return
 
 
 PokedexRating_EventScript_DexCompleteIntro::
-# 1970 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1974 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PokedexRating_Text_LoveSeeingYourPokedex
 	return
 
 
 PokedexRating_EventScript_NormalIntro::
-# 1975 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1979 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PokedexRating_Text_HowIsPokedexComingAlong
 	return
 
 
 PokedexRating_EventScript_ShowRatingMsg::
-# 1980 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	copyvar VAR_0x8004, VAR_0x8009
-# 1981 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	special ShowPokedexRatingMessage
-# 1982 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	waitmessage
-# 1983 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	call_if_eq VAR_RESULT, FALSE, PokedexRating_EventScript_NormalFanfare
 # 1984 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	call_if_eq VAR_RESULT, TRUE, PokedexRating_EventScript_DexCompleteFanfare
+	copyvar VAR_0x8004, VAR_0x8009
 # 1985 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	waitfanfare
+	special ShowPokedexRatingMessage
 # 1986 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	waitmessage
+# 1987 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	call_if_eq VAR_RESULT, FALSE, PokedexRating_EventScript_NormalFanfare
+# 1988 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	call_if_eq VAR_RESULT, TRUE, PokedexRating_EventScript_DexCompleteFanfare
+# 1989 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	waitfanfare
+# 1990 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	waitbuttonpress
 	return
 
 
 PokedexRating_EventScript_NormalFanfare::
-# 1991 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1995 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	playfanfare MUS_RG_DEX_RATING
 	return
 
 
 PokedexRating_EventScript_DexCompleteFanfare::
-# 1996 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2000 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	playfanfare MUS_EVOLVED
 	return
 
 
 PokedexRating_EventScript_Rate::
-# 2001 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	setvar VAR_0x8004, 0
-# 2002 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	specialvar VAR_RESULT, ScriptGetPokedexInfo
-# 2003 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	copyvar VAR_0x8008, VAR_0x8005
-# 2004 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	copyvar VAR_0x8009, VAR_0x8006
 # 2005 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	copyvar VAR_0x800A, VAR_RESULT
+	setvar VAR_0x8004, 0
 # 2006 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_0x8008
-# 2007 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	buffernumberstring STR_VAR_2, VAR_0x8009
-# 2008 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PokedexRating_Text_SeenXOwnedY
-# 2009 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	call PokedexRating_EventScript_ShowRatingMsg
-# 2010 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	goto_if_eq VAR_0x800A, 0, Common_EventScript_NopReturn
-# 2011 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	setvar VAR_0x8004, 1
-# 2012 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	specialvar VAR_RESULT, ScriptGetPokedexInfo
-# 2013 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2007 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	copyvar VAR_0x8008, VAR_0x8005
-# 2014 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2008 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	copyvar VAR_0x8009, VAR_0x8006
-# 2015 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2009 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	copyvar VAR_0x800A, VAR_RESULT
+# 2010 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	buffernumberstring STR_VAR_1, VAR_0x8008
-# 2016 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2011 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	buffernumberstring STR_VAR_2, VAR_0x8009
+# 2012 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	msgbox PokedexRating_Text_SeenXOwnedY
+# 2013 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	call PokedexRating_EventScript_ShowRatingMsg
+# 2014 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	goto_if_eq VAR_0x800A, 0, Common_EventScript_NopReturn
+# 2015 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	setvar VAR_0x8004, 1
+# 2016 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	specialvar VAR_RESULT, ScriptGetPokedexInfo
 # 2017 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PokedexRating_Text_NationalDexSeenXOwnedY
+	copyvar VAR_0x8008, VAR_0x8005
 # 2018 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	specialvar VAR_RESULT, HasAllMons
+	copyvar VAR_0x8009, VAR_0x8006
 # 2019 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, PokedexRating_EventScript_DexIncomplete
+	buffernumberstring STR_VAR_1, VAR_0x8008
 # 2020 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	buffernumberstring STR_VAR_2, VAR_0x8009
+# 2021 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	msgbox PokedexRating_Text_NationalDexSeenXOwnedY
+# 2022 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	specialvar VAR_RESULT, HasAllMons
+# 2023 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	goto_if_eq VAR_RESULT, FALSE, PokedexRating_EventScript_DexIncomplete
+# 2024 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, PokedexRating_EventScript_DexComplete
 	end
 
 
 PokedexRating_EventScript_DexIncomplete::
-# 2025 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2029 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PokedexRating_Text_LookForwardToFilledNationalDex
-# 2026 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2030 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	goto Common_EventScript_NopReturn
 	end
 
 
 PokedexRating_EventScript_DexComplete::
-# 2031 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2035 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setflag FLAG_OAK_SAW_DEX_COMPLETION
-# 2032 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2036 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PokedexRating_Text_YouveCompletedDex
-# 2033 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 2037 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	goto Common_EventScript_NopReturn
 	end
 
@@ -2518,8 +2518,12 @@ PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
 	.string "So, here are some tools for\n"
 	.string "catching wild POKéMON.$"
 
-PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
+PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
 # 1619 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	.string "{PLAYER} received five POKé BALLS.$"
+
+PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
+# 1623 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "When a wild POKéMON appears,\n"
 	.string "it's fair game.\p"
 	.string "Just throw a POKé BALL at it and\n"
@@ -2529,7 +2533,7 @@ PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
 	.string "You have to be lucky!$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
-# 1629 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1633 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "To make a complete guide on all\n"
 	.string "the POKéMON in the world…\p"
 	.string "That was my dream!\p"
@@ -2542,12 +2546,12 @@ PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
 	.string "POKéMON history!$"
 
 PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
-# 1642 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1646 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "POKéMON around the world wait for\n"
 	.string "you, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex::
-# 1647 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1651 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Ah, {PLAYER}!\n"
 	.string "How is your POKéDEX shaping up?\p"
 	.string "{RIVAL} has already caught some\n"
@@ -2560,41 +2564,41 @@ PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex::
 	.string "little harder.$"
 
 PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime::
-# 1660 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1664 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "OAK: Come see me sometime.\p"
 	.string "After all, I want to know how your\n"
 	.string "POKéDEX is coming along.$"
 
 PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
-# 1666 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1670 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "It's like an encyclopedia, but the\n"
 	.string "pages are blank.$"
 
 PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls::
-# 1671 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1675 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Those are POKé BALLS.\n"
 	.string "They contain POKéMON!$"
 
 PalletTown_ProfessorOaksLab_Text_OaksLastMon::
-# 1676 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1680 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "That's PROF. OAK's last POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
-# 1680 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1684 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Press START to open the MENU!$"
 
 PalletTown_ProfessorOaksLab_Text_SaveOptionInMenu::
-# 1684 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1688 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "The SAVE option is on the MENU.\n"
 	.string "Use it regularly.$"
 
 PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
-# 1689 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1693 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "All POKéMON types have strong and\n"
 	.string "weak points against others.$"
 
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
-# 1694 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1698 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "There's an e-mail message here.\p"
 	.string "…\p"
 	.string "Finally!\n"
@@ -2609,12 +2613,12 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "…$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
-# 1709 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1713 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "I study POKéMON as PROF. OAK's\n"
 	.string "AIDE.$"
 
 PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
-# 1714 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1718 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Hi, {PLAYER}. I bet you've become\n"
 	.string "good friends with your POKéMON.\p"
 	.string "By the way, did you know about\n"
@@ -2627,28 +2631,28 @@ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
 	.string "tell anyone.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
-# 1727 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1731 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "PROF. OAK is going to have his own\n"
 	.string "radio show soon.\p"
 	.string "The program will be called PROF.\n"
 	.string "OAK's POKéMON SEMINAR.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
-# 1734 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1738 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "PROF. OAK may not look like much,\n"
 	.string "but he's the authority on POKéMON.\p"
 	.string "Many POKéMON TRAINERS hold him in\n"
 	.string "high regard.$"
 
 PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
-# 1741 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1745 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Ah, now this is excellent!\p"
 	.string "{PLAYER}, I have another important\n"
 	.string "favor to ask of you.\p"
 	.string "I need you to listen closely.$"
 
 PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons::
-# 1748 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1752 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Recently, there have been sightings\n"
 	.string "of many rare POKéMON species.\p"
 	.string "I'm talking about POKéMON that\n"
@@ -2659,7 +2663,7 @@ PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons::
 	.string "like you to go in my place.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
-# 1759 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1763 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "{RIVAL}: Hey, I heard that!\p"
 	.string "Gramps, what's with favoring\n"
 	.string "{PLAYER} over me all the time?\p"
@@ -2669,19 +2673,19 @@ PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
 	.string "everything.$"
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
-# 1769 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1773 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "OAK: I know, I know.\n"
 	.string "Of course I need your help, too.\p"
 	.string "Now, I need to see both your\n"
 	.string "POKéDEXES.$"
 
 PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits::
-# 1776 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1780 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "PROF. OAK took both POKéDEX\n"
 	.string "units.$"
 
 PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData::
-# 1781 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1785 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "… … …  … … …\p"
 	.string "… … …  … … …\p"
 	.string "…And that's done!\p"
@@ -2689,11 +2693,11 @@ PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData::
 	.string "a lot more POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_PlayersPokedexWasUpgraded::
-# 1789 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1793 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "{PLAYER}'s POKéDEX was upgraded!$"
 
 PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex::
-# 1793 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1797 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Now, {PLAYER} and {RIVAL}!\p"
 	.string "This time, you really must work\n"
 	.string "towards filling your POKéDEXES.\p"
@@ -2703,7 +2707,7 @@ PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex::
 	.string "undertaking in POKéMON history!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
-# 1803 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1807 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "{RIVAL}: Gramps, calm down.\n"
 	.string "Don't get so excited.\p"
 	.string "I'll get the POKéDEX completed,\n"
@@ -2713,13 +2717,13 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "Anyways, I'm outta here!$"
 
 PokedexRating_Text_HowIsPokedexComingAlong::
-# 1815 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1819 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "OAK: Good to see you!\n"
 	.string "How is your POKéDEX coming along?\p"
 	.string "Here, let me take a look.$"
 
 PokedexRating_Text_SeenXOwnedY::
-# 1821 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1825 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "The amount of progress you've made\n"
 	.string "on your POKéDEX is:\p"
 	.string "{STR_VAR_1} POKéMON seen and\n"
@@ -2727,110 +2731,110 @@ PokedexRating_Text_SeenXOwnedY::
 	.string "{FONT_NORMAL}PROF. OAK's rating:$"
 
 PokedexRating_Text_LessThan10::
-# 1829 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1833 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "You still have lots to do.\p"
 	.string "Go into every patch of grass you\n"
 	.string "see and look for POKéMON!$"
 
 PokedexRating_Text_LessThan20::
-# 1835 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1839 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "It looks as if you're getting on\n"
 	.string "the right track!\p"
 	.string "I've given one of my AIDES a FLASH\n"
 	.string "HM. Make sure you go get it!$"
 
 PokedexRating_Text_LessThan30::
-# 1842 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1846 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Your POKéDEX could use a bit more\n"
 	.string "volume still!\p"
 	.string "Try to catch other species of\n"
 	.string "POKéMON!$"
 
 PokedexRating_Text_LessThan40::
-# 1849 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1853 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Good, it's apparent that you're\n"
 	.string "trying hard!\p"
 	.string "I've given one of my AIDES an\n"
 	.string "ITEMFINDER. Be sure to collect it!$"
 
 PokedexRating_Text_LessThan50::
-# 1856 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1860 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Your POKéDEX is coming along quite\n"
 	.string "well!\p"
 	.string "I've given one of my AIDES an\n"
 	.string "AMULET COIN. Be sure to get it!$"
 
 PokedexRating_Text_LessThan60::
-# 1863 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1867 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Ah, you've finally topped 50\n"
 	.string "species!\p"
 	.string "I've given one of my AIDES an EXP.\n"
 	.string "SHARE. Be sure to go get it!$"
 
 PokedexRating_Text_LessThan70::
-# 1870 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1874 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Hoho! This is turning into quite the\n"
 	.string "respectable POKéDEX!$"
 
 PokedexRating_Text_LessThan80::
-# 1875 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1879 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Very good!\p"
 	.string "I think you'll collect even more\n"
 	.string "POKéMON by going fishing!$"
 
 PokedexRating_Text_LessThan90::
-# 1881 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1885 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Wonderful! Let me guess… You\n"
 	.string "like to collect things, don't you?$"
 
 PokedexRating_Text_LessThan100::
-# 1886 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1890 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "I'm impressed!\n"
 	.string "It must have been difficult to do!$"
 
 PokedexRating_Text_LessThan110::
-# 1891 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1895 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "You've finally hit 100 species!\n"
 	.string "I can't believe how good you are!$"
 
 PokedexRating_Text_LessThan120::
-# 1896 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1900 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "You even have the evolved forms\n"
 	.string "of POKéMON! Super!$"
 
 PokedexRating_Text_LessThan130::
-# 1901 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1905 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Excellent! Trade with friends to\n"
 	.string "get some more!$"
 
 PokedexRating_Text_LessThan140::
-# 1906 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1910 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Outstanding!\n"
 	.string "You've become a real pro at this!$"
 
 PokedexRating_Text_LessThan150::
-# 1911 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1915 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "I have nothing left to say!\n"
 	.string "You're the POKéMON PROFESSOR now!$"
 
 PokedexRating_Text_Complete::
-# 1916 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1920 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Your POKéDEX is entirely complete!\n"
 	.string "Congratulations!!$"
 
 PokedexRating_Text_NationalDexSeenXOwnedY::
-# 1921 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1925 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "And your NATIONAL POKéDEX is:\p"
 	.string "{STR_VAR_1} POKéMON seen and\n"
 	.string "{STR_VAR_2} POKéMON owned.$"
 
 PokedexRating_Text_LookForwardToFilledNationalDex::
-# 1927 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1931 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "I'll be looking forward to seeing\n"
 	.string "you fill the NATIONAL POKéDEX!$"
 
 PokedexRating_Text_YouveCompletedDex::
-# 1932 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1936 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Finally…\p"
 	.string "You've finally completed the\n"
 	.string "POKéDEX!\p"
@@ -2838,17 +2842,17 @@ PokedexRating_Text_YouveCompletedDex::
 	.string "Truly, this is a fantastic feat!$"
 
 PokedexRating_Text_Wroooaaarrr::
-# 1940 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1944 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Wroooooooaaaaaarrrr!$"
 
 PokedexRating_Text_ThankYouMadeDreamReality::
-# 1944 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1948 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Thank you, {PLAYER}!\n"
 	.string "Sincerely, thank you!\l"
 	.string "You've made my dream a reality!$"
 
 PokedexRating_Text_LoveSeeingYourPokedex::
-# 1950 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 1954 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "OAK: Ah, welcome!\p"
 	.string "Tell me, how is your POKéDEX\n"
 	.string "coming along?\p"

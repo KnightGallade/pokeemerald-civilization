@@ -6,7 +6,7 @@ ViridianCity_MapScripts::
 
 ViridianCity_OnTransition::
 # 10 "data/maps/ViridianCity/scripts.pory"
-	setworldmapflag FLAG_VISITED_VIRIDIAN_CITY
+	setflag FLAG_VISITED_VIRIDIAN_CITY
 # 11 "data/maps/ViridianCity/scripts.pory"
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad
 # 12 "data/maps/ViridianCity/scripts.pory"

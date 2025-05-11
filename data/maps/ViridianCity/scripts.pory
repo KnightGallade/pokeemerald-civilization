@@ -7,7 +7,7 @@ mapscripts ViridianCity_MapScripts {
 }
 
 script ViridianCity_OnTransition {
-	setworldmapflag(FLAG_VISITED_VIRIDIAN_CITY)
+	setflag(FLAG_VISITED_VIRIDIAN_CITY)
 	call_if_eq(VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad)
 	call_if_eq(VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_SetOldManStandingByRoad)
 	call_if_ge(VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_SetOldManNormal)

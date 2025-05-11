@@ -131,3 +131,21 @@ Movement_PkmnCenterNurse_Bow:
 Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
+
+@ New script to add to FRLG Centers to fill in space
+Common_EventScript_PkmnCenterChansey::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
+	applymovement VAR_0x800B, Movement_PkmnCenterChansey_LookAtNurse
+	waitmoncry
+	waitmovement 0
+	msgbox gText_ChanseyTalkToNurse, MSGBOX_NPC
+	end
+
+Movement_PkmnCenterChansey_LookAtNurse:
+	face_left
+	delay_16
+	face_player
+	step_end

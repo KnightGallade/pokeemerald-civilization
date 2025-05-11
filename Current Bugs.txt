@@ -1,0 +1,9 @@
+-Route 1: Need to fix the side edges in the sand
+-Route 2: Need to fix the side edges in the sand
+-Route 2: edge of northern exit building, no top of trees
+-Professor Oak: I get the PokéDex, but it does not register Pokémon
+--NOTE: This is because Hoenn dex
+-Route 22: the brick tiles that are from another tileset doesn't load properly in you enter from too far South
+-Route 22: No events added yet
+-General: Figure out the Wild encounter settings (FR or LG)
+-Route 2: Top gate needs work on exit

@@ -16875,7 +16875,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_SQUIRTLE ===
-Name: {RIVAL}
+Name: Blue
 Class: Rival
 Pic: FRLG Blue Early
 Gender: Male
@@ -16888,7 +16888,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_BULBASAUR ===
-Name: {RIVAL}
+Name: Blue
 Class: Rival
 Pic: FRLG Blue Early
 Gender: Male
@@ -16901,7 +16901,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_CHARMANDER ===
-Name: {RIVAL}
+Name: Blue
 Class: Rival
 Pic: FRLG Blue Early
 Gender: Male
@@ -16912,3 +16912,236 @@ AI: Basic Trainer
 Charmander
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+/* Viridian City Gym */
+
+=== TRAINER_TAMER_JASON ===
+Name: Jason
+Class: Tamer
+Pic: FRLG Tamer
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Rhyhorn
+Level: 43
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+
+=== TRAINER_TAMER_COLE ===
+Name: Cole
+Class: Tamer
+Pic: FRLG Tamer
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Arbok
+Level: 39
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+
+Tauros
+Level: 39
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+
+=== TRAINER_BLACK_BELT_ATSUSHI ===
+Name: Atsushi
+Class: Black Belt
+Pic: FRLG Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Machop @ Black Belt
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Machoke @ Black Belt
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_BLACK_BELT_KIYO ===
+Name: Kiyo
+Class: Black Belt
+Pic: FRLG Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Machoke @ Black Belt
+Level: 43
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_BLACK_BELT_TAKASHI ===
+Name: Takashi
+Class: Black Belt
+Pic: FRLG Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Machoke @ Black Belt
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Machop @ Black Belt
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Machoke @ Black Belt
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_COOLTRAINER_SAMUEL ===
+Name: Samuel
+Class: Cooltrainer
+Pic: FRLG Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Sandslash
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Slash
+- Swift
+- Sand Attack
+- Poison Sting
+
+Sandslash
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Slash
+- Swift
+- Sand Attack
+- Poison Sting
+
+Rhyhorn
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Take Down
+- Rock Blast
+- Fury Attack
+- Scary Face
+
+Nidorino
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Fury Attack
+- Horn Attack
+- Poison Sting
+- Double Kick
+
+Nidoking
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Thrash
+- Double Kick
+- Poison Sting
+- Focus Energy
+
+=== TRAINER_COOLTRAINER_YUJI ===
+Name: Yuji
+Class: Cooltrainer
+Pic: FRLG Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Sandslash
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Slash
+- Swift
+- Sand Attack
+- Poison Sting
+
+Graveler
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Rock Blast
+- Magnitude
+- Mud Sport
+- Defense Curl
+
+Onix
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Dragon Breath
+- Sandstorm
+- Rock Throw
+- Bind
+
+Graveler
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Rock Blast
+- Magnitude
+- Rollout
+- Defense Curl
+
+Marowak
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bonemerang
+- Headbutt
+- Leer
+- Growl
+
+=== TRAINER_COOLTRAINER_WARREN ===
+Name: Warren
+Class: Cooltrainer
+Pic: FRLG Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Marowak
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bonemerang
+- Headbutt
+- Leer
+- Growl
+
+Marowak
+Level: 37
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bonemerang
+- Headbutt
+- Leer
+- Growl
+
+Rhyhorn
+Level: 38
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Take Down
+- Rock Blast
+- Fury Attack
+- Scary Face
+
+Nidorina
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Fury Swipes
+- Bite
+- Poison Sting
+- Double Kick
+
+Nidoqueen
+Level: 39
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Body Slam
+- Bite
+- Poison Sting
+- Double Kick

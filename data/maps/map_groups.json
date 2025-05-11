@@ -150,7 +150,8 @@
     "Route18",
     "Route19",
     "Route20",
-    "Route21",
+    "Route21_North",
+    "Route21_South",
     "Route22",
     "Route23",
     "Route24",
@@ -693,7 +694,12 @@
     "PalletTown_ProfessorOaksLab"
   ],
   "gMapGroup_IndoorViridian": [
-
+    "ViridianCity_House",
+    "ViridianCity_Gym",
+    "ViridianCity_School",
+    "ViridianCity_Mart",
+    "ViridianCity_PokemonCenter_1F",
+    "ViridianCity_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorPewter": [
 

@@ -156,6 +156,8 @@ script PalletTown_RivalsHouse_EventScript_PleaseGiveMonsRest {
 script PalletTown_RivalsHouse_EventScript_GiveTownMap {
 	msgbox(PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp)
 	closemessage
+	checkitemspace(ITEM_TOWN_MAP)
+	goto_if_eq(VAR_RESULT, FALSE, PalletTown_RivalsHouse_EventScript_NoRoomForTownMap)
 	applymovement(LOCALID_DAISY, Common_Movement_WalkInPlaceFasterRight)
 	waitmovement(0)
 	removeobject(LOCALID_TOWN_MAP)
@@ -164,9 +166,13 @@ script PalletTown_RivalsHouse_EventScript_GiveTownMap {
 	applymovement(LOCALID_DAISY, Common_Movement_FacePlayer)
 	waitmovement(0)
 	delay(12)
-	giveitem(ITEM_TOWN_MAP,1)
-	playfanfare(MUS_RG_OBTAIN_KEY_ITEM)
-	waitfanfare
+	giveitem_msg(PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy, ITEM_TOWN_MAP, 1, MUS_RG_OBTAIN_KEY_ITEM)
+	release
+	end
+}
+
+script PalletTown_RivalsHouse_EventScript_NoRoomForTownMap {
+	msgbox(PalletTown_RivalsHouse_Text_DontHaveSpaceForThis)
 	release
 	end
 }
@@ -209,6 +215,16 @@ text PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp {
 	"errand?\p"
 	"Gee, that's lazy of him.\n"
 	"Here, this will help you.$"
+}
+
+text PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy {
+    "{PLAYER} received a TOWN MAP\n"
+    "from DAISY.$"
+}
+
+text PalletTown_RivalsHouse_Text_DontHaveSpaceForThis {
+    "You don't have space for this in\n"
+    "your BAG.$"
 }
 
 text PalletTown_RivalsHouse_Text_ExplainTownMap {

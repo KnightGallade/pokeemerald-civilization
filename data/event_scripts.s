@@ -105,6 +105,8 @@ gStdScripts::
 	.4byte Std_RegisteredInMatchCall   @ STD_REGISTER_MATCH_CALL
 	.4byte Std_MsgboxGetPoints         @ MSGBOX_GETPOINTS
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
+	.4byte Std_ReceivedItem            @ STD_RECEIVED_ITEM
+	.4byte Std_PutItemAway             @ STD_PUT_ITEM_AWAY
 gStdScripts_End::
 
 	.include "data/maps/PetalburgCity/scripts.inc"
@@ -1216,7 +1218,9 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Route20/scripts.inc"
 
-	.include "data/maps/Route21/scripts.inc"
+	.include "data/maps/Route21_North/scripts.inc"
+
+	.include "data/maps/Route21_South/scripts.inc"
 
 	.include "data/maps/Route22/scripts.inc"
 
@@ -1239,3 +1243,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PalletTown_RivalsHouse/scripts.inc"
 
 	.include "data/maps/PalletTown_ProfessorOaksLab/scripts.inc"
+
+	.include "data/maps/ViridianCity_House/scripts.inc"
+
+	.include "data/maps/ViridianCity_Gym/scripts.inc"
+
+	.include "data/maps/ViridianCity_School/scripts.inc"
+
+	.include "data/maps/ViridianCity_Mart/scripts.inc"
+
+	.include "data/maps/ViridianCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/ViridianCity_PokemonCenter_2F/scripts.inc"

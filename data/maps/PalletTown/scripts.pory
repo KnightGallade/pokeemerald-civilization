@@ -17,13 +17,9 @@ script PalletTown_OnTransition {
 }
 
 script PalletTown_EventScript_TryReadySignLady {
-	goto_if_unset(FLAG_TEMP_A, PalletTown_EventScript_ReusableReturn)
-	goto_if_ge(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_ReusableReturn)
+	goto_if_unset(FLAG_OPENED_START_MENU, Common_EventScript_NopReturn)
+	goto_if_ge(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, Common_EventScript_NopReturn)
 	setvar(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1)
-	return
-}
-
-script PalletTown_EventScript_ReusableReturn {
 	return
 }
 
@@ -475,7 +471,7 @@ script PalletTown_EventScript_SignLadyShowSign {
 	msgbox(PalletTown_Text_LookCopiedTrainerTipsSign)
 	closemessage
 	delay(20)
-	setflag(FLAG_TEMP_A)
+	setflag(FLAG_OPENED_START_MENU)
 	setvar(VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1)
 	setvar(SIGN_LADY_READY, FALSE)
 	// TODO - figure out this line

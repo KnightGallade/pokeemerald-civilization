@@ -49,3 +49,7 @@ gText_ThankYouForWaiting::
 
 gText_WeHopeToSeeYouAgain2::
 	.string "We hope to see you again!$"
+
+gText_ChanseyTalkToNurse::
+	.string "You should probably talk\n"
+	.string "to the nurse instead.$"

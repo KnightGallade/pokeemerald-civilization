@@ -8,3 +8,9 @@ gText_PleaseComeAgain::
 gText_PlayerWhatCanIDoForYou::
 	.string "{PLAYER}{STRING 5}, welcome!\p"
 	.string "What can I do for you?$"
+
+@ Kanto stores say different things for some reason
+
+gText_MayIHelpYou::
+	.string "Hi, there!\n"
+	.string "May I help you?$"

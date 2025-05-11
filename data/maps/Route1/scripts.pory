@@ -5,16 +5,18 @@ script Route1_EventScript_MartClerk {
 	faceplayer
 	goto_if_set(FLAG_GOT_POTION_ON_ROUTE_1, Route1_EventScript_AlreadyGotPotion)
 	msgbox(Route1_Text_WorkAtPokeMartTakeSample)
-	giveitem(ITEM_POTION)
-	goto_if_eq(VAR_RESULT, TRUE, Route1_EventScript_GettingPotion)
-	release
-	end
-}
-
-script Route1_EventScript_GettingPotion {
+	checkitemspace(ITEM_POTION)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_BagIsFull)
+	bufferitemname(STR_VAR_2, ITEM_POTION)
+	playfanfare(MUS_LEVEL_UP)
+	message(gText_ObtainedTheItem)
 	waitmessage
 	waitfanfare
+	additem(ITEM_POTION)
+	msgbox(Route1_Text_PutPotionAway)
 	setflag(FLAG_GOT_POTION_ON_ROUTE_1)
+	release
+	end
 }
 
 script Route1_EventScript_AlreadyGotPotion {
@@ -46,6 +48,11 @@ text Route1_Text_WorkAtPokeMartTakeSample {
 text Route1_Text_ComeSeeUsIfYouNeedPokeBalls {
     "Please come see us if you need\n"
     "POKé BALLS for catching POKéMON.$"
+}
+
+text Route1_Text_PutPotionAway {
+    "{PLAYER} put the POTION away in\n"
+    "the BAG's ITEMS POCKET.$"
 }
 
 text Route1_Text_CanJumpFromLedges {

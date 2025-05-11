@@ -8,6 +8,14 @@ Common_EventScript_SetGymTrainers::
 	case 6, FortreeCity_Gym_SetGymTrainers
 	case 7, MossdeepCity_Gym_SetGymTrainers
 	case 8, SootopolisCity_Gym_SetGymTrainers
+	@ case 9, PewterCity_Gym_SetGymTrainers
+	@ case 10, CeruleanCity_Gym_SetGymTrainers
+	@ case 11, VermillionCity_Gym_SetGymTrainers
+	@ case 12, CeladonCity_Gym_SetGymTrainers
+	@ case 13, SaffronCity_Gym_SetGymTrainers
+	@ case 14, FuchsiaCity_Gym_SetGymTrainers
+	@ case 15, CinnabarIsland_Gym_SetGymTrainers
+	case 16, ViridianCity_Gym_SetGymTrainers
 	end
 
 RustboroCity_Gym_SetGymTrainers::
@@ -89,4 +97,17 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
 	settrainerflag TRAINER_DAPHNE
+	return
+
+@ TODO - add the other gyms
+
+ViridianCity_Gym_SetGymTrainers::
+	settrainerflag TRAINER_TAMER_JASON
+	settrainerflag TRAINER_TAMER_COLE
+	settrainerflag TRAINER_BLACK_BELT_ATSUSHI
+	settrainerflag TRAINER_BLACK_BELT_KIYO
+	settrainerflag TRAINER_BLACK_BELT_TAKASHI
+	settrainerflag TRAINER_COOLTRAINER_SAMUEL
+	settrainerflag TRAINER_COOLTRAINER_YUJI
+	settrainerflag TRAINER_COOLTRAINER_WARREN
 	return

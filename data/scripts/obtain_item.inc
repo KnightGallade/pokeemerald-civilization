@@ -224,3 +224,34 @@ EventScript_NoRoomForHiddenItem::
 	setvar VAR_RESULT, 0
 	releaseall
 	end
+
+@ Added from FRLG
+
+Std_ReceivedItem::
+	call_if_eq VAR_0x8002, MUS_LEVEL_UP, EventScript_ReceivedItemFanfare1
+	call_if_eq VAR_0x8002, MUS_RG_OBTAIN_KEY_ITEM, EventScript_ReceivedItemFanfare2
+	message 0x0
+	waitmessage
+	waitfanfare
+	call_if_eq VAR_0x8002, MUS_LEVEL_UP, EventScript_ReceivedItemWaitFanfare
+	putitemaway VAR_0x8000, VAR_0x8001
+	return
+
+EventScript_ReceivedItemFanfare1::
+	playfanfare MUS_LEVEL_UP
+	return
+
+EventScript_ReceivedItemFanfare2::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	return
+
+EventScript_ReceivedItemWaitFanfare::
+	delay 50
+	return
+
+Std_PutItemAway::
+	bufferitemnameplural STR_VAR_2, ITEMID, AMOUNT
+	checkitemtype ITEMID
+	call EventScript_BufferPocketNameAndTryFanfare
+	msgbox gText_PutItemInPocket
+	return

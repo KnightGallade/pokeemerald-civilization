@@ -254,102 +254,120 @@ PalletTown_RivalsHouse_EventScript_GiveTownMap::
 # 158 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	closemessage
 # 159 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	applymovement 1, Common_Movement_WalkInPlaceFasterRight
+	checkitemspace ITEM_TOWN_MAP
 # 160 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	waitmovement 0
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_RivalsHouse_EventScript_NoRoomForTownMap
 # 161 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	removeobject 2
+	applymovement 1, Common_Movement_WalkInPlaceFasterRight
 # 162 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
-# 163 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	delay 15
-# 164 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	applymovement 1, Common_Movement_FacePlayer
-# 165 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	waitmovement 0
+# 163 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	removeobject 2
+# 164 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
+# 165 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	delay 15
 # 166 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	delay 12
+	applymovement 1, Common_Movement_FacePlayer
 # 167 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	giveitem ITEM_TOWN_MAP, 1
+	waitmovement 0
 # 168 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	delay 12
 # 169 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	waitfanfare
+	giveitem_msg PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy, ITEM_TOWN_MAP, 1, MUS_RG_OBTAIN_KEY_ITEM
 # 170 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	release
 	end
 
 
-PalletTown_RivalsHouse_EventScript_ExplainTownMap::
+PalletTown_RivalsHouse_EventScript_NoRoomForTownMap::
 # 175 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	msgbox PalletTown_RivalsHouse_Text_ExplainTownMap
+	msgbox PalletTown_RivalsHouse_Text_DontHaveSpaceForThis
 # 176 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	release
 	end
 
 
-PalletTown_RivalsHouse_EventScript_TownMap::
+PalletTown_RivalsHouse_EventScript_ExplainTownMap::
 # 181 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	msgbox PalletTown_RivalsHouse_Text_ExplainTownMap
+# 182 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	release
+	end
+
+
+PalletTown_RivalsHouse_EventScript_TownMap::
+# 187 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	msgbox PalletTown_RivalsHouse_Text_ItsBigMapOfKanto, MSGBOX_NPC
 	end
 
 
 PalletTown_RivalsHouse_EventScript_Bookshelf::
-# 186 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 192 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	msgbox PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks, MSGBOX_SIGN
 	end
 
 
 PalletTown_RivalsHouse_EventScript_Picture::
-# 191 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 197 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	msgbox PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy, MSGBOX_SIGN
 	end
 
 
 PalletTown_RivalsHouse_Text_HiBrothersAtLab::
-# 195 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 201 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: Hi, {PLAYER}!\p"
 	.string "My brother, {RIVAL}, is out at\n"
 	.string "Grandpa's LAB.$"
 
 PalletTown_RivalsHouse_Text_HeardYouBattledRival::
-# 201 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 207 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: {PLAYER}, I heard you had\n"
 	.string "a battle against {RIVAL}.\p"
 	.string "I wish I'd seen that!$"
 
 PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp::
-# 207 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 213 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "Grandpa asked you to run an\n"
 	.string "errand?\p"
 	.string "Gee, that's lazy of him.\n"
 	.string "Here, this will help you.$"
 
+PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy::
+# 220 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	.string "{PLAYER} received a TOWN MAP\n"
+	.string "from DAISY.$"
+
+PalletTown_RivalsHouse_Text_DontHaveSpaceForThis::
+# 225 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+	.string "You don't have space for this in\n"
+	.string "your BAG.$"
+
 PalletTown_RivalsHouse_Text_ExplainTownMap::
-# 214 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 230 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "You can use the TOWN MAP to find\n"
 	.string "out where you are, or check the\l"
 	.string "names of places.$"
 
 PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
-# 220 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 236 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: Just like people, POKéMON\n"
 	.string "are living things.\p"
 	.string "When they get tired, please give\n"
 	.string "them a rest.$"
 
 PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
-# 227 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 243 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It's a big map of the KANTO region.\n"
 	.string "Now this would be useful!$"
 
 PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks::
-# 232 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 248 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "The shelves are crammed full of\n"
 	.string "books on POKéMON.$"
 
 PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
-# 237 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 253 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: Hi, {PLAYER}!\n"
 	.string "Good timing.\p"
 	.string "I'm about to have some tea.\n"
@@ -359,21 +377,21 @@ PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
 	.string "Would you like me to groom one?$"
 
 PalletTown_RivalsHouse_Text_DontNeedAnyGrooming::
-# 247 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 263 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "You don't need any grooming done?\n"
 	.string "Okay, we'll just have tea.$"
 
 PalletTown_RivalsHouse_Text_GroomWhichOne::
-# 252 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 268 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "Which one should I groom?$"
 
 PalletTown_RivalsHouse_Text_LookingNiceInNoTime::
-# 256 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 272 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: Okay, I'll get it looking\n"
 	.string "nice in no time.$"
 
 PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
-# 261 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 277 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "{COLOR DARK_GRAY}{STR_VAR_1} looks dreamily content…\p"
 	.string "{COLOR RED}DAISY: There you go! All done.\n"
 	.string "See? Doesn't it look nice?\p"
@@ -381,62 +399,62 @@ PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
 	.string "It's such a cute POKéMON.$"
 
 PalletTown_RivalsHouse_Text_CantGroomAnEgg::
-# 269 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 285 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "Oh, sorry. I honestly can't\n"
 	.string "groom an EGG.$"
 
 PalletTown_RivalsHouse_Text_MayISeeFirstMon::
-# 274 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 290 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "DAISY: Your POKéMON grow to love\n"
 	.string "you if you raise them with love.\p"
 	.string "For example, {PLAYER}, may I see\n"
 	.string "your first POKéMON?$"
 
 PalletTown_RivalsHouse_Text_CouldntLoveYouMore::
-# 281 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 297 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It couldn't possibly love you\n"
 	.string "any more than it does now.\p"
 	.string "Your POKéMON is happy beyond\n"
 	.string "words.$"
 
 PalletTown_RivalsHouse_Text_ItLooksVeryHappy::
-# 288 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 304 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It looks very happy.\p"
 	.string "I wish {RIVAL} could see this and\n"
 	.string "learn something from it.$"
 
 PalletTown_RivalsHouse_Text_ItsQuiteFriendly::
-# 294 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 310 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It's quite friendly with you.\n"
 	.string "Keep being good to it!$"
 
 PalletTown_RivalsHouse_Text_ItsWarmingUpToYou::
-# 299 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 315 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It's warming up to you.\n"
 	.string "Trust must be growing between you.$"
 
 PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet::
-# 304 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 320 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "It's not quite familiar with you\n"
 	.string "yet.\p"
 	.string "POKéMON are all quite wary when\n"
 	.string "you first get them.$"
 
 PalletTown_RivalsHouse_Text_DontLikeWayItGlaresAtYou::
-# 311 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 327 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "{PLAYER}, I don't like the way it\n"
 	.string "glares at you.\p"
 	.string "Could you try being a little nicer\n"
 	.string "to it?$"
 
 PalletTown_RivalsHouse_Text_WhyWouldMonHateYouSoMuch::
-# 318 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 334 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "…Um, it's not easy for me to say\n"
 	.string "this, but…\p"
 	.string "Is there some reason why your\n"
 	.string "POKéMON would hate you so much?$"
 
 PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy::
-# 325 "data/maps/PalletTown_RivalsHouse/scripts.pory"
+# 341 "data/maps/PalletTown_RivalsHouse/scripts.pory"
 	.string "“The lovely and sweet\n"
 	.string "CLEFAIRY”$"
