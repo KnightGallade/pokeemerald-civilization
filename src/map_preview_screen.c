@@ -85,6 +85,9 @@ static const u8 sIcefallCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_previe
 static const u8 sAlteringCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/altering_cave/tiles.gbapal");
 static const u8 sAlteringCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/altering_cave/tiles.4bpp.lz");
 static const u8 sAlteringCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/altering_cave/tilemap.bin.lz");
+static const u8 sPetalburgWoodsMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/petalburg_woods/tiles.gbapal");
+static const u8 sPetalburgWoodsMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/petalburg_woods/tiles.4bpp.lz");
+static const u8 sPetalburgWoodsMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/petalburg_woods/tilemap.bin.lz");
 
 // If you set flagId to MPS_FLAG_NULL, it will not set a flag when visiting the map for the first time
 // and the duration will default to MPS_DURATION_NO_FLAG.
@@ -167,6 +170,13 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .flagId = MPS_FLAG_NULL,
         .image = IMG_POWER_PLANT
     },
+    [MPS_PETALBURG_WOODS] = {
+        .mapsec = MAPSEC_PETALBURG_WOODS,
+        .type = MPS_TYPE_FADE_IN,
+        .flagId = MPS_FLAG_NULL,
+        .image = IMG_PETALBURG_WOODS
+    },
+    // TODO - remove all these later
     [MPS_MT_EMBER] = {
         .mapsec = MAPSEC_MT_EMBER,
         .type = MPS_TYPE_CAVE,
@@ -325,6 +335,12 @@ static const struct ImageData sMapPreviewImageData[IMG_COUNT] = {
         .tilemapptr = sPowerPlantMapPreviewTilemap,
         .palptr = sPowerPlantMapPreviewPalette
     },
+    [IMG_PETALBURG_WOODS] = {
+        .tilesptr = sPetalburgWoodsMapPreviewTiles,
+        .tilemapptr = sPetalburgWoodsMapPreviewTilemap,
+        .palptr = sPetalburgWoodsMapPreviewPalette
+    },
+    // TODO - remove these later
     [IMG_MT_EMBER] = {
         .tilesptr = sMtEmberMapPreviewTiles,
         .tilemapptr = sMtEmberMapPreviewTilemap,

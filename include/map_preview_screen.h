@@ -16,6 +16,8 @@ enum MapPreviewScreenId
     MPS_VICTORY_ROAD,
     MPS_CERULEAN_CAVE,
     MPS_POWER_PLANT,
+    MPS_PETALBURG_WOODS,
+    // TODO - Remove all of these later
     MPS_MT_EMBER,
     MPS_ROCKET_WAREHOUSE,
     MPS_MONEAN_CHAMBER,
@@ -49,6 +51,8 @@ enum PreviewImageId
     IMG_VICTORY_ROAD,
     IMG_CERULEAN_CAVE,
     IMG_POWER_PLANT,
+    IMG_PETALBURG_WOODS,
+    // TODO - remove these later
     IMG_MT_EMBER,
     IMG_ROCKET_WAREHOUSE,
     IMG_MONEAN_CHAMBER,
