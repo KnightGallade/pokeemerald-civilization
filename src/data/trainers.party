@@ -16886,6 +16886,8 @@ AI: Basic Trainer
 Squirtle
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Tail Whip
 
 === TRAINER_RIVAL_OAKS_LAB_BULBASAUR ===
 Name: Blue
@@ -16899,6 +16901,8 @@ AI: Basic Trainer
 Bulbasaur
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Growl
 
 === TRAINER_RIVAL_OAKS_LAB_CHARMANDER ===
 Name: Blue
@@ -16912,6 +16916,8 @@ AI: Basic Trainer
 Charmander
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scratch
+- Growl
 
 /* Viridian City Gym */
 
@@ -17145,3 +17151,240 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bite
 - Poison Sting
 - Double Kick
+
+
+/* Route 22 Rival Battles */
+
+=== TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE ===
+Name: Blue
+Class: Rival
+Pic: FRLG Blue Early
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgey
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Tackle
+- Sand Attack
+
+Squirtle
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Tackle
+- Tail Whip
+
+=== TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR ===
+Name: Blue
+Class: Rival
+Pic: FRLG Blue Early
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgey
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Tackle
+- Sand Attack
+
+Bulbasaur
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Tackle
+- Growl
+
+=== TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER ===
+Name: Blue
+Class: Rival
+Pic: FRLG Blue Early
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgey
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Tackle
+- Sand Attack
+
+Charmander
+Level: 9
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Scratch
+- Growl
+
+=== TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE ===
+Name: Blue
+Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Pic: FRLG Blue Late
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgeot
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Feather Dance
+- Wing Attack
+- Gust
+- Quick Attack
+
+Rhyhorn
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Take Down
+- Horn Drill
+- Rock Blast
+- Fury Attack
+
+Growlithe
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Flame Wheel
+- Take Down
+- Leer
+- Agility
+
+Exeggcute
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Solar Beam
+- Sleep Powder
+- Poison Powder
+- Stun Spore
+
+Alakazam
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Psychic
+- Calm Mind
+- Future Sight
+- Disable
+
+Blastoise
+Level: 53
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Water Gun
+- Rain Dance
+- Bite
+- Rapid Spin
+
+=== TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR ===
+Name: Blue
+Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Pic: FRLG Blue Late
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgeot
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Feather Dance
+- Wing Attack
+- Gust
+- Quick Attack
+
+Rhyhorn
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Take Down
+- Horn Drill
+- Rock Blast
+- Fury Attack
+
+Gyarados
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Hydro Pump
+- Twister
+- Leer
+- Rain Dance
+
+Growlithe
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Flame Wheel
+- Take Down
+- Leer
+- Agility
+
+Alakazam
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Psychic
+- Calm Mind
+- Future Sight
+- Disable
+
+Venusaur
+Level: 53
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Razor Leaf
+- Sweet Scent
+- Growth
+- Synthesis
+
+=== TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER ===
+Name: Blue
+Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Pic: FRLG Blue Late
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pidgeot
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Feather Dance
+- Wing Attack
+- Gust
+- Quick Attack
+
+Rhyhorn
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Take Down
+- Horn Drill
+- Rock Blast
+- Fury Attack
+
+Exeggcute
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Solar Beam
+- Sleep Powder
+- Poison Powder
+- Stun Spore
+
+Gyarados
+Level: 45
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Hydro Pump
+- Twister
+- Leer
+- Rain Dance
+
+Alakazam
+Level: 47
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- Psychic
+- Calm Mind
+- Future Sight
+- Disable
+
+Charizard
+Level: 53
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Flamethrower
+- Wing Attack
+- Slash
+- Scary Face

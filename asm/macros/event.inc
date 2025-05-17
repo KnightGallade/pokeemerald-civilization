@@ -2538,8 +2538,12 @@
 	callstd STD_PUT_ITEM_AWAY
 	.endm
 
+	@ Starts a lossable trainer battle, with victory text if the player loses.
+	.macro trainerbattle_friendly trainer:req, defeat_text:req, victory_text:req
+	trainerbattle TRAINER_BATTLE_FRIENDLY, \trainer, \defeat_text, \victory_text
+	.endm
 
-	@ TODO - put more work here, I want to have a generic battle method where whiting out is OK
+	@ Added from other repos
 
 	@ Show a map preview for the current map with the WEATHER type.
 	.macro mappreview

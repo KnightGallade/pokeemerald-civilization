@@ -36,14 +36,67 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE_22_RIVAL"
     }
   ],
   "warp_events": [
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "0",
+      "script": "Route22_EventScript_EarlyRivalTriggerTop"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "1",
+      "script": "Route22_EventScript_EarlyRivalTriggerMid"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "1",
+      "script": "Route22_EventScript_EarlyRivalTriggerBottom"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "3",
+      "script": "Route22_EventScript_LateRivalTriggerTop"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "3",
+      "script": "Route22_EventScript_LateRivalTriggerMid"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_ROUTE22",
+      "var_value": "3",
+      "script": "Route22_EventScript_LateRivalTriggerBottom"
+    }
   ],
   "bg_events": [
     {
