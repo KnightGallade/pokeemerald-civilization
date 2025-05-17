@@ -47,6 +47,15 @@ void HealPlayerParty(void)
         FlagSet(B_FLAG_TERA_ORB_CHARGED);
 }
 
+// Only revive the first pokemon in the team to 1 HP
+void BarelyRevivePlayerParty(void)
+{
+    u16 min_hp = 1;
+    SetMonData(&gPlayerParty[0], MON_DATA_HP, &min_hp);
+    u32 status = STATUS1_NONE;
+    SetMonData(&gPlayerParty[0], MON_DATA_STATUS, &status);
+}
+
 static void HealPlayerBoxes(void)
 {
     int boxId, boxPosition;

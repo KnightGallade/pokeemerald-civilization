@@ -1272,10 +1272,17 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || BattleHasNoWhiteout())
+        if (BattleHasNoWhiteout()) {
+            BarelyRevivePlayerParty();
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-        else
+        }
+        else if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer())) {
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+            
+        }
+        else {
             SetMainCallback2(CB2_WhiteOut);
+        }
     }
     else
     {

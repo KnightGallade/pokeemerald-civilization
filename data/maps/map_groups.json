@@ -495,7 +495,8 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "ViridianForest"
+    "ViridianForest",
+    "DiglettsCave_NorthEntrance"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -729,7 +730,10 @@
 
   ],
   "gMapGroup_IndoorRoute2": [
-
+    "Route2_ViridianForest_SouthEntrance",
+    "Route2_House",
+    "Route2_EastBuilding",
+    "Route2_ViridianForest_NorthEntrance"
   ],
   "gMapGroup_IndoorRoute4": [
 

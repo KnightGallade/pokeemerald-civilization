@@ -49,7 +49,7 @@
       "y": 4,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE22",
-      "var_value": "0",
+      "var_value": "1",
       "script": "Route22_EventScript_EarlyRivalTriggerTop"
     },
     {

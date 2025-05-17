@@ -729,6 +729,8 @@ EventScript_BackupMrBrineyLocation::
 	.include "data/scripts/rival_graphics.inc"
 	.include "data/scripts/set_gym_trainers.inc"
 
+	.include "data/scripts/frlg_aide.inc"
+
 EventScript_CancelMessageBox::
 	special UseBlankMessageToCancelPokemonPic
 	release
@@ -852,6 +854,8 @@ Common_EventScript_FerryDepartIsland::
 	call Common_EventScript_FerryDepart
 	return
 
+	.include "data/text/frlg_pokedex_rating.inc"
+	.include "data/scripts/frlg_pokedex_rating.inc"
 	.include "data/scripts/cave_of_origin.inc"
 	.include "data/scripts/kecleon.inc"
 
@@ -924,6 +928,11 @@ gText_PokeblockLinkCanceled::
 gText_GiveNicknameToThisMon::
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
+
+	@TODO - add .include "data/text/itemfinder.inc"
+	@TODO - add .include "data/text/route23.inc"
+	.include "data/text/frlg_aide.inc"
+	.include "data/text/frlg_ingame_trade.inc"
 
 gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
@@ -1255,3 +1264,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ViridianCity_PokemonCenter_1F/scripts.inc"
 
 	.include "data/maps/ViridianCity_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/Route2_ViridianForest_SouthEntrance/scripts.inc"
+
+	.include "data/maps/Route2_House/scripts.inc"
+
+	.include "data/maps/Route2_EastBuilding/scripts.inc"
+
+	.include "data/maps/Route2_ViridianForest_NorthEntrance/scripts.inc"
+
+	.include "data/maps/DiglettsCave_NorthEntrance/scripts.inc"

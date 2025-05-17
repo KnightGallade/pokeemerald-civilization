@@ -4527,7 +4527,7 @@
       "width": 24,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
@@ -4794,8 +4794,8 @@
     {
       "id": "LAYOUT_VIRIDIAN_FOREST",
       "name": "ViridianForest_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 54,
+      "height": 69,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/ViridianForest/border.bin",
@@ -4900,6 +4900,56 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
+      "name": "Route2_ViridianForest_SouthEntrance_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route2_ViridianForest_SouthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_ViridianForest_SouthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_HOUSE",
+      "name": "Route2_House_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route2_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_EAST_BUILDING",
+      "name": "Route2_EastBuilding_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route2_EastBuilding/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_EastBuilding/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE",
+      "name": "Route2_ViridianForest_NorthEntrance_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route2_ViridianForest_NorthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_ViridianForest_NorthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_NORTH_ENTRANCE",
+      "name": "DiglettsCave_NorthEntrance_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/DiglettsCave_NorthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_NorthEntrance/map.bin"
     }
   ]
 }

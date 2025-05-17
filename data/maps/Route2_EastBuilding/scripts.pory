@@ -1,0 +1,79 @@
+const REQUIRED_SEEN_MONS = 10
+
+mapscripts Route2_EastBuilding_MapScripts {}
+
+script Route2_EastBuilding_EventScript_Aide {
+	lock
+	faceplayer
+    call(Route2_EastBuilding_EventScript_GetAideRequestInfo)
+	goto_if_set(FLAG_GOT_HM05, Route2_EastBuilding_EventScript_AlreadyGotHM05)
+	msgbox(Route2_EastBuilding_Text_GiveHM05IfSeen10Mons, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, NO, Aide_EventScript_DeclineCheckMons)
+	setvar(VAR_0x8004, 1) // 1 means national dex, 0 would be Kanto only
+	specialvar(VAR_RESULT, ScriptGetPokedexInfo)
+	buffernumberstring(STR_VAR_3, VAR_0x8006)
+	call(Route2_EastBuilding_EventScript_GetAideRequestInfo)
+	goto_if_lt(VAR_0x8006, REQUIRED_SEEN_MONS, Aide_EventScript_HaventCaughtEnough)
+	msgbox(Route2_EastBuilding_Text_GreatHereYouGo)
+	checkitemspace(ITEM_HM05)
+	goto_if_eq(VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem)
+	giveitem_msg(Route2_EastBuilding_Text_ReceivedHM05FromAide, ITEM_HM05)
+	setflag(FLAG_GOT_HM05)
+	msgbox(Route2_EastBuilding_Text_ExplainHM05)
+	release
+	end
+}
+
+script Route2_EastBuilding_EventScript_AlreadyGotHM05 {
+	msgbox(Route2_EastBuilding_Text_ExplainHM05)
+	release
+	end
+}
+
+script Route2_EastBuilding_EventScript_GetAideRequestInfo {
+	buffernumberstring(STR_VAR_1, REQUIRED_SEEN_MONS)
+	bufferitemname(STR_VAR_2, ITEM_HM05)
+	return
+}
+
+script Route2_EastBuilding_EventScript_Rocker {
+	msgbox(Route2_EastBuilding_Text_CanGetThroughRockTunnel, MSGBOX_NPC)
+	end
+}
+
+text Route2_EastBuilding_Text_GiveHM05IfSeen10Mons {
+    "Hi! Remember me?\n"
+    "I'm one of PROF. OAK's AIDES.\p"
+    "If your POKéDEX has complete data\n"
+    "on ten species, I'm supposed to\l"
+    "give you a reward.\p"
+    "PROF. OAK entrusted me with\n"
+    "HM05 for you.\p"
+    "So, {PLAYER}, let me ask you.\p"
+    "Have you gathered data on at least\n"
+    "ten kinds of POKéMON?$"
+}
+
+text Route2_EastBuilding_Text_GreatHereYouGo {
+    "Great! You have caught or owned\n"
+    "{STR_VAR_3} kinds of POKéMON!\p"
+    "Congratulations!\n"
+    "Here you go!$"
+}
+
+text Route2_EastBuilding_Text_ReceivedHM05FromAide {
+    "{PLAYER} received HM05\n"
+    "from the AIDE.$"
+}
+
+text Route2_EastBuilding_Text_ExplainHM05 {
+    "HM05 contains the hidden move\n"
+    "FLASH.\p"
+    "FLASH lights up even the darkest\n"
+    "of caves and dungeons.$"
+}
+
+text Route2_EastBuilding_Text_CanGetThroughRockTunnel {
+    "Once a POKéMON learns FLASH, you\n"
+    "can get through ROCK TUNNEL.$"
+}
