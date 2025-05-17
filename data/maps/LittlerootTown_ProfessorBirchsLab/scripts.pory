@@ -577,6 +577,8 @@ LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer:
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Machine::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine, MSGBOX_SIGN
+	callnative StartNewPokeballCaseUI
+	waitstate
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Rival::
