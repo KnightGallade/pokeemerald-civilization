@@ -113,7 +113,8 @@
 #define TRAINER_PIC_FRLG_BLACK_BELT       94
 #define TRAINER_PIC_FRLG_COOLTRAINER_M    95
 #define TRAINER_PIC_FRLG_TAMER            96
-#define TRAINER_PIC_COUNT                 97
+#define TRAINER_PIC_FRLG_BLUE_LATE        97
+#define TRAINER_PIC_COUNT                 98
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

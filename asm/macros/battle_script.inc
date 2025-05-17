@@ -1639,6 +1639,10 @@
 	callnative BS_TryTrainerSlideDynamaxMsg
 	.endm
 
+	.macro trytrainerslideplayerdefeatedmsg
+	callnative BS_TryTrainerSlidePlayerDefeatedMsg
+	.endm
+
 	.macro tryhealpulse failInstr:req
 	callnative BS_TryHealPulse
 	.4byte \failInstr

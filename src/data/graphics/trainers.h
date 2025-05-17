@@ -282,8 +282,10 @@ const u32 gTrainerPalette_RubySapphireMay[] = INCBIN_U32("graphics/trainers/pale
 
 // FRLG trainers
 
-const u32 gTrainerFrontPic_FRLG_BlueEarly[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/blue_early.4bpp.lz");
+const u32 gTrainerFrontPic_FRLG_BlueEarly[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/blue_early_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FRLG_BlueEarly[] = INCBIN_U32("graphics/trainers/FRLG/palettes/blue_early.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_BlueLate[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/blue_late_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_BlueLate[] = INCBIN_U32("graphics/trainers/FRLG/palettes/blue_late.gbapal.lz");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
@@ -407,7 +409,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
     // FRLG trainers
-    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_EARLY, gTrainerFrontPic_FRLG_BlueEarly, gTrainerPalette_FRLG_BlueEarly)
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_EARLY, gTrainerFrontPic_FRLG_BlueEarly, gTrainerPalette_FRLG_BlueEarly),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_LATE, gTrainerFrontPic_FRLG_BlueLate, gTrainerPalette_FRLG_BlueLate)
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

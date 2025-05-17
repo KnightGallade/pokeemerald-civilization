@@ -69,6 +69,7 @@ static void TryUpdateGymLeaderRematchFromTrainer(void);
 static void CB2_GiveStarter(void);
 static void CB2_StartFirstBattle(void);
 static void CB2_EndFirstBattle(void);
+static bool8 BattleHasNoWhiteout(void);
 static void SaveChangesToPlayerParty(void);
 static void HandleBattleVariantEndParty(void);
 static void CB2_EndTrainerBattle(void);
@@ -1005,11 +1006,13 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
     switch (TRAINER_BATTLE_PARAM.mode)
     {
     case TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT:
+    case TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT:
         return EventScript_DoNoIntroTrainerBattle;
     case TRAINER_BATTLE_DOUBLE:
         SetMapVarsToTrainerA();
         return EventScript_TryDoDoubleTrainerBattle;
     case TRAINER_BATTLE_CONTINUE_SCRIPT:
+    case TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT:
         if (gApproachingTrainerId == 0)
         {
             SetMapVarsToTrainerA();
@@ -1161,6 +1164,8 @@ void BattleSetup_StartTrainerBattle(void)
 {
     if (gNoOfApproachingTrainers == 2)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
+    else if (BattleHasNoWhiteout())
+        gBattleTypeFlags = (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LOSABLE);
     else
         gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
 
@@ -1248,6 +1253,14 @@ static void HandleBattleVariantEndParty(void)
     FlagClear(B_FLAG_SKY_BATTLE);
 }
 
+static bool8 BattleHasNoWhiteout()
+{
+    if (TRAINER_BATTLE_PARAM.mode == TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT || TRAINER_BATTLE_PARAM.mode == TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 static void CB2_EndTrainerBattle(void)
 {
     HandleBattleVariantEndParty();
@@ -1259,7 +1272,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
+        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || BattleHasNoWhiteout())
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);

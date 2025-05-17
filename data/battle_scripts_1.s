@@ -6,6 +6,7 @@
 #include "constants/battle_arena.h"
 #include "constants/battle_script_commands.h"
 #include "constants/battle_anim.h"
+#include "constants/battle_setup.h"
 #include "constants/battle_string_ids.h"
 #include "constants/abilities.h"
 #include "constants/hold_effects.h"
@@ -5590,13 +5591,18 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERLOSTTOENEMYTRAINER
 	waitmessage B_WAIT_TIME_LONG
+	trytrainerslideplayerdefeatedmsg
+	jumpifbattletype BATTLE_TYPE_LOSABLE, BattleScript_LocalBattleLostPrintNoWhiteout
 	getmoneyreward
 	printstring STRINGID_PLAYERPAIDPRIZEMONEY
 	waitmessage B_WAIT_TIME_LONG
 	end2
+BattleScript_LocalBattleLostPrintNoWhiteout::
+	end2
 .else
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
+	trytrainerslideplayerdefeatedmsg
 	printstring STRINGID_PLAYERWHITEOUT2
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_LocalBattleLostEnd::

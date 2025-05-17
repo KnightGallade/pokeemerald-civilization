@@ -52,5 +52,9 @@
     {
         [TRAINER_SLIDE_DYNAMAX] = COMPOUND_STRING("This message plays before the enemy activates the Dynamax gimmick.{PAUSE_UNTIL_PRESS}"),
     },
+    [TRAINER_SLIDE_PLAYER_DEFEATED] =
+    {
+        [TRAINER_SLIDE_PLAYER_DEFEATED] = COMPOUND_STRING("This message plays after the player's last Pokémon faints.{PAUSE_UNTIL_PRESS}"),
+    },
 },
 

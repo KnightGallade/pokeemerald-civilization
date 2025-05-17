@@ -359,10 +359,8 @@ script PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleSquirtleRig
 	end
 }
 
-// TODO - this is no longer ok to lose
-// OLD: trainerbattle_earlyrival(TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory)
 script PalletTown_ProfessorOaksLab_EventScript_RivalBattleSquirtle {
-	trainerbattle_no_intro(TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
+	trainerbattle_no_intro_no_whiteout(TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
 	goto(PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle)
 	end
 }
@@ -422,10 +420,8 @@ script PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleCharmanderR
 	end
 }
 
-// TODO - this is no longer ok to lose
-// OLD: trainerbattle_earlyrival(TRAINER_RIVAL_OAKS_LAB_CHARMANDER, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory)
 script PalletTown_ProfessorOaksLab_EventScript_RivalBattleCharmander {
-	trainerbattle_no_intro(TRAINER_RIVAL_OAKS_LAB_CHARMANDER, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
+	trainerbattle_no_intro_no_whiteout(TRAINER_RIVAL_OAKS_LAB_CHARMANDER, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
 	goto(PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle)
 	end
 }
@@ -488,10 +484,8 @@ script PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleBulbasaurRi
 	end
 }
 
-// TODO - this is no longer ok to lose
-// OLD: trainerbattle_earlyrival(TRAINER_RIVAL_OAKS_LAB_BULBASAUR, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory)
 script PalletTown_ProfessorOaksLab_EventScript_RivalBattleBulbasaur {
-	trainerbattle_no_intro(TRAINER_RIVAL_OAKS_LAB_BULBASAUR, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
+	trainerbattle_no_intro_no_whiteout(TRAINER_RIVAL_OAKS_LAB_BULBASAUR, PalletTown_ProfessorOaksLab_Text_RivalDefeat)
 	goto(PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle)
 	end
 }
@@ -1442,12 +1436,6 @@ text PalletTown_ProfessorOaksLab_Text_RivalDefeat {
     "WHAT?\n"
     "Unbelievable!\l"
     "I picked the wrong POKéMON!$"
-}
-
-// Also used for early Route 22 battle
-text Text_RivalVictory {
-    "{RIVAL}: Yeah!\n"
-    "Am I great or what?$"
 }
 
 text PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon {

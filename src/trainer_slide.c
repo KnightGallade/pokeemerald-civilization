@@ -52,10 +52,38 @@ static bool32 ShouldRunTrainerSlideLastLowHp(u32 firstId, u32 lastId, u32 battle
 static void SetTrainerSlideParamters(u32 battler, u32* firstId, u32* lastId, u32* trainerId, u32* retValue);
 static bool32 IsSlideInitalizedOrPlayed(enum TrainerSlideType slideId);
 
+const u8 gText_Blue_FirstBattles[] = _("Blue: Yeah!\nAm I great or what?{PAUSE_UNTIL_PRESS}");
+
+
 static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_SLIDE_COUNT] =
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_RIVAL_OAKS_LAB_SQUIRTLE] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+            //[TRAINER_SLIDE_PLAYER_DEFEATED] = COMPOUND_STRING("Blue: Yeah!\nAm I great or what?{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_RIVAL_OAKS_LAB_BULBASAUR] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+        },
+        [TRAINER_RIVAL_OAKS_LAB_CHARMANDER] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+        },
+        [TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+        },
+        [TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+        },
+        [TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER] = 
+        {
+            [TRAINER_SLIDE_PLAYER_DEFEATED] = gText_Blue_FirstBattles,
+        },
     },
 };
 
@@ -287,6 +315,7 @@ enum TrainerSlideTargets ShouldDoTrainerSlide(u32 battler, enum TrainerSlideType
         case TRAINER_SLIDE_MEGA_EVOLUTION:
         case TRAINER_SLIDE_Z_MOVE:
         case TRAINER_SLIDE_DYNAMAX:
+        case TRAINER_SLIDE_PLAYER_DEFEATED:
             shouldRun = TRUE;
             break;
         default:
