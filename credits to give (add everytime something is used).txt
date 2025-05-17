@@ -6,3 +6,9 @@ porymap
 
 -----
 need to add town map and pokedex objects to graphics
+
+dynamic multichoice (find author)
+FRLG map previews (find author)
+no whiteout by Jaizu
+buffer (check commit for name and potential others)
+new birch briefcase
