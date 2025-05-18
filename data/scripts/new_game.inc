@@ -297,5 +297,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY
 	setflag FLAG_HIDE_POSTGAME_GOSSIPERS
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
+	@ TODO - place this somewhere smarter
+	setvar VAR_LEVEL_CAP 14
 	call EventScript_ResetAllBerries
 	end

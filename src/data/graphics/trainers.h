@@ -284,8 +284,20 @@ const u32 gTrainerPalette_RubySapphireMay[] = INCBIN_U32("graphics/trainers/pale
 
 const u32 gTrainerFrontPic_FRLG_BlueEarly[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/blue_early_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FRLG_BlueEarly[] = INCBIN_U32("graphics/trainers/FRLG/palettes/blue_early.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_BlackBelt[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/black_belt_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_BlackBelt[] = INCBIN_U32("graphics/trainers/FRLG/palettes/black_belt.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_CoolTrainerM[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/cool_trainer_m_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_CoolTrainerM[] = INCBIN_U32("graphics/trainers/FRLG/palettes/cool_trainer_m.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_Tamer[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/tamer_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_Tamer[] = INCBIN_U32("graphics/trainers/FRLG/palettes/tamer.gbapal.lz");
 const u32 gTrainerFrontPic_FRLG_BlueLate[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/blue_late_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FRLG_BlueLate[] = INCBIN_U32("graphics/trainers/FRLG/palettes/blue_late.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_BugCatcher[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/bug_catcher_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_BugCatcher[] = INCBIN_U32("graphics/trainers/FRLG/palettes/bug_catcher.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_LeaderBrock[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/leader_brock_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_LeaderBrock[] = INCBIN_U32("graphics/trainers/FRLG/palettes/leader_brock.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_Camper[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/camper_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_Camper[] = INCBIN_U32("graphics/trainers/FRLG/palettes/camper.gbapal.lz");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
@@ -410,7 +422,13 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
     // FRLG trainers
     TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_EARLY, gTrainerFrontPic_FRLG_BlueEarly, gTrainerPalette_FRLG_BlueEarly),
-    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_LATE, gTrainerFrontPic_FRLG_BlueLate, gTrainerPalette_FRLG_BlueLate)
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLACK_BELT, gTrainerFrontPic_FRLG_BlackBelt, gTrainerPalette_FRLG_BlackBelt),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_COOLTRAINER_M, gTrainerFrontPic_FRLG_CoolTrainerM, gTrainerPalette_FRLG_CoolTrainerM),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_TAMER, gTrainerFrontPic_FRLG_Tamer, gTrainerPalette_FRLG_Tamer),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_BLUE_LATE, gTrainerFrontPic_FRLG_BlueLate, gTrainerPalette_FRLG_BlueLate),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_BUG_CATCHER, gTrainerFrontPic_FRLG_BugCatcher, gTrainerPalette_FRLG_BugCatcher),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_LEADER_BROCK, gTrainerFrontPic_FRLG_LeaderBrock, gTrainerPalette_FRLG_LeaderBrock),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_CAMPER, gTrainerFrontPic_FRLG_Camper, gTrainerPalette_FRLG_Camper),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

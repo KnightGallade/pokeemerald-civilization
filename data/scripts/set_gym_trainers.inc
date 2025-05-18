@@ -8,7 +8,7 @@ Common_EventScript_SetGymTrainers::
 	case 6, FortreeCity_Gym_SetGymTrainers
 	case 7, MossdeepCity_Gym_SetGymTrainers
 	case 8, SootopolisCity_Gym_SetGymTrainers
-	@ case 9, PewterCity_Gym_SetGymTrainers
+	case 9, PewterCity_Gym_SetGymTrainers
 	@ case 10, CeruleanCity_Gym_SetGymTrainers
 	@ case 11, VermillionCity_Gym_SetGymTrainers
 	@ case 12, CeladonCity_Gym_SetGymTrainers
@@ -97,6 +97,10 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
 	settrainerflag TRAINER_DAPHNE
+	return
+
+PewterCity_Gym_SetGymTrainers::
+	settrainerflag TRAINER_CAMPER_LIAM
 	return
 
 @ TODO - add the other gyms

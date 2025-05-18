@@ -94,79 +94,80 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .type = MPS_TYPE_FADE_IN,
         .flagId = MPS_FLAG_NULL,
         .image = IMG_VIRIDIAN_FOREST
-    },
-    [MPS_MT_MOON] = {
-        .mapsec = MAPSEC_MT_MOON,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_MT_MOON
-    },
-    [MPS_DIGLETTS_CAVE] = {
-        .mapsec = MAPSEC_DIGLETTS_CAVE,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_DIGLETTS_CAVE
-    },
-    [MPS_ROCK_TUNNEL] = {
-        .mapsec = MAPSEC_ROCK_TUNNEL,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_ROCK_TUNNEL
-    },
-    [MPS_POKEMON_TOWER] = {
-        .mapsec = MAPSEC_POKEMON_TOWER,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_POKEMON_TOWER
-    },
-    [MPS_SAFARI_ZONE] = {
-        .mapsec = MAPSEC_KANTO_SAFARI_ZONE,
-        .type = MPS_TYPE_FADE_IN,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_SAFARI_ZONE
-    },
-    [MPS_SEAFOAM_ISLANDS] = {
-        .mapsec = MAPSEC_SEAFOAM_ISLANDS,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_SEAFOAM_ISLANDS
-    },
-    [MPS_POKEMON_MANSION] = {
-        .mapsec = MAPSEC_POKEMON_MANSION,
-        .type = MPS_TYPE_FADE_IN,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_POKEMON_MANSION
-    },
-    [MPS_ROCKET_HIDEOUT] = {
-        .mapsec = MAPSEC_ROCKET_HIDEOUT,
-        .type = MPS_TYPE_FADE_IN,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_ROCKET_HIDEOUT
-    },
-    [MPS_SILPH_CO] = {
-        .mapsec = MAPSEC_SILPH_CO,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_SILPH_CO
-    },
-    [MPS_VICTORY_ROAD] = {
-        .mapsec = MAPSEC_KANTO_VICTORY_ROAD,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_VICTORY_ROAD
-    },
-    [MPS_CERULEAN_CAVE] = {
-        .mapsec = MAPSEC_CERULEAN_CAVE,
-        .type = MPS_TYPE_CAVE,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_CERULEAN_CAVE
-    },
-    [MPS_POWER_PLANT] = {
-        .mapsec = MAPSEC_POWER_PLANT,
-        .type = MPS_TYPE_FADE_IN,
-        .flagId = MPS_FLAG_NULL,
-        .image = IMG_POWER_PLANT
     }
+    // TODO - add these as the maps are created
+    // [MPS_MT_MOON] = {
+    //     .mapsec = MAPSEC_MT_MOON,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_MT_MOON
+    // },
+    // [MPS_DIGLETTS_CAVE] = {
+    //     .mapsec = MAPSEC_DIGLETTS_CAVE,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_DIGLETTS_CAVE
+    // },
+    // [MPS_ROCK_TUNNEL] = {
+    //     .mapsec = MAPSEC_ROCK_TUNNEL,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_ROCK_TUNNEL
+    // },
+    // [MPS_POKEMON_TOWER] = {
+    //     .mapsec = MAPSEC_POKEMON_TOWER,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_POKEMON_TOWER
+    // },
+    // [MPS_SAFARI_ZONE] = {
+    //     .mapsec = MAPSEC_KANTO_SAFARI_ZONE,
+    //     .type = MPS_TYPE_FADE_IN,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_SAFARI_ZONE
+    // },
+    // [MPS_SEAFOAM_ISLANDS] = {
+    //     .mapsec = MAPSEC_SEAFOAM_ISLANDS,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_SEAFOAM_ISLANDS
+    // },
+    // [MPS_POKEMON_MANSION] = {
+    //     .mapsec = MAPSEC_POKEMON_MANSION,
+    //     .type = MPS_TYPE_FADE_IN,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_POKEMON_MANSION
+    // },
+    // [MPS_ROCKET_HIDEOUT] = {
+    //     .mapsec = MAPSEC_ROCKET_HIDEOUT,
+    //     .type = MPS_TYPE_FADE_IN,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_ROCKET_HIDEOUT
+    // },
+    // [MPS_SILPH_CO] = {
+    //     .mapsec = MAPSEC_SILPH_CO,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_SILPH_CO
+    // },
+    // [MPS_VICTORY_ROAD] = {
+    //     .mapsec = MAPSEC_KANTO_VICTORY_ROAD,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_VICTORY_ROAD
+    // },
+    // [MPS_CERULEAN_CAVE] = {
+    //     .mapsec = MAPSEC_CERULEAN_CAVE,
+    //     .type = MPS_TYPE_CAVE,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_CERULEAN_CAVE
+    // },
+    // [MPS_POWER_PLANT] = {
+    //     .mapsec = MAPSEC_POWER_PLANT,
+    //     .type = MPS_TYPE_FADE_IN,
+    //     .flagId = MPS_FLAG_NULL,
+    //     .image = IMG_POWER_PLANT
+    // }
 };
 
 static const struct ImageData sMapPreviewImageData[IMG_COUNT] = {
@@ -174,108 +175,109 @@ static const struct ImageData sMapPreviewImageData[IMG_COUNT] = {
         .tilesptr = sViridianForestMapPreviewTiles,
         .tilemapptr = sViridianForestMapPreviewTilemap,
         .palptr = sViridianForestMapPreviewPalette
-    },
-    [IMG_MT_MOON] = {
-        .tilesptr = sMtMoonMapPreviewTiles,
-        .tilemapptr = sMtMoonMapPreviewTilemap,
-        .palptr = sMtMoonMapPreviewPalette
-    },
-    [IMG_DIGLETTS_CAVE] = {
-        .tilesptr = sDiglettsCaveMapPreviewTiles,
-        .tilemapptr = sDiglettsCaveMapPreviewTilemap,
-        .palptr = sDiglettsCaveMapPreviewPalette
-    },
-    [IMG_ROCK_TUNNEL] = {
-        .tilesptr = sRockTunnelMapPreviewTiles,
-        .tilemapptr = sRockTunnelMapPreviewTilemap,
-        .palptr = sRockTunnelMapPreviewPalette
-    },
-    [IMG_POKEMON_TOWER] = {
-        .tilesptr = sPokemonTowerMapPreviewTiles,
-        .tilemapptr = sPokemonTowerMapPreviewTilemap,
-        .palptr = sPokemonTowerMapPreviewPalette
-    },
-    [IMG_SAFARI_ZONE] = {
-        .tilesptr = sSafariZoneMapPreviewTiles,
-        .tilemapptr = sSafariZoneMapPreviewTilemap,
-        .palptr = sSafariZoneMapPreviewPalette
-    },
-    [IMG_SEAFOAM_ISLANDS] = {
-        .tilesptr = sSeafoamIslandsMapPreviewTiles,
-        .tilemapptr = sSeafoamIslandsMapPreviewTilemap,
-        .palptr = sSeafoamIslandsMapPreviewPalette
-    },
-    [IMG_POKEMON_MANSION] = {
-        .tilesptr = sPokemonMansionMapPreviewTiles,
-        .tilemapptr = sPokemonMansionMapPreviewTilemap,
-        .palptr = sPokemonMansionMapPreviewPalette
-    },
-    [IMG_ROCKET_HIDEOUT] = {
-        .tilesptr = sRocketHideoutMapPreviewTiles,
-        .tilemapptr = sRocketHideoutMapPreviewTilemap,
-        .palptr = sRocketHideoutMapPreviewPalette
-    },
-    [IMG_SILPH_CO] = {
-        .tilesptr = sSilphCoMapPreviewTiles,
-        .tilemapptr = sSilphCoMapPreviewTilemap,
-        .palptr = sSilphCoMapPreviewPalette
-    },
-    [IMG_VICTORY_ROAD] = {
-        .tilesptr = sVictoryRoadMapPreviewTiles,
-        .tilemapptr = sVictoryRoadMapPreviewTilemap,
-        .palptr = sVictoryRoadMapPreviewPalette
-    },
-    [IMG_CERULEAN_CAVE] = {
-        .tilesptr = sCeruleanCaveMapPreviewTiles,
-        .tilemapptr = sCeruleanCaveMapPreviewTilemap,
-        .palptr = sCeruleanCaveMapPreviewPalette
-    },
-    [IMG_POWER_PLANT] = {
-        .tilesptr = sPowerPlantMapPreviewTiles,
-        .tilemapptr = sPowerPlantMapPreviewTilemap,
-        .palptr = sPowerPlantMapPreviewPalette
-    },
-    // TODO - remove these later
-    [IMG_MT_EMBER] = {
-        .tilesptr = sMtEmberMapPreviewTiles,
-        .tilemapptr = sMtEmberMapPreviewTilemap,
-        .palptr = sMtEmberMapPreviewPalette
-    },
-    [IMG_ROCKET_WAREHOUSE] = {
-        .tilesptr = sRocketWarehouseMapPreviewTiles,
-        .tilemapptr = sRocketWarehouseMapPreviewTilemap,
-        .palptr = sRocketWarehouseMapPreviewPalette
-    },
-    [IMG_MONEAN_CHAMBER] = {
-        .tilesptr = sMoneanChamberMapPreviewTiles,
-        .tilemapptr = sMoneanChamberMapPreviewTilemap,
-        .palptr = sMoneanChamberMapPreviewPalette
-    },
-    [IMG_DOTTED_HOLE] = {
-        .tilesptr = sDottedHoleMapPreviewTiles,
-        .tilemapptr = sDottedHoleMapPreviewTilemap,
-        .palptr = sDottedHoleMapPreviewPalette
-    },
-    [IMG_BERRY_FOREST] = {
-        .tilesptr = sBerryForestMapPreviewTiles,
-        .tilemapptr = sBerryForestMapPreviewTilemap,
-        .palptr = sBerryForestMapPreviewPalette
-    },
-    [IMG_ICEFALL_CAVE] = {
-        .tilesptr = sIcefallCaveMapPreviewTiles,
-        .tilemapptr = sIcefallCaveMapPreviewTilemap,
-        .palptr = sIcefallCaveMapPreviewPalette
-    },
-    [IMG_LOST_CAVE] = {
-        .tilesptr = sLostCaveMapPreviewTiles,
-        .tilemapptr = sLostCaveMapPreviewTilemap,
-        .palptr = sLostCaveMapPreviewPalette
-    },
-    [IMG_ALTERING_CAVE] = {
-        .tilesptr = sAlteringCaveMapPreviewTiles,
-        .tilemapptr = sAlteringCaveMapPreviewTilemap,
-        .palptr = sAlteringCaveMapPreviewPalette
     }
+    // TODO - add these as the maps are created
+    // [IMG_MT_MOON] = {
+    //     .tilesptr = sMtMoonMapPreviewTiles,
+    //     .tilemapptr = sMtMoonMapPreviewTilemap,
+    //     .palptr = sMtMoonMapPreviewPalette
+    // },
+    // [IMG_DIGLETTS_CAVE] = {
+    //     .tilesptr = sDiglettsCaveMapPreviewTiles,
+    //     .tilemapptr = sDiglettsCaveMapPreviewTilemap,
+    //     .palptr = sDiglettsCaveMapPreviewPalette
+    // },
+    // [IMG_ROCK_TUNNEL] = {
+    //     .tilesptr = sRockTunnelMapPreviewTiles,
+    //     .tilemapptr = sRockTunnelMapPreviewTilemap,
+    //     .palptr = sRockTunnelMapPreviewPalette
+    // },
+    // [IMG_POKEMON_TOWER] = {
+    //     .tilesptr = sPokemonTowerMapPreviewTiles,
+    //     .tilemapptr = sPokemonTowerMapPreviewTilemap,
+    //     .palptr = sPokemonTowerMapPreviewPalette
+    // },
+    // [IMG_SAFARI_ZONE] = {
+    //     .tilesptr = sSafariZoneMapPreviewTiles,
+    //     .tilemapptr = sSafariZoneMapPreviewTilemap,
+    //     .palptr = sSafariZoneMapPreviewPalette
+    // },
+    // [IMG_SEAFOAM_ISLANDS] = {
+    //     .tilesptr = sSeafoamIslandsMapPreviewTiles,
+    //     .tilemapptr = sSeafoamIslandsMapPreviewTilemap,
+    //     .palptr = sSeafoamIslandsMapPreviewPalette
+    // },
+    // [IMG_POKEMON_MANSION] = {
+    //     .tilesptr = sPokemonMansionMapPreviewTiles,
+    //     .tilemapptr = sPokemonMansionMapPreviewTilemap,
+    //     .palptr = sPokemonMansionMapPreviewPalette
+    // },
+    // [IMG_ROCKET_HIDEOUT] = {
+    //     .tilesptr = sRocketHideoutMapPreviewTiles,
+    //     .tilemapptr = sRocketHideoutMapPreviewTilemap,
+    //     .palptr = sRocketHideoutMapPreviewPalette
+    // },
+    // [IMG_SILPH_CO] = {
+    //     .tilesptr = sSilphCoMapPreviewTiles,
+    //     .tilemapptr = sSilphCoMapPreviewTilemap,
+    //     .palptr = sSilphCoMapPreviewPalette
+    // },
+    // [IMG_VICTORY_ROAD] = {
+    //     .tilesptr = sVictoryRoadMapPreviewTiles,
+    //     .tilemapptr = sVictoryRoadMapPreviewTilemap,
+    //     .palptr = sVictoryRoadMapPreviewPalette
+    // },
+    // [IMG_CERULEAN_CAVE] = {
+    //     .tilesptr = sCeruleanCaveMapPreviewTiles,
+    //     .tilemapptr = sCeruleanCaveMapPreviewTilemap,
+    //     .palptr = sCeruleanCaveMapPreviewPalette
+    // },
+    // [IMG_POWER_PLANT] = {
+    //     .tilesptr = sPowerPlantMapPreviewTiles,
+    //     .tilemapptr = sPowerPlantMapPreviewTilemap,
+    //     .palptr = sPowerPlantMapPreviewPalette
+    // },
+    // TODO - remove these later
+    // [IMG_MT_EMBER] = {
+    //     .tilesptr = sMtEmberMapPreviewTiles,
+    //     .tilemapptr = sMtEmberMapPreviewTilemap,
+    //     .palptr = sMtEmberMapPreviewPalette
+    // },
+    // [IMG_ROCKET_WAREHOUSE] = {
+    //     .tilesptr = sRocketWarehouseMapPreviewTiles,
+    //     .tilemapptr = sRocketWarehouseMapPreviewTilemap,
+    //     .palptr = sRocketWarehouseMapPreviewPalette
+    // },
+    // [IMG_MONEAN_CHAMBER] = {
+    //     .tilesptr = sMoneanChamberMapPreviewTiles,
+    //     .tilemapptr = sMoneanChamberMapPreviewTilemap,
+    //     .palptr = sMoneanChamberMapPreviewPalette
+    // },
+    // [IMG_DOTTED_HOLE] = {
+    //     .tilesptr = sDottedHoleMapPreviewTiles,
+    //     .tilemapptr = sDottedHoleMapPreviewTilemap,
+    //     .palptr = sDottedHoleMapPreviewPalette
+    // },
+    // [IMG_BERRY_FOREST] = {
+    //     .tilesptr = sBerryForestMapPreviewTiles,
+    //     .tilemapptr = sBerryForestMapPreviewTilemap,
+    //     .palptr = sBerryForestMapPreviewPalette
+    // },
+    // [IMG_ICEFALL_CAVE] = {
+    //     .tilesptr = sIcefallCaveMapPreviewTiles,
+    //     .tilemapptr = sIcefallCaveMapPreviewTilemap,
+    //     .palptr = sIcefallCaveMapPreviewPalette
+    // },
+    // [IMG_LOST_CAVE] = {
+    //     .tilesptr = sLostCaveMapPreviewTiles,
+    //     .tilemapptr = sLostCaveMapPreviewTilemap,
+    //     .palptr = sLostCaveMapPreviewPalette
+    // },
+    // [IMG_ALTERING_CAVE] = {
+    //     .tilesptr = sAlteringCaveMapPreviewTiles,
+    //     .tilemapptr = sAlteringCaveMapPreviewTilemap,
+    //     .palptr = sAlteringCaveMapPreviewPalette
+    // }
 };
 
 static const struct WindowTemplate sMapNameWindow = {
