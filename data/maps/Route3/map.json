@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PEWTER_CITY",
-      "offset": 0,
+      "offset": -10,
       "direction": "left"
     }
   ],
