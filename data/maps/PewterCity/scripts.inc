@@ -1229,155 +1229,149 @@ PewterCity_EventScript_AideGiveRunningShoes::
 	waitfanfare
 # 736 "data/maps/PewterCity/scripts.pory"
 	msgbox PewterCity_Text_SwitchedShoesWithRunningShoes
-# 737 "data/maps/PewterCity/scripts.pory"
-	special DisableMsgBoxWalkaway
-# 738 "data/maps/PewterCity/scripts.pory"
-	signmsg
-# 739 "data/maps/PewterCity/scripts.pory"
-	msgbox PewterCity_Text_ExplainRunningShoes
 # 740 "data/maps/PewterCity/scripts.pory"
-	normalmsg
+	signmsg
 # 741 "data/maps/PewterCity/scripts.pory"
-	msgbox PewterCity_Text_MustBeGoingBackToLab
+	msgbox PewterCity_Text_ExplainRunningShoes
 # 742 "data/maps/PewterCity/scripts.pory"
-	closemessage
+	normalmsg
 # 743 "data/maps/PewterCity/scripts.pory"
-	call_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_AideExit0
+	msgbox PewterCity_Text_MustBeGoingBackToLab
 # 744 "data/maps/PewterCity/scripts.pory"
-	call_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_AideExit1
-# 745 "data/maps/PewterCity/scripts.pory"
-	call_if_eq VAR_TEMP_1, 2, PewterCity_EventScript_AideExit2
-# 746 "data/maps/PewterCity/scripts.pory"
-	call_if_eq VAR_TEMP_1, 3, PewterCity_EventScript_AideExit3
-# 747 "data/maps/PewterCity/scripts.pory"
-	delay 30
-# 748 "data/maps/PewterCity/scripts.pory"
-	msgbox PewterCity_Text_RunningShoesLetterFromMom
-# 749 "data/maps/PewterCity/scripts.pory"
 	closemessage
+# 745 "data/maps/PewterCity/scripts.pory"
+	call_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_AideExit0
+# 746 "data/maps/PewterCity/scripts.pory"
+	call_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_AideExit1
+# 747 "data/maps/PewterCity/scripts.pory"
+	call_if_eq VAR_TEMP_1, 2, PewterCity_EventScript_AideExit2
+# 748 "data/maps/PewterCity/scripts.pory"
+	call_if_eq VAR_TEMP_1, 3, PewterCity_EventScript_AideExit3
+# 749 "data/maps/PewterCity/scripts.pory"
+	delay 30
 # 750 "data/maps/PewterCity/scripts.pory"
-	removeobject 7
+	msgbox PewterCity_Text_RunningShoesLetterFromMom
 # 751 "data/maps/PewterCity/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	closemessage
 # 752 "data/maps/PewterCity/scripts.pory"
+	removeobject 7
+# 753 "data/maps/PewterCity/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 754 "data/maps/PewterCity/scripts.pory"
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 2
 	return
 
 
 PewterCity_EventScript_AideNoticePlayer::
-# 757 "data/maps/PewterCity/scripts.pory"
+# 759 "data/maps/PewterCity/scripts.pory"
 	applymovement 7, Common_Movement_WalkInPlaceFasterDown
-# 758 "data/maps/PewterCity/scripts.pory"
+# 760 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideApproachPlayer0::
-# 764 "data/maps/PewterCity/scripts.pory"
+# 766 "data/maps/PewterCity/scripts.pory"
 	closemessage
-# 765 "data/maps/PewterCity/scripts.pory"
+# 767 "data/maps/PewterCity/scripts.pory"
 	delay 20
 	return
 
 
 PewterCity_EventScript_AideApproachPlayer1::
-# 770 "data/maps/PewterCity/scripts.pory"
-	closemessage
-# 771 "data/maps/PewterCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 # 772 "data/maps/PewterCity/scripts.pory"
+	closemessage
+# 773 "data/maps/PewterCity/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+# 774 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideApproachPlayer2::
-# 777 "data/maps/PewterCity/scripts.pory"
-	closemessage
-# 778 "data/maps/PewterCity/scripts.pory"
-	applymovement 7, PewterCity_Movement_AideApproachPlayerMid
 # 779 "data/maps/PewterCity/scripts.pory"
-	waitmovement 0
+	closemessage
 # 780 "data/maps/PewterCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	applymovement 7, PewterCity_Movement_AideApproachPlayerMid
 # 781 "data/maps/PewterCity/scripts.pory"
+	waitmovement 0
+# 782 "data/maps/PewterCity/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+# 783 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideApproachPlayer3::
-# 786 "data/maps/PewterCity/scripts.pory"
-	closemessage
-# 787 "data/maps/PewterCity/scripts.pory"
-	applymovement 7, PewterCity_Movement_AideApproachPlayerBottom
 # 788 "data/maps/PewterCity/scripts.pory"
-	waitmovement 0
+	closemessage
 # 789 "data/maps/PewterCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	applymovement 7, PewterCity_Movement_AideApproachPlayerBottom
 # 790 "data/maps/PewterCity/scripts.pory"
+	waitmovement 0
+# 791 "data/maps/PewterCity/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+# 792 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideExit0::
-# 795 "data/maps/PewterCity/scripts.pory"
+# 797 "data/maps/PewterCity/scripts.pory"
 	applymovement 7, PewterCity_Movement_AideExit0
-# 796 "data/maps/PewterCity/scripts.pory"
+# 798 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideExit1::
-# 801 "data/maps/PewterCity/scripts.pory"
+# 803 "data/maps/PewterCity/scripts.pory"
 	applymovement 7, PewterCity_Movement_AideExit1
-# 802 "data/maps/PewterCity/scripts.pory"
+# 804 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideExit2::
-# 807 "data/maps/PewterCity/scripts.pory"
+# 809 "data/maps/PewterCity/scripts.pory"
 	applymovement 7, PewterCity_Movement_AideExit2
-# 808 "data/maps/PewterCity/scripts.pory"
+# 810 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
 PewterCity_EventScript_AideExit3::
-# 813 "data/maps/PewterCity/scripts.pory"
+# 815 "data/maps/PewterCity/scripts.pory"
 	applymovement 7, PewterCity_Movement_AideExit3
-# 814 "data/maps/PewterCity/scripts.pory"
+# 816 "data/maps/PewterCity/scripts.pory"
 	waitmovement 0
 	return
 
 
-# 818 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideApproachPlayerMid:
-# 819 "data/maps/PewterCity/scripts.pory"
-	delay_4
 # 820 "data/maps/PewterCity/scripts.pory"
-	walk_down
+PewterCity_Movement_AideApproachPlayerMid:
 # 821 "data/maps/PewterCity/scripts.pory"
-	step_end
-
-# 824 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideApproachPlayerBottom:
-# 825 "data/maps/PewterCity/scripts.pory"
 	delay_4
-# 826 "data/maps/PewterCity/scripts.pory"
+# 822 "data/maps/PewterCity/scripts.pory"
 	walk_down
-# 827 "data/maps/PewterCity/scripts.pory"
-	walk_down
-# 828 "data/maps/PewterCity/scripts.pory"
+# 823 "data/maps/PewterCity/scripts.pory"
 	step_end
 
-# 831 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideExit0:
-# 832 "data/maps/PewterCity/scripts.pory"
+# 826 "data/maps/PewterCity/scripts.pory"
+PewterCity_Movement_AideApproachPlayerBottom:
+# 827 "data/maps/PewterCity/scripts.pory"
+	delay_4
+# 828 "data/maps/PewterCity/scripts.pory"
 	walk_down
+# 829 "data/maps/PewterCity/scripts.pory"
+	walk_down
+# 830 "data/maps/PewterCity/scripts.pory"
+	step_end
+
 # 833 "data/maps/PewterCity/scripts.pory"
-	walk_left
+PewterCity_Movement_AideExit0:
 # 834 "data/maps/PewterCity/scripts.pory"
-	walk_left
+	walk_down
 # 835 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 836 "data/maps/PewterCity/scripts.pory"
@@ -1393,18 +1387,18 @@ PewterCity_Movement_AideExit0:
 # 841 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 842 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 843 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 844 "data/maps/PewterCity/scripts.pory"
 	step_end
 
-# 845 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideExit1:
-# 846 "data/maps/PewterCity/scripts.pory"
-	walk_left
 # 847 "data/maps/PewterCity/scripts.pory"
-	walk_down
+PewterCity_Movement_AideExit1:
 # 848 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 849 "data/maps/PewterCity/scripts.pory"
-	walk_left
+	walk_down
 # 850 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 851 "data/maps/PewterCity/scripts.pory"
@@ -1418,14 +1412,14 @@ PewterCity_Movement_AideExit1:
 # 855 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 856 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 857 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 858 "data/maps/PewterCity/scripts.pory"
 	step_end
 
-# 859 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideExit2:
-# 860 "data/maps/PewterCity/scripts.pory"
-	walk_left
 # 861 "data/maps/PewterCity/scripts.pory"
-	walk_left
+PewterCity_Movement_AideExit2:
 # 862 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 863 "data/maps/PewterCity/scripts.pory"
@@ -1441,14 +1435,14 @@ PewterCity_Movement_AideExit2:
 # 868 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 869 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 870 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 871 "data/maps/PewterCity/scripts.pory"
 	step_end
 
-# 872 "data/maps/PewterCity/scripts.pory"
-PewterCity_Movement_AideExit3:
-# 873 "data/maps/PewterCity/scripts.pory"
-	walk_left
 # 874 "data/maps/PewterCity/scripts.pory"
-	walk_left
+PewterCity_Movement_AideExit3:
 # 875 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 876 "data/maps/PewterCity/scripts.pory"
@@ -1464,10 +1458,14 @@ PewterCity_Movement_AideExit3:
 # 881 "data/maps/PewterCity/scripts.pory"
 	walk_left
 # 882 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 883 "data/maps/PewterCity/scripts.pory"
+	walk_left
+# 884 "data/maps/PewterCity/scripts.pory"
 	step_end
 
 Text_DreamEaterTeach::
-# 885 "data/maps/PewterCity/scripts.pory"
+# 887 "data/maps/PewterCity/scripts.pory"
 	.string "Yawn!\n"
 	.string "I must have dozed off in the sun.\p"
 	.string "I had this weird dream about\n"
@@ -1479,28 +1477,28 @@ Text_DreamEaterTeach::
 	.string "I can forget about it!$"
 
 Text_DreamEaterDeclined::
-# 897 "data/maps/PewterCity/scripts.pory"
+# 899 "data/maps/PewterCity/scripts.pory"
 	.string "…Snore…$"
 
 Text_DreamEaterWhichMon::
-# 901 "data/maps/PewterCity/scripts.pory"
+# 903 "data/maps/PewterCity/scripts.pory"
 	.string "Which POKéMON wants to learn\n"
 	.string "DREAM EATER?$"
 
 Text_DreamEaterTaught::
-# 906 "data/maps/PewterCity/scripts.pory"
+# 908 "data/maps/PewterCity/scripts.pory"
 	.string "…ZZZ…\n"
 	.string "I…can't eat…anymore…$"
 
 PewterCity_Text_ClefairyCameFromMoon::
-# 911 "data/maps/PewterCity/scripts.pory"
+# 913 "data/maps/PewterCity/scripts.pory"
 	.string "CLEFAIRY came from the moon.\n"
 	.string "That's what the rumor is.\p"
 	.string "They appeared after MOON STONES\n"
 	.string "fell on MT. MOON.$"
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
-# 918 "data/maps/PewterCity/scripts.pory"
+# 920 "data/maps/PewterCity/scripts.pory"
 	.string "There aren't many serious POKéMON\n"
 	.string "TRAINERS here.\p"
 	.string "They're all like BUG CATCHERS,\n"
@@ -1509,59 +1507,59 @@ PewterCity_Text_BrockOnlySeriousTrainerHere::
 	.string "that, not one bit.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
-# 927 "data/maps/PewterCity/scripts.pory"
+# 929 "data/maps/PewterCity/scripts.pory"
 	.string "Did you check out the MUSEUM?$"
 
 PewterCity_Text_WerentThoseFossilsAmazing::
-# 931 "data/maps/PewterCity/scripts.pory"
+# 933 "data/maps/PewterCity/scripts.pory"
 	.string "Weren't those fossils from MT. MOON\n"
 	.string "amazing?$"
 
 PewterCity_Text_ReallyYouHaveToGo::
-# 936 "data/maps/PewterCity/scripts.pory"
+# 938 "data/maps/PewterCity/scripts.pory"
 	.string "Really?\n"
 	.string "You absolutely have to go!$"
 
 PewterCity_Text_ThisIsTheMuseum::
-# 941 "data/maps/PewterCity/scripts.pory"
+# 943 "data/maps/PewterCity/scripts.pory"
 	.string "This is it, the MUSEUM.\p"
 	.string "You have to pay to get in, but it's\n"
 	.string "worth it. See you around!$"
 
 PewterCity_Text_DoYouKnowWhatImDoing::
-# 947 "data/maps/PewterCity/scripts.pory"
+# 949 "data/maps/PewterCity/scripts.pory"
 	.string "Psssst!\n"
 	.string "Do you know what I'm doing?$"
 
 PewterCity_Text_ThatsRightItsHardWork::
-# 952 "data/maps/PewterCity/scripts.pory"
+# 954 "data/maps/PewterCity/scripts.pory"
 	.string "That's right!\n"
 	.string "It's hard work!$"
 
 PewterCity_Text_SprayingRepelToKeepWildMonsOut::
-# 957 "data/maps/PewterCity/scripts.pory"
+# 959 "data/maps/PewterCity/scripts.pory"
 	.string "I'm spraying REPEL to keep wild\n"
 	.string "POKéMON out of my garden!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
-# 962 "data/maps/PewterCity/scripts.pory"
+# 964 "data/maps/PewterCity/scripts.pory"
 	.string "You're a TRAINER, right?\p"
 	.string "BROCK's looking for new\n"
 	.string "challengers. Follow me!$"
 
 PewterCity_Text_GoTakeOnBrock::
-# 968 "data/maps/PewterCity/scripts.pory"
+# 970 "data/maps/PewterCity/scripts.pory"
 	.string "If you have the right stuff,\n"
 	.string "go take on BROCK!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
-# 973 "data/maps/PewterCity/scripts.pory"
+# 975 "data/maps/PewterCity/scripts.pory"
 	.string "TRAINER TIPS\p"
 	.string "All POKéMON that appear in battle,\n"
 	.string "however briefly, earn EXP Points.$"
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
-# 979 "data/maps/PewterCity/scripts.pory"
+# 981 "data/maps/PewterCity/scripts.pory"
 	.string "NOTICE!\p"
 	.string "Thieves have been stealing POKéMON\n"
 	.string "fossils from MT. MOON.\p"
@@ -1569,54 +1567,54 @@ PewterCity_Text_CallPoliceIfInfoOnThieves::
 	.string "you have any information.$"
 
 PewterCity_Text_MuseumOfScience::
-# 987 "data/maps/PewterCity/scripts.pory"
+# 989 "data/maps/PewterCity/scripts.pory"
 	.string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-# 991 "data/maps/PewterCity/scripts.pory"
+# 993 "data/maps/PewterCity/scripts.pory"
 	.string "PEWTER CITY POKéMON GYM\n"
 	.string "LEADER: BROCK\l"
 	.string "The Rock-Solid POKéMON TRAINER!$"
 
 PewterCity_Text_CitySign::
-# 997 "data/maps/PewterCity/scripts.pory"
+# 999 "data/maps/PewterCity/scripts.pory"
 	.string "PEWTER CITY\n"
 	.string "A Stone Gray City$"
 
 PewterCity_Text_OhPlayer::
-# 1002 "data/maps/PewterCity/scripts.pory"
+# 1004 "data/maps/PewterCity/scripts.pory"
 	.string "Oh, {PLAYER}{KUN}!$"
 
 PewterCity_Text_AskedToDeliverThis::
-# 1006 "data/maps/PewterCity/scripts.pory"
+# 1008 "data/maps/PewterCity/scripts.pory"
 	.string "I'm glad I caught up to you.\n"
 	.string "I'm PROF. OAK's AIDE.\p"
 	.string "I've been asked to deliver this,\n"
 	.string "so here you go.$"
 
 PewterCity_Text_ReceivedRunningShoesFromAide::
-# 1013 "data/maps/PewterCity/scripts.pory"
+# 1015 "data/maps/PewterCity/scripts.pory"
 	.string "{PLAYER} received the\n"
 	.string "RUNNING SHOES from the AIDE.$"
 
 PewterCity_Text_SwitchedShoesWithRunningShoes::
-# 1018 "data/maps/PewterCity/scripts.pory"
+# 1020 "data/maps/PewterCity/scripts.pory"
 	.string "{PLAYER} switched shoes with the\n"
 	.string "RUNNING SHOES.$"
 
 PewterCity_Text_ExplainRunningShoes::
-# 1023 "data/maps/PewterCity/scripts.pory"
+# 1025 "data/maps/PewterCity/scripts.pory"
 	.string "Press the B Button to run.\n"
 	.string "But only where there's room to run!$"
 
 PewterCity_Text_MustBeGoingBackToLab::
-# 1028 "data/maps/PewterCity/scripts.pory"
+# 1030 "data/maps/PewterCity/scripts.pory"
 	.string "Well, I must be going back to\n"
 	.string "the LAB.\p"
 	.string "Bye-bye!$"
 
 PewterCity_Text_RunningShoesLetterFromMom::
-# 1034 "data/maps/PewterCity/scripts.pory"
+# 1036 "data/maps/PewterCity/scripts.pory"
 	.string "There's a letter attached…\p"
 	.string "Dear {PLAYER},\p"
 	.string "Here is a pair of RUNNING SHOES\n"

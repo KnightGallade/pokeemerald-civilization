@@ -157,7 +157,7 @@
       "x": 17,
       "y": 25,
       "elevation": 0,
-      "dest_map": "",
+      "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": "1"
     },
     {

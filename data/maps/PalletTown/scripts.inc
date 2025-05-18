@@ -95,7 +95,7 @@ PalletTown_EventScript_OakRatingScene::
 # 65 "data/maps/PalletTown/scripts.pory"
 	closemessage
 # 66 "data/maps/PalletTown/scripts.pory"
-	playbgm MUS_FOLLOW_ME, 0
+	playbgm MUS_RG_FOLLOW_ME, 0
 # 67 "data/maps/PalletTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_Movement_PlayerWalkToLabFromHouse
 # 68 "data/maps/PalletTown/scripts.pory"

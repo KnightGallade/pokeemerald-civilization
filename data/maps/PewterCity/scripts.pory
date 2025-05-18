@@ -734,7 +734,9 @@ script PewterCity_EventScript_AideGiveRunningShoes {
 	waitmessage
 	waitfanfare
 	msgbox(PewterCity_Text_SwitchedShoesWithRunningShoes)
-	special(DisableMsgBoxWalkaway)
+	// TODO - figure out this special, also in Pewter, pretty sure it does nothing
+	// special(DisableMsgBoxWalkaway)
+	// TODO - figure signmsg as well, pretty sure just a dummy macro in Emerald for FRLG
 	signmsg
 	msgbox(PewterCity_Text_ExplainRunningShoes)
 	normalmsg
