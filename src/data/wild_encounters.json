@@ -13052,7 +13052,7 @@
           "map": "MAP_VIRIDIAN_FOREST",
           "base_label": "sViridianForest_FireRed",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 14,
             "mons": [
               {
                 "min_level": 4,
@@ -13182,6 +13182,144 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_PIKACHU"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE3",
+          "base_label": "sRoute3_FireRed",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 3,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE3",
+          "base_label": "sRoute_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 3,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 7,
+                "max_level": 7,
+                "species": "SPECIES_JIGGLYPUFF"
               }
             ]
           }

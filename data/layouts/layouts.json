@@ -4534,10 +4534,10 @@
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 20,
+      "width": 84,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route3/border.bin",
       "blockdata_filepath": "data/layouts/Route3/map.bin"
     },
@@ -4957,7 +4957,7 @@
       "width": 28,
       "height": 11,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/PewterCity_Museum_1F/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Museum_1F/map.bin"
     },
@@ -4966,8 +4966,8 @@
       "name": "PewterCity_Museum_2F_Layout",
       "width": 19,
       "height": 10,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/PewterCity_Museum_2F/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Museum_2F/map.bin"
     },
