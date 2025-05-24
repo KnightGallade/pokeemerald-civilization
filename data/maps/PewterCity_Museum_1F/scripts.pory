@@ -1,1 +1,324 @@
+const LOCALID_SCIENTIST1 = 1
+const LOCALID_OLD_AMBER = 4
+
 mapscripts PewterCity_Museum_1F_MapScripts {}
+
+script PewterCity_Museum_1F_EventScript_Scientist1 {
+	lock
+	faceplayer
+	goto_if_eq(VAR_FACING, DIR_WEST, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter)
+	goto_if_eq(VAR_FACING, DIR_SOUTH, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter)
+	goto_if_eq(VAR_FACING, DIR_NORTH, PewterCity_Museum_1F_EventScript_Scientist1BehindCounter)
+	msgbox(PewterCity_Museum_1F_Text_PleaseEnjoyYourself)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_Scientist1BehindCounter {
+	msgbox(PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter)
+	goto_if_eq(VAR_RESULT, NO, PewterCity_Museum_1F_EventScript_ExplainAmber)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter {
+	msgbox(PewterCity_Museum_1F_Text_AmberContainsGeneticMatter)
+	applymovement(LOCALID_SCIENTIST1, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_ExplainAmber {
+	msgbox(PewterCity_Museum_1F_Text_AmberIsFossilizedSap)
+	applymovement(LOCALID_SCIENTIST1, Common_Movement_FaceOriginalDirection)
+	waitmovement(0)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerLeft {
+	lockall
+	setvar(VAR_TEMP_1, 0)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement(0)
+	goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerMid {
+	lockall
+	setvar(VAR_TEMP_1, 1)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement(0)
+	goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTriggerRight {
+	lockall
+	setvar(VAR_TEMP_1, 2)
+	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
+	waitmovement(0)
+	goto(PewterCity_Museum_1F_EventScript_EntranceTrigger)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_EntranceTrigger {
+	showmoneybox(0, 0)
+	msgbox(PewterCity_Museum_1F_Text_Its50YForChildsTicket, MSGBOX_YESNO)
+	goto_if_eq(VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_TryPayForTicket)
+	msgbox(PewterCity_Museum_1F_Text_ComeAgain)
+	closemessage
+	hidemoneybox
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_TryPayForTicket {
+	checkmoney(50)
+	goto_if_eq(VAR_RESULT, FALSE, PewterCity_Museum_1F_EventScript_NotEnoughMoney)
+	closemessage
+	call_if_eq(VAR_TEMP_1, 0, PewterCity_Museum_1F_EventScript_PlayerApproachCounterLeft)
+	call_if_eq(VAR_TEMP_1, 1, PewterCity_Museum_1F_EventScript_PlayerApproachCounterMid)
+	call_if_eq(VAR_TEMP_1, 2, PewterCity_Museum_1F_EventScript_PlayerApproachCounterRight)
+	playse(SE_SHOP)
+	removemoney(50)
+	updatemoneybox
+	waitse
+	msgbox(PewterCity_Museum_1F_Text_Right50YThankYou)
+	setvar(VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 1)
+	hidemoneybox
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterLeft {
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterLeft)
+	waitmovement(0)
+	return
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterMid {
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterMid)
+	waitmovement(0)
+	return
+}
+
+script PewterCity_Museum_1F_EventScript_PlayerApproachCounterRight {
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterRight)
+	waitmovement(0)
+	return
+}
+
+script PewterCity_Museum_1F_EventScript_NotEnoughMoney {
+	msgbox(PewterCity_Museum_1F_Text_DontHaveEnoughMoney)
+	closemessage
+	hidemoneybox
+	applymovement(OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+movement PewterCity_Museum_1F_Movement_ForcePlayerExit {
+	walk_down
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterLeft {
+	walk_right
+	walk_right
+	delay_8
+	walk_in_place_right
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterMid {
+	walk_right
+	delay_8
+	walk_in_place_right
+	step_end
+}
+
+movement PewterCity_Museum_1F_Movement_ApproachCounterRight {
+	delay_8
+	walk_in_place_right
+	step_end
+}
+
+script PewterCity_Museum_1F_EventScript_Scientist2 {
+	msgbox(PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit, MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_OldMan {
+	msgbox(PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife, MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_OldAmberScientist {
+	lock
+	faceplayer
+	goto_if_set(FLAG_GOT_OLD_AMBER, PewterCity_Museum_1F_EventScript_AlreadyGotOldAmber)
+	msgbox(PewterCity_Museum_1F_Text_WantYouToGetAmberExamined)
+	checkitemspace(ITEM_OLD_AMBER)
+	goto_if_eq(VAR_RESULT, FALSE, PewterCity_Museum_1F_EventScript_NoRoomForOldAmber)
+	setflag(FLAG_GOT_OLD_AMBER)
+	removeobject(LOCALID_OLD_AMBER)
+	giveitem_msg(PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan, ITEM_OLD_AMBER, 1, MUS_RG_OBTAIN_KEY_ITEM)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_NoRoomForOldAmber {
+	msgbox(PewterCity_Museum_1F_Text_DontHaveSpaceForThis)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_AlreadyGotOldAmber {
+	msgbox(PewterCity_Museum_1F_Text_GetOldAmberChecked)
+	release
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_OldAmber {
+	msgbox(PewterCity_Museum_1F_Text_BeautifulPieceOfAmber, MSGBOX_NPC)
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_AerodactylFossil {
+	lockall
+    showmonpic(SPECIES_AERODACTYL, 10, 3)
+	msgbox(PewterCity_Museum_1F_Text_AerodactylFossil)
+	hidemonpic
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_KabutopsFossil {
+	lockall
+	showmonpic(SPECIES_KABUTOPS, 10, 3)
+	msgbox(PewterCity_Museum_1F_Text_KabutopsFossil)
+	hidemonpic
+	releaseall
+	end
+}
+
+script PewterCity_Museum_1F_EventScript_PokemonJournalBrock {
+	lockall
+	msgbox(PokemonJournal_Text_SpecialFeatureBrock)
+	releaseall
+	end
+}
+
+text PewterCity_Museum_1F_Text_Its50YForChildsTicket {
+    "Yes, yes.\n"
+    "It's ¥50 for a child's ticket.\p"
+    "Would you like to come in?$"
+}
+
+text PewterCity_Museum_1F_Text_ComeAgain {
+    "Come again!$"
+}
+
+text PewterCity_Museum_1F_Text_Right50YThankYou {
+    "Right, ¥50!\n"
+    "Thank you!$"
+}
+
+text PewterCity_Museum_1F_Text_DontHaveEnoughMoney {
+    "You don't have enough money.$"
+}
+
+text PewterCity_Museum_1F_Text_PleaseEnjoyYourself {
+    "Please enjoy yourself.$"
+}
+
+text PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs {
+    "You can't sneak in the back way!\n"
+    "Nice try, kid, but no.\p"
+    "Oh, whatever!\n"
+    "Do you know what AMBER is?$"
+}
+
+text PewterCity_Museum_1F_Text_AmberContainsGeneticMatter {
+    "AMBER contains the genetic matter\n"
+    "of ancient POKéMON.\p"
+    "There's a LAB somewhere trying to\n"
+    "resurrect POKéMON from AMBER.$"
+}
+
+text PewterCity_Museum_1F_Text_AmberIsFossilizedSap {
+    "AMBER is actually sap, that gooey\n"
+    "stuff that oozes from trees.\p"
+    "The ancient sap fossilized over\n"
+    "time to become rock-hard AMBER.$"
+}
+
+text PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife {
+    "I should be grateful for my long\n"
+    "life.\p"
+    "Never did I think I would get to\n"
+    "see the bones of a dragon!$"
+}
+
+text PewterCity_Museum_1F_Text_WantYouToGetAmberExamined {
+    "Ssh! Listen, I need to share a\n"
+    "secret with someone.\p"
+    "I think that this chunk of AMBER\n"
+    "contains POKéMON DNA!\p"
+    "It would be a shattering scientific\n"
+    "breakthrough if POKéMON could be\l"
+    "resurrected from it.\p"
+    "But, my colleagues just ignore\n"
+    "what I have to say.\p"
+    "So, I have a favor to ask!\p"
+    "I want you to get this examined at\n"
+    "a POKéMON LAB somewhere.$"
+}
+
+text PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan {
+    "{PLAYER} received the OLD AMBER\n"
+    "from the man.$"
+}
+
+text PewterCity_Museum_1F_Text_GetOldAmberChecked {
+    "Ssh!\n"
+    "Get the OLD AMBER checked!$"
+}
+
+text PewterCity_Museum_1F_Text_DontHaveSpaceForThis {
+    "You don't have space for this.$"
+}
+
+text PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit {
+    "We have two fossils of rare,\n"
+    "prehistoric POKéMON on exhibit.$"
+}
+
+text PewterCity_Museum_1F_Text_BeautifulPieceOfAmber {
+    "There is a beautiful piece of\n"
+    "AMBER in a clear gold color.$"
+}
+
+text PewterCity_Museum_1F_Text_AerodactylFossil {
+    "AERODACTYL Fossil\n"
+    "A primitive and rare POKéMON.$"
+}
+
+text PewterCity_Museum_1F_Text_KabutopsFossil {
+    "KABUTOPS Fossil\n"
+    "A primitive and rare POKéMON.$"
+}
+
+text PokemonJournal_Text_SpecialFeatureBrock {
+	"POKéMON JOURNAL\p"
+	"Special Feature: PEWTER GYM\n"
+	"LEADER BROCK!\p"
+	"BROCK rarely laughs, but is said to\n"
+	"be unable to stop if he starts.$"
+}

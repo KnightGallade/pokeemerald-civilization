@@ -298,6 +298,10 @@ const u32 gTrainerFrontPic_FRLG_LeaderBrock[] = INCBIN_U32("graphics/trainers/FR
 const u32 gTrainerPalette_FRLG_LeaderBrock[] = INCBIN_U32("graphics/trainers/FRLG/palettes/leader_brock.gbapal.lz");
 const u32 gTrainerFrontPic_FRLG_Camper[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/camper_front_pic.4bpp.lz");
 const u32 gTrainerPalette_FRLG_Camper[] = INCBIN_U32("graphics/trainers/FRLG/palettes/camper.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_Youngster[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/youngster_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_Youngster[] = INCBIN_U32("graphics/trainers/FRLG/palettes/youngster.gbapal.lz");
+const u32 gTrainerFrontPic_FRLG_Lass[] = INCBIN_U32("graphics/trainers/FRLG/front_pics/lass_front_pic.4bpp.lz");
+const u32 gTrainerPalette_FRLG_Lass[] = INCBIN_U32("graphics/trainers/FRLG/palettes/lass.gbapal.lz");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
@@ -429,6 +433,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRLG_BUG_CATCHER, gTrainerFrontPic_FRLG_BugCatcher, gTrainerPalette_FRLG_BugCatcher),
     TRAINER_SPRITE(TRAINER_PIC_FRLG_LEADER_BROCK, gTrainerFrontPic_FRLG_LeaderBrock, gTrainerPalette_FRLG_LeaderBrock),
     TRAINER_SPRITE(TRAINER_PIC_FRLG_CAMPER, gTrainerFrontPic_FRLG_Camper, gTrainerPalette_FRLG_Camper),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_YOUNGSTER, gTrainerFrontPic_FRLG_Youngster, gTrainerPalette_FRLG_Youngster),
+    TRAINER_SPRITE(TRAINER_PIC_FRLG_LASS, gTrainerFrontPic_FRLG_Lass, gTrainerPalette_FRLG_Lass),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
