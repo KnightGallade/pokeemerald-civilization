@@ -42184,12 +42184,12 @@ F_TRAINER_FEMALE |
 #line 16878
         .trainerName = _("BLUE"),
 #line 16879
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 16880
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 16882
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 16883
         .doubleBattle = FALSE,
 #line 16884
@@ -42221,12 +42221,12 @@ F_TRAINER_FEMALE |
 #line 16893
         .trainerName = _("BLUE"),
 #line 16894
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 16895
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 16897
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 16898
         .doubleBattle = FALSE,
 #line 16899
@@ -42258,12 +42258,12 @@ F_TRAINER_FEMALE |
 #line 16908
         .trainerName = _("BLUE"),
 #line 16909
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 16910
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 16912
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 16913
         .doubleBattle = FALSE,
 #line 16914
@@ -42295,7 +42295,7 @@ F_TRAINER_FEMALE |
 #line 16925
         .trainerName = _("JASON"),
 #line 16926
-        .trainerClass = TRAINER_CLASS_TAMER,
+        .trainerClass = TRAINER_CLASS_FRLG_TAMER,
 #line 16927
         .trainerPic = TRAINER_PIC_FRLG_TAMER,
         .encounterMusic_gender =
@@ -42327,7 +42327,7 @@ F_TRAINER_FEMALE |
 #line 16938
         .trainerName = _("COLE"),
 #line 16939
-        .trainerClass = TRAINER_CLASS_TAMER,
+        .trainerClass = TRAINER_CLASS_FRLG_TAMER,
 #line 16940
         .trainerPic = TRAINER_PIC_FRLG_TAMER,
         .encounterMusic_gender =
@@ -42370,7 +42370,7 @@ F_TRAINER_FEMALE |
 #line 16955
         .trainerName = _("ATSUSHI"),
 #line 16956
-        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .trainerClass = TRAINER_CLASS_FRLG_BLACK_BELT,
 #line 16957
         .trainerPic = TRAINER_PIC_FRLG_BLACK_BELT,
         .encounterMusic_gender =
@@ -42417,7 +42417,7 @@ F_TRAINER_FEMALE |
 #line 16972
         .trainerName = _("KIYO"),
 #line 16973
-        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .trainerClass = TRAINER_CLASS_FRLG_BLACK_BELT,
 #line 16974
         .trainerPic = TRAINER_PIC_FRLG_BLACK_BELT,
         .encounterMusic_gender =
@@ -42451,7 +42451,7 @@ F_TRAINER_FEMALE |
 #line 16985
         .trainerName = _("TAKASHI"),
 #line 16986
-        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .trainerClass = TRAINER_CLASS_FRLG_BLACK_BELT,
 #line 16987
         .trainerPic = TRAINER_PIC_FRLG_BLACK_BELT,
         .encounterMusic_gender =
@@ -42511,7 +42511,7 @@ F_TRAINER_FEMALE |
 #line 17006
         .trainerName = _("SAMUEL"),
 #line 17007
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .trainerClass = TRAINER_CLASS_FRLG_COOLTRAINER,
 #line 17008
         .trainerPic = TRAINER_PIC_FRLG_COOLTRAINER_M,
         .encounterMusic_gender =
@@ -42624,7 +42624,7 @@ F_TRAINER_FEMALE |
 #line 17056
         .trainerName = _("YUJI"),
 #line 17057
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .trainerClass = TRAINER_CLASS_FRLG_COOLTRAINER,
 #line 17058
         .trainerPic = TRAINER_PIC_FRLG_COOLTRAINER_M,
         .encounterMusic_gender =
@@ -42737,7 +42737,7 @@ F_TRAINER_FEMALE |
 #line 17106
         .trainerName = _("WARREN"),
 #line 17107
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .trainerClass = TRAINER_CLASS_FRLG_COOLTRAINER,
 #line 17108
         .trainerPic = TRAINER_PIC_FRLG_COOLTRAINER_M,
         .encounterMusic_gender =
@@ -42850,12 +42850,12 @@ F_TRAINER_FEMALE |
 #line 17159
         .trainerName = _("BLUE"),
 #line 17160
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 17161
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 17163
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17164
         .doubleBattle = FALSE,
 #line 17165
@@ -42903,12 +42903,12 @@ F_TRAINER_FEMALE |
 #line 17180
         .trainerName = _("BLUE"),
 #line 17181
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 17182
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 17184
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17185
         .doubleBattle = FALSE,
 #line 17186
@@ -42956,12 +42956,12 @@ F_TRAINER_FEMALE |
 #line 17201
         .trainerName = _("BLUE"),
 #line 17202
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_EARLY_RIVAL,
 #line 17203
         .trainerPic = TRAINER_PIC_FRLG_BLUE_EARLY,
         .encounterMusic_gender =
 #line 17205
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17206
         .doubleBattle = FALSE,
 #line 17207
@@ -43009,12 +43009,12 @@ F_TRAINER_FEMALE |
 #line 17222
         .trainerName = _("BLUE"),
 #line 17223
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_LATE_RIVAL,
 #line 17224
         .trainerPic = TRAINER_PIC_FRLG_BLUE_LATE,
         .encounterMusic_gender =
 #line 17226
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17227
         .doubleBattle = FALSE,
 #line 17228
@@ -43138,12 +43138,12 @@ F_TRAINER_FEMALE |
 #line 17279
         .trainerName = _("BLUE"),
 #line 17280
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_LATE_RIVAL,
 #line 17281
         .trainerPic = TRAINER_PIC_FRLG_BLUE_LATE,
         .encounterMusic_gender =
 #line 17283
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17284
         .doubleBattle = FALSE,
 #line 17285
@@ -43267,12 +43267,12 @@ F_TRAINER_FEMALE |
 #line 17336
         .trainerName = _("BLUE"),
 #line 17337
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_FRLG_LATE_RIVAL,
 #line 17338
         .trainerPic = TRAINER_PIC_FRLG_BLUE_LATE,
         .encounterMusic_gender =
 #line 17340
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17341
         .doubleBattle = FALSE,
 #line 17342
@@ -43396,12 +43396,12 @@ F_TRAINER_FEMALE |
 #line 17395
         .trainerName = _("RICK"),
 #line 17396
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17397
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17399
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17400
         .doubleBattle = FALSE,
 #line 17401
@@ -43439,12 +43439,12 @@ F_TRAINER_FEMALE |
 #line 17412
         .trainerName = _("DOUG"),
 #line 17413
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17414
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17416
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17417
         .doubleBattle = FALSE,
 #line 17418
@@ -43493,12 +43493,12 @@ F_TRAINER_FEMALE |
 #line 17433
         .trainerName = _("SAMMY"),
 #line 17434
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17435
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17437
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17438
         .doubleBattle = FALSE,
 #line 17439
@@ -43525,12 +43525,12 @@ F_TRAINER_FEMALE |
 #line 17446
         .trainerName = _("ANTHONY"),
 #line 17447
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17448
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17450
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17451
         .doubleBattle = FALSE,
 #line 17452
@@ -43568,12 +43568,12 @@ F_TRAINER_FEMALE |
 #line 17463
         .trainerName = _("CHARLIE"),
 #line 17464
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17465
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17467
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17468
         .doubleBattle = FALSE,
 #line 17469
@@ -43622,12 +43622,12 @@ F_TRAINER_FEMALE |
 #line 17486
         .trainerName = _("LIAM"),
 #line 17487
-        .trainerClass = TRAINER_CLASS_CAMPER,
+        .trainerClass = TRAINER_CLASS_FRLG_CAMPER,
 #line 17488
         .trainerPic = TRAINER_PIC_FRLG_CAMPER,
         .encounterMusic_gender =
 #line 17490
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17491
         .doubleBattle = FALSE,
 #line 17492
@@ -43676,12 +43676,12 @@ F_TRAINER_FEMALE |
 #line 17508
         .trainerName = _("BROCK"),
 #line 17509
-        .trainerClass = TRAINER_CLASS_LEADER,
+        .trainerClass = TRAINER_CLASS_FRLG_LEADER,
 #line 17510
         .trainerPic = TRAINER_PIC_FRLG_LEADER_BROCK,
         .encounterMusic_gender =
 #line 17512
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17513
         .doubleBattle = FALSE,
 #line 17514
@@ -43730,12 +43730,12 @@ F_TRAINER_FEMALE |
 #line 17532
         .trainerName = _("BEN"),
 #line 17533
-        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .trainerClass = TRAINER_CLASS_FRLG_YOUNGSTER,
 #line 17534
         .trainerPic = TRAINER_PIC_FRLG_YOUNGSTER,
         .encounterMusic_gender =
 #line 17536
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17537
         .doubleBattle = FALSE,
 #line 17538
@@ -43773,12 +43773,12 @@ F_TRAINER_FEMALE |
 #line 17549
         .trainerName = _("CALVIN"),
 #line 17550
-        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .trainerClass = TRAINER_CLASS_FRLG_YOUNGSTER,
 #line 17551
         .trainerPic = TRAINER_PIC_FRLG_YOUNGSTER,
         .encounterMusic_gender =
 #line 17553
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17554
         .doubleBattle = FALSE,
 #line 17555
@@ -43805,12 +43805,12 @@ F_TRAINER_FEMALE |
 #line 17562
         .trainerName = _("COLTON"),
 #line 17563
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17564
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17566
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17567
         .doubleBattle = FALSE,
 #line 17568
@@ -43859,12 +43859,12 @@ F_TRAINER_FEMALE |
 #line 17583
         .trainerName = _("GREG"),
 #line 17584
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17585
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17587
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17588
         .doubleBattle = FALSE,
 #line 17589
@@ -43924,12 +43924,12 @@ F_TRAINER_FEMALE |
 #line 17608
         .trainerName = _("BEN"),
 #line 17609
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_FRLG_BUG_CATCHER,
 #line 17610
         .trainerPic = TRAINER_PIC_FRLG_BUG_CATCHER,
         .encounterMusic_gender =
 #line 17612
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_MALE,
 #line 17613
         .doubleBattle = FALSE,
 #line 17614
@@ -43967,14 +43967,14 @@ F_TRAINER_FEMALE |
 #line 17625
         .trainerName = _("JANICE"),
 #line 17626
-        .trainerClass = TRAINER_CLASS_LASS,
+        .trainerClass = TRAINER_CLASS_FRLG_LASS,
 #line 17627
         .trainerPic = TRAINER_PIC_FRLG_LASS,
         .encounterMusic_gender =
 #line 17628
 F_TRAINER_FEMALE | 
 #line 17629
-            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_FEMALE,
 #line 17630
         .doubleBattle = FALSE,
 #line 17631
@@ -44012,14 +44012,14 @@ F_TRAINER_FEMALE |
 #line 17642
         .trainerName = _("SALLY"),
 #line 17643
-        .trainerClass = TRAINER_CLASS_LASS,
+        .trainerClass = TRAINER_CLASS_FRLG_LASS,
 #line 17644
         .trainerPic = TRAINER_PIC_FRLG_LASS,
         .encounterMusic_gender =
 #line 17645
 F_TRAINER_FEMALE | 
 #line 17646
-            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_FEMALE,
 #line 17647
         .doubleBattle = FALSE,
 #line 17648
@@ -44057,14 +44057,14 @@ F_TRAINER_FEMALE |
 #line 17659
         .trainerName = _("ROBIN"),
 #line 17660
-        .trainerClass = TRAINER_CLASS_LASS,
+        .trainerClass = TRAINER_CLASS_FRLG_LASS,
 #line 17661
         .trainerPic = TRAINER_PIC_FRLG_LASS,
         .encounterMusic_gender =
 #line 17662
 F_TRAINER_FEMALE | 
 #line 17663
-            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+            TRAINER_ENCOUNTER_MUSIC_FRLG_FEMALE,
 #line 17664
         .doubleBattle = FALSE,
 #line 17665

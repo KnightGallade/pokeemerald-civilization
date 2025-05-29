@@ -127,6 +127,7 @@ static void Task_FrontierLogoWave(u8);
 static void Task_FrontierSquares(u8);
 static void Task_FrontierSquaresScroll(u8);
 static void Task_FrontierSquaresSpiral(u8);
+static void Task_GymLeaderRoxanne(u8);
 static void VBlankCB_BattleTransition(void);
 static void VBlankCB_Swirl(void);
 static void HBlankCB_Swirl(void);
@@ -173,6 +174,8 @@ static bool8 Groudon_PaletteFlash(struct Task *);
 static bool8 Groudon_PaletteBrighten(struct Task *);
 static bool8 WeatherDuo_FadeOut(struct Task *);
 static bool8 WeatherDuo_End(struct Task *);
+static bool8 GymLeaderRoxanne_Init(struct Task *);
+static bool8 GymLeaderRoxanne_SetGfx(struct Task *);
 static bool8 BigPokeball_Init(struct Task *);
 static bool8 BigPokeball_SetGfx(struct Task *);
 static bool8 PatternWeave_Blend1(struct Task *);
@@ -331,6 +334,9 @@ static const u32 sFrontierSquares_EmptyBg_Tileset[] = INCBIN_U32("graphics/battl
 static const u32 sFrontierSquares_Shrink1_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_3.4bpp.lz");
 static const u32 sFrontierSquares_Shrink2_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_4.4bpp.lz");
 static const u32 sFrontierSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/frontier_squares.bin");
+static const u32 sGymLeaderRoxanne_Tileset[] = INCBIN_U32("graphics/battle_transitions/gym_leaders/gym_leader_roxanne.4bpp.lz");
+static const u32 sGymLeaderRoxanne_Tilemap[] = INCBIN_U32("graphics/battle_transitions/gym_leaders/gym_leader_roxanne.bin.lz");
+static const u16 sGymLeaderRoxanne_Palette[] = INCBIN_U16("graphics/battle_transitions/gym_leaders/gym_leader_roxanne.gbapal");
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
@@ -380,6 +386,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ] = Task_FrontierCirclesCrossInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesAsymmetricSpiralInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesSymmetricSpiralInSeq,
+    [B_TRANSITION_GYM_LEADER_ROXANNE] = Task_GymLeaderRoxanne,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -481,6 +488,17 @@ static const TransitionStateFunc sKyogre_Funcs[] =
     FramesCountdown,
     WeatherDuo_FadeOut,
     WeatherDuo_End
+};
+
+static const TransitionStateFunc sGymLeaderRoxanne_Funcs[] =
+{
+    GymLeaderRoxanne_Init,
+    GymLeaderRoxanne_SetGfx,
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    FramesCountdown,
+    PatternWeave_CircularMask
 };
 
 static const TransitionStateFunc sPokeballsTrail_Funcs[] =
@@ -1338,6 +1356,11 @@ static void Task_Kyogre(u8 taskId)
     while (sKyogre_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
+static void Task_GymLeaderRoxanne(u8 taskId)
+{
+    while (sGymLeaderRoxanne_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
 static void InitPatternWeaveTransition(struct Task *task)
 {
     s32 i;
@@ -1571,6 +1594,33 @@ static bool8 WeatherDuo_End(struct Task *task)
 }
 
 #undef tTimer
+
+static bool8 GymLeaderRoxanne_Init(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    task->tEndDelay = 60;
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sGymLeaderRoxanne_Tileset, tileset);
+    LoadPalette(sGymLeaderRoxanne_Palette, BG_PLTT_ID(15), sizeof(sGymLeaderRoxanne_Palette));
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 GymLeaderRoxanne_SetGfx(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sGymLeaderRoxanne_Tilemap, tilemap);
+    SetSinWave((s16*)gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return FALSE;
+}
 
 // The PatternWeave_ functions are used by several different transitions.
 // They create an effect where a pattern/image (such as the Magma emblem) is

@@ -138,7 +138,7 @@ PewterCity_Gym_EventScript_GymStatuePostVictory::
 
 PewterCity_Gym_Text_BrockIntro::
 # 94 "data/maps/PewterCity_Gym/scripts.pory"
-	.string "So, you're here. I'm BROCK.\n"
+	.string "{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}So, you're here. I'm BROCK.\n"
 	.string "I'm PEWTER's GYM LEADER.\p"
 	.string "My rock-hard willpower is evident\n"
 	.string "even in my POKéMON.\p"
@@ -151,7 +151,7 @@ PewterCity_Gym_Text_BrockIntro::
 	.string "That's the TRAINER's honor that\n"
 	.string "compels you to challenge me.\p"
 	.string "Fine, then!\n"
-	.string "Show me your best!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Show me your best!$"
 
 PewterCity_Gym_Text_BrockDefeat::
 # 114 "data/maps/PewterCity_Gym/scripts.pory"

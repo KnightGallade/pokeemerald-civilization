@@ -16876,10 +16876,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_SQUIRTLE ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -16891,10 +16891,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_BULBASAUR ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -16906,10 +16906,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_OAKS_LAB_CHARMANDER ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -16923,7 +16923,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TAMER_JASON ===
 Name: JASON
-Class: Tamer
+Class: FRLG Tamer
 Pic: FRLG Tamer
 Gender: Male
 Music: Hiker
@@ -16936,7 +16936,7 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 === TRAINER_TAMER_COLE ===
 Name: COLE
-Class: Tamer
+Class: FRLG Tamer
 Pic: FRLG Tamer
 Gender: Male
 Music: Hiker
@@ -16953,7 +16953,7 @@ IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 === TRAINER_BLACK_BELT_ATSUSHI ===
 Name: ATSUSHI
-Class: Black Belt
+Class: FRLG Black Belt
 Pic: FRLG Black Belt
 Gender: Male
 Music: Intense
@@ -16970,7 +16970,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BLACK_BELT_KIYO ===
 Name: KIYO
-Class: Black Belt
+Class: FRLG Black Belt
 Pic: FRLG Black Belt
 Gender: Male
 Music: Intense
@@ -16983,7 +16983,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BLACK_BELT_TAKASHI ===
 Name: TAKASHI
-Class: Black Belt
+Class: FRLG Black Belt
 Pic: FRLG Black Belt
 Gender: Male
 Music: Intense
@@ -17004,7 +17004,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_COOLTRAINER_SAMUEL ===
 Name: SAMUEL
-Class: Cooltrainer
+Class: FRLG Cooltrainer
 Pic: FRLG Cooltrainer M
 Gender: Male
 Music: Cool
@@ -17054,7 +17054,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_COOLTRAINER_YUJI ===
 Name: YUJI
-Class: Cooltrainer
+Class: FRLG Cooltrainer
 Pic: FRLG Cooltrainer M
 Gender: Male
 Music: Cool
@@ -17104,7 +17104,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_COOLTRAINER_WARREN ===
 Name: WARREN
-Class: Cooltrainer
+Class: FRLG Cooltrainer
 Pic: FRLG Cooltrainer M
 Gender: Male
 Music: Cool
@@ -17157,10 +17157,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17178,10 +17178,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17199,10 +17199,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER ===
 Name: BLUE
-Class: Rival
+Class: FRLG Early Rival
 Pic: FRLG Blue Early
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17220,10 +17220,10 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE ===
 Name: BLUE
-Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Class: FRLG Late Rival
 Pic: FRLG Blue Late
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17277,10 +17277,10 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
 === TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR ===
 Name: BLUE
-Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Class: FRLG Late Rival
 Pic: FRLG Blue Late
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17334,10 +17334,10 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
 === TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER ===
 Name: BLUE
-Class: Rival /* TODO - Add a "Late Rival" class for more money*/
+Class: FRLG Late Rival
 Pic: FRLG Blue Late
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17393,10 +17393,10 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
 === TRAINER_BUG_CATCHER_RICK ===
 Name: RICK
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17410,10 +17410,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_DOUG ===
 Name: DOUG
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17431,10 +17431,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_SAMMY ===
 Name: SAMMY
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17444,10 +17444,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_ANTHONY ===
 Name: ANTHONY
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17461,10 +17461,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_CHARLIE ===
 Name: CHARLIE
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17484,10 +17484,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMPER_LIAM ===
 Name: LIAM
-Class: Camper
+Class: FRLG Camper
 Pic: FRLG Camper
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17506,10 +17506,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LEADER_BROCK ===
 Name: BROCK
-Class: Leader
+Class: FRLG Leader
 Pic: FRLG Leader Brock
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Basic Trainer
 
@@ -17530,10 +17530,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_YOUNGSTER_BEN ===
 Name: BEN
-Class: Youngster
+Class: FRLG Youngster
 Pic: FRLG Youngster
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17547,10 +17547,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_YOUNGSTER_CALVIN ===
 Name: CALVIN
-Class: Youngster
+Class: FRLG Youngster
 Pic: FRLG Youngster
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17560,10 +17560,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_COLTON ===
 Name: COLTON
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17581,10 +17581,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_GREG ===
 Name: GREG
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17606,10 +17606,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BUG_CATCHER_JAMES ===
 Name: BEN
-Class: Bug Catcher
+Class: FRLG Bug Catcher
 Pic: FRLG Bug Catcher
 Gender: Male
-Music: Male
+Music: FRLG Male
 Double Battle: No
 AI: Check Bad Move
 
@@ -17623,10 +17623,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LASS_JANICE ===
 Name: JANICE
-Class: Lass
+Class: FRLG Lass
 Pic: FRLG Lass
 Gender: Female
-Music: Female
+Music: FRLG Female
 Double Battle: No
 AI: Check Bad Move
 
@@ -17640,10 +17640,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LASS_SALLY ===
 Name: SALLY
-Class: Lass
+Class: FRLG Lass
 Pic: FRLG Lass
 Gender: Female
-Music: Female
+Music: FRLG Female
 Double Battle: No
 AI: Check Bad Move
 
@@ -17657,10 +17657,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LASS_ROBIN ===
 Name: ROBIN
-Class: Lass
+Class: FRLG Lass
 Pic: FRLG Lass
 Gender: Female
-Music: Female
+Music: FRLG Female
 Double Battle: No
 AI: Check Bad Move
 

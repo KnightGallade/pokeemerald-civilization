@@ -61,6 +61,7 @@
 #include "constants/regions.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
+#include "constants/region_map_sections.h"
 #include "constants/union_room.h"
 #include "constants/weather.h"
 #include "wild_encounter.h"
@@ -5810,9 +5811,21 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
+        // TODO - keep updating with new FRLG classes
+        case TRAINER_CLASS_FRLG_LEADER:
+            return MUS_RG_VS_GYM_LEADER;
         default:
+            if ((gMapHeader.regionMapSectionId >= KANTO_MAPSEC_START) && (gMapHeader.regionMapSectionId <= KANTO_MAPSEC_END))
+            {
+                return MUS_RG_VS_TRAINER;
+            }
             return MUS_VS_TRAINER;
         }
+    }
+    // If later want to do per map basis, do switch (gMapHeader.regionMapSectionId) and then all the cases
+    else if ((gMapHeader.regionMapSectionId >= KANTO_MAPSEC_START) && (gMapHeader.regionMapSectionId <= KANTO_MAPSEC_END))
+    {
+        return MUS_RG_VS_WILD;
     }
     else
     {

@@ -92,7 +92,7 @@ script PewterCity_Gym_EventScript_GymStatuePostVictory {
 }
 
 text PewterCity_Gym_Text_BrockIntro {
-    "So, you're here. I'm BROCK.\n"
+    "{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}So, you're here. I'm BROCK.\n"
     "I'm PEWTER's GYM LEADER.\p"
     "My rock-hard willpower is evident\n"
     "even in my POKéMON.\p"
@@ -105,7 +105,7 @@ text PewterCity_Gym_Text_BrockIntro {
     "That's the TRAINER's honor that\n"
     "compels you to challenge me.\p"
     "Fine, then!\n"
-    "Show me your best!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+    "Show me your best!$"
 }
 
 // NOTE: This defeat text actually causes a buffer overflow. It's too long for the gDisplayedStringBattle

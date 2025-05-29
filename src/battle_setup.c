@@ -777,6 +777,24 @@ u8 GetTrainerBattleTransition(void)
         || trainerClass == TRAINER_CLASS_AQUA_ADMIN)
         return B_TRANSITION_AQUA;
 
+    // TODO - add a check for each gym leader
+    if (trainerClass == TRAINER_CLASS_LEADER || trainerClass == TRAINER_CLASS_FRLG_LEADER)
+    {
+        switch (TRAINER_BATTLE_PARAM.opponentA)
+        {
+        case TRAINER_ROXANNE_1:
+        case TRAINER_ROXANNE_2:
+        case TRAINER_ROXANNE_3:
+        case TRAINER_ROXANNE_4:
+        case TRAINER_ROXANNE_5:
+            return B_TRANSITION_GYM_LEADER_ROXANNE;
+        // TODO - remove this eventually, this is a test to find leaders without transitions
+        default:
+            return B_TRANSITION_AQUA;
+        }
+    }
+        
+
     if (IsTrainerDoubleBattle(trainerId))
         minPartyCount = 2; // double battles always at least have 2 Pokémon.
     else
@@ -1440,6 +1458,16 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
+            break;
+        // TODO - work in progress since FRLG didn't have much encounter music
+        case TRAINER_ENCOUNTER_MUSIC_FRLG_FEMALE:
+            music = MUS_RG_ENCOUNTER_GIRL;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_FRLG_MALE:
+            music = MUS_RG_ENCOUNTER_BOY;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_FRLG_ROCKET:
+            music = MUS_RG_ENCOUNTER_ROCKET;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;

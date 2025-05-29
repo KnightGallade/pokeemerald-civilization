@@ -363,8 +363,17 @@
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
 // Added from FRLG
-#define TRAINER_CLASS_TAMER          0x42
-#define TRAINER_CLASS_COUNT          0x43
+#define TRAINER_CLASS_FRLG_EARLY_RIVAL     0x42
+#define TRAINER_CLASS_FRLG_LATE_RIVAL      0x43
+#define TRAINER_CLASS_FRLG_BLACK_BELT      0x44
+#define TRAINER_CLASS_FRLG_COOLTRAINER     0x45
+#define TRAINER_CLASS_FRLG_TAMER           0x46
+#define TRAINER_CLASS_FRLG_BUG_CATCHER     0x47
+#define TRAINER_CLASS_FRLG_LEADER          0x48
+#define TRAINER_CLASS_FRLG_CAMPER          0x49
+#define TRAINER_CLASS_FRLG_YOUNGSTER       0x4A
+#define TRAINER_CLASS_FRLG_LASS            0x4B
+#define TRAINER_CLASS_COUNT                0x4C
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
@@ -380,6 +389,11 @@
 #define TRAINER_ENCOUNTER_MUSIC_HIKER       11 // used for other trainer classes too
 #define TRAINER_ENCOUNTER_MUSIC_INTERVIEWER 12
 #define TRAINER_ENCOUNTER_MUSIC_RICH        13 // Rich Boys and Gentlemen
+// Added from FRLG
+#define TRAINER_ENCOUNTER_MUSIC_FRLG_MALE        14
+#define TRAINER_ENCOUNTER_MUSIC_FRLG_FEMALE      15
+#define TRAINER_ENCOUNTER_MUSIC_FRLG_ROCKET      16
+
 
 #define F_TRAINER_FEMALE (1 << 7)
 
