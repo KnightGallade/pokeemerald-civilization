@@ -138,79 +138,79 @@
       "x": 6,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_VIRIDIAN_CITY",
       "map": "MAP_VIRIDIAN_CITY",
       "x": 26,
       "y": 27
     },
-        {
+    {
       "id": "HEAL_LOCATION_PEWTER_CITY",
       "map": "MAP_PEWTER_CITY",
       "x": 17,
       "y": 26
     },
-        {
+    {
       "id": "HEAL_LOCATION_CERULEAN_CITY",
       "map": "MAP_CERULEAN_CITY",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_VERMILION_CITY",
       "map": "MAP_VERMILION_CITY",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_LAVENDER_TOWN",
       "map": "MAP_LAVENDER_TOWN",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_CELADON_CITY",
       "map": "MAP_CELADON_CITY",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_FUCHSIA_CITY",
       "map": "MAP_FUCHSIA_CITY",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_SAFFRON_CITY",
       "map": "MAP_SAFFRON_CITY",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_CINNABAR_ISLAND",
       "map": "MAP_CINNABAR_ISLAND",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_INDIGO_PLATEAU",
       "map": "MAP_INDIGO_PLATEAU",
       "x": 5,
       "y": 8
     },
-        {
+    {
       "id": "HEAL_LOCATION_ROUTE_4",
       "map": "MAP_ROUTE4",
       "x": 4,
       "y": 4
     },
-        {
+    {
       "id": "HEAL_LOCATION_ROUTE_10",
       "map": "MAP_ROUTE10",
       "x": 4,
       "y": 4
     },
-        {
+    {
       "id": "HEAL_LOCATION_VICTORY_ROAD",
       "map": "MAP_VICTORY_ROAD",
       "x": 5,

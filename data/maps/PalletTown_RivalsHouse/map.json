@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_RIVALS_HOUSE_DAISY",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_DAISY",
       "x": 10,
       "y": 6,
@@ -28,6 +29,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_RIVALS_HOUSE_TOWN_MAP",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_TOWN_MAP",
       "x": 6,
       "y": 4,
@@ -57,10 +59,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

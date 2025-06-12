@@ -3,61 +3,61 @@ PewterCity_House1_MapScripts::
 
 
 PewterCity_House1_EventScript_BaldingMan::
-# 6 "data/maps/PewterCity_House1/scripts.pory"
+# 4 "data/maps/PewterCity_House1/scripts.pory"
 	msgbox PewterCity_House1_Text_TradeMonsAreFinicky, MSGBOX_NPC
 	end
 
 
 PewterCity_House1_EventScript_LittleBoy::
-# 11 "data/maps/PewterCity_House1/scripts.pory"
+# 9 "data/maps/PewterCity_House1/scripts.pory"
 	lock
-# 12 "data/maps/PewterCity_House1/scripts.pory"
+# 10 "data/maps/PewterCity_House1/scripts.pory"
 	msgbox PewterCity_House1_Text_NidoranSit
-# 13 "data/maps/PewterCity_House1/scripts.pory"
+# 11 "data/maps/PewterCity_House1/scripts.pory"
 	call PewterCity_House1_EventScript_DoNidoranCry
-# 14 "data/maps/PewterCity_House1/scripts.pory"
+# 12 "data/maps/PewterCity_House1/scripts.pory"
 	release
 	end
 
 
 PewterCity_House1_EventScript_Nidoran::
-# 19 "data/maps/PewterCity_House1/scripts.pory"
+# 17 "data/maps/PewterCity_House1/scripts.pory"
 	lock
-# 20 "data/maps/PewterCity_House1/scripts.pory"
+# 18 "data/maps/PewterCity_House1/scripts.pory"
 	faceplayer
-# 21 "data/maps/PewterCity_House1/scripts.pory"
+# 19 "data/maps/PewterCity_House1/scripts.pory"
 	call PewterCity_House1_EventScript_DoNidoranCry
-# 22 "data/maps/PewterCity_House1/scripts.pory"
-	applymovement 3, Common_Movement_FaceOriginalDirection
-# 23 "data/maps/PewterCity_House1/scripts.pory"
+# 20 "data/maps/PewterCity_House1/scripts.pory"
+	applymovement LOCALID_PEWTER_HOUSE1_NIDORAN, Common_Movement_FaceOriginalDirection
+# 21 "data/maps/PewterCity_House1/scripts.pory"
 	waitmovement 0
-# 24 "data/maps/PewterCity_House1/scripts.pory"
+# 22 "data/maps/PewterCity_House1/scripts.pory"
 	release
 	end
 
 
 PewterCity_House1_EventScript_DoNidoranCry::
-# 29 "data/maps/PewterCity_House1/scripts.pory"
+# 27 "data/maps/PewterCity_House1/scripts.pory"
 	waitse
-# 30 "data/maps/PewterCity_House1/scripts.pory"
+# 28 "data/maps/PewterCity_House1/scripts.pory"
 	playmoncry SPECIES_NIDORAN_M, CRY_MODE_NORMAL
-# 31 "data/maps/PewterCity_House1/scripts.pory"
+# 29 "data/maps/PewterCity_House1/scripts.pory"
 	msgbox PewterCity_House1_Text_Nidoran
-# 32 "data/maps/PewterCity_House1/scripts.pory"
+# 30 "data/maps/PewterCity_House1/scripts.pory"
 	waitmoncry
 	return
 
 
 PewterCity_House1_Text_Nidoran::
-# 36 "data/maps/PewterCity_House1/scripts.pory"
+# 34 "data/maps/PewterCity_House1/scripts.pory"
 	.string "NIDORAN♂: Bowbow!$"
 
 PewterCity_House1_Text_NidoranSit::
-# 40 "data/maps/PewterCity_House1/scripts.pory"
+# 38 "data/maps/PewterCity_House1/scripts.pory"
 	.string "NIDORAN, sit!$"
 
 PewterCity_House1_Text_TradeMonsAreFinicky::
-# 44 "data/maps/PewterCity_House1/scripts.pory"
+# 42 "data/maps/PewterCity_House1/scripts.pory"
 	.string "Our POKéMON's an outsider, so it's\n"
 	.string "finicky and hard to handle.\p"
 	.string "An outsider is a POKéMON that you\n"

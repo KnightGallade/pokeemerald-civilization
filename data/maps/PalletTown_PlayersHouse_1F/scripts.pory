@@ -1,5 +1,3 @@
-const LOCALID_MOM = 1
-
 mapscripts PalletTown_PlayersHouse_1F_MapScripts{}
 
 script PalletTown_PlayersHouse_1F_EventScript_Mom {
@@ -10,7 +8,7 @@ script PalletTown_PlayersHouse_1F_EventScript_Mom {
 	call_if_eq(VAR_RESULT, MALE, PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouMale)
 	call_if_eq(VAR_RESULT, FEMALE, PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouFemale)
 	closemessage
-	applymovement(LOCALID_MOM, Common_Movement_FaceOriginalDirection)
+	applymovement(LOCALID_PALLET_PLAYERSHOUSE_1F_MOM, Common_Movement_FaceOriginalDirection)
 	waitmovement(0)
 	release
 	end

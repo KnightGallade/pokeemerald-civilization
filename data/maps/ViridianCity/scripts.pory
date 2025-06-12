@@ -1,7 +1,3 @@
-const LOCALID_OLD_MAN = 3
-const LOCALID_TUTORIAL_MAN = 4
-const LOCALID_WOMAN = 5
-
 mapscripts ViridianCity_MapScripts {
 	MAP_SCRIPT_ON_TRANSITION: ViridianCity_OnTransition
 }
@@ -22,15 +18,15 @@ script ViridianCity_EventScript_SetOldManNormal {
 
 script ViridianCity_EventScript_SetOldManStandingByRoad {
 	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_FRLG_OLD_MAN_1)
-	setobjectxyperm(LOCALID_TUTORIAL_MAN, 21, 8)
-	setobjectmovementtype(LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND)
+	setobjectxyperm(LOCALID_VIRIDIAN_TUTORIAL_MAN, 21, 8)
+	setobjectmovementtype(LOCALID_VIRIDIAN_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND)
 	return
 }
 
 script ViridianCity_EventScript_SetOldManBlockingRoad {
 	setvar(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN)
-	setobjectxyperm(LOCALID_TUTORIAL_MAN, 21, 11)
-	setobjectmovementtype(LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_FACE_DOWN)
+	setobjectxyperm(LOCALID_VIRIDIAN_TUTORIAL_MAN, 21, 11)
+	setobjectmovementtype(LOCALID_VIRIDIAN_TUTORIAL_MAN, MOVEMENT_TYPE_FACE_DOWN)
 	return
 }
 
@@ -100,7 +96,7 @@ script ViridianCity_EventScript_OldMan {
 	goto_if_eq(VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 1, ViridianCity_EventScript_OldManGymLeaderReturned)
 	msgbox(ViridianCity_Text_GymClosedWonderWhoLeaderIs)
 	closemessage
-	applymovement(LOCALID_OLD_MAN, Common_Movement_FaceOriginalDirection)
+	applymovement(LOCALID_VIRIDIAN_OLD_MAN, Common_Movement_FaceOriginalDirection)
 	waitmovement(0)
 	release
 	end
@@ -188,7 +184,7 @@ script ViridianCity_EventScript_Woman {
 script ViridianCity_EventScript_WomanRoadBlocked {
 	msgbox(ViridianCity_Text_GrandpaHasntHadCoffeeYet)
 	closemessage
-	applymovement(LOCALID_WOMAN, Common_Movement_FaceOriginalDirection)
+	applymovement(LOCALID_VIRIDIAN_WOMAN, Common_Movement_FaceOriginalDirection)
 	waitmovement(0)
 	release
 	end
@@ -216,7 +212,7 @@ script ViridianCity_Movement_WalkDown {
 
 script ViridianCity_EventScript_TutorialTriggerLeft {
 	lockall
-	applymovement(LOCALID_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterLeft)
+	applymovement(LOCALID_VIRIDIAN_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterLeft)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight)
 	waitmovement(0)
@@ -227,7 +223,7 @@ script ViridianCity_EventScript_TutorialTriggerLeft {
 
 script ViridianCity_EventScript_TutorialTriggerRight {
 	lockall
-	applymovement(LOCALID_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterRight)
+	applymovement(LOCALID_VIRIDIAN_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterRight)
 	waitmovement(0)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
 	waitmovement(0)

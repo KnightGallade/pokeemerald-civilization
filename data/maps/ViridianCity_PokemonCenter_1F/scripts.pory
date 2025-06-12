@@ -1,6 +1,3 @@
-const LOCALID_NURSE = 1
-const LOCALID_CHANSEY = 5
-
 mapscripts ViridianCity_PokemonCenter_1F_MapScripts {
 	MAP_SCRIPT_ON_TRANSITION: ViridianCity_PokemonCenter_1F_OnTransition
 	MAP_SCRIPT_ON_RESUME: CableClub_OnResume
@@ -12,7 +9,7 @@ script ViridianCity_PokemonCenter_1F_OnTransition {
 }
 
 script ViridianCity_PokemonCenter_1F_EventScript_Nurse {
-	setvar(VAR_0x800B, LOCALID_NURSE)
+	setvar(VAR_0x800B, LOCALID_VIRIDIAN_NURSE)
 	call(Common_EventScript_PkmnCenterNurse)
 	waitmessage
 	waitbuttonpress
@@ -21,7 +18,7 @@ script ViridianCity_PokemonCenter_1F_EventScript_Nurse {
 }
 
 script ViridianCity_PokemonCenter_1F_EventScript_Chansey {
-	setvar(VAR_0x800B, LOCALID_CHANSEY)
+	setvar(VAR_0x800B, LOCALID_VIRIDIAN_CHANSEY)
 	call(Common_EventScript_PkmnCenterChansey)
 	waitmessage
 	waitbuttonpress

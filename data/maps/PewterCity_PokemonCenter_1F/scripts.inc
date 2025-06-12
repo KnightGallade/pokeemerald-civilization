@@ -1,97 +1,97 @@
 PewterCity_PokemonCenter_1F_MapScripts::
-# 5 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 2 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_PokemonCenter_1F_OnTransition
-# 6 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 3 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 
 PewterCity_PokemonCenter_1F_OnTransition::
-# 10 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 7 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	setrespawn HEAL_LOCATION_PEWTER_CITY
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_Nurse::
-# 15 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, 3
-# 16 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 12 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_PEWTER_NURSE
+# 13 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_PkmnCenterNurse
-# 17 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 14 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
-# 18 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 15 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	waitbuttonpress
-# 19 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 16 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_Chansey::
-# 24 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, 8
-# 25 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 21 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_PEWTER_CHANSEY
+# 22 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_PkmnCenterChansey
-# 26 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 23 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
-# 27 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 24 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	waitbuttonpress
-# 28 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 25 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_Gentleman::
-# 33 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 30 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	msgbox PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone, MSGBOX_NPC
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_Jigglypuff::
-# 38 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	lock
-# 39 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 36 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	faceplayer
-# 40 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 37 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	fadeoutbgm 0
-# 41 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 38 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	playbgm MUS_RG_JIGGLYPUFF, 0
-# 42 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 39 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	message PewterCity_PokemonCenter_1F_Text_Jigglypuff
-# 43 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 40 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
-# 44 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 41 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	delay 455
-# 45 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 42 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	playbgm MUS_RG_POKE_CENTER, 1
-# 46 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 43 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_Youngster::
-# 51 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 48 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	msgbox PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy, MSGBOX_NPC
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_GBAKid1::
-# 56 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 53 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	lock
-# 57 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 54 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	msgbox PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu
-# 58 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 55 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
 
 PewterCity_PokemonCenter_1F_EventScript_GBAKid2::
-# 63 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 60 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	msgbox PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid, MSGBOX_NPC
 	end
 
 
 PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone::
-# 67 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 64 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	.string "What!?\p"
 	.string "TEAM ROCKET is at MT. MOON?\n"
 	.string "Huh?\p"
@@ -99,11 +99,11 @@ PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone::
 	.string "Scram!$"
 
 PewterCity_PokemonCenter_1F_Text_Jigglypuff::
-# 75 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 72 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	.string "JIGGLYPUFF: Puu pupuu!$"
 
 PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy::
-# 79 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 76 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	.string "Yawn!\p"
 	.string "When JIGGLYPUFF sings, POKéMON get\n"
 	.string "drowsy…\p"
@@ -111,12 +111,12 @@ PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy::
 	.string "Snore…$"
 
 PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu::
-# 87 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 84 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	.string "I really want a PIKACHU, so I'm\n"
 	.string "trading my CLEFAIRY for one.$"
 
 PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid::
-# 92 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
+# 89 "data/maps/PewterCity_PokemonCenter_1F/scripts.pory"
 	.string "I'm trading POKéMON with that kid\n"
 	.string "there.\p"
 	.string "I had two PIKACHU, so I figured\n"

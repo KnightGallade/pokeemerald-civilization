@@ -3,141 +3,145 @@ Route22_MapScripts::
 
 
 Route22_EventScript_EarlyRivalTriggerTop::
-# 6 "data/maps/Route22/scripts.pory"
+# 4 "data/maps/Route22/scripts.pory"
 	lockall
-# 7 "data/maps/Route22/scripts.pory"
+# 5 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 0
-# 8 "data/maps/Route22/scripts.pory"
+# 6 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_EarlyRival
 	end
 
 
 Route22_EventScript_EarlyRivalTriggerMid::
-# 13 "data/maps/Route22/scripts.pory"
+# 11 "data/maps/Route22/scripts.pory"
 	lockall
-# 14 "data/maps/Route22/scripts.pory"
+# 12 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 15 "data/maps/Route22/scripts.pory"
-	setobjectxyperm 1, 25, 5
-# 16 "data/maps/Route22/scripts.pory"
+# 13 "data/maps/Route22/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+# 14 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_EarlyRival
 	end
 
 
 Route22_EventScript_EarlyRivalTriggerBottom::
-# 21 "data/maps/Route22/scripts.pory"
+# 19 "data/maps/Route22/scripts.pory"
 	lockall
-# 22 "data/maps/Route22/scripts.pory"
+# 20 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 2
-# 23 "data/maps/Route22/scripts.pory"
-	setobjectxyperm 1, 25, 5
-# 24 "data/maps/Route22/scripts.pory"
+# 21 "data/maps/Route22/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+# 22 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_EarlyRival
 	end
 
 
 Route22_EventScript_EarlyRival::
-# 29 "data/maps/Route22/scripts.pory"
+# 27 "data/maps/Route22/scripts.pory"
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-# 30 "data/maps/Route22/scripts.pory"
-	addobject 1
-# 31 "data/maps/Route22/scripts.pory"
+# 28 "data/maps/Route22/scripts.pory"
+	addobject LOCALID_ROUTE22_RIVAL
+# 29 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_EarlyRivalApproach
-# 32 "data/maps/Route22/scripts.pory"
+# 30 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 1, Route22_EventScript_EarlyRivalApproach
-# 33 "data/maps/Route22/scripts.pory"
+# 31 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 2, Route22_EventScript_EarlyRivalApproachBottom
-# 34 "data/maps/Route22/scripts.pory"
+# 32 "data/maps/Route22/scripts.pory"
 	delay 6
-# 35 "data/maps/Route22/scripts.pory"
+# 33 "data/maps/Route22/scripts.pory"
 	msgbox Route22_Text_EarlyRivalIntro
-# 36 "data/maps/Route22/scripts.pory"
+# 34 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 2, Route22_EventScript_EarlyRivalSquirtle
-# 37 "data/maps/Route22/scripts.pory"
+# 35 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 1, Route22_EventScript_EarlyRivalBulbasaur
-# 38 "data/maps/Route22/scripts.pory"
+# 36 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 0, Route22_EventScript_EarlyRivalCharmander
-# 39 "data/maps/Route22/scripts.pory"
+# 37 "data/maps/Route22/scripts.pory"
 	msgbox Route22_Text_EarlyRivalPostBattle
-# 40 "data/maps/Route22/scripts.pory"
+# 38 "data/maps/Route22/scripts.pory"
 	closemessage
-# 41 "data/maps/Route22/scripts.pory"
+# 39 "data/maps/Route22/scripts.pory"
 	delay 10
-# 42 "data/maps/Route22/scripts.pory"
+# 40 "data/maps/Route22/scripts.pory"
 	playbgm MUS_RG_RIVAL_EXIT, 0
-# 43 "data/maps/Route22/scripts.pory"
+# 41 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_EarlyRivalExit
-# 44 "data/maps/Route22/scripts.pory"
+# 42 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 1, Route22_EventScript_EarlyRivalExit
-# 45 "data/maps/Route22/scripts.pory"
+# 43 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 2, Route22_EventScript_EarlyRivalExitBottom
-# 46 "data/maps/Route22/scripts.pory"
+# 44 "data/maps/Route22/scripts.pory"
 	fadedefaultbgm
-# 47 "data/maps/Route22/scripts.pory"
-	removeobject 1
-# 48 "data/maps/Route22/scripts.pory"
+# 45 "data/maps/Route22/scripts.pory"
+	removeobject LOCALID_ROUTE22_RIVAL
+# 46 "data/maps/Route22/scripts.pory"
 	setvar VAR_MAP_SCENE_ROUTE22, 2
-# 49 "data/maps/Route22/scripts.pory"
+# 47 "data/maps/Route22/scripts.pory"
 	releaseall
 	end
 
 
 Route22_EventScript_EarlyRivalApproach::
-# 54 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_RivalApproach
-# 55 "data/maps/Route22/scripts.pory"
+# 52 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproach
+# 53 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route22_EventScript_EarlyRivalApproachBottom::
-# 60 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_RivalApproachBottom
-# 61 "data/maps/Route22/scripts.pory"
+# 58 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproachBottom
+# 59 "data/maps/Route22/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Route22_Movement_PlayerFaceRival
-# 62 "data/maps/Route22/scripts.pory"
+# 60 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route22_EventScript_EarlyRivalSquirtle::
-# 67 "data/maps/Route22/scripts.pory"
+# 65 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro_no_whiteout TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE, Route22_Text_EarlyRivalDefeat
 	return
 
 
 Route22_EventScript_EarlyRivalBulbasaur::
-# 72 "data/maps/Route22/scripts.pory"
+# 70 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro_no_whiteout TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR, Route22_Text_EarlyRivalDefeat
 	return
 
 
 Route22_EventScript_EarlyRivalCharmander::
-# 77 "data/maps/Route22/scripts.pory"
+# 75 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro_no_whiteout TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER, Route22_Text_EarlyRivalDefeat
 	return
 
 
 Route22_EventScript_EarlyRivalExit::
-# 82 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_EarlyRivalExit
-# 83 "data/maps/Route22/scripts.pory"
+# 80 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_EarlyRivalExit
+# 81 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route22_EventScript_EarlyRivalExitBottom::
-# 88 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_EarlyRivalExitBottom
-# 89 "data/maps/Route22/scripts.pory"
+# 86 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_EarlyRivalExitBottom
+# 87 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
-# 93 "data/maps/Route22/scripts.pory"
+# 91 "data/maps/Route22/scripts.pory"
 Route22_Movement_EarlyRivalExit:
-# 94 "data/maps/Route22/scripts.pory"
+# 92 "data/maps/Route22/scripts.pory"
 	walk_down
+# 93 "data/maps/Route22/scripts.pory"
+	walk_right
+# 94 "data/maps/Route22/scripts.pory"
+	walk_right
 # 95 "data/maps/Route22/scripts.pory"
 	walk_right
 # 96 "data/maps/Route22/scripts.pory"
@@ -145,9 +149,9 @@ Route22_Movement_EarlyRivalExit:
 # 97 "data/maps/Route22/scripts.pory"
 	walk_right
 # 98 "data/maps/Route22/scripts.pory"
-	walk_right
+	walk_down
 # 99 "data/maps/Route22/scripts.pory"
-	walk_right
+	walk_down
 # 100 "data/maps/Route22/scripts.pory"
 	walk_down
 # 101 "data/maps/Route22/scripts.pory"
@@ -157,22 +161,22 @@ Route22_Movement_EarlyRivalExit:
 # 103 "data/maps/Route22/scripts.pory"
 	walk_down
 # 104 "data/maps/Route22/scripts.pory"
-	walk_down
-# 105 "data/maps/Route22/scripts.pory"
-	walk_down
-# 106 "data/maps/Route22/scripts.pory"
 	step_end
 
-# 109 "data/maps/Route22/scripts.pory"
+# 107 "data/maps/Route22/scripts.pory"
 Route22_Movement_EarlyRivalExitBottom:
+# 108 "data/maps/Route22/scripts.pory"
+	walk_right
+# 109 "data/maps/Route22/scripts.pory"
+	walk_right
 # 110 "data/maps/Route22/scripts.pory"
 	walk_right
 # 111 "data/maps/Route22/scripts.pory"
 	walk_right
 # 112 "data/maps/Route22/scripts.pory"
-	walk_right
+	walk_down
 # 113 "data/maps/Route22/scripts.pory"
-	walk_right
+	walk_down
 # 114 "data/maps/Route22/scripts.pory"
 	walk_down
 # 115 "data/maps/Route22/scripts.pory"
@@ -184,14 +188,14 @@ Route22_Movement_EarlyRivalExitBottom:
 # 118 "data/maps/Route22/scripts.pory"
 	walk_down
 # 119 "data/maps/Route22/scripts.pory"
-	walk_down
-# 120 "data/maps/Route22/scripts.pory"
-	walk_down
-# 121 "data/maps/Route22/scripts.pory"
 	step_end
 
-# 124 "data/maps/Route22/scripts.pory"
+# 122 "data/maps/Route22/scripts.pory"
 Route22_Movement_RivalApproach:
+# 123 "data/maps/Route22/scripts.pory"
+	walk_right
+# 124 "data/maps/Route22/scripts.pory"
+	walk_right
 # 125 "data/maps/Route22/scripts.pory"
 	walk_right
 # 126 "data/maps/Route22/scripts.pory"
@@ -203,14 +207,14 @@ Route22_Movement_RivalApproach:
 # 129 "data/maps/Route22/scripts.pory"
 	walk_right
 # 130 "data/maps/Route22/scripts.pory"
-	walk_right
-# 131 "data/maps/Route22/scripts.pory"
-	walk_right
-# 132 "data/maps/Route22/scripts.pory"
 	step_end
 
-# 135 "data/maps/Route22/scripts.pory"
+# 133 "data/maps/Route22/scripts.pory"
 Route22_Movement_RivalApproachBottom:
+# 134 "data/maps/Route22/scripts.pory"
+	walk_right
+# 135 "data/maps/Route22/scripts.pory"
+	walk_right
 # 136 "data/maps/Route22/scripts.pory"
 	walk_right
 # 137 "data/maps/Route22/scripts.pory"
@@ -224,16 +228,16 @@ Route22_Movement_RivalApproachBottom:
 # 141 "data/maps/Route22/scripts.pory"
 	walk_right
 # 142 "data/maps/Route22/scripts.pory"
-	walk_right
-# 143 "data/maps/Route22/scripts.pory"
-	walk_right
-# 144 "data/maps/Route22/scripts.pory"
 	walk_in_place_faster_down
-# 145 "data/maps/Route22/scripts.pory"
+# 143 "data/maps/Route22/scripts.pory"
 	step_end
 
-# 148 "data/maps/Route22/scripts.pory"
+# 146 "data/maps/Route22/scripts.pory"
 Route22_Movement_PlayerFaceRival:
+# 147 "data/maps/Route22/scripts.pory"
+	delay_16
+# 148 "data/maps/Route22/scripts.pory"
+	delay_16
 # 149 "data/maps/Route22/scripts.pory"
 	delay_16
 # 150 "data/maps/Route22/scripts.pory"
@@ -245,132 +249,132 @@ Route22_Movement_PlayerFaceRival:
 # 153 "data/maps/Route22/scripts.pory"
 	delay_16
 # 154 "data/maps/Route22/scripts.pory"
-	delay_16
-# 155 "data/maps/Route22/scripts.pory"
-	delay_16
-# 156 "data/maps/Route22/scripts.pory"
 	delay_8
-# 157 "data/maps/Route22/scripts.pory"
+# 155 "data/maps/Route22/scripts.pory"
 	walk_in_place_faster_up
-# 158 "data/maps/Route22/scripts.pory"
+# 156 "data/maps/Route22/scripts.pory"
 	step_end
 
 Route22_EventScript_LateRivalTriggerTop::
-# 162 "data/maps/Route22/scripts.pory"
+# 160 "data/maps/Route22/scripts.pory"
 	lockall
-# 163 "data/maps/Route22/scripts.pory"
+# 161 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 0
-# 164 "data/maps/Route22/scripts.pory"
+# 162 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_LateRival
 	end
 
 
 Route22_EventScript_LateRivalTriggerMid::
-# 169 "data/maps/Route22/scripts.pory"
+# 167 "data/maps/Route22/scripts.pory"
 	lockall
-# 170 "data/maps/Route22/scripts.pory"
+# 168 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 171 "data/maps/Route22/scripts.pory"
-	setobjectxyperm 1, 25, 5
-# 172 "data/maps/Route22/scripts.pory"
+# 169 "data/maps/Route22/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+# 170 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_LateRival
 	end
 
 
 Route22_EventScript_LateRivalTriggerBottom::
-# 177 "data/maps/Route22/scripts.pory"
+# 175 "data/maps/Route22/scripts.pory"
 	lockall
-# 178 "data/maps/Route22/scripts.pory"
+# 176 "data/maps/Route22/scripts.pory"
 	setvar VAR_TEMP_1, 2
-# 179 "data/maps/Route22/scripts.pory"
-	setobjectxyperm 1, 25, 5
-# 180 "data/maps/Route22/scripts.pory"
+# 177 "data/maps/Route22/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+# 178 "data/maps/Route22/scripts.pory"
 	goto Route22_EventScript_LateRival
 	end
 
 
 Route22_EventScript_LateRival::
-# 185 "data/maps/Route22/scripts.pory"
+# 183 "data/maps/Route22/scripts.pory"
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-# 186 "data/maps/Route22/scripts.pory"
-	addobject 1
-# 187 "data/maps/Route22/scripts.pory"
+# 184 "data/maps/Route22/scripts.pory"
+	addobject LOCALID_ROUTE22_RIVAL
+# 185 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_LateRivalApproach
-# 188 "data/maps/Route22/scripts.pory"
+# 186 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 1, Route22_EventScript_LateRivalApproach
-# 189 "data/maps/Route22/scripts.pory"
+# 187 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_TEMP_1, 2, Route22_EventScript_LateRivalApproachBottom
-# 190 "data/maps/Route22/scripts.pory"
+# 188 "data/maps/Route22/scripts.pory"
 	msgbox Route22_Text_LateRivalIntro
-# 191 "data/maps/Route22/scripts.pory"
-	setvar VAR_LAST_TALKED, 1
-# 192 "data/maps/Route22/scripts.pory"
+# 189 "data/maps/Route22/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_ROUTE22_RIVAL
+# 190 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 2, Route22_EventScript_LateRivalSquirtle
-# 193 "data/maps/Route22/scripts.pory"
+# 191 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 1, Route22_EventScript_LateRivalBulbasaur
-# 194 "data/maps/Route22/scripts.pory"
+# 192 "data/maps/Route22/scripts.pory"
 	call_if_eq VAR_STARTER_MON, 0, Route22_EventScript_LateRivalCharmander
-# 195 "data/maps/Route22/scripts.pory"
+# 193 "data/maps/Route22/scripts.pory"
 	msgbox Route22_Text_LateRivalPostBattle
-# 196 "data/maps/Route22/scripts.pory"
+# 194 "data/maps/Route22/scripts.pory"
 	closemessage
-# 197 "data/maps/Route22/scripts.pory"
+# 195 "data/maps/Route22/scripts.pory"
 	delay 10
-# 198 "data/maps/Route22/scripts.pory"
+# 196 "data/maps/Route22/scripts.pory"
 	playbgm MUS_RG_RIVAL_EXIT, 0
-# 199 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_LateRivalExit
-# 200 "data/maps/Route22/scripts.pory"
+# 197 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_LateRivalExit
+# 198 "data/maps/Route22/scripts.pory"
 	waitmovement 0
-# 201 "data/maps/Route22/scripts.pory"
+# 199 "data/maps/Route22/scripts.pory"
 	fadedefaultbgm
-# 202 "data/maps/Route22/scripts.pory"
-	removeobject 1
-# 203 "data/maps/Route22/scripts.pory"
+# 200 "data/maps/Route22/scripts.pory"
+	removeobject LOCALID_ROUTE22_RIVAL
+# 201 "data/maps/Route22/scripts.pory"
 	setvar VAR_MAP_SCENE_ROUTE22, 4
-# 204 "data/maps/Route22/scripts.pory"
+# 202 "data/maps/Route22/scripts.pory"
 	releaseall
 	end
 
 
 Route22_EventScript_LateRivalApproach::
-# 209 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_RivalApproach
-# 210 "data/maps/Route22/scripts.pory"
+# 207 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproach
+# 208 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route22_EventScript_LateRivalApproachBottom::
-# 215 "data/maps/Route22/scripts.pory"
-	applymovement 1, Route22_Movement_RivalApproachBottom
-# 216 "data/maps/Route22/scripts.pory"
+# 213 "data/maps/Route22/scripts.pory"
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproachBottom
+# 214 "data/maps/Route22/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Route22_Movement_PlayerFaceRival
-# 217 "data/maps/Route22/scripts.pory"
+# 215 "data/maps/Route22/scripts.pory"
 	waitmovement 0
 	return
 
 
 Route22_EventScript_LateRivalSquirtle::
-# 222 "data/maps/Route22/scripts.pory"
+# 220 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE, Route22_Text_LateRivalDefeat
 	return
 
 
 Route22_EventScript_LateRivalBulbasaur::
-# 227 "data/maps/Route22/scripts.pory"
+# 225 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR, Route22_Text_LateRivalDefeat
 	return
 
 
 Route22_EventScript_LateRivalCharmander::
-# 232 "data/maps/Route22/scripts.pory"
+# 230 "data/maps/Route22/scripts.pory"
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER, Route22_Text_LateRivalDefeat
 	return
 
 
-# 236 "data/maps/Route22/scripts.pory"
+# 234 "data/maps/Route22/scripts.pory"
 Route22_Movement_LateRivalExit:
+# 235 "data/maps/Route22/scripts.pory"
+	walk_left
+# 236 "data/maps/Route22/scripts.pory"
+	walk_left
 # 237 "data/maps/Route22/scripts.pory"
 	walk_left
 # 238 "data/maps/Route22/scripts.pory"
@@ -382,20 +386,16 @@ Route22_Movement_LateRivalExit:
 # 241 "data/maps/Route22/scripts.pory"
 	walk_left
 # 242 "data/maps/Route22/scripts.pory"
-	walk_left
-# 243 "data/maps/Route22/scripts.pory"
-	walk_left
-# 244 "data/maps/Route22/scripts.pory"
 	step_end
 
 Route22_EventScript_LeagueGateSign::
-# 248 "data/maps/Route22/scripts.pory"
+# 246 "data/maps/Route22/scripts.pory"
 	msgbox Route22_Text_LeagueGateSign, MSGBOX_SIGN
 	end
 
 
 Route22_Text_EarlyRivalIntro::
-# 252 "data/maps/Route22/scripts.pory"
+# 250 "data/maps/Route22/scripts.pory"
 	.string "{RIVAL}: Hey! {PLAYER}!\p"
 	.string "You're off to the POKéMON LEAGUE?\n"
 	.string "Forget about it!\p"
@@ -407,12 +407,12 @@ Route22_Text_EarlyRivalIntro::
 	.string "any stronger?$"
 
 Route22_Text_EarlyRivalDefeat::
-# 264 "data/maps/Route22/scripts.pory"
+# 262 "data/maps/Route22/scripts.pory"
 	.string "Awww!\n"
 	.string "You just lucked out!$"
 
 Route22_Text_EarlyRivalPostBattle::
-# 269 "data/maps/Route22/scripts.pory"
+# 267 "data/maps/Route22/scripts.pory"
 	.string "I heard the POKéMON LEAGUE is\n"
 	.string "crawling with tough TRAINERS.\p"
 	.string "I have to figure out how to get\n"
@@ -421,7 +421,7 @@ Route22_Text_EarlyRivalPostBattle::
 	.string "move on!$"
 
 Route22_Text_LateRivalIntro::
-# 278 "data/maps/Route22/scripts.pory"
+# 276 "data/maps/Route22/scripts.pory"
 	.string "{RIVAL}: What? {PLAYER}!\n"
 	.string "What a surprise to see you here!\p"
 	.string "So you're going to the POKéMON\n"
@@ -433,12 +433,12 @@ Route22_Text_LateRivalIntro::
 	.string "Come on!$"
 
 Route22_Text_LateRivalDefeat::
-# 290 "data/maps/Route22/scripts.pory"
+# 288 "data/maps/Route22/scripts.pory"
 	.string "What!?\p"
 	.string "I was just careless, you!$"
 
 Route22_Text_LateRivalPostBattle::
-# 295 "data/maps/Route22/scripts.pory"
+# 293 "data/maps/Route22/scripts.pory"
 	.string "That loosened me up.\n"
 	.string "I'm ready for the POKéMON LEAGUE!\p"
 	.string "{PLAYER}, you need more practice.\p"
@@ -446,6 +446,6 @@ Route22_Text_LateRivalPostBattle::
 	.string "I'm out of here. Smell ya!$"
 
 Route22_Text_LeagueGateSign::
-# 303 "data/maps/Route22/scripts.pory"
+# 301 "data/maps/Route22/scripts.pory"
 	.string "POKéMON LEAGUE\n"
 	.string "Front Gate$"

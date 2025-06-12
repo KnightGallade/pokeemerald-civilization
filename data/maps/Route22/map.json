@@ -26,6 +26,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_ROUTE22_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_BLUE",
       "x": 25,
       "y": 4,
@@ -39,9 +40,7 @@
       "flag": "FLAG_HIDE_ROUTE_22_RIVAL"
     }
   ],
-  "warp_events": [
-
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",

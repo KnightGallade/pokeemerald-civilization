@@ -1204,6 +1204,9 @@ void BattleSetup_StartTrainerBattle(void)
         }
     }
 
+    if (BattleHasNoWhiteout())
+        gBattleTypeFlags |= BATTLE_TYPE_LOSABLE;
+
     if (InBattlePyramid())
     {
         VarSet(VAR_TEMP_PLAYING_PYRAMID_MUSIC, 0);
@@ -1316,7 +1319,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || FlagGet(B_FLAG_NO_WHITEOUT))
+        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || FlagGet(B_FLAG_NO_WHITEOUT)) {
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         }
         else if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer())) {

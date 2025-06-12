@@ -129,6 +129,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
     },
     {
+      "local_id": "LOCALID_LITTLEROOT_CELEBI",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CELEBI)",
       "x": 17,
       "y": 13,

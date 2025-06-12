@@ -1,6 +1,3 @@
-const LOCALID_SCIENTIST1 = 1
-const LOCALID_OLD_AMBER = 4
-
 mapscripts PewterCity_Museum_1F_MapScripts {}
 
 script PewterCity_Museum_1F_EventScript_Scientist1 {
@@ -23,7 +20,7 @@ script PewterCity_Museum_1F_EventScript_Scientist1BehindCounter {
 
 script PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter {
 	msgbox(PewterCity_Museum_1F_Text_AmberContainsGeneticMatter)
-	applymovement(LOCALID_SCIENTIST1, Common_Movement_FaceOriginalDirection)
+	applymovement(LOCALID_PEWTER_MUSEUM_1F_SCIENTIST1, Common_Movement_FaceOriginalDirection)
 	waitmovement(0)
 	release
 	end
@@ -31,7 +28,7 @@ script PewterCity_Museum_1F_EventScript_AmberHasGeneticMatter {
 
 script PewterCity_Museum_1F_EventScript_ExplainAmber {
 	msgbox(PewterCity_Museum_1F_Text_AmberIsFossilizedSap)
-	applymovement(LOCALID_SCIENTIST1, Common_Movement_FaceOriginalDirection)
+	applymovement(LOCALID_PEWTER_MUSEUM_1F_SCIENTIST1, Common_Movement_FaceOriginalDirection)
 	waitmovement(0)
 	release
 	end
@@ -167,7 +164,7 @@ script PewterCity_Museum_1F_EventScript_OldAmberScientist {
 	checkitemspace(ITEM_OLD_AMBER)
 	goto_if_eq(VAR_RESULT, FALSE, PewterCity_Museum_1F_EventScript_NoRoomForOldAmber)
 	setflag(FLAG_GOT_OLD_AMBER)
-	removeobject(LOCALID_OLD_AMBER)
+	removeobject(LOCALID_PEWTER_MUSEUM_1F_OLD_AMBER)
 	giveitem_msg(PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan, ITEM_OLD_AMBER, 1, MUS_RG_OBTAIN_KEY_ITEM)
 	release
 	end

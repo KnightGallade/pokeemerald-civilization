@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FRLG_SCIENTIST",
@@ -54,6 +54,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_PROF_OAK",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_PROF_OAK",
       "x": 6,
       "y": 3,
@@ -67,6 +68,7 @@
       "flag": "FLAG_HIDE_OAK_IN_HIS_LAB"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_BULBASAUR_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 8,
       "y": 4,
@@ -80,6 +82,7 @@
       "flag": "FLAG_HIDE_BULBASAUR_BALL"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_SQUIRTLE_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 9,
       "y": 4,
@@ -93,6 +96,7 @@
       "flag": "FLAG_HIDE_SQUIRTLE_BALL"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_CHARMANDER_BALL",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
       "y": 4,
@@ -106,6 +110,7 @@
       "flag": "FLAG_HIDE_CHARMANDER_BALL"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_BLUE",
       "x": 5,
       "y": 4,
@@ -119,6 +124,7 @@
       "flag": "FLAG_HIDE_RIVAL_IN_LAB"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_POKEDEX_1",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_POKEDEX",
       "x": 4,
       "y": 1,
@@ -132,6 +138,7 @@
       "flag": "FLAG_HIDE_POKEDEX"
     },
     {
+      "local_id": "LOCALID_PALLET_OAKS_LAB_POKEDEX_2",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_POKEDEX",
       "x": 5,
       "y": 1,

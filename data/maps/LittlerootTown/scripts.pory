@@ -1015,11 +1015,10 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 `
-const LOCALID_CELEBI = 9
 
 script LittlerootTown_EventScript_Talk_To_Celebi {
 	lockall
-	applymovement(LOCALID_CELEBI, moves(face_player, emote_exclamation_mark))
+	applymovement(LOCALID_LITTLEROOT_CELEBI, moves(face_player, emote_exclamation_mark))
 	msgbox(LittlerootTown_EventScript_Ask_Celebi, MSGBOX_YESNO)
 	goto_if_eq(VAR_RESULT, YES, LittlerootTown_EventScript_Celebi_Back_In_Time)
 	msgbox(LittlerootTown_EventScript_Refuse_Celebi, MSGBOX_NPC)

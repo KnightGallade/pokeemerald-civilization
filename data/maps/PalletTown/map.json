@@ -26,6 +26,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_PALLET_SIGN_LADY",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_WOMAN_1",
       "x": 3,
       "y": 10,
@@ -52,6 +53,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_PALLET_PROF_OAK",
       "graphics_id": "OBJ_EVENT_GFX_FRLG_PROF_OAK",
       "x": 10,
       "y": 8,
@@ -65,6 +67,7 @@
       "flag": "FLAG_HIDE_OAK_IN_PALLET_TOWN"
     },
     {
+      "local_id": "LOCALID_PALLET_CELEBI",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CELEBI)",
       "x": 8,
       "y": 14,
