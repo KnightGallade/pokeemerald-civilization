@@ -1,10 +1,3 @@
-# 1 "data/maps/UnionRoom/scripts.pory"
-
-# 2 "data/maps/UnionRoom/scripts.pory"
-@ Note: LOCALID_UNION_ROOM_PLAYER_# are local ids for this map used elsewhere. They're defined in event_objects.h
-# 3 "data/maps/UnionRoom/scripts.pory"
-
-# 4 "data/maps/UnionRoom/scripts.pory"
 UnionRoom_MapScripts::
 # 5 "data/maps/UnionRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, UnionRoom_OnResume

@@ -1,10 +1,3 @@
-# 1 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
-
-# 2 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
-.set LOCALID_NURSE, 1
-# 3 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
-
-# 4 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 PacifidlogTown_PokemonCenter_1F_MapScripts::
 # 5 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, PacifidlogTown_PokemonCenter_1F_OnTransition
@@ -24,9 +17,7 @@ PacifidlogTown_PokemonCenter_1F_OnTransition:
 
 # 13 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 PacifidlogTown_PokemonCenter_1F_EventScript_Nurse::
-# 14 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, LOCALID_NURSE
-# 15 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_PACIFIDLOG_NURSE
 	call Common_EventScript_PkmnCenterNurse
 # 16 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	waitmessage

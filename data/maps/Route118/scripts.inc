@@ -1,10 +1,3 @@
-# 1 "data/maps/Route118/scripts.pory"
-
-# 2 "data/maps/Route118/scripts.pory"
-.set LOCALID_STEVEN, 19
-# 3 "data/maps/Route118/scripts.pory"
-
-# 4 "data/maps/Route118/scripts.pory"
 Route118_MapScripts::
 # 5 "data/maps/Route118/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
@@ -134,13 +127,9 @@ Route118_EventScript_StevenTrigger0::
 	lockall
 # 68 "data/maps/Route118/scripts.pory"
 	setvar VAR_0x8008, 0
-# 69 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 70 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-# 71 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenApproachLedge0
-# 72 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge0
 	waitmovement 0
 # 73 "data/maps/Route118/scripts.pory"
 	goto Route118_EventScript_StevenTrigger
@@ -154,9 +143,7 @@ Route118_EventScript_StevenTrigger1::
 	lockall
 # 78 "data/maps/Route118/scripts.pory"
 	setvar VAR_0x8008, 1
-# 79 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 80 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 # 81 "data/maps/Route118/scripts.pory"
 	goto Route118_EventScript_StevenTrigger
@@ -170,13 +157,9 @@ Route118_EventScript_StevenTrigger2::
 	lockall
 # 86 "data/maps/Route118/scripts.pory"
 	setvar VAR_0x8008, 2
-# 87 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 88 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-# 89 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenApproachLedge2
-# 90 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge2
 	waitmovement 0
 # 91 "data/maps/Route118/scripts.pory"
 	goto Route118_EventScript_StevenTrigger
@@ -188,9 +171,7 @@ Route118_EventScript_StevenTrigger2::
 Route118_EventScript_StevenTrigger::
 # 95 "data/maps/Route118/scripts.pory"
 	playse SE_LEDGE
-# 96 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenJumpLedge
-# 97 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenJumpLedge
 	waitmovement 0
 # 98 "data/maps/Route118/scripts.pory"
 	delay 30
@@ -206,9 +187,7 @@ Route118_EventScript_StevenTrigger::
 	call_if_eq VAR_0x8008, 2, Route118_EventScript_StevenExit2
 # 104 "data/maps/Route118/scripts.pory"
 	setvar VAR_ROUTE118_STATE, 1
-# 105 "data/maps/Route118/scripts.pory"
-	removeobject LOCALID_STEVEN
-# 106 "data/maps/Route118/scripts.pory"
+	removeobject LOCALID_ROUTE118_STEVEN
 	releaseall
 # 107 "data/maps/Route118/scripts.pory"
 	end
@@ -216,11 +195,8 @@ Route118_EventScript_StevenTrigger::
 
 # 109 "data/maps/Route118/scripts.pory"
 Route118_EventScript_StevenExit0::
-# 110 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-# 111 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit0
-# 112 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit0
 	waitmovement 0
 # 113 "data/maps/Route118/scripts.pory"
 	return
@@ -228,11 +204,8 @@ Route118_EventScript_StevenExit0::
 
 # 115 "data/maps/Route118/scripts.pory"
 Route118_EventScript_StevenExit1::
-# 116 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-# 117 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit1
-# 118 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit1
 	waitmovement 0
 # 119 "data/maps/Route118/scripts.pory"
 	return
@@ -240,11 +213,8 @@ Route118_EventScript_StevenExit1::
 
 # 121 "data/maps/Route118/scripts.pory"
 Route118_EventScript_StevenExit2::
-# 122 "data/maps/Route118/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-# 123 "data/maps/Route118/scripts.pory"
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenExit2
-# 124 "data/maps/Route118/scripts.pory"
+	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
+	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit2
 	waitmovement 0
 # 125 "data/maps/Route118/scripts.pory"
 	return

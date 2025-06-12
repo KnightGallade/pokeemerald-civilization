@@ -1,10 +1,3 @@
-# 1 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-
-# 2 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-.set LOCALID_FAMILIAR_GRUNT, 13
-# 3 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-
-# 4 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 SlateportCity_OceanicMuseum_1F_MapScripts::
 # 5 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	.byte 0
@@ -22,9 +15,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_EntranceAttendant::
 SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeLeft::
 # 12 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	lockall
-# 13 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 14 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 15 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	goto SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee
@@ -36,9 +27,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeLeft::
 SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeRight::
 # 19 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	lockall
-# 20 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 21 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 22 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	goto SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee
@@ -58,9 +47,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee::
 	closemessage
 # 30 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	hidemoneybox
-# 31 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
-# 32 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
 	waitmovement 0
 # 33 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	releaseall
@@ -102,9 +89,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_NotEnoughMoney::
 	closemessage
 # 52 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	hidemoneybox
-# 53 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
-# 54 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
 	waitmovement 0
 # 55 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	releaseall
@@ -296,13 +281,9 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGrunt::
 	delay 8
 # 149 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	playse SE_PIN
-# 150 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement LOCALID_FAMILIAR_GRUNT, Common_Movement_ExclamationMark
-# 151 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT, Common_Movement_ExclamationMark
 	waitmovement 0
-# 152 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement LOCALID_FAMILIAR_GRUNT, Common_Movement_Delay48
-# 153 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT, Common_Movement_Delay48
 	waitmovement 0
 # 154 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	msgbox SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis, MSGBOX_DEFAULT
@@ -330,11 +311,8 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGrunt::
 
 # 166 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitNorth::
-# 167 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PlayerWatchGruntExitNorth
-# 168 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement LOCALID_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExitNorth
-# 169 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PlayerWatchGruntExitNorth
+	applymovement LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExitNorth
 	waitmovement 0
 # 170 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	goto SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExited
@@ -344,9 +322,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitNorth::
 
 # 173 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitSouth::
-# 174 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement LOCALID_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExit
-# 175 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExit
 	waitmovement 0
 # 176 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	goto SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExited
@@ -356,11 +332,8 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitSouth::
 
 # 179 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitWestEast::
-# 180 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PlayerWatchGruntExitWestEast
-# 181 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	applymovement LOCALID_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExit
-# 182 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PlayerWatchGruntExitWestEast
+	applymovement LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT, SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExit
 	waitmovement 0
 # 183 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	goto SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExited
@@ -374,9 +347,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExited::
 	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_FAMILIAR_AQUA_GRUNT
 # 188 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	playse SE_EXIT
-# 189 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
-	removeobject LOCALID_FAMILIAR_GRUNT
-# 190 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
+	removeobject LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT
 	release
 # 191 "data/maps/SlateportCity_OceanicMuseum_1F/scripts.pory"
 	end

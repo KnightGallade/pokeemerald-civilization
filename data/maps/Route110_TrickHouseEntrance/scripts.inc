@@ -1,10 +1,3 @@
-# 1 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-
-# 2 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-.set LOCALID_TRICK_MASTER, 1
-# 3 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-
-# 4 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 Route110_TrickHouseEntrance_MapScripts::
 # 5 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route110_TrickHouseEntrance_OnTransition
@@ -262,9 +255,7 @@ Route110_TrickHouseEntrance_EventScript_TrickMasterFound::
 	showobjectat LOCALID_TRICK_MASTER, MAP_ROUTE110_TRICK_HOUSE_ENTRANCE
 # 132 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	turnobject LOCALID_TRICK_MASTER, DIR_EAST
-# 133 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-# 134 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_WEST
 	end
 # 135 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 
@@ -466,13 +457,9 @@ Route110_TrickHouseEntrance_EventScript_TrickMaster::
 Route110_TrickHouseEntrance_EventScript_FoundTrickMaster::
 # 234 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	playse SE_PIN
-# 235 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-# 236 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-# 237 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-# 238 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
 # 239 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	call_if_eq VAR_TRICK_HOUSE_LEVEL, 0, Route110_TrickHouseEntrance_EventScript_FoundBeneathDesk
@@ -938,13 +925,9 @@ Route110_TrickHouseEntrance_EventScript_EnterPuzzleRoom::
 	special DrawWholeMapView
 # 470 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	delay 20
-# 471 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-# 472 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-# 473 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route110_TrickHouseEntrance_Movement_EnterRoom
-# 474 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
+	applymovement LOCALID_PLAYER, Route110_TrickHouseEntrance_Movement_EnterRoom
 	waitmovement 0
 # 475 "data/maps/Route110_TrickHouseEntrance/scripts.pory"
 	switch VAR_TRICK_HOUSE_LEVEL

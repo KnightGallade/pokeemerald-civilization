@@ -1,10 +1,3 @@
-# 1 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-
-# 2 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-.set LOCALID_WALLACE, 1
-# 3 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-
-# 4 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 CaveOfOrigin_B1F_MapScripts::
 # 5 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	.byte 0
@@ -20,27 +13,19 @@ CaveOfOrigin_B1F_EventScript_Wallace::
 	msgbox CaveOfOrigin_B1F_Text_WallaceStory, MSGBOX_DEFAULT
 # 11 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	closemessage
-# 12 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
-# 13 "data/maps/CaveOfOrigin_B1F/scripts.pory"
+	applymovement LOCALID_CAVE_OF_ORIGIN_WALLACE, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 14 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	delay 60
 # 15 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	playse SE_PIN
-# 16 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-	applymovement LOCALID_WALLACE, Common_Movement_ExclamationMark
-# 17 "data/maps/CaveOfOrigin_B1F/scripts.pory"
+	applymovement LOCALID_CAVE_OF_ORIGIN_WALLACE, Common_Movement_ExclamationMark
 	waitmovement 0
-# 18 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-	applymovement LOCALID_WALLACE, Common_Movement_Delay48
-# 19 "data/maps/CaveOfOrigin_B1F/scripts.pory"
+	applymovement LOCALID_CAVE_OF_ORIGIN_WALLACE, Common_Movement_Delay48
 	waitmovement 0
 # 20 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	delay 30
-# 21 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-	applymovement LOCALID_WALLACE, Common_Movement_FacePlayer
-# 22 "data/maps/CaveOfOrigin_B1F/scripts.pory"
+	applymovement LOCALID_CAVE_OF_ORIGIN_WALLACE, Common_Movement_FacePlayer
 	waitmovement 0
 # 23 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	message CaveOfOrigin_B1F_Text_WhereIsRayquaza
@@ -114,9 +99,7 @@ CaveOfOrigin_B1F_EventScript_AtSkyPillar::
 	setflag FLAG_WALLACE_GOES_TO_SKY_PILLAR
 # 58 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 3
-# 59 "data/maps/CaveOfOrigin_B1F/scripts.pory"
-	removeobject LOCALID_WALLACE
-# 60 "data/maps/CaveOfOrigin_B1F/scripts.pory"
+	removeobject LOCALID_CAVE_OF_ORIGIN_WALLACE
 	clearflag FLAG_HIDE_SKY_PILLAR_WALLACE
 # 61 "data/maps/CaveOfOrigin_B1F/scripts.pory"
 	fadescreen FADE_FROM_BLACK

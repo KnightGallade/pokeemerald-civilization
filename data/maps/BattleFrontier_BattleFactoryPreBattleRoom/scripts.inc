@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 BattleFrontier_BattleFactoryPreBattleRoom_MapScripts::
 # 5 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleFactoryPreBattleRoom_OnFrame
@@ -28,15 +21,10 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_SetUpObjects::
 	setvar VAR_TEMP_1, 1
 # 15 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	goto_if_ne VAR_0x8006, 1, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_TurnPlayerNorth
-# 16 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	setobjectxy LOCALID_ATTENDANT, 8, 7
-# 17 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	turnobject LOCALID_ATTENDANT, DIR_SOUTH
-# 18 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	setobjectxy LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, 8, 7
+	turnobject LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, DIR_SOUTH
 BattleFrontier_BattleFactoryPreBattleRoom_EventScript_TurnPlayerNorth::
-# 19 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 20 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 21 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 
@@ -54,11 +42,8 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_EnterRoom::
 	goto_if_eq VAR_0x8006, 1, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_ReturnToRoomFromBattle
 # 28 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 29 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantEnterRoom
-# 30 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerEnterRoom
-# 31 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	applymovement LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantEnterRoom
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerEnterRoom
 	waitmovement 0
 # 32 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	goto_if_eq VAR_0x8006, 2, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_ResumeChallenge
@@ -136,17 +121,13 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_ReturnToRoomFromBattle::
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_WaitFewMoments, MSGBOX_DEFAULT
 # 69 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	closemessage
-# 70 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantMoveToReceiveCall
-# 71 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	applymovement LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantMoveToReceiveCall
 	waitmovement 0
 # 72 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_UnderstoodSirWillDo, MSGBOX_DEFAULT
 # 73 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	closemessage
-# 74 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantReturnToPlayer
-# 75 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	applymovement LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantReturnToPlayer
 	waitmovement 0
 # 76 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow, MSGBOX_DEFAULT
@@ -770,21 +751,15 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_AskSwapBeforeHead::
 
 # 386 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 BattleFrontier_BattleFactoryPreBattleRoom_EventScript_WalkToBattleRoomLv50::
-# 387 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_GuideWalkToBattleRoomLv50
-# 388 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLv50
-# 389 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	applymovement LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_GuideWalkToBattleRoomLv50
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLv50
 	return
 # 390 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 
 # 391 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 BattleFrontier_BattleFactoryPreBattleRoom_EventScript_WalkToBattleRoomLvOpen::
-# 392 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_GuideWalkToBattleRoomLvOpen
-# 393 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLvOpen
-# 394 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
+	applymovement LOCALID_FACTORY_PRE_BATTLE_ATTENDANT, BattleFrontier_BattleFactoryPreBattleRoom_Movement_GuideWalkToBattleRoomLvOpen
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLvOpen
 	return
 # 395 "data/maps/BattleFrontier_BattleFactoryPreBattleRoom/scripts.pory"
 

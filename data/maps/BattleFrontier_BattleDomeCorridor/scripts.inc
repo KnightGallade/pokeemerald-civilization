@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 BattleFrontier_BattleDomeCorridor_MapScripts::
 # 5 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleDomeCorridor_OnFrame
@@ -30,21 +23,15 @@ BattleFrontier_BattleDomeCorridor_EventScript_EnterCorridor::
 	frontier_get FRONTIER_DATA_LVL_MODE
 # 16 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	goto_if_eq VAR_RESULT, FRONTIER_LVL_OPEN, BattleFrontier_BattleDomeCorridor_EventScript_WalkToBattleRoomLvOpen
-# 17 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLv50
-# 18 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLv50
-# 19 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
+	applymovement LOCALID_DOME_CORRIDOR_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLv50
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLv50
 	waitmovement 0
 # 20 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	opendoor 13, 3
 # 21 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	waitdooranim
-# 22 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLv50
-# 23 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLv50
-# 24 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
+	applymovement LOCALID_DOME_CORRIDOR_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLv50
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLv50
 	waitmovement 0
 # 25 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	closedoor 13, 3
@@ -56,21 +43,15 @@ BattleFrontier_BattleDomeCorridor_EventScript_EnterCorridor::
 
 # 29 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 BattleFrontier_BattleDomeCorridor_EventScript_WalkToBattleRoomLvOpen::
-# 30 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLvOpen
-# 31 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLvOpen
-# 32 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
+	applymovement LOCALID_DOME_CORRIDOR_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLvOpen
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLvOpen
 	waitmovement 0
 # 33 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	opendoor 37, 3
 # 34 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	waitdooranim
-# 35 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLvOpen
-# 36 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLvOpen
-# 37 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
+	applymovement LOCALID_DOME_CORRIDOR_ATTENDANT, BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLvOpen
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLvOpen
 	waitmovement 0
 # 38 "data/maps/BattleFrontier_BattleDomeCorridor/scripts.pory"
 	closedoor 37, 3

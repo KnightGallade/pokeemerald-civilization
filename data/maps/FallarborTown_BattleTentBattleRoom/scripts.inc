@@ -1,14 +1,7 @@
-# 1 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-
-# 2 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-.set LOCALID_PLAYER, 1
-# 3 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-.set LOCALID_ATTENDANT, 2
-# 4 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-.set LOCALID_OPPONENT, 3
-# 5 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-
-# 6 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+@ On this map the player will automatically walk into the room, but the camera is supposed to remain still.
+@ To do this GF sets the player (LOCALID_PLAYER) invisible and creates a fake player object (LOCALID_FALLARBOR_TENT_BATTLE_PLAYER).
+@ The graphics of this fake player object are represented with VAR_OBJ_GFX_ID_1.
+@ The graphics of the opponent are represented with VAR_OBJ_GFX_ID_0, which will ultimately be set by tower_setopponent.
 FallarborTown_BattleTentBattleRoom_MapScripts::
 # 7 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, FallarborTown_BattleTentBattleRoom_OnTransition
@@ -20,15 +13,6 @@ FallarborTown_BattleTentBattleRoom_MapScripts::
 	.byte 0
 # 11 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 
-# 12 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	@ On this map the player (OBJ_EVENT_ID_PLAYER) is hidden
-# 13 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	@ The player is represented instead by object event 1, which has the gfx id VAR_OBJ_GFX_ID_1
-# 14 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	@ The opponent is represented by object event 3, which has the gfx id VAR_OBJ_GFX_ID_0
-# 15 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-
-# 16 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 FallarborTown_BattleTentBattleRoom_OnTransition:
 # 17 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	call FallarborTown_BattleTentBattleRoom_EventScript_SetPlayerGfx
@@ -80,11 +64,8 @@ FallarborTown_BattleTentBattleRoom_OnFrame:
 FallarborTown_BattleTentBattleRoom_EventScript_EnterRoom::
 # 41 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	lockall
-# 42 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	showobjectat LOCALID_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
-# 43 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerEnter
-# 44 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	showobjectat LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerEnter
 	waitmovement 0
 # 45 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	frontier_get FRONTIER_DATA_BATTLE_NUM
@@ -94,15 +75,10 @@ FallarborTown_BattleTentBattleRoom_EventScript_EnterRoom::
 FallarborTown_BattleTentBattleRoom_EventScript_NextOpponentEnter::
 # 48 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	tower_setopponent
-# 49 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	addobject LOCALID_OPPONENT
-# 50 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_OPPONENT, FallarborTown_BattleTentBattleRoom_Movement_OpponentEnter
-# 51 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	addobject LOCALID_FALLARBOR_TENT_BATTLE_OPPONENT
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_OPPONENT, FallarborTown_BattleTentBattleRoom_Movement_OpponentEnter
 	waitmovement 0
-# 52 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
-# 53 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
 	playse SE_M_BELLY_DRUM
 # 54 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	waitse
@@ -122,9 +98,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_NextOpponentEnter::
 	switch VAR_RESULT
 # 62 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	case 1, FallarborTown_BattleTentBattleRoom_EventScript_DefeatedOpponent
-# 63 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
-# 64 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
 	playse SE_M_SNORE
 # 65 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	waitse
@@ -148,9 +122,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyLost::
 
 # 75 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 FallarborTown_BattleTentBattleRoom_EventScript_DefeatedOpponent::
-# 76 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
-# 77 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantJump
 	playse SE_BANG
 # 78 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	waitse
@@ -172,19 +144,12 @@ FallarborTown_BattleTentBattleRoom_EventScript_IncrementBattleNum::
 	switch VAR_RESULT
 # 87 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	case 3, FallarborTown_BattleTentBattleRoom_EventScript_WarpToLobbyWon
-# 88 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_OPPONENT, FallarborTown_BattleTentBattleRoom_Movement_OpponentExit
-# 89 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_OPPONENT, FallarborTown_BattleTentBattleRoom_Movement_OpponentExit
 	waitmovement 0
-# 90 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	removeobject LOCALID_OPPONENT
-# 91 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantApproachPlayer
-# 92 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	removeobject LOCALID_FALLARBOR_TENT_BATTLE_OPPONENT
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantApproachPlayer
 	waitmovement 0
-# 93 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceAttendant
-# 94 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
 # 95 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	msgbox BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored, MSGBOX_DEFAULT
@@ -256,13 +221,9 @@ FallarborTown_BattleTentBattleRoom_EventScript_AskRetireChallenge::
 FallarborTown_BattleTentBattleRoom_EventScript_ContinueChallenge::
 # 129 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	closemessage
-# 130 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantReturnToPos
-# 131 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantReturnToPos
 	waitmovement 0
-# 132 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceBattle
-# 133 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceBattle
 	waitmovement 0
 # 134 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	goto FallarborTown_BattleTentBattleRoom_EventScript_NextOpponentEnter
@@ -340,13 +301,9 @@ FallarborTown_BattleTentBattleRoom_EventScript_PauseChallenge::
 
 # 171 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 FallarborTown_BattleTentBattleRoom_EventScript_ResumeChallenge::
-# 172 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantApproachPlayer
-# 173 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_ATTENDANT, FallarborTown_BattleTentBattleRoom_Movement_AttendantApproachPlayer
 	waitmovement 0
-# 174 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	applymovement LOCALID_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceAttendant
-# 175 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, FallarborTown_BattleTentBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
 # 176 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	goto FallarborTown_BattleTentBattleRoom_EventScript_AskContinueChallenge
@@ -472,13 +429,9 @@ FallarborTown_BattleTentBattleRoom_OnWarp:
 
 # 237 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 FallarborTown_BattleTentBattleRoom_EventScript_SetUpObjects::
-# 238 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
-# 239 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	hideobjectat LOCALID_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
-# 240 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
-	removeobject LOCALID_OPPONENT
-# 241 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
+	hideobjectat LOCALID_FALLARBOR_TENT_BATTLE_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
+	removeobject LOCALID_FALLARBOR_TENT_BATTLE_OPPONENT
 	setvar VAR_TEMP_1, 1
 # 242 "data/maps/FallarborTown_BattleTentBattleRoom/scripts.pory"
 	end

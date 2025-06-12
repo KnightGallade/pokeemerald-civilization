@@ -1,10 +1,3 @@
-# 1 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-
-# 2 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-.set LOCALID_GRUNT, 1
-# 3 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-
-# 4 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 SeafloorCavern_Entrance_MapScripts::
 # 5 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, SeafloorCavern_Entrance_OnResume
@@ -32,13 +25,9 @@ SeafloorCavern_Entrance_EventScript_Grunt::
 	waitse
 # 17 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	playse SE_PIN
-# 18 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_ExclamationMark
-# 19 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_ExclamationMark
 	waitmovement 0
-# 20 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_Delay48
-# 21 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_Delay48
 	waitmovement 0
 # 22 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	delay 20
@@ -52,15 +41,11 @@ SeafloorCavern_Entrance_EventScript_Grunt::
 	delay 30
 # 27 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	setvar VAR_HAS_TALKED_TO_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, 1
-# 28 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	copyobjectxytoperm LOCALID_GRUNT
-# 29 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	copyobjectxytoperm LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT
 	msgbox SeafloorCavern_Entrance_Text_HearMagmaNearMossdeep, MSGBOX_DEFAULT
 # 30 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	closemessage
-# 31 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterUp
-# 32 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 33 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	releaseall
@@ -80,9 +65,7 @@ SeafloorCavern_Entrance_EventScript_GruntSpeechShort::
 	msgbox SeafloorCavern_Entrance_Text_HearMagmaNearMossdeepShort, MSGBOX_DEFAULT
 # 41 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	closemessage
-# 42 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterUp
-# 43 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 44 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	releaseall
@@ -92,9 +75,7 @@ SeafloorCavern_Entrance_EventScript_GruntSpeechShort::
 
 # 47 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 SeafloorCavern_Entrance_EventScript_GruntFacePlayerEast::
-# 48 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterLeft
-# 49 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 50 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	return
@@ -102,9 +83,7 @@ SeafloorCavern_Entrance_EventScript_GruntFacePlayerEast::
 
 # 52 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 SeafloorCavern_Entrance_EventScript_GruntFacePlayerWest::
-# 53 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterRight
-# 54 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 55 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	return
@@ -112,9 +91,7 @@ SeafloorCavern_Entrance_EventScript_GruntFacePlayerWest::
 
 # 57 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 SeafloorCavern_Entrance_EventScript_GruntFacePlayerNorth::
-# 58 "data/maps/SeafloorCavern_Entrance/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterDown
-# 59 "data/maps/SeafloorCavern_Entrance/scripts.pory"
+	applymovement LOCALID_SEAFLOOR_CAVERN_ENTRANCE_GRUNT, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 60 "data/maps/SeafloorCavern_Entrance/scripts.pory"
 	return

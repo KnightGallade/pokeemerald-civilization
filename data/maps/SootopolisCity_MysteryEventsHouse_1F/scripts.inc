@@ -1,10 +1,3 @@
-# 1 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-
-# 2 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-.set LOCALID_OLD_MAN, 1
-# 3 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-
-# 4 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 SootopolisCity_MysteryEventsHouse_1F_MapScripts::
 # 5 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, SootopolisCity_MysteryEventsHouse_1F_OnTransition
@@ -30,11 +23,8 @@ SootopolisCity_MysteryEventsHouse_1F_OnTransition:
 SootopolisCity_MysteryEventsHouse_1F_EventScript_SetTrainerVisitingLayout::
 # 16 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 17 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	setobjectxyperm LOCALID_OLD_MAN, 3, 2
-# 18 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	setobjectmovementtype LOCALID_OLD_MAN, MOVEMENT_TYPE_FACE_DOWN
-# 19 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	setobjectxyperm LOCALID_MYSTERY_EVENTS_OLD_MAN, 3, 2
+	setobjectmovementtype LOCALID_MYSTERY_EVENTS_OLD_MAN, MOVEMENT_TYPE_FACE_DOWN
 	setmaplayoutindex LAYOUT_SOOTOPOLIS_CITY_MYSTERY_EVENTS_HOUSE_1F_STAIRS_UNBLOCKED
 # 20 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	return
@@ -42,11 +32,8 @@ SootopolisCity_MysteryEventsHouse_1F_EventScript_SetTrainerVisitingLayout::
 
 # 22 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 SootopolisCity_MysteryEventsHouse_1F_EventScript_MoveOldManToDoor::
-# 23 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	setobjectxyperm LOCALID_OLD_MAN, 2, 2
-# 24 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	setobjectmovementtype LOCALID_OLD_MAN, MOVEMENT_TYPE_FACE_RIGHT
-# 25 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	setobjectxyperm LOCALID_MYSTERY_EVENTS_OLD_MAN, 2, 2
+	setobjectmovementtype LOCALID_MYSTERY_EVENTS_OLD_MAN, MOVEMENT_TYPE_FACE_RIGHT
 	return
 # 26 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 
@@ -66,19 +53,12 @@ SootopolisCity_MysteryEventsHouse_1F_OnFrame:
 SootopolisCity_MysteryEventsHouse_1F_EventScript_OldManCommentOnBattle::
 # 34 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	lockall
-# 35 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerExitStairs
-# 36 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerExitStairs
 	waitmovement 0
-# 37 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement LOCALID_OLD_MAN, SootopolisCity_MysteryEventsHouse_1F_Movement_OldManWalkBehindPlayer
-# 38 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	applymovement LOCALID_MYSTERY_EVENTS_OLD_MAN, SootopolisCity_MysteryEventsHouse_1F_Movement_OldManWalkBehindPlayer
 	waitmovement 0
-# 39 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	copyobjectxytoperm LOCALID_OLD_MAN
-# 40 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 41 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	copyobjectxytoperm LOCALID_MYSTERY_EVENTS_OLD_MAN
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 42 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	call_if_eq VAR_SOOTOPOLIS_MYSTERY_EVENTS_STATE, 1, SootopolisCity_MysteryEventsHouse_1F_EventScript_BattleWonComment
@@ -246,9 +226,7 @@ SootopolisCity_MysteryEventsHouse_1F_EventScript_ChooseParty::
 SootopolisCity_MysteryEventsHouse_1F_EventScript_EnterBasementNorth::
 # 124 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	applymovement VAR_LAST_TALKED, SootopolisCity_MysteryEventsHouse_1F_Movement_OldManMoveAsideLeft
-# 125 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementNorth
-# 126 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementNorth
 	waitmovement 0
 # 127 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	return
@@ -258,9 +236,7 @@ SootopolisCity_MysteryEventsHouse_1F_EventScript_EnterBasementNorth::
 SootopolisCity_MysteryEventsHouse_1F_EventScript_EnterBasementEast::
 # 130 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	applymovement VAR_LAST_TALKED, SootopolisCity_MysteryEventsHouse_1F_Movement_OldManMoveAsideRight
-# 131 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementEast
-# 132 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementEast
 	waitmovement 0
 # 133 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	return
@@ -270,9 +246,7 @@ SootopolisCity_MysteryEventsHouse_1F_EventScript_EnterBasementEast::
 SootopolisCity_MysteryEventsHouse_1F_EventScript_EnterBasementWest::
 # 136 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	applymovement VAR_LAST_TALKED, SootopolisCity_MysteryEventsHouse_1F_Movement_OldManMoveAsideLeft
-# 137 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementWest
-# 138 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_1F_Movement_PlayerEnterBasementWest
 	waitmovement 0
 # 139 "data/maps/SootopolisCity_MysteryEventsHouse_1F/scripts.pory"
 	return

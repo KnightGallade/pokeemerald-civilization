@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 BattleFrontier_BattleTowerElevator_MapScripts::
 # 5 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleTowerElevator_OnFrame
@@ -26,11 +19,8 @@ BattleFrontier_BattleTowerElevator_OnFrame:
 BattleFrontier_BattleTowerElevator_EventScript_EnterElevator::
 # 14 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 15 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleTowerElevator_Movement_AttendantEnter
-# 16 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerElevator_Movement_PlayerEnter
-# 17 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
+	applymovement LOCALID_TOWER_ELEVATOR_ATTENDANT, BattleFrontier_BattleTowerElevator_Movement_AttendantEnter
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerElevator_Movement_PlayerEnter
 	waitmovement 0
 # 18 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	special BufferBattleTowerElevatorFloors
@@ -42,11 +32,8 @@ BattleFrontier_BattleTowerElevator_EventScript_EnterElevator::
 	waitstate
 # 22 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	delay 48
-# 23 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleTowerElevator_Movement_AttendantExit
-# 24 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerElevator_Movement_PlayerExit
-# 25 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
+	applymovement LOCALID_TOWER_ELEVATOR_ATTENDANT, BattleFrontier_BattleTowerElevator_Movement_AttendantExit
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerElevator_Movement_PlayerExit
 	waitmovement 0
 # 26 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	call BattleFrontier_BattleTowerElevator_EventScript_WarpToNextRoom
@@ -170,7 +157,5 @@ BattleFrontier_BattleTowerElevator_OnWarp:
 BattleFrontier_BattleTowerElevator_EventScript_TurnPlayerNorth::
 # 86 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 87 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 88 "data/maps/BattleFrontier_BattleTowerElevator/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end

@@ -1,12 +1,3 @@
-# 1 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-
-# 2 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-.set LOCALID_STEVEN, 1
-# 3 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-.set LOCALID_BELDUM_BALL, 2
-# 4 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-
-# 5 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 MossdeepCity_StevensHouse_MapScripts::
 # 6 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	map_script MAP_SCRIPT_ON_LOAD, MossdeepCity_StevensHouse_OnLoad
@@ -44,11 +35,8 @@ MossdeepCity_StevensHouse_OnTransition:
 
 # 23 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 MossdeepCity_StevensHouse_EventScript_SetStevenPos::
-# 24 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	setobjectxyperm LOCALID_STEVEN, 6, 5
-# 25 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	setobjectmovementtype LOCALID_STEVEN, MOVEMENT_TYPE_FACE_UP
-# 26 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	setobjectxyperm LOCALID_STEVENS_HOUSE_STEVEN, 6, 5
+	setobjectmovementtype LOCALID_STEVENS_HOUSE_STEVEN, MOVEMENT_TYPE_FACE_UP
 	return
 # 27 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 
@@ -64,23 +52,15 @@ MossdeepCity_StevensHouse_OnFrame:
 MossdeepCity_StevensHouse_EventScript_StevenGivesDive::
 # 33 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	lockall
-# 34 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterLeft
-# 35 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	applymovement LOCALID_STEVENS_HOUSE_STEVEN, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 36 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	playse SE_PIN
-# 37 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_ExclamationMark
-# 38 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	applymovement LOCALID_STEVENS_HOUSE_STEVEN, Common_Movement_ExclamationMark
 	waitmovement 0
-# 39 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_Delay48
-# 40 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	applymovement LOCALID_STEVENS_HOUSE_STEVEN, Common_Movement_Delay48
 	waitmovement 0
-# 41 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	applymovement LOCALID_STEVEN, MossdeepCity_StevensHouse_Movement_StevenApproachPlayer
-# 42 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	applymovement LOCALID_STEVENS_HOUSE_STEVEN, MossdeepCity_StevensHouse_Movement_StevenApproachPlayer
 	waitmovement 0
 # 43 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	msgbox MossdeepCity_StevensHouse_Text_YouveEarnedHMDive, MSGBOX_DEFAULT
@@ -96,9 +76,7 @@ MossdeepCity_StevensHouse_EventScript_StevenGivesDive::
 	closemessage
 # 49 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	delay 20
-# 50 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	applymovement LOCALID_STEVEN, MossdeepCity_StevensHouse_Movement_StevenReturn
-# 51 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	applymovement LOCALID_STEVENS_HOUSE_STEVEN, MossdeepCity_StevensHouse_Movement_StevenReturn
 	waitmovement 0
 # 52 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SCOTT
@@ -236,9 +214,7 @@ MossdeepCity_StevensHouse_EventScript_BeldumTransferredToPC::
 MossdeepCity_StevensHouse_EventScript_ReceivedBeldumFanfare::
 # 119 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	bufferspeciesname STR_VAR_2, SPECIES_BELDUM
-# 120 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
-	removeobject LOCALID_BELDUM_BALL
-# 121 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
+	removeobject LOCALID_STEVENS_HOUSE_BALL
 	playfanfare MUS_OBTAIN_ITEM
 # 122 "data/maps/MossdeepCity_StevensHouse/scripts.pory"
 	message MossdeepCity_StevensHouse_Text_ObtainedBeldum

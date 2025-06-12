@@ -1,10 +1,3 @@
-# 1 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 2 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-.set LOCALID_NURSE, 1
-# 3 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-
-# 4 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_MapScripts::
 # 5 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_PokemonCenter_1F_OnTransition
@@ -56,9 +49,7 @@ LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon::
 
 # 29 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_EventScript_Nurse::
-# 30 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, LOCALID_NURSE
-# 31 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_LILYCOVE_NURSE
 	call Common_EventScript_PkmnCenterNurse
 # 32 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	waitmessage

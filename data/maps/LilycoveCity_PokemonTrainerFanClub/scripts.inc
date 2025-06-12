@@ -1,24 +1,3 @@
-# 1 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-
-# 2 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_LASS, 1
-# 3 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_MAN, 2
-# 4 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_POKEFAN_M, 3
-# 5 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_LITTLE_GIRL, 4
-# 6 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_NINJA_BOY, 5
-# 7 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_BOY, 6
-# 8 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_WOMAN, 7
-# 9 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-.set LOCALID_EXPERT_F, 8
-# 10 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-
-# 11 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_MapScripts::
 # 12 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LilycoveCity_PokemonTrainerFanClub_OnFrame
@@ -44,35 +23,22 @@ LilycoveCity_PokemonTrainerFanClub_OnFrame:
 LilycoveCity_PokemonTrainerFanClub_EventScript_MeetFirstFans::
 # 23 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 	lockall
-# 24 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement LOCALID_LASS, Common_Movement_WalkInPlaceFasterDown
-# 25 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_TRAINER_FAN_CLUB_LASS, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 26 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 	msgbox LilycoveCity_PokemonTrainerFanClub_Text_OhWowItsPlayer, MSGBOX_DEFAULT
-# 27 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement LOCALID_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlWatchPlayer
-# 28 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement LOCALID_MAN, LilycoveCity_PokemonTrainerFanClub_Movement_FanApproachPlayer
-# 29 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_TRAINER_FAN_CLUB_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlWatchPlayer
+	applymovement LOCALID_TRAINER_FAN_CLUB_MAN, LilycoveCity_PokemonTrainerFanClub_Movement_FanApproachPlayer
 	waitmovement 0
-# 30 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 31 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 32 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 	msgbox LilycoveCity_PokemonTrainerFanClub_Text_HeardAboutYouImYourFan, MSGBOX_DEFAULT
-# 33 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement LOCALID_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlMoveCloserToPlayer
-# 34 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_TRAINER_FAN_CLUB_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlMoveCloserToPlayer
 	waitmovement 0
-# 35 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 36 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-# 37 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	applymovement LOCALID_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlHideFromPlayer
-# 38 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	applymovement LOCALID_TRAINER_FAN_CLUB_LITTLE_GIRL, LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlHideFromPlayer
 	waitmovement 0
 # 39 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 	setvar VAR_LILYCOVE_FAN_CLUB_STATE, 2
@@ -318,65 +284,49 @@ LilycoveCity_PokemonTrainerFanClub_EventScript_TrySetUpTVShow::
 
 # 160 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember1ToFarTable::
-# 161 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_LASS, 7, 5
-# 162 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_LASS, 7, 5
 	return
 # 163 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 164 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember2ToFarTable::
-# 165 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_POKEFAN_M, 3, 4
-# 166 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_POKEFAN_M, 3, 4
 	return
 # 167 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 168 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember3ToFarTable::
-# 169 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_LITTLE_GIRL, 7, 2
-# 170 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_LITTLE_GIRL, 7, 2
 	return
 # 171 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 172 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember4ToFarTable::
-# 173 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_NINJA_BOY, 5, 5
-# 174 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_NINJA_BOY, 5, 5
 	return
 # 175 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 176 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember5ToFarTable::
-# 177 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_BOY, 5, 2
-# 178 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_BOY, 5, 2
 	return
 # 179 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 180 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember6ToFarTable::
-# 181 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_MAN, 8, 4
-# 182 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_MAN, 8, 4
 	return
 # 183 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 184 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember7ToFarTable::
-# 185 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_WOMAN, 3, 3
-# 186 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_WOMAN, 3, 3
 	return
 # 187 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 
 # 188 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 LilycoveCity_PokemonTrainerFanClub_EventScript_MoveMember8ToFarTable::
-# 189 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
-	setobjectxyperm LOCALID_EXPERT_F, 8, 3
-# 190 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
+	setobjectxyperm LOCALID_TRAINER_FAN_CLUB_EXPERT_F, 8, 3
 	return
 # 191 "data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.pory"
 

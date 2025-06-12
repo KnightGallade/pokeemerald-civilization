@@ -1,20 +1,3 @@
-# 1 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-
-# 2 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_SCIENTIST_1, 1
-# 3 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_SCIENTIST_2, 2
-# 4 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_SAILOR, 3
-# 5 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_OLD_MAN, 4
-# 6 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_WOMAN, 5
-# 7 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-.set LOCALID_STAIR_GRUNT, 9
-# 8 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-
-# 9 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_MapScripts::
 # 10 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_LOAD, MossdeepCity_SpaceCenter_1F_OnLoad
@@ -34,25 +17,15 @@ MossdeepCity_SpaceCenter_1F_OnTransition:
 
 # 18 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveObjectsForTeamMagma::
-# 19 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_SAILOR, 1, 9
-# 20 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectmovementtype LOCALID_SAILOR, MOVEMENT_TYPE_FACE_RIGHT
-# 21 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_WOMAN, 0, 8
-# 22 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectmovementtype LOCALID_WOMAN, MOVEMENT_TYPE_FACE_RIGHT
-# 23 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_OLD_MAN, 1, 6
-# 24 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectmovementtype LOCALID_OLD_MAN, MOVEMENT_TYPE_FACE_RIGHT
-# 25 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_SCIENTIST_1, 3, 4
-# 26 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectmovementtype LOCALID_SCIENTIST_1, MOVEMENT_TYPE_FACE_RIGHT
-# 27 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectmovementtype LOCALID_SCIENTIST_2, MOVEMENT_TYPE_FACE_RIGHT
-# 28 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_SAILOR, 1, 9
+	setobjectmovementtype LOCALID_SPACE_CENTER_1F_SAILOR, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_WOMAN, 0, 8
+	setobjectmovementtype LOCALID_SPACE_CENTER_1F_WOMAN, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_OLD_MAN, 1, 6
+	setobjectmovementtype LOCALID_SPACE_CENTER_1F_OLD_MAN, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_SCIENTIST_1, 3, 4
+	setobjectmovementtype LOCALID_SPACE_CENTER_1F_SCIENTIST_1, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_SPACE_CENTER_1F_SCIENTIST_2, MOVEMENT_TYPE_FACE_RIGHT
 	goto_if_eq VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE, 1, MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardLeft
 # 29 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	goto_if_eq VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardDown
@@ -64,17 +37,13 @@ MossdeepCity_SpaceCenter_1F_EventScript_MoveObjectsForTeamMagma::
 
 # 33 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardLeft::
-# 34 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_STAIR_GRUNT, 12, 2
-# 35 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, 12, 2
 	end
 # 36 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 
 # 37 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardDown::
-# 38 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_STAIR_GRUNT, 13, 3
-# 39 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, 13, 3
 	end
 # 40 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 
@@ -82,9 +51,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardDown::
 @ Functionally unused. See comment on MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsEast
 # 42 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardRight::
-# 43 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	setobjectxyperm LOCALID_STAIR_GRUNT, 14, 2
-# 44 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	setobjectxyperm LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, 14, 2
 	end
 # 45 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 
@@ -456,9 +423,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_Grunt2::
 	trainerbattle_no_intro TRAINER_GRUNT_SPACE_CENTER_2, MossdeepCity_SpaceCenter_1F_Text_Grunt2Defeat
 # 229 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	setflag FLAG_DEFEATED_GRUNT_SPACE_CENTER_1F
-# 230 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	copyobjectxytoperm LOCALID_STAIR_GRUNT
-# 231 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	copyobjectxytoperm LOCALID_SPACE_CENTER_1F_STAIR_GRUNT
 	switch VAR_FACING
 # 232 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	case DIR_WEST, MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsWest
@@ -472,9 +437,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_Grunt2::
 	case DIR_WEST, MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsEast
 # 237 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 #endif
-# 238 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	applymovement LOCALID_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairs
-# 239 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	applymovement LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairs
 	waitmovement 0
 # 240 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE, 2
@@ -496,9 +459,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_Grunt2Defeated::
 
 # 249 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsWest::
-# 250 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	applymovement LOCALID_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairsWest
-# 251 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	applymovement LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairsWest
 	waitmovement 0
 # 252 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE, 1
@@ -514,9 +475,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsWest::
 @ This also means VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE can never be 3
 # 258 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 MossdeepCity_SpaceCenter_1F_EventScript_MoveGruntFromStairsEast::
-# 259 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
-	applymovement LOCALID_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairsEast
-# 260 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
+	applymovement LOCALID_SPACE_CENTER_1F_STAIR_GRUNT, MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairsEast
 	waitmovement 0
 # 261 "data/maps/MossdeepCity_SpaceCenter_1F/scripts.pory"
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STAIR_GUARD_STATE, 3

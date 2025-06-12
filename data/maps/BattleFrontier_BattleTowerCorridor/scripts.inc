@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 BattleFrontier_BattleTowerCorridor_MapScripts::
 # 5 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_LOAD, BattleFrontier_BattleTowerCorridor_OnLoad
@@ -50,11 +43,8 @@ BattleFrontier_BattleTowerCorridor_EventScript_EnterCorridor::
 	setvar VAR_TEMP_0, 1
 # 26 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 	goto_if_eq VAR_0x8006, 1, BattleFrontier_BattleTowerCorridor_EventScript_WalkToFarDoor
-# 27 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToDoor
-# 28 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToDoor
-# 29 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
+	applymovement LOCALID_TOWER_CORRIDOR_ATTENDANT, BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToDoor
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToDoor
 	waitmovement 0
 # 30 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 	goto BattleFrontier_BattleTowerCorridor_EventScript_WarpToBattleRoom
@@ -62,11 +52,8 @@ BattleFrontier_BattleTowerCorridor_EventScript_EnterCorridor::
 
 # 32 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 BattleFrontier_BattleTowerCorridor_EventScript_WalkToFarDoor::
-# 33 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToFarDoor
-# 34 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToFarDoor
-# 35 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
+	applymovement LOCALID_TOWER_CORRIDOR_ATTENDANT, BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToFarDoor
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToFarDoor
 	waitmovement 0
 # 36 "data/maps/BattleFrontier_BattleTowerCorridor/scripts.pory"
 

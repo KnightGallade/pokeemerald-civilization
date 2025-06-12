@@ -1,10 +1,3 @@
-# 1 "data/maps/RustboroCity_DevonCorp_2F/scripts.pory"
-
-# 2 "data/maps/RustboroCity_DevonCorp_2F/scripts.pory"
-.set LOCALID_FOSSIL_SCIENTIST, 5
-# 3 "data/maps/RustboroCity_DevonCorp_2F/scripts.pory"
-
-# 4 "data/maps/RustboroCity_DevonCorp_2F/scripts.pory"
 RustboroCity_DevonCorp_2F_MapScripts::
 # 5 "data/maps/RustboroCity_DevonCorp_2F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_DevonCorp_2F_OnTransition

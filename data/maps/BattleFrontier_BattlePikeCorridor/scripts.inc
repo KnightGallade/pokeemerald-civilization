@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 BattleFrontier_BattlePikeCorridor_MapScripts::
 # 5 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePikeCorridor_OnFrame
@@ -32,11 +25,8 @@ BattleFrontier_BattlePikeCorridor_EventScript_EnterCorridor::
 	pike_cleartrainerids
 # 17 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	pike_nohealing TRUE
-# 18 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeCorridor_Movement_PlayerEnterCorridor
-# 19 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattlePikeCorridor_Movement_AttendantEnterCorridor
-# 20 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeCorridor_Movement_PlayerEnterCorridor
+	applymovement LOCALID_PIKE_CORRIDOR_ATTENDANT, BattleFrontier_BattlePikeCorridor_Movement_AttendantEnterCorridor
 	waitmovement 0
 # 21 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	lockall
@@ -46,9 +36,7 @@ BattleFrontier_BattlePikeCorridor_EventScript_EnterCorridor::
 	closemessage
 # 24 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	releaseall
-# 25 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeCorridor_Movement_PlayerExitCorridor
-# 26 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeCorridor_Movement_PlayerExitCorridor
 	waitmovement 0
 # 27 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 99
@@ -74,9 +62,7 @@ BattleFrontier_BattlePikeCorridor_OnWarp:
 BattleFrontier_BattlePikeCorridor_EventScript_TurnPlayerNorth::
 # 38 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 39 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 40 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 41 "data/maps/BattleFrontier_BattlePikeCorridor/scripts.pory"
 

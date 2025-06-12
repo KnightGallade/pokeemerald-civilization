@@ -1,10 +1,3 @@
-# 1 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-
-# 2 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-
-# 4 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 VerdanturfTown_BattleTentLobby_MapScripts::
 # 5 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, VerdanturfTown_BattleTentLobby_OnFrame
@@ -26,9 +19,7 @@ VerdanturfTown_BattleTentLobby_OnWarp:
 VerdanturfTown_BattleTentLobby_EventScript_TurnPlayerNorth::
 # 14 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 15 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 16 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 17 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 
@@ -390,21 +381,15 @@ VerdanturfTown_BattleTentLobby_EventScript_EndCancelChallenge::
 
 # 196 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 VerdanturfTown_BattleTentLobby_EventScript_WalkToDoor::
-# 197 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-	applymovement LOCALID_ATTENDANT, VerdanturfTown_BattleTentLobby_Movement_WalkToDoor
-# 198 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, VerdanturfTown_BattleTentLobby_Movement_WalkToDoor
-# 199 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
+	applymovement LOCALID_VERDANTURF_TENT_ATTENDANT, VerdanturfTown_BattleTentLobby_Movement_WalkToDoor
+	applymovement LOCALID_PLAYER, VerdanturfTown_BattleTentLobby_Movement_WalkToDoor
 	waitmovement 0
 # 200 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 	opendoor 6, 1
 # 201 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 	waitdooranim
-# 202 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-	applymovement LOCALID_ATTENDANT, VerdanturfTown_BattleTentLobby_Movement_AttendantEnterDoor
-# 203 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, VerdanturfTown_BattleTentLobby_Movement_PlayerEnterDoor
-# 204 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
+	applymovement LOCALID_VERDANTURF_TENT_ATTENDANT, VerdanturfTown_BattleTentLobby_Movement_AttendantEnterDoor
+	applymovement LOCALID_PLAYER, VerdanturfTown_BattleTentLobby_Movement_PlayerEnterDoor
 	waitmovement 0
 # 205 "data/maps/VerdanturfTown_BattleTentLobby/scripts.pory"
 	closedoor 6, 1

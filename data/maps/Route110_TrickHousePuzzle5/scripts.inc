@@ -1,18 +1,3 @@
-# 1 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-
-# 2 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-.set LOCALID_MECHADOLL_1, 1
-# 3 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-.set LOCALID_MECHADOLL_2, 2
-# 4 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-.set LOCALID_MECHADOLL_3, 3
-# 5 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-.set LOCALID_MECHADOLL_4, 4
-# 6 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-.set LOCALID_MECHADOLL_5, 5
-# 7 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
-
-# 8 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
 Route110_TrickHousePuzzle5_MapScripts::
 # 9 "data/maps/Route110_TrickHousePuzzle5/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route110_TrickHousePuzzle5_OnTransition

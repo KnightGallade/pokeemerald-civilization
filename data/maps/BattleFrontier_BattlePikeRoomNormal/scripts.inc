@@ -1,16 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-@ Objects in this room are set dynamically with OBJ_EVENT_GFX_VAR_0 and OBJ_EVENT_GFX_VAR_1
-# 3 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-@ Note: LOCALIDs shared with data/scripts/battle_pike.inc
-# 4 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-.equ LOCALID_OBJ_0, 1
-# 5 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-.equ LOCALID_OBJ_1, 2
-# 6 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-
-# 7 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 BattleFrontier_BattlePikeRoomNormal_MapScripts::
 # 8 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_BattlePikeRoom_OnResume
@@ -62,9 +49,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterSingleBattleRoom::
 	lockall
 # 32 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	delay 16
-# 33 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
-# 34 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
 	waitmovement 0
 # 35 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_gettrainerintro 0
@@ -102,9 +87,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WarpToLobbyLost::
 
 # 52 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 BattleFrontier_BattlePikeRoomNormal_EventScript_WonSingleBattle::
-# 53 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
-# 54 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
 # 55 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	end
@@ -122,9 +105,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterHardBattleRoom::
 	waitmessage
 # 62 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	closemessage
-# 63 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
-# 64 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
 	waitmovement 0
 # 65 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_gettrainerintro 0
@@ -156,13 +137,9 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterHardBattleRoom::
 
 # 79 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 BattleFrontier_BattlePikeRoomNormal_EventScript_WonHardBattle::
-# 80 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
-# 81 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
-# 82 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCApproachPlayer
-# 83 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCApproachPlayer
 	waitmovement 0
 # 84 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	lock
@@ -182,9 +159,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WonHardBattle::
 	closemessage
 # 92 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	release
-# 93 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
-# 94 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
 # 95 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	end
@@ -196,9 +171,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterBrainRoom::
 	delay 22
 # 99 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	lockall
-# 100 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_PreQueenHealNPCApproachPlayer
-# 101 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_PreQueenHealNPCApproachPlayer
 	waitmovement 0
 # 102 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_prequeenheal
@@ -220,11 +193,8 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter::
 	closemessage
 # 111 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	special SpawnCameraObject
-# 112 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanUp
-# 113 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExitForLucy
-# 114 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_CAMERA, BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanUp
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExitForLucy
 	waitmovement 0
 # 115 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	playse SE_PIKE_CURTAIN_CLOSE
@@ -250,9 +220,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter::
 	delay 65
 # 126 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	call BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesMostlyClosed
-# 127 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	showobjectat LOCALID_OBJ_0, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL
-# 128 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	showobjectat LOCALID_PIKE_ROOM_NPC_1, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL
 	delay 4
 # 129 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	call BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesLittleClosed
@@ -262,9 +230,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_LucyEnter::
 	call BattleFrontier_BattlePikeRoomNormal_EventScript_SetCurtainTilesOpen
 # 132 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	waitse
-# 133 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_LucyEnter
-# 134 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_LucyEnter
 	waitmovement 0
 # 135 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_getbrainstatus
@@ -378,13 +344,9 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucyGold::
 
 # 190 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 BattleFrontier_BattlePikeRoomNormal_EventScript_DefeatedLucy::
-# 191 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_LucyMoveAside
-# 192 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_LucyMoveAside
 	waitmovement 0
-# 193 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
-# 194 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
 	waitmovement 0
 # 195 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_get PIKE_DATA_WIN_STREAK
@@ -444,9 +406,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterFullHealRoom::
 	lockall
 # 223 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	delay 16
-# 224 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
-# 225 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_ApproachPlayer
 	waitmovement 0
 # 226 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	message BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreToFullHealth
@@ -462,9 +422,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterFullHealRoom::
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge, MSGBOX_DEFAULT
 # 232 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	closemessage
-# 233 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
-# 234 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCExit
 	waitmovement 0
 # 235 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	releaseall
@@ -478,27 +436,16 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom::
 	lockall
 # 240 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	delay 16
-# 241 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1WalkRight
-# 242 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2WalkLeft
-# 243 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1WalkRight
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2WalkLeft
 	waitmovement 0
-# 244 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown
-# 245 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown
-# 246 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_DoubleTrainersWalkDown
 	waitmovement 0
-# 247 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1FacePlayer
-# 248 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2FacePlayer
-# 249 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1FacePlayer
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2FacePlayer
 	waitmovement 0
-# 250 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer1
-# 251 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer1
 	waitmovement 0
 # 252 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_gettrainerintro 0
@@ -508,9 +455,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom::
 	closemessage
 # 255 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	delay 16
-# 256 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2
-# 257 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2
 	waitmovement 0
 # 258 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_gettrainerintro 1
@@ -538,21 +483,13 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterDoubleBattleRoom::
 
 # 270 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 BattleFrontier_BattlePikeRoomNormal_EventScript_WonDoubleBattle::
-# 271 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2
-# 272 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceTrainer2
 	waitmovement 0
-# 273 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit
-# 274 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer1Exit
 	waitmovement 0
-# 275 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2Exit
-# 276 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_Trainer2Exit
 	waitmovement 0
-# 277 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceUp
-# 278 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerFaceUp
 	waitmovement 0
 # 279 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	end
@@ -564,9 +501,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterStatusRoom::
 	lockall
 # 283 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	message BattleFrontier_BattlePikeRoomNormal_Text_WatchOut
-# 284 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer
-# 285 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonApproachPlayer
 	waitmovement 0
 # 286 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	pike_getstatusmon
@@ -612,13 +547,9 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
 	pike_flashscreen
 # 307 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	waitstate
-# 308 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
-# 309 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
 	waitmovement 0
-# 310 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
-# 311 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 # 312 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	waitse
@@ -636,11 +567,8 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
 	waitmoncry
 # 319 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	closemessage
-# 320 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
-# 321 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
-# 322 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
 	waitmovement 0
 # 323 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia, MSGBOX_DEFAULT
@@ -670,13 +598,9 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
 	pike_flashscreen
 # 336 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	waitstate
-# 337 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
-# 338 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
 	waitmovement 0
-# 339 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
-# 340 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 # 341 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	waitse
@@ -694,11 +618,8 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
 	waitmoncry
 # 348 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	closemessage
-# 349 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
-# 350 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
-# 351 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
 	waitmovement 0
 # 352 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops, MSGBOX_DEFAULT
@@ -770,9 +691,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp::
 BattleFrontier_BattlePikeRoomNormal_EventScript_DoPikeQueenBattle::
 # 386 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	closemessage
-# 387 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
-# 388 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_PlayerWalkUp2
 	waitmovement 0
 # 389 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	setvar VAR_0x8004, SPECIAL_BATTLE_PIKE_SINGLE
@@ -1128,9 +1047,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_HealNPC::
 	closemessage
 # 565 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	release
-# 566 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExit
-# 567 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_1, BattleFrontier_BattlePikeRoomNormal_Movement_HealNPCExit
 	waitmovement 0
 # 568 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	end
@@ -1178,9 +1095,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon::
 	closemessage
 # 590 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	release
-# 591 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
-	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceRight
-# 592 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
+	applymovement LOCALID_PIKE_ROOM_NPC_2, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceRight
 	waitmovement 0
 # 593 "data/maps/BattleFrontier_BattlePikeRoomNormal/scripts.pory"
 	end

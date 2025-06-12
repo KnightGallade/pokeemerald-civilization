@@ -1,12 +1,3 @@
-# 1 "data/maps/Route116/scripts.pory"
-
-# 2 "data/maps/Route116/scripts.pory"
-.set LOCALID_BRINEY, 11
-# 3 "data/maps/Route116/scripts.pory"
-.set LOCALID_WANDAS_BF_OUTSIDE, 21
-# 4 "data/maps/Route116/scripts.pory"
-
-# 5 "data/maps/Route116/scripts.pory"
 Route116_MapScripts::
 # 6 "data/maps/Route116/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -34,9 +25,7 @@ Route116_OnTransition:
 
 # 18 "data/maps/Route116/scripts.pory"
 Route116_EventScript_SetWandasBoyfriendPos::
-# 19 "data/maps/Route116/scripts.pory"
-	setobjectxyperm LOCALID_WANDAS_BF_OUTSIDE, 38, 10
-# 20 "data/maps/Route116/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE116_WANDAS_BF, 38, 10
 	return
 # 21 "data/maps/Route116/scripts.pory"
 
@@ -292,11 +281,8 @@ Route116_EventScript_Briney::
 Route116_EventScript_BrineyTrigger::
 # 147 "data/maps/Route116/scripts.pory"
 	lockall
-# 148 "data/maps/Route116/scripts.pory"
-	applymovement LOCALID_BRINEY, Common_Movement_WalkInPlaceFasterRight
-# 149 "data/maps/Route116/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 150 "data/maps/Route116/scripts.pory"
+	applymovement LOCALID_ROUTE116_BRINEY, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 151 "data/maps/Route116/scripts.pory"
 	msgbox Route116_Text_ScoundrelMadeOffWithPeeko, MSGBOX_DEFAULT

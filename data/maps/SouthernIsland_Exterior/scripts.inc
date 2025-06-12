@@ -1,12 +1,3 @@
-# 1 "data/maps/SouthernIsland_Exterior/scripts.pory"
-
-# 2 "data/maps/SouthernIsland_Exterior/scripts.pory"
-.set LOCALID_SAILOR, 1
-# 3 "data/maps/SouthernIsland_Exterior/scripts.pory"
-.set LOCALID_SS_TIDAL, 2
-# 4 "data/maps/SouthernIsland_Exterior/scripts.pory"
-
-# 5 "data/maps/SouthernIsland_Exterior/scripts.pory"
 SouthernIsland_Exterior_MapScripts::
 # 6 "data/maps/SouthernIsland_Exterior/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Exterior_OnTransition
@@ -42,11 +33,8 @@ SouthernIsland_Exterior_EventScript_Sailor::
 	waitmovement 0
 # 22 "data/maps/SouthernIsland_Exterior/scripts.pory"
 	delay 30
-# 23 "data/maps/SouthernIsland_Exterior/scripts.pory"
-	hideobjectat LOCALID_SAILOR, MAP_SOUTHERN_ISLAND_EXTERIOR
-# 24 "data/maps/SouthernIsland_Exterior/scripts.pory"
-	setvar VAR_0x8004, LOCALID_SS_TIDAL
-# 25 "data/maps/SouthernIsland_Exterior/scripts.pory"
+	hideobjectat LOCALID_SOUTHERN_ISLAND_SAILOR, MAP_SOUTHERN_ISLAND_EXTERIOR
+	setvar VAR_0x8004, LOCALID_SOUTHERN_ISLAND_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
 # 26 "data/maps/SouthernIsland_Exterior/scripts.pory"
 	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
@@ -70,9 +58,7 @@ SouthernIsland_Exterior_EventScript_AsYouLike::
 
 # 36 "data/maps/SouthernIsland_Exterior/scripts.pory"
 Ferry_EventScript_DepartIslandSouth::
-# 37 "data/maps/SouthernIsland_Exterior/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Ferry_Movement_DepartIslandBoardSouth
-# 38 "data/maps/SouthernIsland_Exterior/scripts.pory"
+	applymovement LOCALID_PLAYER, Ferry_Movement_DepartIslandBoardSouth
 	waitmovement 0
 # 39 "data/maps/SouthernIsland_Exterior/scripts.pory"
 	return
@@ -80,9 +66,7 @@ Ferry_EventScript_DepartIslandSouth::
 
 # 41 "data/maps/SouthernIsland_Exterior/scripts.pory"
 Ferry_EventScript_DepartIslandWest::
-# 42 "data/maps/SouthernIsland_Exterior/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Ferry_Movement_DepartIslandBoardWest
-# 43 "data/maps/SouthernIsland_Exterior/scripts.pory"
+	applymovement LOCALID_PLAYER, Ferry_Movement_DepartIslandBoardWest
 	waitmovement 0
 # 44 "data/maps/SouthernIsland_Exterior/scripts.pory"
 	return

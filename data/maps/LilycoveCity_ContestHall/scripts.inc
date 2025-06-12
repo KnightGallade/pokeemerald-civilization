@@ -1,64 +1,7 @@
-# 1 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-
-# 2 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-@ VAR_LAST_TALKED would have made all these direct references unnecessary
-# 3 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_MC, 4
-# 4 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_JUDGE, 5
-# 5 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_CONTESTANT_1, 6
-# 6 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_CONTESTANT_2, 7
-# 7 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_CONTESTANT_3, 8
-# 8 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_CONTESTANT_4, 9
-# 9 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_AUDIENCE_4, 11
-# 10 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_AUDIENCE_2, 12
-# 11 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_MC, 13
-# 12 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_JUDGE, 14
-# 13 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_CONTESTANT_1, 15
-# 14 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_CONTESTANT_2, 16
-# 15 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_CONTESTANT_3, 17
-# 16 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_CONTESTANT_4, 18
-# 17 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_AUDIENCE_1, 19
-# 18 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_AUDIENCE_3, 20
-# 19 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_BEAUTY_AUDIENCE_2, 21
-# 20 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_SMART_AUDIENCE_3, 22
-# 21 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_MC, 23
-# 22 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_JUDGE, 24
-# 23 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_CONTESTANT_1, 25
-# 24 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_CONTESTANT_2, 26
-# 25 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_CONTESTANT_3, 27
-# 26 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_CONTESTANT_4, 28
-# 27 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_AUDIENCE_1, 29
-# 28 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_AUDIENCE_3, 30
-# 29 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-.set LOCALID_CUTE_AUDIENCE_2, 31
-# 30 "data/maps/LilycoveCity_ContestHall/scripts.pory"
-
-# 31 "data/maps/LilycoveCity_ContestHall/scripts.pory"
+@ All the LOCALID constants used in this file are essentially redundant.
+@ They're all used to have the NPC the player talked to turn back so they're facing
+@ their original direction (because they're watching/participating in the contests).
+@ They could all be substituted for VAR_LAST_TALKED.
 LilycoveCity_ContestHall_MapScripts::
 # 32 "data/maps/LilycoveCity_ContestHall/scripts.pory"
 	.byte 0

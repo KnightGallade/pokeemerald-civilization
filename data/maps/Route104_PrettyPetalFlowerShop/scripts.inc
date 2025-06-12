@@ -1,10 +1,3 @@
-# 1 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 2 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-.set LOCALID_OWNER, 1
-# 3 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-
-# 4 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 Route104_PrettyPetalFlowerShop_MapScripts::
 # 5 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route104_PrettyPetalFlowerShop_OnTransition
@@ -28,9 +21,7 @@ Route104_PrettyPetalFlowerShop_OnTransition:
 
 # 15 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner::
-# 16 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
-	setobjectxyperm LOCALID_OWNER, 4, 6
-# 17 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
+	setobjectxyperm LOCALID_FLOWER_SHOP_OWNER, 4, 6
 	end
 # 18 "data/maps/Route104_PrettyPetalFlowerShop/scripts.pory"
 

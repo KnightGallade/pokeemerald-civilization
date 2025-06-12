@@ -1,12 +1,3 @@
-# 1 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-
-# 2 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-.set LOCALID_NURSE, 1
-# 3 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-.set LOCALID_LANETTE, 4
-# 4 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-
-# 5 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 FallarborTown_PokemonCenter_1F_MapScripts::
 # 6 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, FallarborTown_PokemonCenter_1F_OnTransition
@@ -28,9 +19,7 @@ FallarborTown_PokemonCenter_1F_OnTransition:
 
 # 15 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 FallarborTown_PokemonCenter_1F_EventScript_Nurse::
-# 16 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, LOCALID_NURSE
-# 17 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_FALLARBOR_NURSE
 	call Common_EventScript_PkmnCenterNurse
 # 18 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
@@ -80,9 +69,7 @@ FallarborTown_PokemonCenter_1F_EventScript_Lanette::
 
 # 41 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 FallarborTown_PokemonCenter_1F_EventScript_LanetteExitNorth::
-# 42 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-	applymovement LOCALID_LANETTE, FallarborTown_PokemonCenter_1F_Movement_LanetteExitNorth
-# 43 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
+	applymovement LOCALID_FALLARBOR_LANETTE, FallarborTown_PokemonCenter_1F_Movement_LanetteExitNorth
 	waitmovement 0
 # 44 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	goto FallarborTown_PokemonCenter_1F_EventScript_LanetteExited
@@ -92,9 +79,7 @@ FallarborTown_PokemonCenter_1F_EventScript_LanetteExitNorth::
 
 # 47 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 FallarborTown_PokemonCenter_1F_EventScript_LanetteExitWest::
-# 48 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-	applymovement LOCALID_LANETTE, FallarborTown_PokemonCenter_1F_Movement_LanetteExitWest
-# 49 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
+	applymovement LOCALID_FALLARBOR_LANETTE, FallarborTown_PokemonCenter_1F_Movement_LanetteExitWest
 	waitmovement 0
 # 50 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	goto FallarborTown_PokemonCenter_1F_EventScript_LanetteExited
@@ -106,9 +91,7 @@ FallarborTown_PokemonCenter_1F_EventScript_LanetteExitWest::
 FallarborTown_PokemonCenter_1F_EventScript_LanetteExited::
 # 54 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	playse SE_SLIDING_DOOR
-# 55 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
-	removeobject LOCALID_LANETTE
-# 56 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
+	removeobject LOCALID_FALLARBOR_LANETTE
 	clearflag FLAG_HIDE_LANETTES_HOUSE_LANETTE
 # 57 "data/maps/FallarborTown_PokemonCenter_1F/scripts.pory"
 	release

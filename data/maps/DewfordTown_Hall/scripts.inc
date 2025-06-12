@@ -1,16 +1,3 @@
-# 1 "data/maps/DewfordTown_Hall/scripts.pory"
-
-# 2 "data/maps/DewfordTown_Hall/scripts.pory"
-.set LOCALID_EXPERT_M, 4
-# 3 "data/maps/DewfordTown_Hall/scripts.pory"
-.set LOCALID_TWIN, 5
-# 4 "data/maps/DewfordTown_Hall/scripts.pory"
-.set LOCALID_SCHOOL_KID_M, 7
-# 5 "data/maps/DewfordTown_Hall/scripts.pory"
-.set LOCALID_PSYCHIC_M, 8
-# 6 "data/maps/DewfordTown_Hall/scripts.pory"
-
-# 7 "data/maps/DewfordTown_Hall/scripts.pory"
 DewfordTown_Hall_MapScripts::
 # 8 "data/maps/DewfordTown_Hall/scripts.pory"
 	.byte 0
@@ -114,9 +101,7 @@ DewfordTown_Hall_EventScript_ExpertM::
 	msgbox DewfordTown_Hall_Text_TVShowAboutTrend, MSGBOX_DEFAULT
 # 58 "data/maps/DewfordTown_Hall/scripts.pory"
 	closemessage
-# 59 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement LOCALID_EXPERT_M, Common_Movement_WalkInPlaceFasterUp
-# 60 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_DEWFORD_HALL_EXPERT_M, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 61 "data/maps/DewfordTown_Hall/scripts.pory"
 	release
@@ -136,9 +121,7 @@ DewfordTown_Hall_EventScript_Twin::
 	msgbox DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea, MSGBOX_DEFAULT
 # 69 "data/maps/DewfordTown_Hall/scripts.pory"
 	closemessage
-# 70 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement LOCALID_TWIN, Common_Movement_WalkInPlaceFasterUp
-# 71 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_DEWFORD_HALL_TWIN, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 72 "data/maps/DewfordTown_Hall/scripts.pory"
 	release
@@ -386,9 +369,7 @@ DewfordTown_Hall_EventScript_DontMovePlayer1::
 
 # 194 "data/maps/DewfordTown_Hall/scripts.pory"
 DewfordTown_Hall_EventScript_DebateReact1::
-# 195 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement LOCALID_PSYCHIC_M, DewfordTown_Hall_Movement_PsychicWalkInPlaceLeft
-# 196 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_DEWFORD_HALL_PSYCHIC_M, DewfordTown_Hall_Movement_PsychicWalkInPlaceLeft
 	waitmovement 0
 # 197 "data/maps/DewfordTown_Hall/scripts.pory"
 	goto_if_eq VAR_0x8008, 0, DewfordTown_Hall_EventScript_PlayerReactWest
@@ -402,9 +383,7 @@ DewfordTown_Hall_EventScript_DebateReact1::
 DewfordTown_Hall_EventScript_PlayerReactWest::
 # 202 "data/maps/DewfordTown_Hall/scripts.pory"
 	goto_if_eq VAR_FACING, DIR_EAST, DewfordTown_Hall_EventScript_DontMovePlayer1
-# 203 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 204 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 205 "data/maps/DewfordTown_Hall/scripts.pory"
 	return
@@ -418,9 +397,7 @@ DewfordTown_Hall_EventScript_DontMovePlayer2::
 
 # 210 "data/maps/DewfordTown_Hall/scripts.pory"
 DewfordTown_Hall_EventScript_DebateReact2::
-# 211 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement LOCALID_SCHOOL_KID_M, DewfordTown_Hall_Movement_SchoolKidWalkInPlaceRight
-# 212 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_DEWFORD_HALL_SCHOOL_KID_M, DewfordTown_Hall_Movement_SchoolKidWalkInPlaceRight
 	waitmovement 0
 # 213 "data/maps/DewfordTown_Hall/scripts.pory"
 	goto_if_eq VAR_0x8008, 0, DewfordTown_Hall_EventScript_PlayerReactNorthSouth
@@ -442,9 +419,7 @@ DewfordTown_Hall_EventScript_PlayerReactNorthSouth::
 
 # 222 "data/maps/DewfordTown_Hall/scripts.pory"
 DewfordTown_Hall_EventScript_PlayerWalkInPlaceUp::
-# 223 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 224 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 225 "data/maps/DewfordTown_Hall/scripts.pory"
 	return
@@ -452,9 +427,7 @@ DewfordTown_Hall_EventScript_PlayerWalkInPlaceUp::
 
 # 227 "data/maps/DewfordTown_Hall/scripts.pory"
 DewfordTown_Hall_EventScript_PlayerWalkInPlaceDown::
-# 228 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 229 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 230 "data/maps/DewfordTown_Hall/scripts.pory"
 	return
@@ -464,9 +437,7 @@ DewfordTown_Hall_EventScript_PlayerWalkInPlaceDown::
 DewfordTown_Hall_EventScript_PlayerReactEast::
 # 233 "data/maps/DewfordTown_Hall/scripts.pory"
 	goto_if_eq VAR_FACING, DIR_WEST, DewfordTown_Hall_EventScript_DontMovePlayer1
-# 234 "data/maps/DewfordTown_Hall/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 235 "data/maps/DewfordTown_Hall/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 236 "data/maps/DewfordTown_Hall/scripts.pory"
 	return

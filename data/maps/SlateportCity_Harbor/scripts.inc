@@ -1,18 +1,3 @@
-# 1 "data/maps/SlateportCity_Harbor/scripts.pory"
-
-# 2 "data/maps/SlateportCity_Harbor/scripts.pory"
-.set LOCALID_CAPT_STERN, 4
-# 3 "data/maps/SlateportCity_Harbor/scripts.pory"
-.set LOCALID_SS_TIDAL, 5
-# 4 "data/maps/SlateportCity_Harbor/scripts.pory"
-.set LOCALID_GRUNT, 6
-# 5 "data/maps/SlateportCity_Harbor/scripts.pory"
-.set LOCALID_ARCHIE, 7
-# 6 "data/maps/SlateportCity_Harbor/scripts.pory"
-.set LOCALID_SUBMARINE, 8
-# 7 "data/maps/SlateportCity_Harbor/scripts.pory"
-
-# 8 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_MapScripts::
 # 9 "data/maps/SlateportCity_Harbor/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_Harbor_OnTransition
@@ -46,11 +31,8 @@ SlateportCity_Harbor_EventScript_ShowSSTidal::
 SlateportCity_Harbor_EventScript_ReadyAquaEscapeScene::
 # 24 "data/maps/SlateportCity_Harbor/scripts.pory"
 	savebgm MUS_ENCOUNTER_AQUA
-# 25 "data/maps/SlateportCity_Harbor/scripts.pory"
-	setobjectxyperm LOCALID_CAPT_STERN, 12, 13
-# 26 "data/maps/SlateportCity_Harbor/scripts.pory"
-	setobjectmovementtype LOCALID_CAPT_STERN, MOVEMENT_TYPE_FACE_LEFT
-# 27 "data/maps/SlateportCity_Harbor/scripts.pory"
+	setobjectxyperm LOCALID_SLATEPORT_HARBOR_CAPT_STERN, 12, 13
+	setobjectmovementtype LOCALID_SLATEPORT_HARBOR_CAPT_STERN, MOVEMENT_TYPE_FACE_LEFT
 	setflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS
 # 28 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -98,9 +80,7 @@ SlateportCity_Harbor_EventScript_AquaEscapeTrigger3::
 	lockall
 # 50 "data/maps/SlateportCity_Harbor/scripts.pory"
 	setvar VAR_0x8008, 3
-# 51 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Harbor_Movement_PlayerWalkUp
-# 52 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_Harbor_Movement_PlayerWalkUp
 	waitmovement 0
 # 53 "data/maps/SlateportCity_Harbor/scripts.pory"
 	goto SlateportCity_Harbor_EventScript_AquaEscapeScene
@@ -110,35 +90,22 @@ SlateportCity_Harbor_EventScript_AquaEscapeTrigger3::
 
 # 56 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_AquaEscapeScene::
-# 57 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_ARCHIE, Common_Movement_WalkInPlaceFasterDown
-# 58 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_ARCHIE, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-# 59 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_GRUNT, Common_Movement_WalkInPlaceFasterDown
-# 60 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 61 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_GRUNT, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 62 "data/maps/SlateportCity_Harbor/scripts.pory"
 	msgbox SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove, MSGBOX_DEFAULT
 # 63 "data/maps/SlateportCity_Harbor/scripts.pory"
 	closemessage
-# 64 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_GRUNT, SlateportCity_Harbor_Movement_AquaBoardSub
-# 65 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_ARCHIE, SlateportCity_Harbor_Movement_AquaBoardSub
-# 66 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_SUBMARINE, SlateportCity_Harbor_Movement_SubmarineExit
-# 67 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_GRUNT, SlateportCity_Harbor_Movement_AquaBoardSub
+	applymovement LOCALID_SLATEPORT_HARBOR_ARCHIE, SlateportCity_Harbor_Movement_AquaBoardSub
+	applymovement LOCALID_SLATEPORT_HARBOR_SUBMARINE, SlateportCity_Harbor_Movement_SubmarineExit
 	waitmovement 0
-# 68 "data/maps/SlateportCity_Harbor/scripts.pory"
-	removeobject LOCALID_GRUNT
-# 69 "data/maps/SlateportCity_Harbor/scripts.pory"
-	removeobject LOCALID_ARCHIE
-# 70 "data/maps/SlateportCity_Harbor/scripts.pory"
-	removeobject LOCALID_SUBMARINE
-# 71 "data/maps/SlateportCity_Harbor/scripts.pory"
+	removeobject LOCALID_SLATEPORT_HARBOR_GRUNT
+	removeobject LOCALID_SLATEPORT_HARBOR_ARCHIE
+	removeobject LOCALID_SLATEPORT_HARBOR_SUBMARINE
 	setvar VAR_SLATEPORT_HARBOR_STATE, 2
 # 72 "data/maps/SlateportCity_Harbor/scripts.pory"
 	setflag FLAG_MET_TEAM_AQUA_HARBOR
@@ -160,11 +127,8 @@ SlateportCity_Harbor_EventScript_AquaEscapeScene::
 	setflag FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_1_BLOCKING_ENTRANCE
 # 81 "data/maps/SlateportCity_Harbor/scripts.pory"
 	setflag FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_2_BLOCKING_ENTRANCE
-# 82 "data/maps/SlateportCity_Harbor/scripts.pory"
-	copyobjectxytoperm LOCALID_CAPT_STERN
-# 83 "data/maps/SlateportCity_Harbor/scripts.pory"
-	setobjectmovementtype LOCALID_CAPT_STERN, MOVEMENT_TYPE_FACE_RIGHT
-# 84 "data/maps/SlateportCity_Harbor/scripts.pory"
+	copyobjectxytoperm LOCALID_SLATEPORT_HARBOR_CAPT_STERN
+	setobjectmovementtype LOCALID_SLATEPORT_HARBOR_CAPT_STERN, MOVEMENT_TYPE_FACE_RIGHT
 	releaseall
 # 85 "data/maps/SlateportCity_Harbor/scripts.pory"
 	end
@@ -172,13 +136,9 @@ SlateportCity_Harbor_EventScript_AquaEscapeScene::
 
 # 87 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_SternApproachPlayer0::
-# 88 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer0
-# 89 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer0
 	waitmovement 0
-# 90 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 91 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 92 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -186,13 +146,9 @@ SlateportCity_Harbor_EventScript_SternApproachPlayer0::
 
 # 94 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_SternApproachPlayer1::
-# 95 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer1
-# 96 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer1
 	waitmovement 0
-# 97 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 98 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 99 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -200,13 +156,9 @@ SlateportCity_Harbor_EventScript_SternApproachPlayer1::
 
 # 101 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_SternApproachPlayer::
-# 102 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement LOCALID_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer
-# 103 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_HARBOR_CAPT_STERN, SlateportCity_Harbor_Movement_SternApproachPlayer
 	waitmovement 0
-# 104 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 105 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 106 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -472,11 +424,8 @@ SlateportCity_Harbor_EventScript_BoardFerry::
 	call_if_eq VAR_FACING, DIR_EAST, SlateportCity_Harbor_EventScript_BoardFerryEast
 # 237 "data/maps/SlateportCity_Harbor/scripts.pory"
 	delay 30
-# 238 "data/maps/SlateportCity_Harbor/scripts.pory"
-	hideobjectat OBJ_EVENT_ID_PLAYER, 0
-# 239 "data/maps/SlateportCity_Harbor/scripts.pory"
-	setvar VAR_0x8004, LOCALID_SS_TIDAL
-# 240 "data/maps/SlateportCity_Harbor/scripts.pory"
+	hideobjectat LOCALID_PLAYER, 0
+	setvar VAR_0x8004, LOCALID_SLATEPORT_HARBOR_SS_TIDAL
 	call Common_EventScript_FerryDepart
 # 241 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -494,9 +443,7 @@ SlateportCity_Harbor_EventScript_CancelDestinationSelect::
 
 # 248 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_BoardFerryEast::
-# 249 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Harbor_Movement_BoardFerryEast
-# 250 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_Harbor_Movement_BoardFerryEast
 	waitmovement 0
 # 251 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return
@@ -504,9 +451,7 @@ SlateportCity_Harbor_EventScript_BoardFerryEast::
 
 # 253 "data/maps/SlateportCity_Harbor/scripts.pory"
 SlateportCity_Harbor_EventScript_BoardFerryNorth::
-# 254 "data/maps/SlateportCity_Harbor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Harbor_Movement_BoardFerryNorth
-# 255 "data/maps/SlateportCity_Harbor/scripts.pory"
+	applymovement LOCALID_PLAYER, SlateportCity_Harbor_Movement_BoardFerryNorth
 	waitmovement 0
 # 256 "data/maps/SlateportCity_Harbor/scripts.pory"
 	return

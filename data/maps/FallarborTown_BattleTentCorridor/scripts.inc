@@ -1,10 +1,3 @@
-# 1 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-
-# 2 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-
-# 4 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 FallarborTown_BattleTentCorridor_MapScripts::
 # 5 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FallarborTown_BattleTentCorridor_OnFrame
@@ -26,21 +19,15 @@ FallarborTown_BattleTentCorridor_EventScript_EnterCorridor::
 	lockall
 # 14 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 15 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentCorridor_Movement_WalkToDoor
-# 16 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, FallarborTown_BattleTentCorridor_Movement_WalkToDoor
-# 17 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_CORRIDOR_ATTENDANT, FallarborTown_BattleTentCorridor_Movement_WalkToDoor
+	applymovement LOCALID_PLAYER, FallarborTown_BattleTentCorridor_Movement_WalkToDoor
 	waitmovement 0
 # 18 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 	opendoor 2, 1
 # 19 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 	waitdooranim
-# 20 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, FallarborTown_BattleTentCorridor_Movement_AttendantEnterDoor
-# 21 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, FallarborTown_BattleTentCorridor_Movement_PlayerEnterDoor
-# 22 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
+	applymovement LOCALID_FALLARBOR_TENT_CORRIDOR_ATTENDANT, FallarborTown_BattleTentCorridor_Movement_AttendantEnterDoor
+	applymovement LOCALID_PLAYER, FallarborTown_BattleTentCorridor_Movement_PlayerEnterDoor
 	waitmovement 0
 # 23 "data/maps/FallarborTown_BattleTentCorridor/scripts.pory"
 	closedoor 2, 1

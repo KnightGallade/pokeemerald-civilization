@@ -1,12 +1,3 @@
-# 1 "data/maps/MirageTower_4F/scripts.pory"
-
-# 2 "data/maps/MirageTower_4F/scripts.pory"
-.set LOCALID_ROOT_FOSSIL, 1
-# 3 "data/maps/MirageTower_4F/scripts.pory"
-.set LOCALID_CLAW_FOSSIL, 2
-# 4 "data/maps/MirageTower_4F/scripts.pory"
-
-# 5 "data/maps/MirageTower_4F/scripts.pory"
 MirageTower_4F_MapScripts::
 # 6 "data/maps/MirageTower_4F/scripts.pory"
 	.byte 0
@@ -32,9 +23,7 @@ MirageTower_4F_EventScript_RootFossil::
 	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
 # 17 "data/maps/MirageTower_4F/scripts.pory"
 	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
-# 18 "data/maps/MirageTower_4F/scripts.pory"
-	removeobject LOCALID_ROOT_FOSSIL
-# 19 "data/maps/MirageTower_4F/scripts.pory"
+	removeobject LOCALID_MIRAGE_ROOT_FOSSIL
 	delay 30
 # 20 "data/maps/MirageTower_4F/scripts.pory"
 	setflag FLAG_CHOSE_ROOT_FOSSIL
@@ -74,9 +63,7 @@ MirageTower_4F_EventScript_ClawFossil::
 	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
 # 38 "data/maps/MirageTower_4F/scripts.pory"
 	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
-# 39 "data/maps/MirageTower_4F/scripts.pory"
-	removeobject LOCALID_CLAW_FOSSIL
-# 40 "data/maps/MirageTower_4F/scripts.pory"
+	removeobject LOCALID_MIRAGE_CLAW_FOSSIL
 	delay 30
 # 41 "data/maps/MirageTower_4F/scripts.pory"
 	setflag FLAG_CHOSE_CLAW_FOSSIL

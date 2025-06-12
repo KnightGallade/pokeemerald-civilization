@@ -1,10 +1,3 @@
-# 1 "data/maps/RustboroCity_Flat1_2F/scripts.pory"
-
-# 2 "data/maps/RustboroCity_Flat1_2F/scripts.pory"
-.set LOCALID_WALDAS_DAD, 6
-# 3 "data/maps/RustboroCity_Flat1_2F/scripts.pory"
-
-# 4 "data/maps/RustboroCity_Flat1_2F/scripts.pory"
 RustboroCity_Flat1_2F_MapScripts::
 # 5 "data/maps/RustboroCity_Flat1_2F/scripts.pory"
 	.byte 0

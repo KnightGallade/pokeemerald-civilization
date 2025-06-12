@@ -1,20 +1,3 @@
-# 1 "data/maps/MossdeepCity/scripts.pory"
-
-# 2 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_GRUNT_1, 10
-# 3 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_GRUNT_2, 11
-# 4 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_GRUNT_3, 12
-# 5 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_GRUNT_4, 13
-# 6 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_MAXIE, 14
-# 7 "data/maps/MossdeepCity/scripts.pory"
-.set LOCALID_SCOTT, 16
-# 8 "data/maps/MossdeepCity/scripts.pory"
-
-# 9 "data/maps/MossdeepCity/scripts.pory"
 MossdeepCity_MapScripts::
 # 10 "data/maps/MossdeepCity/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -168,43 +151,24 @@ MossdeepCity_EventScript_VisitedMossdeep::
 MossdeepCity_EventScript_TeamMagmaEnterSpaceCenter::
 # 85 "data/maps/MossdeepCity/scripts.pory"
 	lockall
-# 86 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_MAXIE, MossdeepCity_Movement_MaxieGestureToSpaceCenter
-# 87 "data/maps/MossdeepCity/scripts.pory"
+	applymovement LOCALID_MOSSDEEP_MAXIE, MossdeepCity_Movement_MaxieGestureToSpaceCenter
 	waitmovement 0
-# 88 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_1, MossdeepCity_Movement_GruntFaceSpaceCenter
-# 89 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_2, MossdeepCity_Movement_GruntFaceSpaceCenter
-# 90 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_3, MossdeepCity_Movement_GruntFaceSpaceCenter
-# 91 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_4, MossdeepCity_Movement_GruntFaceSpaceCenter
-# 92 "data/maps/MossdeepCity/scripts.pory"
+	applymovement LOCALID_MOSSDEEP_GRUNT_1, MossdeepCity_Movement_GruntFaceSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_2, MossdeepCity_Movement_GruntFaceSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_3, MossdeepCity_Movement_GruntFaceSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_4, MossdeepCity_Movement_GruntFaceSpaceCenter
 	waitmovement 0
-# 93 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_MAXIE, MossdeepCity_Movement_MaxieEnterSpaceCenter
-# 94 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_1, MossdeepCity_Movement_Grunt1EnterSpaceCenter
-# 95 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_2, MossdeepCity_Movement_Grunt2EnterSpaceCenter
-# 96 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_3, MossdeepCity_Movement_Grunt3EnterSpaceCenter
-# 97 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_GRUNT_4, MossdeepCity_Movement_Grunt4EnterSpaceCenter
-# 98 "data/maps/MossdeepCity/scripts.pory"
+	applymovement LOCALID_MOSSDEEP_MAXIE, MossdeepCity_Movement_MaxieEnterSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_1, MossdeepCity_Movement_Grunt1EnterSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_2, MossdeepCity_Movement_Grunt2EnterSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_3, MossdeepCity_Movement_Grunt3EnterSpaceCenter
+	applymovement LOCALID_MOSSDEEP_GRUNT_4, MossdeepCity_Movement_Grunt4EnterSpaceCenter
 	waitmovement 0
-# 99 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_MAXIE
-# 100 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_GRUNT_1
-# 101 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_GRUNT_2
-# 102 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_GRUNT_3
-# 103 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_GRUNT_4
-# 104 "data/maps/MossdeepCity/scripts.pory"
+	removeobject LOCALID_MOSSDEEP_MAXIE
+	removeobject LOCALID_MOSSDEEP_GRUNT_1
+	removeobject LOCALID_MOSSDEEP_GRUNT_2
+	removeobject LOCALID_MOSSDEEP_GRUNT_3
+	removeobject LOCALID_MOSSDEEP_GRUNT_4
 	delay 30
 # 105 "data/maps/MossdeepCity/scripts.pory"
 	setvar VAR_MOSSDEEP_CITY_STATE, 2
@@ -530,9 +494,7 @@ MossdeepCity_EventScript_Scott::
 	call_if_eq VAR_FACING, DIR_EAST, MossdeepCity_EventScript_ScottExitEast
 # 266 "data/maps/MossdeepCity/scripts.pory"
 	addvar VAR_SCOTT_STATE, 1
-# 267 "data/maps/MossdeepCity/scripts.pory"
-	removeobject LOCALID_SCOTT
-# 268 "data/maps/MossdeepCity/scripts.pory"
+	removeobject LOCALID_MOSSDEEP_SCOTT
 	release
 # 269 "data/maps/MossdeepCity/scripts.pory"
 	end
@@ -540,11 +502,8 @@ MossdeepCity_EventScript_Scott::
 
 # 271 "data/maps/MossdeepCity/scripts.pory"
 MossdeepCity_EventScript_ScottExitNorth::
-# 272 "data/maps/MossdeepCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_Movement_PlayerWatchScottExit
-# 273 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_SCOTT, MossdeepCity_Movement_ScottExitNorth
-# 274 "data/maps/MossdeepCity/scripts.pory"
+	applymovement LOCALID_PLAYER, MossdeepCity_Movement_PlayerWatchScottExit
+	applymovement LOCALID_MOSSDEEP_SCOTT, MossdeepCity_Movement_ScottExitNorth
 	waitmovement 0
 # 275 "data/maps/MossdeepCity/scripts.pory"
 	return
@@ -552,11 +511,8 @@ MossdeepCity_EventScript_ScottExitNorth::
 
 # 277 "data/maps/MossdeepCity/scripts.pory"
 MossdeepCity_EventScript_ScottExitEast::
-# 278 "data/maps/MossdeepCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_Movement_PlayerWatchScottExit
-# 279 "data/maps/MossdeepCity/scripts.pory"
-	applymovement LOCALID_SCOTT, MossdeepCity_Movement_ScottExitEast
-# 280 "data/maps/MossdeepCity/scripts.pory"
+	applymovement LOCALID_PLAYER, MossdeepCity_Movement_PlayerWatchScottExit
+	applymovement LOCALID_MOSSDEEP_SCOTT, MossdeepCity_Movement_ScottExitEast
 	waitmovement 0
 # 281 "data/maps/MossdeepCity/scripts.pory"
 	return

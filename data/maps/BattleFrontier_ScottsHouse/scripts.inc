@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-.set LOCALID_SCOTT, 1
-# 3 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 BattleFrontier_ScottsHouse_MapScripts::
 # 5 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	.byte 0
@@ -302,9 +295,7 @@ BattleFrontier_ScottsHouse_EventScript_WelcomeToFrontier::
 	call_if_eq VAR_FACING, DIR_WEST, BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayWest
 # 152 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	msgbox BattleFrontier_ScottsHouse_Text_HowMuchEffortItTookToMakeReal, MSGBOX_DEFAULT
-# 153 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_FacePlayer
-# 154 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
+	applymovement LOCALID_SCOTTS_HOUSE_SCOTT, Common_Movement_FacePlayer
 	waitmovement 0
 # 155 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	msgbox BattleFrontier_ScottsHouse_Text_HaveThisAsMementoOfOurPathsCrossing, MSGBOX_DEFAULT
@@ -388,9 +379,7 @@ BattleFrontier_ScottsHouse_EventScript_GiveBattlePoints::
 
 # 195 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayNorth::
-# 196 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterUp
-# 197 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
+	applymovement LOCALID_SCOTTS_HOUSE_SCOTT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 198 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	return
@@ -398,9 +387,7 @@ BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayNorth::
 
 # 200 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 BattleFrontier_ScottsHouse_EventScript_ScottFaceAwaySouth::
-# 201 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterDown
-# 202 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
+	applymovement LOCALID_SCOTTS_HOUSE_SCOTT, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 203 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	return
@@ -408,9 +395,7 @@ BattleFrontier_ScottsHouse_EventScript_ScottFaceAwaySouth::
 
 # 205 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayEast::
-# 206 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterRight
-# 207 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
+	applymovement LOCALID_SCOTTS_HOUSE_SCOTT, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 208 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	return
@@ -418,9 +403,7 @@ BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayEast::
 
 # 210 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayWest::
-# 211 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterLeft
-# 212 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
+	applymovement LOCALID_SCOTTS_HOUSE_SCOTT, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 213 "data/maps/BattleFrontier_ScottsHouse/scripts.pory"
 	return

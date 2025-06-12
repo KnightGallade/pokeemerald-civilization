@@ -1,10 +1,3 @@
-# 1 "data/maps/SafariZone_South/scripts.pory"
-
-# 2 "data/maps/SafariZone_South/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/SafariZone_South/scripts.pory"
-
-# 4 "data/maps/SafariZone_South/scripts.pory"
 SafariZone_South_MapScripts::
 # 5 "data/maps/SafariZone_South/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, SafariZone_South_OnTransition
@@ -26,17 +19,11 @@ SafariZone_South_OnFrame:
 SafariZone_South_EventScript_EnterSafariZone::
 # 14 "data/maps/SafariZone_South/scripts.pory"
 	lockall
-# 15 "data/maps/SafariZone_South/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SafariZone_South_Movement_PlayerEnter
-# 16 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_PLAYER, SafariZone_South_Movement_PlayerEnter
 	waitmovement 0
-# 17 "data/maps/SafariZone_South/scripts.pory"
-	applymovement LOCALID_ATTENDANT, SafariZone_South_Movement_ExitAttendantBlockDoor
-# 18 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_SAFARI_EXIT_ATTENDANT, SafariZone_South_Movement_ExitAttendantBlockDoor
 	waitmovement 0
-# 19 "data/maps/SafariZone_South/scripts.pory"
-	setobjectxyperm LOCALID_ATTENDANT, 32, 34
-# 20 "data/maps/SafariZone_South/scripts.pory"
+	setobjectxyperm LOCALID_SAFARI_EXIT_ATTENDANT, 32, 34
 	setvar VAR_SAFARI_ZONE_STATE, 0
 # 21 "data/maps/SafariZone_South/scripts.pory"
 	releaseall
@@ -54,9 +41,7 @@ SafariZone_South_OnTransition:
 
 # 28 "data/maps/SafariZone_South/scripts.pory"
 SafariZone_South_EventScript_SetExitAttendantAside::
-# 29 "data/maps/SafariZone_South/scripts.pory"
-	setobjectxyperm LOCALID_ATTENDANT, 31, 34
-# 30 "data/maps/SafariZone_South/scripts.pory"
+	setobjectxyperm LOCALID_SAFARI_EXIT_ATTENDANT, 31, 34
 	return
 # 31 "data/maps/SafariZone_South/scripts.pory"
 
@@ -152,13 +137,9 @@ SafariZone_South_EventScript_ExitEarly::
 
 # 77 "data/maps/SafariZone_South/scripts.pory"
 SafariZone_South_EventScript_ExitEarlyNorth::
-# 78 "data/maps/SafariZone_South/scripts.pory"
-	applymovement LOCALID_ATTENDANT, SafariZone_South_Movement_MoveExitAttendantNorth
-# 79 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_SAFARI_EXIT_ATTENDANT, SafariZone_South_Movement_MoveExitAttendantNorth
 	waitmovement 0
-# 80 "data/maps/SafariZone_South/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SafariZone_South_Movement_PlayerExitNorth
-# 81 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_PLAYER, SafariZone_South_Movement_PlayerExitNorth
 	waitmovement 0
 # 82 "data/maps/SafariZone_South/scripts.pory"
 	goto SafariZone_South_EventScript_Exit
@@ -168,13 +149,9 @@ SafariZone_South_EventScript_ExitEarlyNorth::
 
 # 85 "data/maps/SafariZone_South/scripts.pory"
 SafariZone_South_EventScript_ExitEarlyEast::
-# 86 "data/maps/SafariZone_South/scripts.pory"
-	applymovement LOCALID_ATTENDANT, SafariZone_South_Movement_MoveExitAttendantEast
-# 87 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_SAFARI_EXIT_ATTENDANT, SafariZone_South_Movement_MoveExitAttendantEast
 	waitmovement 0
-# 88 "data/maps/SafariZone_South/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SafariZone_South_Movement_PlayerExitEast
-# 89 "data/maps/SafariZone_South/scripts.pory"
+	applymovement LOCALID_PLAYER, SafariZone_South_Movement_PlayerExitEast
 	waitmovement 0
 # 90 "data/maps/SafariZone_South/scripts.pory"
 	goto SafariZone_South_EventScript_Exit

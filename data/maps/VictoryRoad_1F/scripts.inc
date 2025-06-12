@@ -1,10 +1,3 @@
-# 1 "data/maps/VictoryRoad_1F/scripts.pory"
-
-# 2 "data/maps/VictoryRoad_1F/scripts.pory"
-.set LOCALID_WALLY_ENTRANCE, 4
-# 3 "data/maps/VictoryRoad_1F/scripts.pory"
-
-# 4 "data/maps/VictoryRoad_1F/scripts.pory"
 VictoryRoad_1F_MapScripts::
 # 5 "data/maps/VictoryRoad_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_1F_OnTransition
@@ -24,21 +17,15 @@ VictoryRoad_1F_OnTransition:
 
 # 13 "data/maps/VictoryRoad_1F/scripts.pory"
 VictoryRoad_1F_EventScript_SetEntranceWallyPos1::
-# 14 "data/maps/VictoryRoad_1F/scripts.pory"
-	setobjectxyperm LOCALID_WALLY_ENTRANCE, 2, 24
-# 15 "data/maps/VictoryRoad_1F/scripts.pory"
-	setobjectmovementtype LOCALID_WALLY_ENTRANCE, MOVEMENT_TYPE_FACE_DOWN
-# 16 "data/maps/VictoryRoad_1F/scripts.pory"
+	setobjectxyperm LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, 2, 24
+	setobjectmovementtype LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, MOVEMENT_TYPE_FACE_DOWN
 	return
 # 17 "data/maps/VictoryRoad_1F/scripts.pory"
 
 # 18 "data/maps/VictoryRoad_1F/scripts.pory"
 VictoryRoad_1F_EventScript_SetEntranceWallyPos2::
-# 19 "data/maps/VictoryRoad_1F/scripts.pory"
-	setobjectxyperm LOCALID_WALLY_ENTRANCE, 3, 24
-# 20 "data/maps/VictoryRoad_1F/scripts.pory"
-	setobjectmovementtype LOCALID_WALLY_ENTRANCE, MOVEMENT_TYPE_FACE_DOWN
-# 21 "data/maps/VictoryRoad_1F/scripts.pory"
+	setobjectxyperm LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, 3, 24
+	setobjectmovementtype LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, MOVEMENT_TYPE_FACE_DOWN
 	return
 # 22 "data/maps/VictoryRoad_1F/scripts.pory"
 
@@ -48,11 +35,8 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger1::
 	lockall
 # 25 "data/maps/VictoryRoad_1F/scripts.pory"
 	setvar VAR_0x8008, 1
-# 26 "data/maps/VictoryRoad_1F/scripts.pory"
-	addobject LOCALID_WALLY_ENTRANCE
-# 27 "data/maps/VictoryRoad_1F/scripts.pory"
-	applymovement LOCALID_WALLY_ENTRANCE, VictoryRoad_1F_Movement_WallyApproachPlayer1
-# 28 "data/maps/VictoryRoad_1F/scripts.pory"
+	addobject LOCALID_VICTORY_ROAD_ENTRANCE_WALLY
+	applymovement LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayer1
 	waitmovement 0
 # 29 "data/maps/VictoryRoad_1F/scripts.pory"
 	goto VictoryRoad_1F_EventScript_WallyEntranceBattle
@@ -66,11 +50,8 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger2::
 	lockall
 # 34 "data/maps/VictoryRoad_1F/scripts.pory"
 	setvar VAR_0x8008, 2
-# 35 "data/maps/VictoryRoad_1F/scripts.pory"
-	addobject LOCALID_WALLY_ENTRANCE
-# 36 "data/maps/VictoryRoad_1F/scripts.pory"
-	applymovement LOCALID_WALLY_ENTRANCE, VictoryRoad_1F_Movement_WallyApproachPlayer2
-# 37 "data/maps/VictoryRoad_1F/scripts.pory"
+	addobject LOCALID_VICTORY_ROAD_ENTRANCE_WALLY
+	applymovement LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, VictoryRoad_1F_Movement_WallyApproachPlayer2
 	waitmovement 0
 # 38 "data/maps/VictoryRoad_1F/scripts.pory"
 	goto VictoryRoad_1F_EventScript_WallyEntranceBattle
@@ -80,9 +61,7 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger2::
 
 # 41 "data/maps/VictoryRoad_1F/scripts.pory"
 VictoryRoad_1F_EventScript_WallyEntranceBattle::
-# 42 "data/maps/VictoryRoad_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 43 "data/maps/VictoryRoad_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 44 "data/maps/VictoryRoad_1F/scripts.pory"
 	msgbox VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, MSGBOX_DEFAULT
@@ -92,9 +71,7 @@ VictoryRoad_1F_EventScript_WallyEntranceBattle::
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
 # 47 "data/maps/VictoryRoad_1F/scripts.pory"
 	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
-# 48 "data/maps/VictoryRoad_1F/scripts.pory"
-	copyobjectxytoperm LOCALID_WALLY_ENTRANCE
-# 49 "data/maps/VictoryRoad_1F/scripts.pory"
+	copyobjectxytoperm LOCALID_VICTORY_ROAD_ENTRANCE_WALLY
 	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
 # 50 "data/maps/VictoryRoad_1F/scripts.pory"
 	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008

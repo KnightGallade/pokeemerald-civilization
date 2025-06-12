@@ -1,10 +1,3 @@
-# 1 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
-
-# 2 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
-.set LOCALID_WALLYS_DAD, 1
-# 3 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
-
-# 4 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
 PetalburgCity_WallysHouse_MapScripts::
 # 5 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_WallysHouse_OnFrame
@@ -24,11 +17,8 @@ PetalburgCity_WallysHouse_OnWarp:
 
 # 13 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
 PetalburgCity_WallysHouse_EventScript_PlayerWallysDadFaceEachOther::
-# 14 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
-# 15 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
-	turnobject LOCALID_WALLYS_DAD, DIR_WEST
-# 16 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject LOCALID_WALLYS_HOUSE_WALLYS_DAD, DIR_WEST
 	end
 # 17 "data/maps/PetalburgCity_WallysHouse/scripts.pory"
 

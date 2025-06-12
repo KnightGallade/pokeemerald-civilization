@@ -1,10 +1,3 @@
-# 1 "data/maps/Route103/scripts.pory"
-
-# 2 "data/maps/Route103/scripts.pory"
-.set LOCALID_RIVAL, 2
-# 3 "data/maps/Route103/scripts.pory"
-
-# 4 "data/maps/Route103/scripts.pory"
 Route103_MapScripts::
 # 5 "data/maps/Route103/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route103_OnTransition
@@ -64,17 +57,11 @@ Route103_EventScript_RivalMay::
 	closemessage
 # 33 "data/maps/Route103/scripts.pory"
 	playbgm MUS_ENCOUNTER_MAY, TRUE
-# 34 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
-# 35 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
-# 36 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-# 37 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-# 38 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-# 39 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 # 40 "data/maps/Route103/scripts.pory"
 	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
@@ -98,17 +85,11 @@ Route103_EventScript_RivalBrendan::
 	closemessage
 # 50 "data/maps/Route103/scripts.pory"
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
-# 51 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
-# 52 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
-# 53 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-# 54 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-# 55 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-# 56 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 # 57 "data/maps/Route103/scripts.pory"
 	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
@@ -224,17 +205,12 @@ Route103_EventScript_RivalExit::
 
 # 113 "data/maps/Route103/scripts.pory"
 Route103_EventScript_RivalExitFacingNorth::
-# 114 "data/maps/Route103/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_WatchRivalExitFacingNorth
-# 115 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExitFacingNorth1
-# 116 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_PLAYER, Route103_Movement_WatchRivalExitFacingNorth
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExitFacingNorth1
 	waitmovement 0
 # 117 "data/maps/Route103/scripts.pory"
 	playse SE_LEDGE
-# 118 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExitFacingNorth2
-# 119 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExitFacingNorth2
 	waitmovement 0
 # 120 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_RivalEnd
@@ -244,17 +220,12 @@ Route103_EventScript_RivalExitFacingNorth::
 
 # 123 "data/maps/Route103/scripts.pory"
 Route103_EventScript_RivalExitFacingEastOrWest::
-# 124 "data/maps/Route103/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_WatchRivalExitFacingEastOrWest
-# 125 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit1
-# 126 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_PLAYER, Route103_Movement_WatchRivalExitFacingEastOrWest
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit1
 	waitmovement 0
 # 127 "data/maps/Route103/scripts.pory"
 	playse SE_LEDGE
-# 128 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
-# 129 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
 # 130 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_RivalEnd
@@ -264,15 +235,11 @@ Route103_EventScript_RivalExitFacingEastOrWest::
 
 # 133 "data/maps/Route103/scripts.pory"
 Route103_EventScript_RivalExitFacingSouth::
-# 134 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit1
-# 135 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit1
 	waitmovement 0
 # 136 "data/maps/Route103/scripts.pory"
 	playse SE_LEDGE
-# 137 "data/maps/Route103/scripts.pory"
-	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
-# 138 "data/maps/Route103/scripts.pory"
+	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
 # 139 "data/maps/Route103/scripts.pory"
 	goto Route103_EventScript_RivalEnd
@@ -282,9 +249,7 @@ Route103_EventScript_RivalExitFacingSouth::
 
 # 142 "data/maps/Route103/scripts.pory"
 Route103_EventScript_RivalEnd::
-# 143 "data/maps/Route103/scripts.pory"
-	removeobject LOCALID_RIVAL
-# 144 "data/maps/Route103/scripts.pory"
+	removeobject LOCALID_ROUTE103_RIVAL
 	setvar VAR_BIRCH_LAB_STATE, 4
 # 145 "data/maps/Route103/scripts.pory"
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL

@@ -1,10 +1,3 @@
-# 1 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-
-# 2 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-.set LOCALID_STEVEN, 1
-# 3 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-
-# 4 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 MeteorFalls_StevensCave_MapScripts::
 # 5 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 	.byte 0
@@ -20,17 +13,11 @@ MeteorFalls_StevensCave_EventScript_Steven::
 	waitse
 # 11 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 	playse SE_PIN
-# 12 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_ExclamationMark
-# 13 "data/maps/MeteorFalls_StevensCave/scripts.pory"
+	applymovement LOCALID_METEOR_FALLS_STEVEN, Common_Movement_ExclamationMark
 	waitmovement 0
-# 14 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_Delay48
-# 15 "data/maps/MeteorFalls_StevensCave/scripts.pory"
+	applymovement LOCALID_METEOR_FALLS_STEVEN, Common_Movement_Delay48
 	waitmovement 0
-# 16 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
-# 17 "data/maps/MeteorFalls_StevensCave/scripts.pory"
+	applymovement LOCALID_METEOR_FALLS_STEVEN, Common_Movement_FacePlayer
 	waitmovement 0
 # 18 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
@@ -48,9 +35,7 @@ MeteorFalls_StevensCave_EventScript_Steven::
 
 # 25 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 MeteorFalls_StevensCave_EventScript_Defeated::
-# 26 "data/maps/MeteorFalls_StevensCave/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
-# 27 "data/maps/MeteorFalls_StevensCave/scripts.pory"
+	applymovement LOCALID_METEOR_FALLS_STEVEN, Common_Movement_FacePlayer
 	waitmovement 0
 # 28 "data/maps/MeteorFalls_StevensCave/scripts.pory"
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT

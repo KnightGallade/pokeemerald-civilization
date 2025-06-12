@@ -1,14 +1,3 @@
-# 1 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-.set LOCALID_GREETER, 1
-# 3 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-.set LOCALID_GUIDE, 2
-# 4 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-.set LOCALID_SCOTT, 4
-# 5 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-
-# 6 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 BattleFrontier_ReceptionGate_MapScripts::
 # 7 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_ReceptionGate_OnFrame
@@ -42,21 +31,15 @@ BattleFrontier_ReceptionGate_EventScript_FirstTimeEntering::
 	setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1
 # 22 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	playse SE_PIN
-# 23 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GREETER, Common_Movement_ExclamationMark
-# 24 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_ExclamationMark
 	waitmovement 0
-# 25 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GREETER, Common_Movement_Delay48
-# 26 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_Delay48
 	waitmovement 0
 # 27 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	msgbox BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay, MSGBOX_DEFAULT
 # 28 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	closemessage
-# 29 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_ReceptionGate_Movement_PlayerApproachCounter
-# 30 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_ReceptionGate_Movement_PlayerApproachCounter
 	waitmovement 0
 # 31 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	goto BattleFrontier_ReceptionGate_EventScript_ScottScene
@@ -88,49 +71,32 @@ BattleFrontier_ReceptionGate_EventScript_ScottScene::
 	msgbox BattleFrontier_ReceptionGate_Text_IfItIsntPlayerYouCame, MSGBOX_DEFAULT
 # 45 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	closemessage
-# 46 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GREETER, Common_Movement_WalkInPlaceFasterUp
-# 47 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GUIDE, Common_Movement_WalkInPlaceFasterUp
-# 48 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 49 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_FRONTIER_RECEPTION_GUIDE, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 50 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	playse SE_PIN
-# 51 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GREETER, Common_Movement_ExclamationMark
-# 52 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GUIDE, Common_Movement_ExclamationMark
-# 53 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-# 54 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_ExclamationMark
+	applymovement LOCALID_FRONTIER_RECEPTION_GUIDE, Common_Movement_ExclamationMark
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 # 55 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	msgbox BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay, MSGBOX_DEFAULT
 # 56 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	closemessage
-# 57 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GREETER, BattleFrontier_ReceptionGate_Movement_GreeterFaceScott
-# 58 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_GUIDE, BattleFrontier_ReceptionGate_Movement_FacilityGuideFaceScott
-# 59 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_ReceptionGate_Movement_PlayerFaceScott
-# 60 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottEnter
-# 61 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, BattleFrontier_ReceptionGate_Movement_GreeterFaceScott
+	applymovement LOCALID_FRONTIER_RECEPTION_GUIDE, BattleFrontier_ReceptionGate_Movement_FacilityGuideFaceScott
+	applymovement LOCALID_PLAYER, BattleFrontier_ReceptionGate_Movement_PlayerFaceScott
+	applymovement LOCALID_FRONTIER_RECEPTION_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottEnter
 	waitmovement 0
 # 62 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	msgbox BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere, MSGBOX_DEFAULT
 # 63 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	closemessage
-# 64 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	applymovement LOCALID_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottExit
-# 65 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	applymovement LOCALID_FRONTIER_RECEPTION_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottExit
 	waitmovement 0
-# 66 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
-	removeobject LOCALID_SCOTT
-# 67 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
+	removeobject LOCALID_FRONTIER_RECEPTION_SCOTT
 	releaseall
 # 68 "data/maps/BattleFrontier_ReceptionGate/scripts.pory"
 	end

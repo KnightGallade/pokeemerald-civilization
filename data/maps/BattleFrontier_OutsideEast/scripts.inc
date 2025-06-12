@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-.set LOCALID_SUDOWOODO, 14
-# 3 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 BattleFrontier_OutsideEast_MapScripts::
 # 5 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_OutsideEast_OnResume
@@ -220,9 +213,7 @@ BattleFrontier_OutsideEast_EventScript_Sudowoodo::
 	waitse
 # 111 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	playse SE_SUDOWOODO_SHAKE
-# 112 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-	applymovement LOCALID_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
-# 113 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
+	applymovement LOCALID_FRONTIER_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
 	waitmovement 0
 # 114 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	release
@@ -244,9 +235,7 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	waitse
 # 123 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	playse SE_SUDOWOODO_SHAKE
-# 124 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-	applymovement LOCALID_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
-# 125 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
+	applymovement LOCALID_FRONTIER_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
 	waitmovement 0
 # 126 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	msgbox gText_Sudowoodo_Attacked, MSGBOX_DEFAULT
@@ -260,9 +249,7 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	delay 40
 # 131 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	waitmoncry
-# 132 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
-	setvar VAR_LAST_TALKED, LOCALID_SUDOWOODO
-# 133 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_FRONTIER_SUDOWOODO
 	setwildbattle SPECIES_SUDOWOODO, 40
 # 134 "data/maps/BattleFrontier_OutsideEast/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE

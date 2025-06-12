@@ -1,10 +1,3 @@
-# 1 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
-
-# 2 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
-.set LOCALID_FOSSIL_MANIAC, 1
-# 3 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
-
-# 4 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
 Route114_FossilManiacsTunnel_MapScripts::
 # 5 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route114_FossilManiacsTunnel_OnTransition
@@ -56,9 +49,7 @@ Route114_FossilManiacsTunnel_EventScript_ManiacMentionCaveIn::
 	lockall
 # 29 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
 	applymovement LOCALID_FOSSIL_MANIAC, Common_Movement_WalkInPlaceFasterUp
-# 30 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 31 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 32 "data/maps/Route114_FossilManiacsTunnel/scripts.pory"
 	msgbox Route114_FossilManiacsTunnel_Text_NotSafeThatWay, MSGBOX_DEFAULT

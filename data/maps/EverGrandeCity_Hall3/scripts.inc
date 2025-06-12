@@ -18,7 +18,5 @@ EverGrandeCity_Hall3_OnWarp:
 
 # 10 "data/maps/EverGrandeCity_Hall3/scripts.pory"
 EverGrandeCity_Hall3_EventScript_TurnPlayerNorth::
-# 11 "data/maps/EverGrandeCity_Hall3/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 12 "data/maps/EverGrandeCity_Hall3/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end

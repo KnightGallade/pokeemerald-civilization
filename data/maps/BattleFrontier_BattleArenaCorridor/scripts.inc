@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
 BattleFrontier_BattleArenaCorridor_MapScripts::
 # 5 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleArenaCorridor_OnFrame
@@ -26,25 +19,16 @@ BattleFrontier_BattleArenaCorridor_EventScript_WalkToBattleRoom::
 	delay 16
 # 14 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 15 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantWalkToDoor
-# 16 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleArenaCorridor_Movement_PlayerWalkToDoor
-# 17 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
+	applymovement LOCALID_ARENA_CORRIDOR_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantWalkToDoor
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleArenaCorridor_Movement_PlayerWalkToDoor
 	waitmovement 0
-# 18 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantFacePlayer
-# 19 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
+	applymovement LOCALID_ARENA_CORRIDOR_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantFacePlayer
 	waitmovement 0
 # 20 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
 	msgbox BattleFrontier_BattleArenaCorridor_Text_PleaseStepIn, MSGBOX_SIGN
-# 21 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantMoveOutOfWay
-# 22 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
+	applymovement LOCALID_ARENA_CORRIDOR_ATTENDANT, BattleFrontier_BattleArenaCorridor_Movement_AttendantMoveOutOfWay
 	waitmovement 0
-# 23 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleArenaCorridor_Movement_PlayerEnterDoor
-# 24 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleArenaCorridor_Movement_PlayerEnterDoor
 	waitmovement 0
 # 25 "data/maps/BattleFrontier_BattleArenaCorridor/scripts.pory"
 	setvar VAR_0x8006, 0

@@ -1,10 +1,3 @@
-# 1 "data/maps/SkyPillar_Top/scripts.pory"
-
-# 2 "data/maps/SkyPillar_Top/scripts.pory"
-.set LOCALID_RAYQUAZA_SLEEPING, 1
-# 3 "data/maps/SkyPillar_Top/scripts.pory"
-
-# 4 "data/maps/SkyPillar_Top/scripts.pory"
 SkyPillar_Top_MapScripts::
 # 5 "data/maps/SkyPillar_Top/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, SkyPillar_Top_OnResume
@@ -184,15 +177,11 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	lockall
 # 93 "data/maps/SkyPillar_Top/scripts.pory"
 	fadeoutbgm 1
-# 94 "data/maps/SkyPillar_Top/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 95 "data/maps/SkyPillar_Top/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 # 96 "data/maps/SkyPillar_Top/scripts.pory"
 	special SpawnCameraObject
-# 97 "data/maps/SkyPillar_Top/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SkyPillar_Top_Movement_CameraPanUp
-# 98 "data/maps/SkyPillar_Top/scripts.pory"
+	applymovement LOCALID_CAMERA, SkyPillar_Top_Movement_CameraPanUp
 	waitmovement 0
 # 99 "data/maps/SkyPillar_Top/scripts.pory"
 	special RemoveCameraObject
@@ -250,9 +239,7 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	fadeinbgm 1
 # 126 "data/maps/SkyPillar_Top/scripts.pory"
 	special SpawnCameraObject
-# 127 "data/maps/SkyPillar_Top/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SkyPillar_Top_Movement_CameraPanDown
-# 128 "data/maps/SkyPillar_Top/scripts.pory"
+	applymovement LOCALID_CAMERA, SkyPillar_Top_Movement_CameraPanDown
 	waitmovement 0
 # 129 "data/maps/SkyPillar_Top/scripts.pory"
 	special RemoveCameraObject

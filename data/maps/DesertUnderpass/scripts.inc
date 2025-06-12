@@ -1,10 +1,3 @@
-# 1 "data/maps/DesertUnderpass/scripts.pory"
-
-# 2 "data/maps/DesertUnderpass/scripts.pory"
-.set LOCALID_FOSSIL, 1
-# 3 "data/maps/DesertUnderpass/scripts.pory"
-
-# 4 "data/maps/DesertUnderpass/scripts.pory"
 DesertUnderpass_MapScripts::
 # 5 "data/maps/DesertUnderpass/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, DesertUnderpass_OnTransition
@@ -42,9 +35,7 @@ DesertUnderpass_EventScript_GiveClawFossil::
 	giveitem ITEM_CLAW_FOSSIL
 # 22 "data/maps/DesertUnderpass/scripts.pory"
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-# 23 "data/maps/DesertUnderpass/scripts.pory"
-	removeobject LOCALID_FOSSIL
-# 24 "data/maps/DesertUnderpass/scripts.pory"
+	removeobject LOCALID_UNDERPASS_FOSSIL
 	release
 # 25 "data/maps/DesertUnderpass/scripts.pory"
 	end
@@ -56,9 +47,7 @@ DesertUnderpass_EventScript_GiveRootFossil::
 	giveitem ITEM_ROOT_FOSSIL
 # 29 "data/maps/DesertUnderpass/scripts.pory"
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-# 30 "data/maps/DesertUnderpass/scripts.pory"
-	removeobject LOCALID_FOSSIL
-# 31 "data/maps/DesertUnderpass/scripts.pory"
+	removeobject LOCALID_UNDERPASS_FOSSIL
 	release
 # 32 "data/maps/DesertUnderpass/scripts.pory"
 	end

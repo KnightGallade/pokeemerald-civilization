@@ -1,10 +1,3 @@
-# 1 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-
-# 2 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-.set LOCALID_OWNER, 1
-# 3 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-
-# 4 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 LilycoveCity_CoveLilyMotel_1F_MapScripts::
 # 5 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	.byte 0
@@ -20,17 +13,13 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
 	goto_if_set FLAG_HOENN_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
 # 11 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot, MSGBOX_DEFAULT
-# 12 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FacePlayer
-# 13 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
 	waitmovement 0
 # 14 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua, MSGBOX_DEFAULT
 # 15 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	closemessage
-# 16 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FaceOriginalDirection
-# 17 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 18 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	releaseall
@@ -42,17 +31,13 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
 LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted::
 # 22 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem, MSGBOX_DEFAULT
-# 23 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FacePlayer
-# 24 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
 	waitmovement 0
 # 25 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted, MSGBOX_DEFAULT
 # 26 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	closemessage
-# 27 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FaceOriginalDirection
-# 28 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 29 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	releaseall
@@ -64,17 +49,13 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted::
 LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear::
 # 33 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar, MSGBOX_DEFAULT
-# 34 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FacePlayer
-# 35 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
 	waitmovement 0
 # 36 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner, MSGBOX_DEFAULT
 # 37 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	closemessage
-# 38 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_FaceOriginalDirection
-# 39 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 40 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	releaseall
@@ -88,31 +69,20 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_BlockingTV::
 	lockall
 # 45 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	playse SE_PIN
-# 46 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_ExclamationMark
-# 47 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_ExclamationMark
 	waitmovement 0
-# 48 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, Common_Movement_Delay48
-# 49 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, Common_Movement_Delay48
 	waitmovement 0
-# 50 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 51 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 52 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV, MSGBOX_DEFAULT
 # 53 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	closemessage
-# 54 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_CoveLilyMotel_1F_Movement_PlayerPushFromTV
-# 55 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerPushPlayer
-# 56 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_PLAYER, LilycoveCity_CoveLilyMotel_1F_Movement_PlayerPushFromTV
+	applymovement LOCALID_MOTEL_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerPushPlayer
 	waitmovement 0
-# 57 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
-	applymovement LOCALID_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn
-# 58 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
+	applymovement LOCALID_MOTEL_OWNER, LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn
 	waitmovement 0
 # 59 "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.pory"
 	release

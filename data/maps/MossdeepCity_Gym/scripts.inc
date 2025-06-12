@@ -228,11 +228,95 @@ MossdeepCity_Gym_EventScript_TateAndLizaRematch::
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
 # 115 "data/maps/MossdeepCity_Gym/scripts.pory"
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
-# 116 "data/maps/MossdeepCity_Gym/scripts.pory"
 	end
-# 117 "data/maps/MossdeepCity_Gym/scripts.pory"
 
-# 118 "data/maps/MossdeepCity_Gym/scripts.pory"
+@ All the below switch scripts are leftover from RS and are functionally unused
+MossdeepCity_Gym_EventScript_Switch1::
+	lockall
+	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_1, MossdeepCity_Gym_EventScript_ClearSwitch1
+	setflag FLAG_MOSSDEEP_GYM_SWITCH_1
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 5, 5, METATILE_RSMossdeepGym_RedArrow_Right, FALSE
+	setmetatile 2, 7, METATILE_RSMossdeepGym_Switch_Down, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed::
+	special DrawWholeMapView
+	playse SE_CLICK
+	releaseall
+	end
+
+MossdeepCity_Gym_EventScript_ClearSwitch1::
+	clearflag FLAG_MOSSDEEP_GYM_SWITCH_1
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 5, 5, METATILE_RSMossdeepGym_RedArrow_Left, FALSE
+	setmetatile 2, 7, METATILE_RSMossdeepGym_Switch_Up, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_Switch2::
+	lockall
+	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_2, MossdeepCity_Gym_EventScript_ClearSwitch2
+	setflag FLAG_MOSSDEEP_GYM_SWITCH_2
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 8, 14, METATILE_RSMossdeepGym_RedArrow_Right, FALSE
+	setmetatile 8, 10, METATILE_RSMossdeepGym_Switch_Down, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_ClearSwitch2::
+	clearflag FLAG_MOSSDEEP_GYM_SWITCH_2
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 8, 14, METATILE_RSMossdeepGym_RedArrow_Down, FALSE
+	setmetatile 8, 10, METATILE_RSMossdeepGym_Switch_Up, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_Switch3::
+	lockall
+	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_3, MossdeepCity_Gym_EventScript_ClearSwitch3
+	setflag FLAG_MOSSDEEP_GYM_SWITCH_3
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 15, 17, METATILE_RSMossdeepGym_RedArrow_Left, FALSE
+	setmetatile 17, 15, METATILE_RSMossdeepGym_Switch_Down, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_ClearSwitch3::
+	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 15, 17, METATILE_RSMossdeepGym_RedArrow_Right, FALSE
+	setmetatile 17, 15, METATILE_RSMossdeepGym_Switch_Up, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_Switch4::
+	lockall
+	goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_4, MossdeepCity_Gym_EventScript_ClearSwitch4
+	setflag FLAG_MOSSDEEP_GYM_SWITCH_4
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 1, 23, METATILE_RSMossdeepGym_RedArrow_Up, FALSE
+	setmetatile 5, 24, METATILE_RSMossdeepGym_Switch_Down, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
+MossdeepCity_Gym_EventScript_ClearSwitch4::
+	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
+	applymovement LOCALID_PLAYER, MossdeepCity_Gym_Movement_WaitAfterSwitchUse
+	waitmovement 0
+	setmetatile 1, 23, METATILE_RSMossdeepGym_RedArrow_Right, FALSE
+	setmetatile 5, 24, METATILE_RSMossdeepGym_Switch_Up, TRUE
+	goto MossdeepCity_Gym_EventScript_DrawMapAfterSwitchUsed
+	end
+
 MossdeepCity_Gym_EventScript_WarpToEntrance::
 # 119 "data/maps/MossdeepCity_Gym/scripts.pory"
 	lockall

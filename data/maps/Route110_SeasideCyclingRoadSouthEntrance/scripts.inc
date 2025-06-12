@@ -44,9 +44,7 @@ Route110_SeasideCyclingRoadSouthEntrance_EventScript_NoBike::
 	msgbox Route110_SeasideCyclingRoadSouthEntrance_Text_TooDangerousToWalk, MSGBOX_DEFAULT
 # 23 "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.pory"
 	closemessage
-# 24 "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route110_SeasideCyclingRoadSouthEntrance_Movement_PushPlayerBackFromCounter
-# 25 "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.pory"
+	applymovement LOCALID_PLAYER, Route110_SeasideCyclingRoadSouthEntrance_Movement_PushPlayerBackFromCounter
 	waitmovement 0
 # 26 "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.pory"
 	releaseall

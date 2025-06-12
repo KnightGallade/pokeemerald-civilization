@@ -1,20 +1,3 @@
-# 1 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-
-# 2 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_GRUNT_1, 1
-# 3 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_GRUNT_2, 2
-# 4 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_SHELLY, 3
-# 5 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_SCIENTIST, 5
-# 6 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_GRUNT_3, 7
-# 7 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-.set LOCALID_GRUNT_4, 8
-# 8 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-
-# 9 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 Route119_WeatherInstitute_2F_MapScripts::
 # 10 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route119_WeatherInstitute_2F_OnTransition
@@ -36,31 +19,22 @@ Route119_WeatherInstitute_2F_OnTransition:
 
 # 19 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaHere::
-# 20 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectxyperm LOCALID_SCIENTIST, 1, 6
-# 21 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectmovementtype LOCALID_SCIENTIST, MOVEMENT_TYPE_FACE_RIGHT
-# 22 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	setobjectxyperm LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, 1, 6
+	setobjectmovementtype LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, MOVEMENT_TYPE_FACE_RIGHT
 	return
 # 23 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 
 # 24 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaGone::
-# 25 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectxyperm LOCALID_SCIENTIST, 4, 6
-# 26 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectmovementtype LOCALID_SCIENTIST, MOVEMENT_TYPE_FACE_RIGHT
-# 27 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	setobjectxyperm LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, 4, 6
+	setobjectmovementtype LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, MOVEMENT_TYPE_FACE_RIGHT
 	return
 # 28 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 
 # 29 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 Route119_WeatherInstitute_2F_EventScript_SetScientistPosGameClear::
-# 30 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectxyperm LOCALID_SCIENTIST, 2, 2
-# 31 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	setobjectmovementtype LOCALID_SCIENTIST, MOVEMENT_TYPE_FACE_UP
-# 32 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	setobjectxyperm LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, 2, 2
+	setobjectmovementtype LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, MOVEMENT_TYPE_FACE_UP
 	return
 # 33 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 
@@ -110,13 +84,9 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 	msgbox Route119_WeatherInstitute_2F_Text_ShellyPostBattle, MSGBOX_DEFAULT
 # 56 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	closemessage
-# 57 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	addobject LOCALID_GRUNT_3
-# 58 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement LOCALID_GRUNT_3, Route119_WeatherInstitute_2F_Movement_GruntApproachShelly
-# 59 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route119_WeatherInstitute_2F_Movement_ShovePlayerOutOfWay
-# 60 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	addobject LOCALID_WEATHER_INSTITUTE_2F_GRUNT_3
+	applymovement LOCALID_WEATHER_INSTITUTE_2F_GRUNT_3, Route119_WeatherInstitute_2F_Movement_GruntApproachShelly
+	applymovement LOCALID_PLAYER, Route119_WeatherInstitute_2F_Movement_ShovePlayerOutOfWay
 	waitmovement 0
 # 61 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	msgbox Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy, MSGBOX_DEFAULT
@@ -124,13 +94,9 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 	closemessage
 # 63 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	playse SE_PIN
-# 64 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement LOCALID_SHELLY, Common_Movement_ExclamationMark
-# 65 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	applymovement LOCALID_WEATHER_INSTITUTE_2F_SHELLY, Common_Movement_ExclamationMark
 	waitmovement 0
-# 66 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement LOCALID_SHELLY, Common_Movement_Delay48
-# 67 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	applymovement LOCALID_WEATHER_INSTITUTE_2F_SHELLY, Common_Movement_Delay48
 	waitmovement 0
 # 68 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	msgbox Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre, MSGBOX_DEFAULT
@@ -148,29 +114,18 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 	setflag FLAG_HIDE_ROUTE_119_TEAM_AQUA
 # 75 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M
-# 76 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	removeobject LOCALID_GRUNT_1
-# 77 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	removeobject LOCALID_GRUNT_2
-# 78 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	removeobject LOCALID_SHELLY
-# 79 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	removeobject LOCALID_GRUNT_4
-# 80 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	removeobject LOCALID_GRUNT_3
-# 81 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route119_WeatherInstitute_2F_Movement_PlayerReturnToPosition
-# 82 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	removeobject LOCALID_WEATHER_INSTITUTE_2F_GRUNT_1
+	removeobject LOCALID_WEATHER_INSTITUTE_2F_GRUNT_2
+	removeobject LOCALID_WEATHER_INSTITUTE_2F_SHELLY
+	removeobject LOCALID_WEATHER_INSTITUTE_2F_GRUNT_4
+	removeobject LOCALID_WEATHER_INSTITUTE_2F_GRUNT_3
+	applymovement LOCALID_PLAYER, Route119_WeatherInstitute_2F_Movement_PlayerReturnToPosition
 	waitmovement 0
 # 83 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 84 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	applymovement LOCALID_SCIENTIST, Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer
-# 85 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	applymovement LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST, Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer
 	waitmovement 0
-# 86 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
-	copyobjectxytoperm LOCALID_SCIENTIST
-# 87 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
+	copyobjectxytoperm LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST
 	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
 # 88 "data/maps/Route119_WeatherInstitute_2F/scripts.pory"
 	end

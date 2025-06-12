@@ -1,12 +1,3 @@
-# 1 "data/maps/LavaridgeTown/scripts.pory"
-
-# 2 "data/maps/LavaridgeTown/scripts.pory"
-.set LOCALID_RIVAL_ON_BIKE, 7
-# 3 "data/maps/LavaridgeTown/scripts.pory"
-.set LOCALID_RIVAL, 8
-# 4 "data/maps/LavaridgeTown/scripts.pory"
-
-# 5 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_MapScripts::
 # 6 "data/maps/LavaridgeTown/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_OnTransition
@@ -56,13 +47,9 @@ LavaridgeTown_EventScript_CheckSetRivalPos::
 
 # 29 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_SetRivalPos::
-# 30 "data/maps/LavaridgeTown/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL, 11, 9
-# 31 "data/maps/LavaridgeTown/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 9, 8
-# 32 "data/maps/LavaridgeTown/scripts.pory"
-	setobjectmovementtype LOCALID_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_UP
-# 33 "data/maps/LavaridgeTown/scripts.pory"
+	setobjectxyperm LOCALID_LAVARIDGE_RIVAL, 11, 9
+	setobjectxyperm LOCALID_LAVARIDGE_RIVAL_ON_BIKE, 9, 8
+	setobjectmovementtype LOCALID_LAVARIDGE_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_UP
 	clearflag FLAG_HIDE_LAVARIDGE_TOWN_RIVAL
 # 34 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -160,19 +147,14 @@ LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 LavaridgeTown_EventScript_RivalExit::
 # 81 "data/maps/LavaridgeTown/scripts.pory"
 	closemessage
-# 82 "data/maps/LavaridgeTown/scripts.pory"
-	removeobject LOCALID_RIVAL
-# 83 "data/maps/LavaridgeTown/scripts.pory"
-	addobject LOCALID_RIVAL_ON_BIKE
-# 84 "data/maps/LavaridgeTown/scripts.pory"
+	removeobject LOCALID_LAVARIDGE_RIVAL
+	addobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
 	delay 30
 # 85 "data/maps/LavaridgeTown/scripts.pory"
 	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit1
 # 86 "data/maps/LavaridgeTown/scripts.pory"
 	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit2
-# 87 "data/maps/LavaridgeTown/scripts.pory"
-	removeobject LOCALID_RIVAL_ON_BIKE
-# 88 "data/maps/LavaridgeTown/scripts.pory"
+	removeobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
 	setvar VAR_LAVARIDGE_TOWN_STATE, 2
 # 89 "data/maps/LavaridgeTown/scripts.pory"
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
@@ -204,19 +186,13 @@ LavaridgeTown_EventScript_PlayBrendanMusic::
 
 # 103 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_RivalNoticePlayer::
-# 104 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterUp
-# 105 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 106 "data/maps/LavaridgeTown/scripts.pory"
 	playse SE_PIN
-# 107 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-# 108 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-# 109 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-# 110 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 # 111 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -228,33 +204,22 @@ LavaridgeTown_EventScript_RivalExitHerbShop::
 	opendoor 12, 15
 # 115 "data/maps/LavaridgeTown/scripts.pory"
 	waitdooranim
-# 116 "data/maps/LavaridgeTown/scripts.pory"
-	addobject LOCALID_RIVAL
-# 117 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, LavaridgeTown_Movement_RivalExitHerbShop
-# 118 "data/maps/LavaridgeTown/scripts.pory"
+	addobject LOCALID_LAVARIDGE_RIVAL
+	applymovement LOCALID_LAVARIDGE_RIVAL, LavaridgeTown_Movement_RivalExitHerbShop
 	waitmovement 0
 # 119 "data/maps/LavaridgeTown/scripts.pory"
 	closedoor 12, 15
 # 120 "data/maps/LavaridgeTown/scripts.pory"
 	waitdooranim
-# 121 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterLeft
-# 122 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 123 "data/maps/LavaridgeTown/scripts.pory"
 	playse SE_PIN
-# 124 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-# 125 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-# 126 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-# 127 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-# 128 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 129 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 130 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -262,9 +227,7 @@ LavaridgeTown_EventScript_RivalExitHerbShop::
 
 # 132 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_RivalApproachPlayer1::
-# 133 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer1
-# 134 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer1
 	waitmovement 0
 # 135 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -272,9 +235,7 @@ LavaridgeTown_EventScript_RivalApproachPlayer1::
 
 # 137 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_RivalApproachPlayer2::
-# 138 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer2
-# 139 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer2
 	waitmovement 0
 # 140 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -282,11 +243,8 @@ LavaridgeTown_EventScript_RivalApproachPlayer2::
 
 # 142 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_RivalExit1::
-# 143 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LavaridgeTown_Movement_PlayerWatchRivalExit
-# 144 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit1
-# 145 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_PLAYER, LavaridgeTown_Movement_PlayerWatchRivalExit
+	applymovement LOCALID_LAVARIDGE_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit1
 	waitmovement 0
 # 146 "data/maps/LavaridgeTown/scripts.pory"
 	return
@@ -294,9 +252,7 @@ LavaridgeTown_EventScript_RivalExit1::
 
 # 148 "data/maps/LavaridgeTown/scripts.pory"
 LavaridgeTown_EventScript_RivalExit2::
-# 149 "data/maps/LavaridgeTown/scripts.pory"
-	applymovement LOCALID_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit2
-# 150 "data/maps/LavaridgeTown/scripts.pory"
+	applymovement LOCALID_LAVARIDGE_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit2
 	waitmovement 0
 # 151 "data/maps/LavaridgeTown/scripts.pory"
 	return

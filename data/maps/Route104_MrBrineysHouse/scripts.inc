@@ -1,12 +1,3 @@
-# 1 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-
-# 2 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-.set LOCALID_BRINEY, 1
-# 3 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-.set LOCALID_PEEKO, 2
-# 4 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-
-# 5 "data/maps/Route104_MrBrineysHouse/scripts.pory"
 Route104_MrBrineysHouse_MapScripts::
 # 6 "data/maps/Route104_MrBrineysHouse/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route104_MrBrineysHouse_OnTransition
@@ -36,15 +27,10 @@ Route104_MrBrineysHouse_EventScript_HideRustboroRival::
 
 # 19 "data/maps/Route104_MrBrineysHouse/scripts.pory"
 Route104_MrBrineysHouse_EventScript_SetBrineyPeekoPos::
-# 20 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-	setobjectxyperm LOCALID_BRINEY, 9, 3
-# 21 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-	setobjectmovementtype LOCALID_BRINEY, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT
-# 22 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-	setobjectxyperm LOCALID_PEEKO, 9, 6
-# 23 "data/maps/Route104_MrBrineysHouse/scripts.pory"
-	setobjectmovementtype LOCALID_PEEKO, MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN
-# 24 "data/maps/Route104_MrBrineysHouse/scripts.pory"
+	setobjectxyperm LOCALID_BRINEYS_HOUSE_BRINEY, 9, 3
+	setobjectmovementtype LOCALID_BRINEYS_HOUSE_BRINEY, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT
+	setobjectxyperm LOCALID_BRINEYS_HOUSE_PEEKO, 9, 6
+	setobjectmovementtype LOCALID_BRINEYS_HOUSE_PEEKO, MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN
 	return
 # 25 "data/maps/Route104_MrBrineysHouse/scripts.pory"
 

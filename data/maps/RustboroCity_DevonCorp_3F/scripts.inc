@@ -1,10 +1,3 @@
-# 1 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-
-# 2 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-.set LOCALID_DEVON_EMPLOYEE, 2
-# 3 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-
-# 4 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 RustboroCity_DevonCorp_3F_MapScripts::
 # 5 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_DevonCorp_3F_OnTransition
@@ -26,11 +19,8 @@ RustboroCity_DevonCorp_3F_OnTransition:
 
 # 14 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 RustboroCity_DevonCorp_3F_EventScript_SetEmployeePos::
-# 15 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 3, 2
-# 16 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_LEFT
-# 17 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	setobjectxyperm LOCALID_DEVON_CORP_3F_EMPLOYEE, 3, 2
+	setobjectmovementtype LOCALID_DEVON_CORP_3F_EMPLOYEE, MOVEMENT_TYPE_FACE_LEFT
 	return
 # 18 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 
@@ -44,9 +34,7 @@ RustboroCity_DevonCorp_3F_OnWarp:
 
 # 23 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 RustboroCity_DevonCorp_3F_EventScript_PlayerFaceEast::
-# 24 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
-# 25 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_EAST
 	end
 # 26 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 
@@ -66,15 +54,11 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	msgbox RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere, MSGBOX_DEFAULT
 # 34 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	closemessage
-# 35 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeWalkOffscreen
-# 36 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	applymovement LOCALID_DEVON_CORP_3F_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeWalkOffscreen
 	waitmovement 0
 # 37 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	delay 80
-# 38 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeReturnToPlayer
-# 39 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	applymovement LOCALID_DEVON_CORP_3F_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeReturnToPlayer
 	waitmovement 0
 # 40 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	msgbox RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe, MSGBOX_DEFAULT
@@ -82,11 +66,8 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	closemessage
 # 42 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	playbgm MUS_FOLLOW_ME, FALSE
-# 43 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_LeadPlayerToPresident
-# 44 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerFollowToPresident
-# 45 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	applymovement LOCALID_DEVON_CORP_3F_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_LeadPlayerToPresident
+	applymovement LOCALID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerFollowToPresident
 	waitmovement 0
 # 46 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	msgbox RustboroCity_DevonCorp_3F_Text_PleaseGoAhead, MSGBOX_DEFAULT
@@ -94,11 +75,8 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	closemessage
 # 48 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	fadedefaultbgm
-# 49 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeFaceDesk
-# 50 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerApproachDesk
-# 51 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
+	applymovement LOCALID_DEVON_CORP_3F_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeFaceDesk
+	applymovement LOCALID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerApproachDesk
 	waitmovement 0
 # 52 "data/maps/RustboroCity_DevonCorp_3F/scripts.pory"
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor, MSGBOX_DEFAULT

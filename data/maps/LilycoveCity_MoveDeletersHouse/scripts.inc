@@ -1,10 +1,3 @@
-# 1 "data/maps/LilycoveCity_MoveDeletersHouse/scripts.pory"
-
-# 2 "data/maps/LilycoveCity_MoveDeletersHouse/scripts.pory"
-.set LOCALID_MOVE_DELETER, 1
-# 3 "data/maps/LilycoveCity_MoveDeletersHouse/scripts.pory"
-
-# 4 "data/maps/LilycoveCity_MoveDeletersHouse/scripts.pory"
 LilycoveCity_MoveDeletersHouse_MapScripts::
 # 5 "data/maps/LilycoveCity_MoveDeletersHouse/scripts.pory"
 	.byte 0

@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 BattleFrontier_BattlePikeLobby_MapScripts::
 # 5 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePikeLobby_OnFrame
@@ -40,9 +33,7 @@ BattleFrontier_BattlePikeLobby_OnWarp:
 BattleFrontier_BattlePikeLobby_EventScript_TurnPlayerNorth::
 # 21 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 22 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 23 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 24 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 
@@ -408,11 +399,8 @@ BattleFrontier_BattlePikeLobby_EventScript_ShowResults::
 
 # 205 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 BattleFrontier_BattlePikeLobby_EventScript_WalkToCorridor::
-# 206 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattlePikeLobby_Movement_AttendantWalkToCorridor
-# 207 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeLobby_Movement_PlayerWalkToCorridor
-# 208 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
+	applymovement LOCALID_PIKE_LOBBY_ATTENDANT, BattleFrontier_BattlePikeLobby_Movement_AttendantWalkToCorridor
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePikeLobby_Movement_PlayerWalkToCorridor
 	waitmovement 0
 # 209 "data/maps/BattleFrontier_BattlePikeLobby/scripts.pory"
 	return

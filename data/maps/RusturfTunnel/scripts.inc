@@ -1,18 +1,3 @@
-# 1 "data/maps/RusturfTunnel/scripts.pory"
-
-# 2 "data/maps/RusturfTunnel/scripts.pory"
-.equ LOCALID_WANDAS_BF, 1
-# 3 "data/maps/RusturfTunnel/scripts.pory"
-.set LOCALID_BRINEY, 5
-# 4 "data/maps/RusturfTunnel/scripts.pory"
-.set LOCALID_GRUNT, 6
-# 5 "data/maps/RusturfTunnel/scripts.pory"
-.set LOCALID_PEEKO, 7
-# 6 "data/maps/RusturfTunnel/scripts.pory"
-.equ LOCALID_WANDA, 10
-# 7 "data/maps/RusturfTunnel/scripts.pory"
-
-# 8 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_MapScripts::
 # 9 "data/maps/RusturfTunnel/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, RusturfTunnel_OnTransition
@@ -42,11 +27,8 @@ RusturfTunnel_OnTransition:
 
 # 22 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
-# 23 "data/maps/RusturfTunnel/scripts.pory"
-	setobjectxyperm LOCALID_PEEKO, 13, 4
-# 24 "data/maps/RusturfTunnel/scripts.pory"
-	setobjectxyperm LOCALID_GRUNT, 13, 5
-# 25 "data/maps/RusturfTunnel/scripts.pory"
+	setobjectxyperm LOCALID_RUSTURF_TUNNEL_PEEKO, 13, 4
+	setobjectxyperm LOCALID_RUSTURF_TUNNEL_GRUNT, 13, 5
 	return
 # 26 "data/maps/RusturfTunnel/scripts.pory"
 
@@ -162,11 +144,8 @@ RusturfTunnel_EventScript_ClearTunnelScene::
 
 # 82 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_BoyfriendApproachWanda1::
-# 83 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend1
-# 84 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda1
-# 85 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend1
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda1
 	waitmovement 0
 # 86 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -174,15 +153,10 @@ RusturfTunnel_EventScript_BoyfriendApproachWanda1::
 
 # 88 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_BoyfriendApproachWanda2::
-# 89 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend
-# 90 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda
-# 91 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda
 	waitmovement 0
-# 92 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDA, Common_Movement_WalkInPlaceFasterDown
-# 93 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDA, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 94 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -190,15 +164,10 @@ RusturfTunnel_EventScript_BoyfriendApproachWanda2::
 
 # 96 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_BoyfriendApproachWanda3::
-# 97 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend
-# 98 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda
-# 99 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchBoyfriend
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_BoyfriendApproachWanda
 	waitmovement 0
-# 100 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDA, Common_Movement_WalkInPlaceFasterDown
-# 101 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDA, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 102 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -206,13 +175,9 @@ RusturfTunnel_EventScript_BoyfriendApproachWanda3::
 
 # 104 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_FaceWandasBoyfriend1::
-# 105 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, Common_Movement_WalkInPlaceFasterUp
-# 106 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-# 107 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 108 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 109 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -220,9 +185,7 @@ RusturfTunnel_EventScript_FaceWandasBoyfriend1::
 
 # 111 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_FaceWandasBoyfriend2::
-# 112 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_BoyfriendFaceRight
-# 113 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_BoyfriendFaceRight
 	waitmovement 0
 # 114 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -238,9 +201,7 @@ RusturfTunnel_EventScript_FaceWandasBoyfriend3::
 RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer::
 # 120 "data/maps/RusturfTunnel/scripts.pory"
 	closemessage
-# 121 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendApproachPlayer
-# 122 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendApproachPlayer
 	waitmovement 0
 # 123 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -248,11 +209,8 @@ RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer::
 
 # 125 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_WandaAndBoyfriendExit1::
-# 126 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDA, RusturfTunnel_Movement_WandaExit1
-# 127 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendExit1
-# 128 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDA, RusturfTunnel_Movement_WandaExit1
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendExit1
 	waitmovement 0
 # 129 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -260,13 +218,9 @@ RusturfTunnel_EventScript_WandaAndBoyfriendExit1::
 
 # 131 "data/maps/RusturfTunnel/scripts.pory"
 RusturfTunnel_EventScript_WandaAndBoyfriendExit::
-# 132 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchWandaExit
-# 133 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDA, RusturfTunnel_Movement_WandaExit
-# 134 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendExit
-# 135 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchWandaExit
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDA, RusturfTunnel_Movement_WandaExit
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, RusturfTunnel_Movement_WandasBoyfriendExit
 	waitmovement 0
 # 136 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -276,13 +230,9 @@ RusturfTunnel_EventScript_WandaAndBoyfriendExit::
 RusturfTunnel_EventScript_WandasBoyfriendNotice::
 # 139 "data/maps/RusturfTunnel/scripts.pory"
 	playse SE_PIN
-# 140 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, Common_Movement_ExclamationMark
-# 141 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, Common_Movement_ExclamationMark
 	waitmovement 0
-# 142 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_WANDAS_BF, Common_Movement_Delay48
-# 143 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_WANDAS_BF, Common_Movement_Delay48
 	waitmovement 0
 # 144 "data/maps/RusturfTunnel/scripts.pory"
 	return
@@ -558,17 +508,11 @@ RusturfTunnel_EventScript_AquaGruntBackUp::
 	msgbox RusturfTunnel_Text_ComeAndGetSome, MSGBOX_DEFAULT
 # 280 "data/maps/RusturfTunnel/scripts.pory"
 	closemessage
-# 281 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntAndPeekoBackUp
-# 282 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_PEEKO, RusturfTunnel_Movement_GruntAndPeekoBackUp
-# 283 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntAndPeekoBackUp
+	applymovement LOCALID_RUSTURF_TUNNEL_PEEKO, RusturfTunnel_Movement_GruntAndPeekoBackUp
 	waitmovement 0
-# 284 "data/maps/RusturfTunnel/scripts.pory"
-	copyobjectxytoperm LOCALID_GRUNT
-# 285 "data/maps/RusturfTunnel/scripts.pory"
-	copyobjectxytoperm LOCALID_PEEKO
-# 286 "data/maps/RusturfTunnel/scripts.pory"
+	copyobjectxytoperm LOCALID_RUSTURF_TUNNEL_GRUNT
+	copyobjectxytoperm LOCALID_RUSTURF_TUNNEL_PEEKO
 	setvar VAR_RUSTURF_TUNNEL_STATE, 3
 # 287 "data/maps/RusturfTunnel/scripts.pory"
 	releaseall
@@ -626,33 +570,20 @@ RusturfTunnel_EventScript_Grunt::
 	giveitem ITEM_DEVON_PARTS
 # 314 "data/maps/RusturfTunnel/scripts.pory"
 	closemessage
-# 315 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
-# 316 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntEscape
-# 317 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
+	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntEscape
 	waitmovement 0
-# 318 "data/maps/RusturfTunnel/scripts.pory"
-	removeobject LOCALID_GRUNT
-# 319 "data/maps/RusturfTunnel/scripts.pory"
+	removeobject LOCALID_RUSTURF_TUNNEL_GRUNT
 	delay 50
-# 320 "data/maps/RusturfTunnel/scripts.pory"
-	addobject LOCALID_BRINEY
-# 321 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
-# 322 "data/maps/RusturfTunnel/scripts.pory"
+	addobject LOCALID_RUSTURF_TUNNEL_BRINEY
+	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
 	waitmovement 0
-# 323 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerMoveAsideForBriney
-# 324 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko2
-# 325 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerMoveAsideForBriney
+	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko2
 	waitmovement 0
 # 326 "data/maps/RusturfTunnel/scripts.pory"
 	msgbox RusturfTunnel_Text_PeekoGladToSeeYouSafe, MSGBOX_DEFAULT
-# 327 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_BRINEY, Common_Movement_FacePlayer
-# 328 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, Common_Movement_FacePlayer
 	waitmovement 0
 # 329 "data/maps/RusturfTunnel/scripts.pory"
 	message RusturfTunnel_Text_ThankYouLetsGoHomePeeko
@@ -668,19 +599,12 @@ RusturfTunnel_EventScript_Grunt::
 	waitmoncry
 # 335 "data/maps/RusturfTunnel/scripts.pory"
 	closemessage
-# 336 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerWatchBrineyExit
-# 337 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyExit
-# 338 "data/maps/RusturfTunnel/scripts.pory"
-	applymovement LOCALID_PEEKO, RusturfTunnel_Movement_PeekoExit
-# 339 "data/maps/RusturfTunnel/scripts.pory"
+	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PlayerWatchBrineyExit
+	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyExit
+	applymovement LOCALID_RUSTURF_TUNNEL_PEEKO, RusturfTunnel_Movement_PeekoExit
 	waitmovement 0
-# 340 "data/maps/RusturfTunnel/scripts.pory"
-	removeobject LOCALID_BRINEY
-# 341 "data/maps/RusturfTunnel/scripts.pory"
-	removeobject LOCALID_PEEKO
-# 342 "data/maps/RusturfTunnel/scripts.pory"
+	removeobject LOCALID_RUSTURF_TUNNEL_BRINEY
+	removeobject LOCALID_RUSTURF_TUNNEL_PEEKO
 	clearflag FLAG_DEVON_GOODS_STOLEN
 # 343 "data/maps/RusturfTunnel/scripts.pory"
 	setflag FLAG_RECOVERED_DEVON_GOODS

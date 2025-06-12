@@ -1,10 +1,3 @@
-# 1 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
-
-# 2 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
-.set LOCALID_NURSE, 1
-# 3 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
-
-# 4 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
 MauvilleCity_PokemonCenter_1F_MapScripts::
 # 5 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_PokemonCenter_1F_OnTransition
@@ -36,9 +29,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_SetMauvilleOldManGfx::
 
 # 19 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
 MauvilleCity_PokemonCenter_1F_EventScript_Nurse::
-# 20 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
-	setvar VAR_0x800B, LOCALID_NURSE
-# 21 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, LOCALID_MAUVILLE_NURSE
 	call Common_EventScript_PkmnCenterNurse
 # 22 "data/maps/MauvilleCity_PokemonCenter_1F/scripts.pory"
 	waitmessage

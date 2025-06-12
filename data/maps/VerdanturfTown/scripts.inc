@@ -1,10 +1,3 @@
-# 1 "data/maps/VerdanturfTown/scripts.pory"
-
-# 2 "data/maps/VerdanturfTown/scripts.pory"
-.set LOCALID_TWIN, 2
-# 3 "data/maps/VerdanturfTown/scripts.pory"
-
-# 4 "data/maps/VerdanturfTown/scripts.pory"
 VerdanturfTown_MapScripts::
 # 5 "data/maps/VerdanturfTown/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_OnTransition
@@ -32,9 +25,7 @@ VerdanturfTown_EventScript_Twin::
 	goto_if_set FLAG_RUSTURF_TUNNEL_OPENED, VerdanturfTown_EventScript_TwinTunnelOpen
 # 17 "data/maps/VerdanturfTown/scripts.pory"
 	msgbox VerdanturfTown_Text_ManTryingToDigTunnel, MSGBOX_DEFAULT
-# 18 "data/maps/VerdanturfTown/scripts.pory"
-	applymovement LOCALID_TWIN, Common_Movement_FaceOriginalDirection
-# 19 "data/maps/VerdanturfTown/scripts.pory"
+	applymovement LOCALID_VERDANTURF_TWIN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 20 "data/maps/VerdanturfTown/scripts.pory"
 	release
@@ -46,9 +37,7 @@ VerdanturfTown_EventScript_Twin::
 VerdanturfTown_EventScript_TwinTunnelOpen::
 # 24 "data/maps/VerdanturfTown/scripts.pory"
 	msgbox VerdanturfTown_Text_ManDugTunnelForLove, MSGBOX_DEFAULT
-# 25 "data/maps/VerdanturfTown/scripts.pory"
-	applymovement LOCALID_TWIN, Common_Movement_FaceOriginalDirection
-# 26 "data/maps/VerdanturfTown/scripts.pory"
+	applymovement LOCALID_VERDANTURF_TWIN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 27 "data/maps/VerdanturfTown/scripts.pory"
 	release

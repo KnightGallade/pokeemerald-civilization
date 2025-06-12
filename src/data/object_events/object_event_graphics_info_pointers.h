@@ -239,6 +239,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
 // Adding FRLG overworld sprites
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_LittleBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRLG_LittleGirl;
@@ -578,6 +579,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
+    [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     // Adding FRLG overworld sprites
     [OBJ_EVENT_GFX_FRLG_LITTLE_BOY] =          &gObjectEventGraphicsInfo_FRLG_LittleBoy,
     [OBJ_EVENT_GFX_FRLG_LITTLE_GIRL] =         &gObjectEventGraphicsInfo_FRLG_LittleGirl,

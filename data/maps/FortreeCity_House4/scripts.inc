@@ -1,10 +1,3 @@
-# 1 "data/maps/FortreeCity_House4/scripts.pory"
-
-# 2 "data/maps/FortreeCity_House4/scripts.pory"
-.set LOCALID_WINGULL, 3
-# 3 "data/maps/FortreeCity_House4/scripts.pory"
-
-# 4 "data/maps/FortreeCity_House4/scripts.pory"
 FortreeCity_House4_MapScripts::
 # 5 "data/maps/FortreeCity_House4/scripts.pory"
 	.byte 0
@@ -36,13 +29,9 @@ FortreeCity_House4_EventScript_Boy::
 	setflag FLAG_WINGULL_SENT_ON_ERRAND
 # 19 "data/maps/FortreeCity_House4/scripts.pory"
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_WINGULL
-# 20 "data/maps/FortreeCity_House4/scripts.pory"
-	applymovement LOCALID_WINGULL, FortreeCity_House4_Movement_WingullExit
-# 21 "data/maps/FortreeCity_House4/scripts.pory"
+	applymovement LOCALID_FORTREE_HOUSE_WINGULL, FortreeCity_House4_Movement_WingullExit
 	waitmovement 0
-# 22 "data/maps/FortreeCity_House4/scripts.pory"
-	removeobject LOCALID_WINGULL
-# 23 "data/maps/FortreeCity_House4/scripts.pory"
+	removeobject LOCALID_FORTREE_HOUSE_WINGULL
 	releaseall
 # 24 "data/maps/FortreeCity_House4/scripts.pory"
 	end

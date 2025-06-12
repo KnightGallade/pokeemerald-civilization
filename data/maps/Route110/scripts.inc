@@ -1,16 +1,3 @@
-# 1 "data/maps/Route110/scripts.pory"
-
-# 2 "data/maps/Route110/scripts.pory"
-.set LOCALID_CHALLENGE_BIKER, 21
-# 3 "data/maps/Route110/scripts.pory"
-.set LOCALID_RIVAL, 28
-# 4 "data/maps/Route110/scripts.pory"
-.set LOCALID_RIVAL_ON_BIKE, 29
-# 5 "data/maps/Route110/scripts.pory"
-.set LOCALID_BIRCH, 36
-# 6 "data/maps/Route110/scripts.pory"
-
-# 7 "data/maps/Route110/scripts.pory"
 Route110_MapScripts::
 # 8 "data/maps/Route110/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, Route110_OnResume
@@ -760,17 +747,11 @@ Route110_EventScript_RivalScene::
 	call_if_eq VAR_RESULT, MALE, Route110_EventScript_PlayMayMusic
 # 381 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_RESULT, FEMALE, Route110_EventScript_PlayBrendanMusic
-# 382 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-# 383 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-# 384 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-# 385 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-# 386 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-# 387 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 # 388 "data/maps/Route110/scripts.pory"
 	delay 30
@@ -946,15 +927,10 @@ Route110_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_MoveRival2
 # 474 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_MoveRival3
-# 475 "data/maps/Route110/scripts.pory"
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
-# 476 "data/maps/Route110/scripts.pory"
-	setobjectmovementtype LOCALID_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
-# 477 "data/maps/Route110/scripts.pory"
-	removeobject LOCALID_RIVAL
-# 478 "data/maps/Route110/scripts.pory"
-	addobject LOCALID_RIVAL_ON_BIKE
-# 479 "data/maps/Route110/scripts.pory"
+	setobjectmovementtype LOCALID_ROUTE110_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype LOCALID_ROUTE110_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
+	removeobject LOCALID_ROUTE110_RIVAL
+	addobject LOCALID_ROUTE110_RIVAL_ON_BIKE
 	delay 45
 # 480 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalExit1
@@ -962,9 +938,7 @@ Route110_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalExit2
 # 482 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalExit3
-# 483 "data/maps/Route110/scripts.pory"
-	removeobject LOCALID_RIVAL_ON_BIKE
-# 484 "data/maps/Route110/scripts.pory"
+	removeobject LOCALID_ROUTE110_RIVAL_ON_BIKE
 	setvar VAR_ROUTE110_STATE, 1
 # 485 "data/maps/Route110/scripts.pory"
 	savebgm MUS_DUMMY
@@ -978,9 +952,7 @@ Route110_EventScript_RivalExit::
 
 # 490 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalApproachPlayer1::
-# 491 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer1
-# 492 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer1
 	waitmovement 0
 # 493 "data/maps/Route110/scripts.pory"
 	return
@@ -988,9 +960,7 @@ Route110_EventScript_RivalApproachPlayer1::
 
 # 495 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalApproachPlayer2::
-# 496 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer2
-# 497 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer2
 	waitmovement 0
 # 498 "data/maps/Route110/scripts.pory"
 	return
@@ -998,9 +968,7 @@ Route110_EventScript_RivalApproachPlayer2::
 
 # 500 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalApproachPlayer3::
-# 501 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL, Route110_Movement_RivalApproachPlayer3
-# 502 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer3
 	waitmovement 0
 # 503 "data/maps/Route110/scripts.pory"
 	return
@@ -1008,9 +976,7 @@ Route110_EventScript_RivalApproachPlayer3::
 
 # 505 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalExit1::
-# 506 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit1
-# 507 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit1
 	waitmovement 0
 # 508 "data/maps/Route110/scripts.pory"
 	return
@@ -1018,9 +984,7 @@ Route110_EventScript_RivalExit1::
 
 # 510 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalExit2::
-# 511 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit2
-# 512 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit2
 	waitmovement 0
 # 513 "data/maps/Route110/scripts.pory"
 	return
@@ -1028,9 +992,7 @@ Route110_EventScript_RivalExit2::
 
 # 515 "data/maps/Route110/scripts.pory"
 Route110_EventScript_RivalExit3::
-# 516 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_RIVAL_ON_BIKE, Route110_Movement_RivalExit3
-# 517 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit3
 	waitmovement 0
 # 518 "data/maps/Route110/scripts.pory"
 	return
@@ -1038,25 +1000,19 @@ Route110_EventScript_RivalExit3::
 
 # 520 "data/maps/Route110/scripts.pory"
 Route110_EventScript_MoveRival1::
-# 521 "data/maps/Route110/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 33, 55
-# 522 "data/maps/Route110/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 33, 55
 	return
 # 523 "data/maps/Route110/scripts.pory"
 
 # 524 "data/maps/Route110/scripts.pory"
 Route110_EventScript_MoveRival2::
-# 525 "data/maps/Route110/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 34, 55
-# 526 "data/maps/Route110/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 34, 55
 	return
 # 527 "data/maps/Route110/scripts.pory"
 
 # 528 "data/maps/Route110/scripts.pory"
 Route110_EventScript_MoveRival3::
-# 529 "data/maps/Route110/scripts.pory"
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 35, 55
-# 530 "data/maps/Route110/scripts.pory"
+	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 35, 55
 	return
 # 531 "data/maps/Route110/scripts.pory"
 
@@ -1196,21 +1152,14 @@ Route110_EventScript_BirchScene4::
 
 # 599 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchScene::
-# 600 "data/maps/Route110/scripts.pory"
-	addobject LOCALID_BIRCH
-# 601 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchEntrance
-# 602 "data/maps/Route110/scripts.pory"
+	addobject LOCALID_ROUTE110_BIRCH
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchEntrance
 	waitmovement 0
 # 603 "data/maps/Route110/scripts.pory"
 	playse SE_PIN
-# 604 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
-# 605 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
-# 606 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Common_Movement_Delay48
-# 607 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_Delay48
 	waitmovement 0
 # 608 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_BirchApproachPlayer1
@@ -1226,21 +1175,15 @@ Route110_EventScript_BirchScene::
 	closemessage
 # 614 "data/maps/Route110/scripts.pory"
 	delay 20
-# 615 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterLeft
-# 616 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 617 "data/maps/Route110/scripts.pory"
 	delay 10
-# 618 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
-# 619 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 620 "data/maps/Route110/scripts.pory"
 	delay 20
-# 621 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterDown
-# 622 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 623 "data/maps/Route110/scripts.pory"
 	delay 30
@@ -1274,9 +1217,7 @@ Route110_EventScript_BirchScene::
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_BirchExit3
 # 638 "data/maps/Route110/scripts.pory"
 	call_if_eq VAR_0x8008, 4, Route110_EventScript_BirchExit4
-# 639 "data/maps/Route110/scripts.pory"
-	removeobject LOCALID_BIRCH
-# 640 "data/maps/Route110/scripts.pory"
+	removeobject LOCALID_ROUTE110_BIRCH
 	setvar VAR_REGISTER_BIRCH_STATE, 2
 # 641 "data/maps/Route110/scripts.pory"
 	releaseall
@@ -1286,9 +1227,7 @@ Route110_EventScript_BirchScene::
 
 # 644 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchApproachPlayer1::
-# 645 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer1
-# 646 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchApproachPlayer1
 	waitmovement 0
 # 647 "data/maps/Route110/scripts.pory"
 	return
@@ -1296,9 +1235,7 @@ Route110_EventScript_BirchApproachPlayer1::
 
 # 649 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchApproachPlayer2::
-# 650 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer2
-# 651 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchApproachPlayer2
 	waitmovement 0
 # 652 "data/maps/Route110/scripts.pory"
 	return
@@ -1306,9 +1243,7 @@ Route110_EventScript_BirchApproachPlayer2::
 
 # 654 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchApproachPlayer3::
-# 655 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer3
-# 656 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchApproachPlayer3
 	waitmovement 0
 # 657 "data/maps/Route110/scripts.pory"
 	return
@@ -1316,9 +1251,7 @@ Route110_EventScript_BirchApproachPlayer3::
 
 # 659 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchApproachPlayer4::
-# 660 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer4
-# 661 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchApproachPlayer4
 	waitmovement 0
 # 662 "data/maps/Route110/scripts.pory"
 	return
@@ -1326,9 +1259,7 @@ Route110_EventScript_BirchApproachPlayer4::
 
 # 664 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchExit1::
-# 665 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit1
-# 666 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchExit1
 	waitmovement 0
 # 667 "data/maps/Route110/scripts.pory"
 	return
@@ -1336,9 +1267,7 @@ Route110_EventScript_BirchExit1::
 
 # 669 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchExit2::
-# 670 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit2
-# 671 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchExit2
 	waitmovement 0
 # 672 "data/maps/Route110/scripts.pory"
 	return
@@ -1346,9 +1275,7 @@ Route110_EventScript_BirchExit2::
 
 # 674 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchExit3::
-# 675 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit3
-# 676 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchExit3
 	waitmovement 0
 # 677 "data/maps/Route110/scripts.pory"
 	return
@@ -1356,9 +1283,7 @@ Route110_EventScript_BirchExit3::
 
 # 679 "data/maps/Route110/scripts.pory"
 Route110_EventScript_BirchExit4::
-# 680 "data/maps/Route110/scripts.pory"
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit4
-# 681 "data/maps/Route110/scripts.pory"
+	applymovement LOCALID_ROUTE110_BIRCH, Route110_Movement_BirchExit4
 	waitmovement 0
 # 682 "data/maps/Route110/scripts.pory"
 	return

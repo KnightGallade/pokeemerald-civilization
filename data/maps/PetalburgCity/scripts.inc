@@ -1,18 +1,3 @@
-# 1 "data/maps/PetalburgCity/scripts.pory"
-
-# 2 "data/maps/PetalburgCity/scripts.pory"
-.set LOCALID_WALLY, 2
-# 3 "data/maps/PetalburgCity/scripts.pory"
-.set LOCALID_BOY, 3
-# 4 "data/maps/PetalburgCity/scripts.pory"
-.set LOCALID_WALLYS_DAD, 5
-# 5 "data/maps/PetalburgCity/scripts.pory"
-.set LOCALID_GYM_BOY, 8
-# 6 "data/maps/PetalburgCity/scripts.pory"
-.set LOCALID_SCOTT, 9
-# 7 "data/maps/PetalburgCity/scripts.pory"
-
-# 8 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_MapScripts::
 # 9 "data/maps/PetalburgCity/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
@@ -82,11 +67,8 @@ PetalburgCity_EventScript_WallyTutorial::
 	special SavePlayerParty
 # 42 "data/maps/PetalburgCity/scripts.pory"
 	special LoadWallyZigzagoon
-# 43 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_WALLY, PetalburgCity_Movement_WallyTutorialWally
-# 44 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WallyTutorialPlayer
-# 45 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_WALLY, PetalburgCity_Movement_WallyTutorialWally
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_WallyTutorialPlayer
 	waitmovement 0
 # 46 "data/maps/PetalburgCity/scripts.pory"
 	msgbox Route102_Text_WatchMeCatchPokemon, MSGBOX_DEFAULT
@@ -96,11 +78,8 @@ PetalburgCity_EventScript_WallyTutorial::
 	waitstate
 # 49 "data/maps/PetalburgCity/scripts.pory"
 	msgbox Route102_Text_WallyIDidIt, MSGBOX_DEFAULT
-# 50 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_WALLY, Common_Movement_WalkInPlaceFasterLeft, MAP_PETALBURG_CITY
-# 51 "data/maps/PetalburgCity/scripts.pory"
-	waitmovement LOCALID_WALLY, MAP_PETALBURG_CITY
-# 52 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_WALLY, Common_Movement_WalkInPlaceFasterLeft, MAP_PETALBURG_CITY
+	waitmovement LOCALID_PETALBURG_WALLY, MAP_PETALBURG_CITY
 	msgbox Route102_Text_LetsGoBack, MSGBOX_DEFAULT
 # 53 "data/maps/PetalburgCity/scripts.pory"
 	closemessage
@@ -132,11 +111,8 @@ PetalburgCity_EventScript_WalkToWallyHouse::
 	lockall
 # 67 "data/maps/PetalburgCity/scripts.pory"
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-# 68 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_WALLYS_DAD, PetalburgCity_Movement_WalkToWallyHouseWallysDad
-# 69 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WalkToWallyHousePlayer
-# 70 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_WALLYS_DAD, PetalburgCity_Movement_WalkToWallyHouseWallysDad
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_WalkToWallyHousePlayer
 	waitmovement 0
 # 71 "data/maps/PetalburgCity/scripts.pory"
 	setvar VAR_0x8004, 7
@@ -146,17 +122,12 @@ PetalburgCity_EventScript_WalkToWallyHouse::
 	opendoor VAR_0x8004, VAR_0x8005
 # 74 "data/maps/PetalburgCity/scripts.pory"
 	waitdooranim
-# 75 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_WALLYS_DAD, PetalburgCity_Movement_WalkInsideHouseWallysDad
-# 76 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WalkInsideHousePlayer
-# 77 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_WALLYS_DAD, PetalburgCity_Movement_WalkInsideHouseWallysDad
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_WalkInsideHousePlayer
 	waitmovement 0
 # 78 "data/maps/PetalburgCity/scripts.pory"
 	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD
-# 79 "data/maps/PetalburgCity/scripts.pory"
-	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_PETALBURG_CITY
-# 80 "data/maps/PetalburgCity/scripts.pory"
+	hideobjectat LOCALID_PLAYER, MAP_PETALBURG_CITY
 	closedoor VAR_0x8004, VAR_0x8005
 # 81 "data/maps/PetalburgCity/scripts.pory"
 	waitdooranim
@@ -186,9 +157,7 @@ PetalburgCity_EventScript_Boy::
 	msgbox PetalburgCity_Text_WaterReflection, MSGBOX_DEFAULT
 # 94 "data/maps/PetalburgCity/scripts.pory"
 	closemessage
-# 95 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_BOY, Common_Movement_FaceOriginalDirection
-# 96 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_BOY, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 97 "data/maps/PetalburgCity/scripts.pory"
 	release
@@ -574,9 +543,7 @@ PetalburgCity_EventScript_ShowGymToPlayer::
 	msgbox PetalburgCity_Text_ThisIsPetalburgGym, MSGBOX_DEFAULT
 # 288 "data/maps/PetalburgCity/scripts.pory"
 	applymovement LOCALID_GYM_BOY, Common_Movement_WalkInPlaceFasterRight
-# 289 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 290 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 291 "data/maps/PetalburgCity/scripts.pory"
 	msgbox PetalburgCity_Text_ThisIsGymSign, MSGBOX_DEFAULT
@@ -600,9 +567,7 @@ PetalburgCity_EventScript_BoyApproachPlayer0::
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer0
 # 301 "data/maps/PetalburgCity/scripts.pory"
 	waitmovement 0
-# 302 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 303 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 304 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -624,9 +589,7 @@ PetalburgCity_EventScript_BoyApproachPlayer2::
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer2
 # 313 "data/maps/PetalburgCity/scripts.pory"
 	waitmovement 0
-# 314 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 315 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 316 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -638,9 +601,7 @@ PetalburgCity_EventScript_BoyApproachPlayer3::
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer3
 # 320 "data/maps/PetalburgCity/scripts.pory"
 	waitmovement 0
-# 321 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 322 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 323 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -650,9 +611,7 @@ PetalburgCity_EventScript_BoyApproachPlayer3::
 PetalburgCity_EventScript_LeadPlayerToGym0::
 # 326 "data/maps/PetalburgCity/scripts.pory"
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym0
-# 327 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym0
-# 328 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym0
 	waitmovement 0
 # 329 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -662,9 +621,7 @@ PetalburgCity_EventScript_LeadPlayerToGym0::
 PetalburgCity_EventScript_LeadPlayerToGym1::
 # 332 "data/maps/PetalburgCity/scripts.pory"
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym1
-# 333 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym1
-# 334 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym1
 	waitmovement 0
 # 335 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -674,9 +631,7 @@ PetalburgCity_EventScript_LeadPlayerToGym1::
 PetalburgCity_EventScript_LeadPlayerToGym2::
 # 338 "data/maps/PetalburgCity/scripts.pory"
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym2
-# 339 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym2
-# 340 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym2
 	waitmovement 0
 # 341 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -686,9 +641,7 @@ PetalburgCity_EventScript_LeadPlayerToGym2::
 PetalburgCity_EventScript_LeadPlayerToGym3::
 # 344 "data/maps/PetalburgCity/scripts.pory"
 	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym3
-# 345 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym3
-# 346 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym3
 	waitmovement 0
 # 347 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -1012,13 +965,9 @@ PetalburgCity_Movement_PlayerWalkToGym3:
 PetalburgCity_EventScript_Scott0::
 # 507 "data/maps/PetalburgCity/scripts.pory"
 	lockall
-# 508 "data/maps/PetalburgCity/scripts.pory"
-	addobject LOCALID_SCOTT
-# 509 "data/maps/PetalburgCity/scripts.pory"
+	addobject LOCALID_PETALBURG_SCOTT
 	setvar VAR_0x8008, 0
-# 510 "data/maps/PetalburgCity/scripts.pory"
-	setobjectxy LOCALID_SCOTT, 13, 10
-# 511 "data/maps/PetalburgCity/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_SCOTT, 13, 10
 	goto PetalburgCity_EventScript_Scott
 # 512 "data/maps/PetalburgCity/scripts.pory"
 	end
@@ -1028,13 +977,9 @@ PetalburgCity_EventScript_Scott0::
 PetalburgCity_EventScript_Scott1::
 # 515 "data/maps/PetalburgCity/scripts.pory"
 	lockall
-# 516 "data/maps/PetalburgCity/scripts.pory"
-	addobject LOCALID_SCOTT
-# 517 "data/maps/PetalburgCity/scripts.pory"
+	addobject LOCALID_PETALBURG_SCOTT
 	setvar VAR_0x8008, 1
-# 518 "data/maps/PetalburgCity/scripts.pory"
-	setobjectxy LOCALID_SCOTT, 13, 11
-# 519 "data/maps/PetalburgCity/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_SCOTT, 13, 11
 	goto PetalburgCity_EventScript_Scott
 # 520 "data/maps/PetalburgCity/scripts.pory"
 	end
@@ -1044,13 +989,9 @@ PetalburgCity_EventScript_Scott1::
 PetalburgCity_EventScript_Scott2::
 # 523 "data/maps/PetalburgCity/scripts.pory"
 	lockall
-# 524 "data/maps/PetalburgCity/scripts.pory"
-	addobject LOCALID_SCOTT
-# 525 "data/maps/PetalburgCity/scripts.pory"
+	addobject LOCALID_PETALBURG_SCOTT
 	setvar VAR_0x8008, 2
-# 526 "data/maps/PetalburgCity/scripts.pory"
-	setobjectxy LOCALID_SCOTT, 13, 12
-# 527 "data/maps/PetalburgCity/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_SCOTT, 13, 12
 	goto PetalburgCity_EventScript_Scott
 # 528 "data/maps/PetalburgCity/scripts.pory"
 	end
@@ -1060,13 +1001,9 @@ PetalburgCity_EventScript_Scott2::
 PetalburgCity_EventScript_Scott3::
 # 531 "data/maps/PetalburgCity/scripts.pory"
 	lockall
-# 532 "data/maps/PetalburgCity/scripts.pory"
-	addobject LOCALID_SCOTT
-# 533 "data/maps/PetalburgCity/scripts.pory"
+	addobject LOCALID_PETALBURG_SCOTT
 	setvar VAR_0x8008, 3
-# 534 "data/maps/PetalburgCity/scripts.pory"
-	setobjectxy LOCALID_SCOTT, 13, 13
-# 535 "data/maps/PetalburgCity/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_SCOTT, 13, 13
 	goto PetalburgCity_EventScript_Scott
 # 536 "data/maps/PetalburgCity/scripts.pory"
 	end
@@ -1074,27 +1011,17 @@ PetalburgCity_EventScript_Scott3::
 
 # 538 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_EventScript_Scott::
-# 539 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottStartWalkLeft
-# 540 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottStartWalkLeft
 	waitmovement 0
 # 541 "data/maps/PetalburgCity/scripts.pory"
 	playse SE_PIN
-# 542 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_ExclamationMark
-# 543 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, Common_Movement_ExclamationMark
 	waitmovement 0
-# 544 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_Delay48
-# 545 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, Common_Movement_Delay48
 	waitmovement 0
-# 546 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottApproachPlayer
-# 547 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottApproachPlayer
 	waitmovement 0
-# 548 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 549 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 550 "data/maps/PetalburgCity/scripts.pory"
 	setvar VAR_SCOTT_STATE, 1
@@ -1102,9 +1029,7 @@ PetalburgCity_EventScript_Scott::
 	msgbox PetalburgCity_Text_AreYouATrainer, MSGBOX_DEFAULT
 # 552 "data/maps/PetalburgCity/scripts.pory"
 	closemessage
-# 553 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterRight
-# 554 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 555 "data/maps/PetalburgCity/scripts.pory"
 	delay 30
@@ -1112,9 +1037,7 @@ PetalburgCity_EventScript_Scott::
 	msgbox PetalburgCity_Text_WellMaybeNot, MSGBOX_DEFAULT
 # 557 "data/maps/PetalburgCity/scripts.pory"
 	closemessage
-# 558 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterLeft
-# 559 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PETALBURG_SCOTT, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 560 "data/maps/PetalburgCity/scripts.pory"
 	delay 30
@@ -1132,9 +1055,7 @@ PetalburgCity_EventScript_Scott::
 	call_if_eq VAR_0x8008, 3, PetalburgCity_EventScript_ScottExit3
 # 567 "data/maps/PetalburgCity/scripts.pory"
 	setvar VAR_SCOTT_PETALBURG_ENCOUNTER, 1
-# 568 "data/maps/PetalburgCity/scripts.pory"
-	removeobject LOCALID_SCOTT
-# 569 "data/maps/PetalburgCity/scripts.pory"
+	removeobject LOCALID_PETALBURG_SCOTT
 	releaseall
 # 570 "data/maps/PetalburgCity/scripts.pory"
 	end
@@ -1142,11 +1063,8 @@ PetalburgCity_EventScript_Scott::
 
 # 572 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_EventScript_ScottExit0::
-# 573 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit0
-# 574 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottExit0
-# 575 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit0
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottExit0
 	waitmovement 0
 # 576 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -1154,11 +1072,8 @@ PetalburgCity_EventScript_ScottExit0::
 
 # 578 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_EventScript_ScottExit1::
-# 579 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit1
-# 580 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottExit1
-# 581 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit1
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottExit1
 	waitmovement 0
 # 582 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -1166,11 +1081,8 @@ PetalburgCity_EventScript_ScottExit1::
 
 # 584 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_EventScript_ScottExit2::
-# 585 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit2
-# 586 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottExit2
-# 587 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit2
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottExit2
 	waitmovement 0
 # 588 "data/maps/PetalburgCity/scripts.pory"
 	return
@@ -1178,11 +1090,8 @@ PetalburgCity_EventScript_ScottExit2::
 
 # 590 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_EventScript_ScottExit3::
-# 591 "data/maps/PetalburgCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit3
-# 592 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottExit3
-# 593 "data/maps/PetalburgCity/scripts.pory"
+	applymovement LOCALID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit3
+	applymovement LOCALID_PETALBURG_SCOTT, PetalburgCity_Movement_ScottExit3
 	waitmovement 0
 # 594 "data/maps/PetalburgCity/scripts.pory"
 	return

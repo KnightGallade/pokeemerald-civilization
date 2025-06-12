@@ -1,10 +1,3 @@
-# 1 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-
-# 2 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-
-# 4 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 SlateportCity_BattleTentCorridor_MapScripts::
 # 5 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SlateportCity_BattleTentCorridor_OnFrame
@@ -32,15 +25,10 @@ SlateportCity_BattleTentCorridor_EventScript_SetUpObjects::
 	setvar VAR_TEMP_1, 1
 # 17 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	goto_if_ne VAR_0x8006, 1, SlateportCity_BattleTentCorridor_EventScript_TurnPlayerNorth
-# 18 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	setobjectxy LOCALID_ATTENDANT, 2, 2
-# 19 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	turnobject LOCALID_ATTENDANT, DIR_SOUTH
-# 20 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
+	setobjectxy LOCALID_SLATEPORT_TENT_CORRIDOR_ATTENDANT, 2, 2
+	turnobject LOCALID_SLATEPORT_TENT_CORRIDOR_ATTENDANT, DIR_SOUTH
 SlateportCity_BattleTentCorridor_EventScript_TurnPlayerNorth::
-# 21 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 22 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 23 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 
@@ -58,11 +46,8 @@ SlateportCity_BattleTentCorridor_EventScript_EnterCorridor::
 	goto_if_eq VAR_0x8006, 1, SlateportCity_BattleTentCorridor_EventScript_ReturnToRoomFromBattle
 # 30 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 31 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, SlateportCity_BattleTentCorridor_Movement_AttendantEnter
-# 32 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_BattleTentCorridor_Movement_PlayerEnter
-# 33 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_TENT_CORRIDOR_ATTENDANT, SlateportCity_BattleTentCorridor_Movement_AttendantEnter
+	applymovement LOCALID_PLAYER, SlateportCity_BattleTentCorridor_Movement_PlayerEnter
 	waitmovement 0
 # 34 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	goto_if_eq VAR_0x8006, 2, SlateportCity_BattleTentCorridor_EventScript_ResumeChallenge
@@ -84,19 +69,14 @@ SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_RightThisWay, MSGBOX_DEFAULT
 # 43 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	closemessage
-# 44 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, Common_Movement_WalkInPlaceFasterUp
-# 45 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_TENT_CORRIDOR_ATTENDANT, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 46 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	opendoor 2, 1
 # 47 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	waitdooranim
-# 48 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	applymovement LOCALID_ATTENDANT, SlateportCity_BattleTentCorridor_Movement_AttendantExit
-# 49 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_BattleTentCorridor_Movement_PlayerExit
-# 50 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
+	applymovement LOCALID_SLATEPORT_TENT_CORRIDOR_ATTENDANT, SlateportCity_BattleTentCorridor_Movement_AttendantExit
+	applymovement LOCALID_PLAYER, SlateportCity_BattleTentCorridor_Movement_PlayerExit
 	waitmovement 0
 # 51 "data/maps/SlateportCity_BattleTentCorridor/scripts.pory"
 	closedoor 2, 1

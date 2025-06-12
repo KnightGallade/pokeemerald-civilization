@@ -22,9 +22,7 @@ EverGrandeCity_GlaciasRoom_OnWarp:
 
 # 12 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
 EverGrandeCity_GlaciasRoom_EventScript_PlayerTurnNorth::
-# 13 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 14 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 15 "data/maps/EverGrandeCity_GlaciasRoom/scripts.pory"
 

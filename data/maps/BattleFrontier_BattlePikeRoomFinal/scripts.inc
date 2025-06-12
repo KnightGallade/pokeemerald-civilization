@@ -1,10 +1,3 @@
-# 1 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
-
-# 2 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
-.set LOCALID_ATTENDANT, 1
-# 3 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
-
-# 4 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 BattleFrontier_BattlePikeRoomFinal_MapScripts::
 # 5 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePikeRoomFinal_OnFrame
@@ -26,9 +19,7 @@ BattleFrontier_BattlePikeRoomFinal_OnFrame:
 BattleFrontier_BattlePikeRoomFinal_EventScript_EnterRoom::
 # 14 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 	delay 16
-# 15 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattlePikeRoomFinal_Movement_AttendantApproachPlayer
-# 16 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
+	applymovement LOCALID_PIKE_FINAL_ROOM_ATTENDANT, BattleFrontier_BattlePikeRoomFinal_Movement_AttendantApproachPlayer
 	waitmovement 0
 # 17 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_WON
@@ -70,9 +61,7 @@ BattleFrontier_BattlePikeRoomFinal_OnWarp:
 BattleFrontier_BattlePikeRoomFinal_EventScript_TurnPlayerNorth::
 # 36 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 	setvar VAR_TEMP_4, 1
-# 37 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-# 38 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 # 39 "data/maps/BattleFrontier_BattlePikeRoomFinal/scripts.pory"
 

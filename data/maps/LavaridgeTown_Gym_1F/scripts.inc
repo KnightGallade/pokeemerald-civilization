@@ -1,16 +1,3 @@
-# 1 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-
-# 2 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-.set LOCALID_COLE, 2
-# 3 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-.set LOCALID_GERALD, 3
-# 4 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-.set LOCALID_AXLE, 4
-# 5 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-.set LOCALID_DANIELLE, 5
-# 6 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
-
-# 7 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 LavaridgeTown_Gym_1F_MapScripts::
 # 8 "data/maps/LavaridgeTown_Gym_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_Gym_1F_OnTransition

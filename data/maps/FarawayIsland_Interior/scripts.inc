@@ -1,10 +1,3 @@
-# 1 "data/maps/FarawayIsland_Interior/scripts.pory"
-
-# 2 "data/maps/FarawayIsland_Interior/scripts.pory"
-@ Note: LOCALID_FARAWAY_ISLAND_MEW is a local id for this map used elsewhere. It's defined in event_objects.h
-# 3 "data/maps/FarawayIsland_Interior/scripts.pory"
-
-# 4 "data/maps/FarawayIsland_Interior/scripts.pory"
 FarawayIsland_Interior_MapScripts::
 # 5 "data/maps/FarawayIsland_Interior/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, FarawayIsland_Interior_OnResume

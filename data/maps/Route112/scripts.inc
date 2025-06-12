@@ -1,12 +1,3 @@
-# 1 "data/maps/Route112/scripts.pory"
-
-# 2 "data/maps/Route112/scripts.pory"
-.set LOCALID_GRUNT_1, 1
-# 3 "data/maps/Route112/scripts.pory"
-.set LOCALID_GRUNT_2, 6
-# 4 "data/maps/Route112/scripts.pory"
-
-# 5 "data/maps/Route112/scripts.pory"
 Route112_MapScripts::
 # 6 "data/maps/Route112/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route112_OnTransition
@@ -30,9 +21,7 @@ Route112_EventScript_MagmaGrunts::
 	lockall
 # 16 "data/maps/Route112/scripts.pory"
 	delay 40
-# 17 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceFasterRight
-# 18 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_1, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 19 "data/maps/Route112/scripts.pory"
 	delay 20
@@ -40,15 +29,11 @@ Route112_EventScript_MagmaGrunts::
 	msgbox Route112_Text_LeaderGoingToAwakenThing, MSGBOX_DEFAULT
 # 21 "data/maps/Route112/scripts.pory"
 	closemessage
-# 22 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_1, Common_Movement_FaceOriginalDirection
-# 23 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_1, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 24 "data/maps/Route112/scripts.pory"
 	delay 40
-# 25 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
-# 26 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 27 "data/maps/Route112/scripts.pory"
 	delay 20
@@ -56,15 +41,11 @@ Route112_EventScript_MagmaGrunts::
 	msgbox Route112_Text_YeahWeNeedMeteorite, MSGBOX_DEFAULT
 # 29 "data/maps/Route112/scripts.pory"
 	closemessage
-# 30 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_2, Common_Movement_FaceOriginalDirection
-# 31 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_2, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 32 "data/maps/Route112/scripts.pory"
 	delay 40
-# 33 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceFasterRight
-# 34 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_1, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 35 "data/maps/Route112/scripts.pory"
 	delay 20
@@ -72,15 +53,11 @@ Route112_EventScript_MagmaGrunts::
 	msgbox Route112_Text_OhThatsWhyCrewWentToFallarbor, MSGBOX_DEFAULT
 # 37 "data/maps/Route112/scripts.pory"
 	closemessage
-# 38 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_1, Common_Movement_FaceOriginalDirection
-# 39 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_1, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 40 "data/maps/Route112/scripts.pory"
 	delay 40
-# 41 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
-# 42 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_2, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 # 43 "data/maps/Route112/scripts.pory"
 	delay 20
@@ -88,9 +65,7 @@ Route112_EventScript_MagmaGrunts::
 	msgbox Route112_Text_CantLetAnyonePassUntilTheyreBack, MSGBOX_DEFAULT
 # 45 "data/maps/Route112/scripts.pory"
 	closemessage
-# 46 "data/maps/Route112/scripts.pory"
-	applymovement LOCALID_GRUNT_2, Common_Movement_FaceOriginalDirection
-# 47 "data/maps/Route112/scripts.pory"
+	applymovement LOCALID_ROUTE112_GRUNT_2, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 # 48 "data/maps/Route112/scripts.pory"
 	releaseall

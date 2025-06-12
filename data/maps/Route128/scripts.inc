@@ -1,14 +1,3 @@
-# 1 "data/maps/Route128/scripts.pory"
-
-# 2 "data/maps/Route128/scripts.pory"
-.set LOCALID_STEVEN, 3
-# 3 "data/maps/Route128/scripts.pory"
-.set LOCALID_ARCHIE, 4
-# 4 "data/maps/Route128/scripts.pory"
-.set LOCALID_MAXIE, 5
-# 5 "data/maps/Route128/scripts.pory"
-
-# 6 "data/maps/Route128/scripts.pory"
 Route128_MapScripts::
 # 7 "data/maps/Route128/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, Route128_OnTransition
@@ -40,53 +29,37 @@ Route128_EventScript_KyogreAwakenedScene::
 	lockall
 # 21 "data/maps/Route128/scripts.pory"
 	delay 20
-# 22 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_ARCHIE, Route128_Movement_ArchieLookAround
-# 23 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_ARCHIE, Route128_Movement_ArchieLookAround
 	waitmovement 0
 # 24 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_ArchieWhatHappened, MSGBOX_DEFAULT
 # 25 "data/maps/Route128/scripts.pory"
 	closemessage
-# 26 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_ARCHIE, Route128_Movement_ArchieBackUp
-# 27 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_ARCHIE, Route128_Movement_ArchieBackUp
 	waitmovement 0
 # 28 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_ArchieIOnlyWanted, MSGBOX_DEFAULT
 # 29 "data/maps/Route128/scripts.pory"
 	closemessage
-# 30 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_MAXIE, Route128_Movement_MaxieApproachArchie
-# 31 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_MAXIE, Route128_Movement_MaxieApproachArchie
 	waitmovement 0
-# 32 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_ARCHIE, Common_Movement_WalkInPlaceFasterUp
-# 33 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_ARCHIE, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 34 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_MaxieDoYouUnderstandNow, MSGBOX_DEFAULT
 # 35 "data/maps/Route128/scripts.pory"
 	closemessage
-# 36 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_MAXIE, Route128_Movement_MaxieApproachPlayer
-# 37 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_MAXIE, Route128_Movement_MaxieApproachPlayer
 	waitmovement 0
-# 38 "data/maps/Route128/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 39 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 40 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_MaxieResposibilityFallsToArchieAndMe, MSGBOX_DEFAULT
 # 41 "data/maps/Route128/scripts.pory"
 	closemessage
-# 42 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_ARCHIE, Route128_Movement_ArchieRunLeft
-# 43 "data/maps/Route128/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 44 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_MAXIE, Route128_Movement_MaxieWalkLeft
-# 45 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_ARCHIE, Route128_Movement_ArchieRunLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_ROUTE128_MAXIE, Route128_Movement_MaxieWalkLeft
 	waitmovement 0
 # 46 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_MaxieThisDefiesBelief, MSGBOX_DEFAULT
@@ -94,17 +67,11 @@ Route128_EventScript_KyogreAwakenedScene::
 	closemessage
 # 48 "data/maps/Route128/scripts.pory"
 	delay 40
-# 49 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_MAXIE, Route128_Movement_MaxieExit
-# 50 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_ARCHIE, Route128_Movement_ArchieExit
-# 51 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_MAXIE, Route128_Movement_MaxieExit
+	applymovement LOCALID_ROUTE128_ARCHIE, Route128_Movement_ArchieExit
 	waitmovement 0
-# 52 "data/maps/Route128/scripts.pory"
-	removeobject LOCALID_MAXIE
-# 53 "data/maps/Route128/scripts.pory"
-	removeobject LOCALID_ARCHIE
-# 54 "data/maps/Route128/scripts.pory"
+	removeobject LOCALID_ROUTE128_MAXIE
+	removeobject LOCALID_ROUTE128_ARCHIE
 	delay 100
 # 55 "data/maps/Route128/scripts.pory"
 	setfieldeffectargument 0, 1
@@ -112,39 +79,27 @@ Route128_EventScript_KyogreAwakenedScene::
 	dofieldeffect FLDEFF_NPCFLY_OUT
 # 57 "data/maps/Route128/scripts.pory"
 	waitfieldeffect FLDEFF_NPCFLY_OUT
-# 58 "data/maps/Route128/scripts.pory"
-	addobject LOCALID_STEVEN
-# 59 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_STEVEN, Route128_Movement_StevenApproachPlayer
-# 60 "data/maps/Route128/scripts.pory"
+	addobject LOCALID_ROUTE128_STEVEN
+	applymovement LOCALID_ROUTE128_STEVEN, Route128_Movement_StevenApproachPlayer
 	waitmovement 0
-# 61 "data/maps/Route128/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-# 62 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 # 63 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_StevenWhatIsHappening, MSGBOX_DEFAULT
 # 64 "data/maps/Route128/scripts.pory"
 	closemessage
-# 65 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_STEVEN, Route128_Movement_StevenWalkUp
-# 66 "data/maps/Route128/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 67 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_STEVEN, Route128_Movement_StevenWalkUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 68 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_StevenWholeWorldWillDrown, MSGBOX_DEFAULT
-# 69 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
-# 70 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 71 "data/maps/Route128/scripts.pory"
 	msgbox Route128_Text_StevenImGoingToSootopolis, MSGBOX_DEFAULT
 # 72 "data/maps/Route128/scripts.pory"
 	closemessage
-# 73 "data/maps/Route128/scripts.pory"
-	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
-# 74 "data/maps/Route128/scripts.pory"
+	applymovement LOCALID_ROUTE128_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 # 75 "data/maps/Route128/scripts.pory"
 	delay 50
@@ -154,9 +109,7 @@ Route128_EventScript_KyogreAwakenedScene::
 	dofieldeffect FLDEFF_NPCFLY_OUT
 # 78 "data/maps/Route128/scripts.pory"
 	delay 15
-# 79 "data/maps/Route128/scripts.pory"
-	removeobject LOCALID_STEVEN
-# 80 "data/maps/Route128/scripts.pory"
+	removeobject LOCALID_ROUTE128_STEVEN
 	waitfieldeffect FLDEFF_NPCFLY_OUT
 # 81 "data/maps/Route128/scripts.pory"
 	clearflag FLAG_HIDE_MAP_NAME_POPUP

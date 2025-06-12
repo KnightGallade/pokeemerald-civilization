@@ -1,10 +1,3 @@
-# 1 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
-
-# 2 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
-.set LOCALID_STAIR_GUARD, 2
-# 3 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
-
-# 4 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
 RustboroCity_DevonCorp_1F_MapScripts::
 # 5 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_DevonCorp_1F_OnTransition
@@ -22,11 +15,8 @@ RustboroCity_DevonCorp_1F_OnTransition:
 
 # 12 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
 RustboroCity_DevonCorp_1F_EventScript_BlockStairs::
-# 13 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
-	setobjectxyperm LOCALID_STAIR_GUARD, 14, 2
-# 14 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
-	setobjectmovementtype LOCALID_STAIR_GUARD, MOVEMENT_TYPE_FACE_DOWN
-# 15 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	setobjectxyperm LOCALID_DEVON_CORP_STAIR_GUARD, 14, 2
+	setobjectmovementtype LOCALID_DEVON_CORP_STAIR_GUARD, MOVEMENT_TYPE_FACE_DOWN
 	return
 # 16 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
 

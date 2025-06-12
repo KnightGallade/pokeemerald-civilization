@@ -1,10 +1,3 @@
-# 1 "data/maps/NavelRock_Top/scripts.pory"
-
-# 2 "data/maps/NavelRock_Top/scripts.pory"
-.set LOCALID_HO_OH, 1
-# 3 "data/maps/NavelRock_Top/scripts.pory"
-
-# 4 "data/maps/NavelRock_Top/scripts.pory"
 NavelRock_Top_MapScripts::
 # 5 "data/maps/NavelRock_Top/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Top_OnTransition
@@ -62,9 +55,7 @@ NavelRock_Top_EventScript_TryRemoveHoOh::
 	specialvar VAR_RESULT, GetBattleOutcome
 # 32 "data/maps/NavelRock_Top/scripts.pory"
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-# 33 "data/maps/NavelRock_Top/scripts.pory"
-	removeobject LOCALID_HO_OH
-# 34 "data/maps/NavelRock_Top/scripts.pory"
+	removeobject LOCALID_NAVEL_ROCK_HO_OH
 	return
 # 35 "data/maps/NavelRock_Top/scripts.pory"
 
@@ -82,11 +73,8 @@ NavelRock_Top_EventScript_HoOh::
 	setvar VAR_0x8005, 35 @ delay
 # 42 "data/maps/NavelRock_Top/scripts.pory"
 	special LoopWingFlapSE
-# 43 "data/maps/NavelRock_Top/scripts.pory"
-	applymovement LOCALID_HO_OH, NavelRock_Top_Movement_HoOhAppear
-# 44 "data/maps/NavelRock_Top/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Top_Movement_CameraPanUp
-# 45 "data/maps/NavelRock_Top/scripts.pory"
+	applymovement LOCALID_NAVEL_ROCK_HO_OH, NavelRock_Top_Movement_HoOhAppear
+	applymovement LOCALID_CAMERA, NavelRock_Top_Movement_CameraPanUp
 	waitmovement 0
 # 46 "data/maps/NavelRock_Top/scripts.pory"
 	delay 50
@@ -110,11 +98,8 @@ NavelRock_Top_EventScript_HoOh::
 	setvar VAR_0x8005, 35 @ delay
 # 56 "data/maps/NavelRock_Top/scripts.pory"
 	special LoopWingFlapSE
-# 57 "data/maps/NavelRock_Top/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Top_Movement_CameraPanDown
-# 58 "data/maps/NavelRock_Top/scripts.pory"
-	applymovement LOCALID_HO_OH, NavelRock_Top_Movement_HoOhApproach
-# 59 "data/maps/NavelRock_Top/scripts.pory"
+	applymovement LOCALID_CAMERA, NavelRock_Top_Movement_CameraPanDown
+	applymovement LOCALID_NAVEL_ROCK_HO_OH, NavelRock_Top_Movement_HoOhApproach
 	waitmovement 0
 # 60 "data/maps/NavelRock_Top/scripts.pory"
 	special RemoveCameraObject
@@ -128,9 +113,7 @@ NavelRock_Top_EventScript_HoOh::
 	waitstate
 # 65 "data/maps/NavelRock_Top/scripts.pory"
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-# 66 "data/maps/NavelRock_Top/scripts.pory"
-	setvar VAR_LAST_TALKED, LOCALID_HO_OH
-# 67 "data/maps/NavelRock_Top/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_NAVEL_ROCK_HO_OH
 	specialvar VAR_RESULT, GetBattleOutcome
 # 68 "data/maps/NavelRock_Top/scripts.pory"
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NavelRock_Top_EventScript_DefeatedHoOh

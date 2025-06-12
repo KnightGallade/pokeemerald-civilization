@@ -1,10 +1,3 @@
-# 1 "data/maps/TerraCave_End/scripts.pory"
-
-# 2 "data/maps/TerraCave_End/scripts.pory"
-.set LOCALID_GROUDON, 1
-# 3 "data/maps/TerraCave_End/scripts.pory"
-
-# 4 "data/maps/TerraCave_End/scripts.pory"
 TerraCave_End_MapScripts::
 # 5 "data/maps/TerraCave_End/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, TerraCave_End_OnResume
@@ -28,9 +21,7 @@ TerraCave_End_EventScript_TryRemoveGroudon::
 	specialvar VAR_RESULT, GetBattleOutcome
 # 15 "data/maps/TerraCave_End/scripts.pory"
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-# 16 "data/maps/TerraCave_End/scripts.pory"
-	removeobject LOCALID_GROUDON
-# 17 "data/maps/TerraCave_End/scripts.pory"
+	removeobject LOCALID_TERRA_CAVE_GROUDON
 	return
 # 18 "data/maps/TerraCave_End/scripts.pory"
 
@@ -56,13 +47,9 @@ TerraCave_End_EventScript_ShowGroudon::
 TerraCave_End_EventScript_Groudon::
 # 29 "data/maps/TerraCave_End/scripts.pory"
 	lockall
-# 30 "data/maps/TerraCave_End/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 31 "data/maps/TerraCave_End/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-# 32 "data/maps/TerraCave_End/scripts.pory"
-	applymovement LOCALID_GROUDON, TerraCave_End_Movement_GroudonApproach
-# 33 "data/maps/TerraCave_End/scripts.pory"
+	applymovement LOCALID_TERRA_CAVE_GROUDON, TerraCave_End_Movement_GroudonApproach
 	waitmovement 0
 # 34 "data/maps/TerraCave_End/scripts.pory"
 	waitse
@@ -72,9 +59,7 @@ TerraCave_End_EventScript_Groudon::
 	delay 40
 # 37 "data/maps/TerraCave_End/scripts.pory"
 	waitmoncry
-# 38 "data/maps/TerraCave_End/scripts.pory"
-	setvar VAR_LAST_TALKED, LOCALID_GROUDON
-# 39 "data/maps/TerraCave_End/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_TERRA_CAVE_GROUDON
 	setwildbattle SPECIES_GROUDON, 70
 # 40 "data/maps/TerraCave_End/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE

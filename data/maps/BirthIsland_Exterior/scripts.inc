@@ -1,14 +1,3 @@
-# 1 "data/maps/BirthIsland_Exterior/scripts.pory"
-
-# 2 "data/maps/BirthIsland_Exterior/scripts.pory"
-.set LOCALID_DEOXYS, 2
-# 3 "data/maps/BirthIsland_Exterior/scripts.pory"
-
-# 4 "data/maps/BirthIsland_Exterior/scripts.pory"
-@ Note: LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK is a local id for this map used elsewhere. It's defined in event_objects.h
-# 5 "data/maps/BirthIsland_Exterior/scripts.pory"
-
-# 6 "data/maps/BirthIsland_Exterior/scripts.pory"
 BirthIsland_Exterior_MapScripts::
 # 7 "data/maps/BirthIsland_Exterior/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, BirthIsland_Exterior_OnTransition
@@ -82,9 +71,7 @@ BirthIsland_Exterior_EventScript_TryRemoveDeoxys::
 	specialvar VAR_RESULT, GetBattleOutcome
 # 42 "data/maps/BirthIsland_Exterior/scripts.pory"
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
-# 43 "data/maps/BirthIsland_Exterior/scripts.pory"
-	removeobject LOCALID_DEOXYS
-# 44 "data/maps/BirthIsland_Exterior/scripts.pory"
+	removeobject LOCALID_BIRTH_ISLAND_DEOXYS
 	return
 # 45 "data/maps/BirthIsland_Exterior/scripts.pory"
 
@@ -148,21 +135,15 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	waitse
 # 75 "data/maps/BirthIsland_Exterior/scripts.pory"
 	setfieldeffectargument 0, LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK
-# 76 "data/maps/BirthIsland_Exterior/scripts.pory"
-	setfieldeffectargument 1, MAP_NUM(BIRTH_ISLAND_EXTERIOR)
-# 77 "data/maps/BirthIsland_Exterior/scripts.pory"
-	setfieldeffectargument 2, MAP_GROUP(BIRTH_ISLAND_EXTERIOR)
-# 78 "data/maps/BirthIsland_Exterior/scripts.pory"
+	setfieldeffectargument 1, MAP_NUM(MAP_BIRTH_ISLAND_EXTERIOR)
+	setfieldeffectargument 2, MAP_GROUP(MAP_BIRTH_ISLAND_EXTERIOR)
 	dofieldeffect FLDEFF_DESTROY_DEOXYS_ROCK
 # 79 "data/maps/BirthIsland_Exterior/scripts.pory"
 	playbgm MUS_RG_ENCOUNTER_DEOXYS, FALSE
 # 80 "data/maps/BirthIsland_Exterior/scripts.pory"
 	waitfieldeffect FLDEFF_DESTROY_DEOXYS_ROCK
-# 81 "data/maps/BirthIsland_Exterior/scripts.pory"
-	addobject LOCALID_DEOXYS
-# 82 "data/maps/BirthIsland_Exterior/scripts.pory"
-	applymovement LOCALID_DEOXYS, BirthIsland_Exterior_Movement_DeoxysApproach
-# 83 "data/maps/BirthIsland_Exterior/scripts.pory"
+	addobject LOCALID_BIRTH_ISLAND_DEOXYS
+	applymovement LOCALID_BIRTH_ISLAND_DEOXYS, BirthIsland_Exterior_Movement_DeoxysApproach
 	waitmovement 0
 # 84 "data/maps/BirthIsland_Exterior/scripts.pory"
 	waitse
@@ -172,9 +153,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	delay 40
 # 87 "data/maps/BirthIsland_Exterior/scripts.pory"
 	waitmoncry
-# 88 "data/maps/BirthIsland_Exterior/scripts.pory"
-	setvar VAR_LAST_TALKED, LOCALID_DEOXYS
-# 89 "data/maps/BirthIsland_Exterior/scripts.pory"
+	setvar VAR_LAST_TALKED, LOCALID_BIRTH_ISLAND_DEOXYS
 	seteventmon SPECIES_DEOXYS_NORMAL, 30
 # 90 "data/maps/BirthIsland_Exterior/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE

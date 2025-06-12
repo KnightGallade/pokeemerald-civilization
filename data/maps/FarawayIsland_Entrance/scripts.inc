@@ -1,12 +1,3 @@
-# 1 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
-# 2 "data/maps/FarawayIsland_Entrance/scripts.pory"
-.set LOCALID_SAILOR, 1
-# 3 "data/maps/FarawayIsland_Entrance/scripts.pory"
-.set LOCALID_SS_TIDAL, 2
-# 4 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
-# 5 "data/maps/FarawayIsland_Entrance/scripts.pory"
 FarawayIsland_Entrance_MapScripts::
 # 6 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Entrance_OnTransition
@@ -62,11 +53,8 @@ FarawayIsland_Entrance_EventScript_Sailor::
 	waitmovement 0
 # 32 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	delay 30
-# 33 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	hideobjectat LOCALID_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE
-# 34 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	setvar VAR_0x8004, LOCALID_SS_TIDAL
-# 35 "data/maps/FarawayIsland_Entrance/scripts.pory"
+	hideobjectat LOCALID_FARAWAY_ISLAND_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE
+	setvar VAR_0x8004, LOCALID_FARAWAY_ISLAND_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
 # 36 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11

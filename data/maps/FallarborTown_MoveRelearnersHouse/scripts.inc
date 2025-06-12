@@ -1,10 +1,3 @@
-# 1 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-
-# 2 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-.set LOCALID_MOVE_RELEARNER, 1
-# 3 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
-
-# 4 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 FallarborTown_MoveRelearnersHouse_MapScripts::
 # 5 "data/maps/FallarborTown_MoveRelearnersHouse/scripts.pory"
 	.byte 0
