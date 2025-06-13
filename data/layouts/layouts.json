@@ -5030,6 +5030,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/PewterCity_House2/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_STRATEGY_DEBUG",
+      "name": "Strategy_Debug_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Strategy_Debug/border.bin",
+      "blockdata_filepath": "data/layouts/Strategy_Debug/map.bin"
     }
   ]
 }

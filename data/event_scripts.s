@@ -1143,6 +1143,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/trainers.inc"
 	.include "data/scripts/repel.inc"
 	.include "data/scripts/safari_zone.inc"
+	.include "data/scripts/strategy_mode.inc"
 	.include "data/scripts/roulette.inc"
 	.include "data/text/pokedex_rating.inc"
 	.include "data/text/lottery_corner.inc"
@@ -1293,3 +1294,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PewterCity_PokemonCenter_2F/scripts.inc"
 
 	.include "data/maps/PewterCity_House2/scripts.inc"
+
+	.include "data/maps/Strategy_Debug/scripts.inc"

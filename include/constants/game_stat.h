@@ -55,7 +55,10 @@
 #define GAME_STAT_PLAYED_BERRY_CRUSH          51
 #define GAME_STAT_DEXNAV_SCANNED              52
 
-#define NUM_USED_GAME_STATS                   53
+// Added for strategy mode
+#define GAME_STAT_ENTERED_STRATEGY_MODE       53
+
+#define NUM_USED_GAME_STATS                   54 // One more than last
 #define NUM_GAME_STATS                        64
 
 #endif // GUARD_CONSTANTS_GAME_STAT_H

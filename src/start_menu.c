@@ -49,6 +49,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "strategy_mode.h"
 
 // Menu actions
 enum
@@ -84,6 +85,7 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
+EWRAM_DATA static u8 sPlayerMovesWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
@@ -149,6 +151,16 @@ static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .tilemapLeft = 1,
     .tilemapTop = 1,
     .width = 9,
+    .height = 4,
+    .paletteNum = 15,
+    .baseBlock = 0x8
+};
+
+static const struct WindowTemplate sWindowTemplate_MovesLeft = {
+    .bg = 0,
+    .tilemapLeft = 1,
+    .tilemapTop = 1,
+    .width = 7,
     .height = 4,
     .paletteNum = 15,
     .baseBlock = 0x8
@@ -280,6 +292,9 @@ static void ShowSaveInfoWindow(void);
 static void RemoveSaveInfoWindow(void);
 static void HideStartMenuWindow(void);
 static void HideStartMenuDebug(void);
+// Strategy Mode
+static void ShowPlayerMovesWindow(void);
+
 
 void SetDexPokemonPokenavFlags(void) // unused
 {
@@ -470,6 +485,12 @@ static void RemoveExtraStartMenuWindows(void)
         CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
         RemoveWindow(sSafariBallsWindowId);
     }
+    if (GetStrategyModeFlag())
+    {
+        ClearStdWindowAndFrameToTransparent(sPlayerMovesWindowId, FALSE);
+        CopyWindowToVram(sPlayerMovesWindowId, COPYWIN_GFX);
+        RemoveWindow(sPlayerMovesWindowId);
+    }
     if (InBattlePyramid())
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
@@ -532,6 +553,8 @@ static bool32 InitStartMenuStep(void)
             ShowSafariBallsWindow();
         if (InBattlePyramid())
             ShowPyramidFloorWindow();
+        if (GetStrategyModeFlag())
+            ShowPlayerMovesWindow();
         sInitStartMenuData[0]++;
         break;
     case 4:
@@ -1591,4 +1614,17 @@ void Script_ForceSaveGame(struct ScriptContext *ctx)
     ShowSaveInfoWindow();
     gMenuCallback = SaveCallback;
     sSaveDialogCallback = SaveSavingMessageCallback;
+}
+
+// Strategy Mode
+static void ShowPlayerMovesWindow(void)
+{
+    sPlayerMovesWindowId = AddWindow(&sWindowTemplate_MovesLeft);
+    PutWindowTilemap(sPlayerMovesWindowId);
+    DrawStdWindowFrame(sPlayerMovesWindowId, FALSE); // TODO - Not sure if I should set this
+    StringCopy(gStringVar1, gSaveBlock2Ptr->playerName);
+    ConvertIntToDecimalStringN(gStringVar2, gStrategyModeStepCounter, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    StringExpandPlaceholders(gStringVar4, gText_PlayerMovesLeft);
+    AddTextPrinterParameterized(sPlayerMovesWindowId, FONT_NORMAL, gStringVar4, 0, 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(sPlayerMovesWindowId, COPYWIN_GFX);
 }
