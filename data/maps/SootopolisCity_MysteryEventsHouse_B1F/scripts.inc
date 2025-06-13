@@ -30,7 +30,9 @@ SootopolisCity_MysteryEventsHouse_B1F_OnFrame:
 SootopolisCity_MysteryEventsHouse_B1F_EventScript_BattleVisitingTrainer::
 # 16 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	lockall
+# 17 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_B1F_Movement_PlayerEnterBasement
+# 18 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	waitmovement 0
 # 19 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	special CopyEReaderTrainerGreeting
@@ -56,7 +58,9 @@ SootopolisCity_MysteryEventsHouse_B1F_EventScript_BattleVisitingTrainer::
 	closemessage
 # 30 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	special HealPlayerParty
+# 31 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	applymovement LOCALID_PLAYER, SootopolisCity_MysteryEventsHouse_B1F_Movement_PlayerExitBasement
+# 32 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	waitmovement 0
 # 33 "data/maps/SootopolisCity_MysteryEventsHouse_B1F/scripts.pory"
 	special LoadPlayerParty
