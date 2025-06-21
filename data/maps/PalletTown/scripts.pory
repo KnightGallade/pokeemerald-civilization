@@ -540,21 +540,29 @@ script PalletTown_EventScript_Talk_To_Steven {
 	end
 }
 
+
+
+
 script PalletTown_EventScript_Start_Strategy {
 	// Choose Allies
 	// Choose Enemies
 
-	dynmultipush("Bug Catcher", ITEM_NET_BALL)
-    dynmultipush("Swimmer", ITEM_DIVE_BALL)
-    dynmultipush("Youngster", ITEM_POKE_BALL)
-	dynmultipush("Cooltrainer", ITEM_ULTRA_BALL)
-	dynmultipush("Rocket", ITEM_DUSK_BALL)
-	dynmultipush("Beauty", ITEM_LOVE_BALL)
-    dynmultistack(0, 0, TRUE, 3, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM)
-	// TO NOTE - can do setvar(VAR_OBJ_GFX_ID_#, OBJ_EVENT_GFX_XYZ) here and it works
+	dynmultipush("Cool Trainer", ITEM_ULTRA_BALL)
+    dynmultipush("Lady", ITEM_PREMIER_BALL)
+    dynmultipush("Gym Leader", ITEM_BEAST_BALL)
+    dynmultistack(0, 0, TRUE, 6, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM)
+	buffernumberstring(STR_VAR_1, VAR_RESULT)
+    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
+	buffernumberstring(STR_VAR_1, ITEM_ULTRA_BALL)
+    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
+	buffernumberstring(STR_VAR_1, ITEM_PREMIER_BALL)
+    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
+	buffernumberstring(STR_VAR_1, ITEM_BEAST_BALL)
+    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
 	special(EnterStrategyMode)
 	warp(MAP_STRATEGY_DEBUG, 1, 1)
 	waitstate
+	// setvar(OBJ_EVENT_GFX_VAR_1, OBJ_EVENT_GFX_FRLG_OLD_MAN_1) // Doesn't work yet
 	releaseall
 	end
 }

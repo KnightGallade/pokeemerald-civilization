@@ -89,7 +89,7 @@ void PlayerRest(void)
     gActiveTrainer++;
     gStrategyModeStepCounter = 10;
     if (gActiveTrainer > 6) {
-        // FlagSet(FLAG_STRATEGY_CURRENT_SIDE); // Since I do nothing with it yet, will crash if I do this
+        FlagSet(FLAG_STRATEGY_CURRENT_SIDE);
         ScriptContext_SetupScript(StrategyMode_EventScript_TimesUp);
     }
 }
