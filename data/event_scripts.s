@@ -1293,5 +1293,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PewterCity_PokemonCenter_2F/scripts.inc"
 
 	.include "data/maps/PewterCity_House2/scripts.inc"
-
-	.include "data/maps/HQ_MainRoom/scripts.inc"
