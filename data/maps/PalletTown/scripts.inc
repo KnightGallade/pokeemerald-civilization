@@ -868,34 +868,6 @@ PalletTown_EventScript_Celebi_Female::
 	end
 
 
-PalletTown_EventScript_Talk_To_Steven::
-# 534 "data/maps/PalletTown/scripts.pory"
-	lockall
-# 535 "data/maps/PalletTown/scripts.pory"
-	applymovement LOCALID_PALLET_STEVEN, PalletTown_EventScript_Talk_To_Celebi_Movement_0
-# 536 "data/maps/PalletTown/scripts.pory"
-	msgbox PalletTown_EventScript_Ask_Steven, MSGBOX_YESNO
-# 537 "data/maps/PalletTown/scripts.pory"
-	goto_if_eq VAR_RESULT, YES, PalletTown_EventScript_Start_Strategy
-# 538 "data/maps/PalletTown/scripts.pory"
-	msgbox PalletTown_EventScript_Refuse_Steven, MSGBOX_NPC
-# 539 "data/maps/PalletTown/scripts.pory"
-	releaseall
-	end
-
-
-PalletTown_EventScript_Start_Strategy::
-# 544 "data/maps/PalletTown/scripts.pory"
-	special EnterStrategyMode
-# 545 "data/maps/PalletTown/scripts.pory"
-	warp MAP_STRATEGY_DEBUG, 1, 1
-# 546 "data/maps/PalletTown/scripts.pory"
-	waitstate
-# 547 "data/maps/PalletTown/scripts.pory"
-	releaseall
-	end
-
-
 # 493 "data/maps/PalletTown/scripts.pory"
 PalletTown_EventScript_Talk_To_Celebi_Movement_0:
 # 493 "data/maps/PalletTown/scripts.pory"
@@ -904,36 +876,27 @@ PalletTown_EventScript_Talk_To_Celebi_Movement_0:
 	emote_exclamation_mark
 	step_end
 
-PalletTown_EventScript_Ask_Steven::
-# 551 "data/maps/PalletTown/scripts.pory"
-	.string "Would you like to try the\n"
-	.string "stretegy mode?$"
-
-PalletTown_EventScript_Refuse_Steven::
-# 556 "data/maps/PalletTown/scripts.pory"
-	.string "Loser.$"
-
 PalletTown_EventScript_Ask_Celebi::
-# 560 "data/maps/PalletTown/scripts.pory"
+# 533 "data/maps/PalletTown/scripts.pory"
 	.string "It appears Celebi wants you to \n"
 	.string "follow it...\l"
 	.string "Do you wish to go with Celebi?$"
 
 PalletTown_EventScript_Refuse_Celebi::
-# 566 "data/maps/PalletTown/scripts.pory"
+# 539 "data/maps/PalletTown/scripts.pory"
 	.string "Yeah, FireRed is pretty cool.$"
 
 PalletTown_EventScript_Accepted_Celebi::
-# 570 "data/maps/PalletTown/scripts.pory"
+# 543 "data/maps/PalletTown/scripts.pory"
 	.string "You enter a different reality...$"
 
 PalletTown_Text_OakDontGoOut::
-# 575 "data/maps/PalletTown/scripts.pory"
+# 548 "data/maps/PalletTown/scripts.pory"
 	.string "OAK: Hey! Wait!\n"
 	.string "Don't go out!$"
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
-# 580 "data/maps/PalletTown/scripts.pory"
+# 553 "data/maps/PalletTown/scripts.pory"
 	.string "OAK: It's unsafe!\n"
 	.string "Wild POKéMON live in tall grass!\p"
 	.string "You need your own POKéMON for\n"
@@ -942,36 +905,36 @@ PalletTown_Text_OakGrassUnsafeNeedMon::
 	.string "Here, come with me!$"
 
 PalletTown_Text_RaisingMonsToo::
-# 589 "data/maps/PalletTown/scripts.pory"
+# 562 "data/maps/PalletTown/scripts.pory"
 	.string "I'm raising POKéMON, too.\p"
 	.string "When they get strong, they can\n"
 	.string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
-# 595 "data/maps/PalletTown/scripts.pory"
+# 568 "data/maps/PalletTown/scripts.pory"
 	.string "Technology is incredible!\p"
 	.string "You can now store and recall items\n"
 	.string "and POKéMON as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-# 601 "data/maps/PalletTown/scripts.pory"
+# 574 "data/maps/PalletTown/scripts.pory"
 	.string "OAK POKéMON RESEARCH LAB$"
 
 PalletTown_Text_PlayersHouse::
-# 605 "data/maps/PalletTown/scripts.pory"
+# 578 "data/maps/PalletTown/scripts.pory"
 	.string "{PLAYER}'s house$"
 
 PalletTown_Text_RivalsHouse::
-# 609 "data/maps/PalletTown/scripts.pory"
+# 582 "data/maps/PalletTown/scripts.pory"
 	.string "{RIVAL}'s house$"
 
 PalletTown_Text_TownSign::
-# 613 "data/maps/PalletTown/scripts.pory"
+# 586 "data/maps/PalletTown/scripts.pory"
 	.string "PALLET TOWN\n"
 	.string "Shades of your journey await!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
-# 618 "data/maps/PalletTown/scripts.pory"
+# 591 "data/maps/PalletTown/scripts.pory"
 	.string "OAK: Ah, {PLAYER}!\n"
 	.string "You're back, are you?\p"
 	.string "How much have you filled in your\n"
@@ -980,7 +943,7 @@ PalletTown_Text_OakLetMeSeePokedex::
 	.string "Let's see…$"
 
 PalletTown_Text_CaughtXPuttingInHonestEffort::
-# 627 "data/maps/PalletTown/scripts.pory"
+# 600 "data/maps/PalletTown/scripts.pory"
 	.string "You've caught {STR_VAR_2}…\p"
 	.string "Hm, it looks as if you're putting\n"
 	.string "in an honest effort.\p"
@@ -988,7 +951,7 @@ PalletTown_Text_CaughtXPuttingInHonestEffort::
 	.string "more, come show me, please.$"
 
 PalletTown_Text_CaughtXImpressiveFollowMe::
-# 635 "data/maps/PalletTown/scripts.pory"
+# 608 "data/maps/PalletTown/scripts.pory"
 	.string "You've caught… {STR_VAR_2}!?\n"
 	.string "Now, this is impressive!\p"
 	.string "There's something I wanted to ask\n"
@@ -997,7 +960,7 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
 	.string "Follow me.$"
 
 PalletTown_Text_OakYouEnjoyingTraveling::
-# 644 "data/maps/PalletTown/scripts.pory"
+# 617 "data/maps/PalletTown/scripts.pory"
 	.string "OAK: Ah, {PLAYER}!\n"
 	.string "You seem to be enjoying traveling.\p"
 	.string "Knowing you, {PLAYER}, I can easily\n"
@@ -1007,35 +970,35 @@ PalletTown_Text_OakYouEnjoyingTraveling::
 	.string "Hohoho.$"
 
 PalletTown_Text_HmmIsThatRight::
-# 656 "data/maps/PalletTown/scripts.pory"
+# 629 "data/maps/PalletTown/scripts.pory"
 	.string "Hmm…\n"
 	.string "Is that right…$"
 
 PalletTown_Text_OhLookLook::
-# 661 "data/maps/PalletTown/scripts.pory"
+# 634 "data/maps/PalletTown/scripts.pory"
 	.string "Oh!\n"
 	.string "Look, look!$"
 
 PalletTown_Text_ReadItReadIt::
-# 666 "data/maps/PalletTown/scripts.pory"
+# 639 "data/maps/PalletTown/scripts.pory"
 	.string "Read it, read it!$"
 
 PalletTown_Text_PressStartToOpenMenu::
-# 671 "data/maps/PalletTown/scripts.pory"
+# 644 "data/maps/PalletTown/scripts.pory"
 	.string "TRAINER TIPS\p"
 	.string "Press START to open the MENU!$"
 
 PalletTown_Text_SignsAreUsefulArentThey::
-# 676 "data/maps/PalletTown/scripts.pory"
+# 649 "data/maps/PalletTown/scripts.pory"
 	.string "Signs are useful, aren't they?$"
 
 PalletTown_Text_LookCopiedTrainerTipsSign::
-# 680 "data/maps/PalletTown/scripts.pory"
+# 653 "data/maps/PalletTown/scripts.pory"
 	.string "Look, look!\p"
 	.string "I copied what it said on one of\n"
 	.string "those TRAINER TIPS signs!$"
 
 PalletTown_Text_PressStartToOpenMenuCopy::
-# 687 "data/maps/PalletTown/scripts.pory"
+# 660 "data/maps/PalletTown/scripts.pory"
 	.string "TRAINER TIPS!\p"
 	.string "Press START to open the MENU!$"

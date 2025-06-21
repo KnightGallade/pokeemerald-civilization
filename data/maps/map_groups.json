@@ -157,8 +157,7 @@
     "Route24",
     "Route25",
     "IndigoPlateau",
-    "VictoryRoad",
-    "Strategy_Debug"
+    "VictoryRoad"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

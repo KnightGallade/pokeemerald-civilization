@@ -567,6 +567,3 @@ gSpecials::
 	def_special DaisyMassageServices
 	@ TODO - add for all regions
 	def_special HasAllMons
-	@ Strategy Mode
-	def_special EnterStrategyMode
-	def_special ExitStrategyMode

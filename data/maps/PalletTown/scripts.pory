@@ -530,33 +530,6 @@ script PalletTown_EventScript_Celebi_Female {
 	end
 }
 
-script PalletTown_EventScript_Talk_To_Steven {
-	lockall
-	applymovement(LOCALID_PALLET_STEVEN, moves(face_player, emote_exclamation_mark))
-	msgbox(PalletTown_EventScript_Ask_Steven, MSGBOX_YESNO)
-	goto_if_eq(VAR_RESULT, YES, PalletTown_EventScript_Start_Strategy)
-	msgbox(PalletTown_EventScript_Refuse_Steven, MSGBOX_NPC)
-	releaseall
-	end
-}
-
-script PalletTown_EventScript_Start_Strategy {
-	special(EnterStrategyMode)
-	warp(MAP_STRATEGY_DEBUG, 1, 1)
-	waitstate
-	releaseall
-	end
-}
-
-text PalletTown_EventScript_Ask_Steven {
-	"Would you like to try the\n"
-	"stretegy mode?$"
-}
-
-text PalletTown_EventScript_Refuse_Steven {
-	"Loser.$"
-}
-
 text PalletTown_EventScript_Ask_Celebi {
 	"It appears Celebi wants you to \n"
 	"follow it...\l"
