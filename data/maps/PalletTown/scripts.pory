@@ -540,29 +540,10 @@ script PalletTown_EventScript_Talk_To_Steven {
 	end
 }
 
-
-
-
 script PalletTown_EventScript_Start_Strategy {
-	// Choose Allies
-	// Choose Enemies
-
-	dynmultipush("Cool Trainer", ITEM_ULTRA_BALL)
-    dynmultipush("Lady", ITEM_PREMIER_BALL)
-    dynmultipush("Gym Leader", ITEM_BEAST_BALL)
-    dynmultistack(0, 0, TRUE, 6, FALSE, VAR_0x800A, DYN_MULTICHOICE_CB_SHOW_ITEM)
-	buffernumberstring(STR_VAR_1, VAR_RESULT)
-    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
-	buffernumberstring(STR_VAR_1, ITEM_ULTRA_BALL)
-    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
-	buffernumberstring(STR_VAR_1, ITEM_PREMIER_BALL)
-    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
-	buffernumberstring(STR_VAR_1, ITEM_BEAST_BALL)
-    msgbox("{STR_VAR_1}", MSGBOX_DEFAULT)
 	special(EnterStrategyMode)
 	warp(MAP_STRATEGY_DEBUG, 1, 1)
 	waitstate
-	// setvar(OBJ_EVENT_GFX_VAR_1, OBJ_EVENT_GFX_FRLG_OLD_MAN_1) // Doesn't work yet
 	releaseall
 	end
 }
