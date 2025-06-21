@@ -60,7 +60,8 @@
     "gMapGroup_IndoorRoute19",
     "gMapGroup_IndoorRoute22",
     "gMapGroup_IndoorRoute23",
-    "gMapGroup_IndoorRoute25"
+    "gMapGroup_IndoorRoute25",
+    "gMapGroup_IndoorHQ"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -740,5 +741,8 @@
   "gMapGroup_IndoorRoute19": [],
   "gMapGroup_IndoorRoute22": [],
   "gMapGroup_IndoorRoute23": [],
-  "gMapGroup_IndoorRoute25": []
+  "gMapGroup_IndoorRoute25": [],
+  "gMapGroup_IndoorHQ": [
+    "HQ_MainRoom"
+  ]
 }
