@@ -20,7 +20,6 @@ extern const u8 StrategyMode_EventScript_OutOfBallsMidBattle[];
 extern const u8 StrategyMode_EventScript_OutOfBalls[];
 
 EWRAM_DATA u8 gStrategyModeStepCounter = 0;
-EWRAM_DATA u8 gActiveTrainer = 0;
 
 bool32 GetStrategyModeFlag(void)
 {
@@ -32,23 +31,6 @@ void SetStrategyModeFlag(void)
     FlagSet(FLAG_SYS_STRATEGY_MODE);
 }
 
-void SetActiveTrainers(void)
-{
-    // TODO - set only active trainers here
-    FlagSet(FLAG_STRATEGY_PLAYER1_ACTIVE);
-    FlagSet(FLAG_STRATEGY_PLAYER2_ACTIVE);
-    FlagSet(FLAG_STRATEGY_PLAYER3_ACTIVE);
-    FlagSet(FLAG_STRATEGY_PLAYER4_ACTIVE);
-    FlagSet(FLAG_STRATEGY_PLAYER5_ACTIVE);
-    FlagSet(FLAG_STRATEGY_PLAYER6_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY1_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY2_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY3_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY4_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY5_ACTIVE);
-    FlagSet(FLAG_STRATEGY_ENEMY6_ACTIVE);
-}
-
 void ResetStrategyModeFlag(void)
 {
     FlagClear(FLAG_SYS_STRATEGY_MODE);
@@ -58,46 +40,13 @@ void EnterStrategyMode(void)
 {
     IncrementGameStat(GAME_STAT_ENTERED_STRATEGY_MODE);
     SetStrategyModeFlag();
-    SetActiveTrainers();
     gStrategyModeStepCounter = 10;
-    gActiveTrainer = 1;
 }
 
 void ExitStrategyMode(void)
 {
     ResetStrategyModeFlag();
     gStrategyModeStepCounter = 0;
-}
-
-void PlayerRest(void)
-{
-    switch (gActiveTrainer) {
-        case 0:
-        case 1:
-            FlagClear(FLAG_STRATEGY_PLAYER1_ACTIVE);
-        case 2:
-            FlagClear(FLAG_STRATEGY_PLAYER2_ACTIVE);
-        case 3:
-            FlagClear(FLAG_STRATEGY_PLAYER3_ACTIVE);
-        case 4:
-            FlagClear(FLAG_STRATEGY_PLAYER4_ACTIVE);
-        case 5:
-            FlagClear(FLAG_STRATEGY_PLAYER5_ACTIVE);
-        case 6:
-            FlagClear(FLAG_STRATEGY_PLAYER6_ACTIVE);
-    }
-    gActiveTrainer++;
-    gStrategyModeStepCounter = 10;
-    if (gActiveTrainer > 6) {
-        FlagSet(FLAG_STRATEGY_CURRENT_SIDE);
-        ScriptContext_SetupScript(StrategyMode_EventScript_TimesUp);
-    }
-}
-
-// False = Player, True = Enemy
-bool32 CheckEnemyTurn(void)
-{
-    return FlagGet(FLAG_STRATEGY_CURRENT_SIDE);
 }
 
 bool8 StrategyModeTakeStep(void)
@@ -110,10 +59,8 @@ bool8 StrategyModeTakeStep(void)
     gStrategyModeStepCounter--;
     if (gStrategyModeStepCounter == 0)
     {
-        PlayerRest();
-        if (CheckEnemyTurn()) {
-            return TRUE;
-        }
+        ScriptContext_SetupScript(StrategyMode_EventScript_TimesUp);
+        return TRUE;
     }
     return FALSE;
 }

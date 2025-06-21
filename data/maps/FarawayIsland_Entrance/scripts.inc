@@ -1,90 +1,84 @@
-# 1 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
-# 2 "data/maps/FarawayIsland_Entrance/scripts.pory"
 FarawayIsland_Entrance_MapScripts::
-# 3 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Entrance_OnTransition
-# 4 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	.byte 0
-# 5 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
 # 6 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_OnTransition:
+	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Entrance_OnTransition
 # 7 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
+	.byte 0
 # 8 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	end
+
 # 9 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
+FarawayIsland_Entrance_OnTransition:
 # 10 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_EventScript_SetCloudsWeather::
+	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
 # 11 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	setweather WEATHER_SUNNY_CLOUDS
+	end
 # 12 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	doweather
+
 # 13 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	end
+FarawayIsland_Entrance_EventScript_SetCloudsWeather::
 # 14 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
+	setweather WEATHER_SUNNY_CLOUDS
 # 15 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_EventScript_ClearWeather::
-# 16 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	setweather WEATHER_NONE
-# 17 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	doweather
+# 16 "data/maps/FarawayIsland_Entrance/scripts.pory"
+	end
+# 17 "data/maps/FarawayIsland_Entrance/scripts.pory"
+
 # 18 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	end
+FarawayIsland_Entrance_EventScript_ClearWeather::
 # 19 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
+	setweather WEATHER_NONE
 # 20 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_EventScript_Sailor::
+	doweather
 # 21 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	lock
+	end
 # 22 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	faceplayer
+
 # 23 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	msgbox FarawayIsland_Entrance_Text_SailorReturn, MSGBOX_YESNO
+FarawayIsland_Entrance_EventScript_Sailor::
 # 24 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	goto_if_eq VAR_RESULT, NO, FarawayIsland_Entrance_EventScript_AsYouLike
+	lock
 # 25 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	msgbox EventTicket_Text_SailHome, MSGBOX_DEFAULT
+	faceplayer
 # 26 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	closemessage
+	msgbox FarawayIsland_Entrance_Text_SailorReturn, MSGBOX_YESNO
 # 27 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	goto_if_eq VAR_RESULT, NO, FarawayIsland_Entrance_EventScript_AsYouLike
 # 28 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	waitmovement 0
+	msgbox EventTicket_Text_SailHome, MSGBOX_DEFAULT
 # 29 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	delay 30
+	closemessage
 # 30 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	hideobjectat LOCALID_FARAWAY_ISLAND_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 # 31 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	setvar VAR_0x8004, LOCALID_FARAWAY_ISLAND_SS_TIDAL
+	waitmovement 0
 # 32 "data/maps/FarawayIsland_Entrance/scripts.pory"
+	delay 30
+	hideobjectat LOCALID_FARAWAY_ISLAND_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE
+	setvar VAR_0x8004, LOCALID_FARAWAY_ISLAND_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
-# 33 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
-# 34 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	waitstate
-# 35 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	release
 # 36 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	end
+	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
 # 37 "data/maps/FarawayIsland_Entrance/scripts.pory"
-
+	waitstate
 # 38 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_EventScript_AsYouLike::
-# 39 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	msgbox EventTicket_Text_AsYouLike, MSGBOX_DEFAULT
-# 40 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	release
-# 41 "data/maps/FarawayIsland_Entrance/scripts.pory"
+# 39 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	end
-# 42 "data/maps/FarawayIsland_Entrance/scripts.pory"
+# 40 "data/maps/FarawayIsland_Entrance/scripts.pory"
 
+# 41 "data/maps/FarawayIsland_Entrance/scripts.pory"
+FarawayIsland_Entrance_EventScript_AsYouLike::
+# 42 "data/maps/FarawayIsland_Entrance/scripts.pory"
+	msgbox EventTicket_Text_AsYouLike, MSGBOX_DEFAULT
 # 43 "data/maps/FarawayIsland_Entrance/scripts.pory"
-FarawayIsland_Entrance_EventScript_Sign::
+	release
 # 44 "data/maps/FarawayIsland_Entrance/scripts.pory"
-	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
+	end
 # 45 "data/maps/FarawayIsland_Entrance/scripts.pory"
+
+# 46 "data/maps/FarawayIsland_Entrance/scripts.pory"
+FarawayIsland_Entrance_EventScript_Sign::
+# 47 "data/maps/FarawayIsland_Entrance/scripts.pory"
+	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
+# 48 "data/maps/FarawayIsland_Entrance/scripts.pory"
 	end

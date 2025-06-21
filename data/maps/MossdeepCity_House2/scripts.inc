@@ -1,136 +1,127 @@
-# 1 "data/maps/MossdeepCity_House2/scripts.pory"
-
-# 2 "data/maps/MossdeepCity_House2/scripts.pory"
 MossdeepCity_House2_MapScripts::
-# 3 "data/maps/MossdeepCity_House2/scripts.pory"
-	.byte 0
-# 4 "data/maps/MossdeepCity_House2/scripts.pory"
-
 # 5 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_EventScript_Man::
+	.byte 0
 # 6 "data/maps/MossdeepCity_House2/scripts.pory"
-	msgbox MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree, MSGBOX_NPC
+
 # 7 "data/maps/MossdeepCity_House2/scripts.pory"
-	end
+MossdeepCity_House2_EventScript_Man::
 # 8 "data/maps/MossdeepCity_House2/scripts.pory"
-
+	msgbox MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree, MSGBOX_NPC
 # 9 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_EventScript_Twin::
+	end
 # 10 "data/maps/MossdeepCity_House2/scripts.pory"
-	msgbox MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth, MSGBOX_NPC
+
 # 11 "data/maps/MossdeepCity_House2/scripts.pory"
-	end
+MossdeepCity_House2_EventScript_Twin::
 # 12 "data/maps/MossdeepCity_House2/scripts.pory"
-
+	msgbox MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth, MSGBOX_NPC
 # 13 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_EventScript_Wingull::
-# 14 "data/maps/MossdeepCity_House2/scripts.pory"
-	lock
-# 15 "data/maps/MossdeepCity_House2/scripts.pory"
-	faceplayer
-# 16 "data/maps/MossdeepCity_House2/scripts.pory"
-	waitse
-# 17 "data/maps/MossdeepCity_House2/scripts.pory"
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
-# 18 "data/maps/MossdeepCity_House2/scripts.pory"
-	msgbox MossdeepCity_House2_Text_Wingull, MSGBOX_DEFAULT
-# 19 "data/maps/MossdeepCity_House2/scripts.pory"
-	waitmoncry
-# 20 "data/maps/MossdeepCity_House2/scripts.pory"
-	closemessage
-# 21 "data/maps/MossdeepCity_House2/scripts.pory"
-	setflag FLAG_WINGULL_DELIVERED_MAIL
-# 22 "data/maps/MossdeepCity_House2/scripts.pory"
-	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
-# 23 "data/maps/MossdeepCity_House2/scripts.pory"
-	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_House2_EventScript_WingullExitNorth
-# 24 "data/maps/MossdeepCity_House2/scripts.pory"
-	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_House2_EventScript_WingullExitWest
-# 25 "data/maps/MossdeepCity_House2/scripts.pory"
-	removeobject LOCALID_MOSSDEEP_HOUSE_WINGULL
-# 26 "data/maps/MossdeepCity_House2/scripts.pory"
-	release
-# 27 "data/maps/MossdeepCity_House2/scripts.pory"
 	end
-# 28 "data/maps/MossdeepCity_House2/scripts.pory"
+# 14 "data/maps/MossdeepCity_House2/scripts.pory"
 
+# 15 "data/maps/MossdeepCity_House2/scripts.pory"
+MossdeepCity_House2_EventScript_Wingull::
+# 16 "data/maps/MossdeepCity_House2/scripts.pory"
+	lock
+# 17 "data/maps/MossdeepCity_House2/scripts.pory"
+	faceplayer
+# 18 "data/maps/MossdeepCity_House2/scripts.pory"
+	waitse
+# 19 "data/maps/MossdeepCity_House2/scripts.pory"
+	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
+# 20 "data/maps/MossdeepCity_House2/scripts.pory"
+	msgbox MossdeepCity_House2_Text_Wingull, MSGBOX_DEFAULT
+# 21 "data/maps/MossdeepCity_House2/scripts.pory"
+	waitmoncry
+# 22 "data/maps/MossdeepCity_House2/scripts.pory"
+	closemessage
+# 23 "data/maps/MossdeepCity_House2/scripts.pory"
+	setflag FLAG_WINGULL_DELIVERED_MAIL
+# 24 "data/maps/MossdeepCity_House2/scripts.pory"
+	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
+# 25 "data/maps/MossdeepCity_House2/scripts.pory"
+	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_House2_EventScript_WingullExitNorth
+# 26 "data/maps/MossdeepCity_House2/scripts.pory"
+	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_House2_EventScript_WingullExitWest
+	removeobject LOCALID_MOSSDEEP_HOUSE_WINGULL
+	release
 # 29 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_EventScript_WingullExitNorth::
+	end
 # 30 "data/maps/MossdeepCity_House2/scripts.pory"
-	applymovement LOCALID_MOSSDEEP_HOUSE_WINGULL, MossdeepCity_House2_Movement_WingullExitNorth
+
 # 31 "data/maps/MossdeepCity_House2/scripts.pory"
+MossdeepCity_House2_EventScript_WingullExitNorth::
+	applymovement LOCALID_MOSSDEEP_HOUSE_WINGULL, MossdeepCity_House2_Movement_WingullExitNorth
 	waitmovement 0
-# 32 "data/maps/MossdeepCity_House2/scripts.pory"
-	return
-# 33 "data/maps/MossdeepCity_House2/scripts.pory"
-
 # 34 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_EventScript_WingullExitWest::
-# 35 "data/maps/MossdeepCity_House2/scripts.pory"
-	applymovement LOCALID_MOSSDEEP_HOUSE_WINGULL, MossdeepCity_House2_Movement_WingullExitEast
-# 36 "data/maps/MossdeepCity_House2/scripts.pory"
-	waitmovement 0
-# 37 "data/maps/MossdeepCity_House2/scripts.pory"
 	return
-# 38 "data/maps/MossdeepCity_House2/scripts.pory"
+# 35 "data/maps/MossdeepCity_House2/scripts.pory"
 
+# 36 "data/maps/MossdeepCity_House2/scripts.pory"
+MossdeepCity_House2_EventScript_WingullExitWest::
+	applymovement LOCALID_MOSSDEEP_HOUSE_WINGULL, MossdeepCity_House2_Movement_WingullExitEast
+	waitmovement 0
 # 39 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_Movement_WingullExitNorth:
+	return
 # 40 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_right
+
 # 41 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_down
+MossdeepCity_House2_Movement_WingullExitNorth:
 # 42 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_down
+	walk_fast_right
 # 43 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_left
+	walk_fast_down
 # 44 "data/maps/MossdeepCity_House2/scripts.pory"
 	walk_fast_down
 # 45 "data/maps/MossdeepCity_House2/scripts.pory"
-	delay_8
+	walk_fast_left
 # 46 "data/maps/MossdeepCity_House2/scripts.pory"
-	step_end
+	walk_fast_down
 # 47 "data/maps/MossdeepCity_House2/scripts.pory"
-
+	delay_8
 # 48 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_Movement_WingullExitEast:
+	step_end
 # 49 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_down
+
 # 50 "data/maps/MossdeepCity_House2/scripts.pory"
-	walk_fast_down
+MossdeepCity_House2_Movement_WingullExitEast:
 # 51 "data/maps/MossdeepCity_House2/scripts.pory"
 	walk_fast_down
 # 52 "data/maps/MossdeepCity_House2/scripts.pory"
-	delay_8
+	walk_fast_down
 # 53 "data/maps/MossdeepCity_House2/scripts.pory"
-	step_end
+	walk_fast_down
 # 54 "data/maps/MossdeepCity_House2/scripts.pory"
-
+	delay_8
 # 55 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree:
+	step_end
 # 56 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "My little sister exchanges MAIL with\n"
+
 # 57 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "her boyfriend in FORTREE.\p"
+MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree:
 # 58 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "I don't envy her one bit at all.$"
+	.string "My little sister exchanges MAIL with\n"
 # 59 "data/maps/MossdeepCity_House2/scripts.pory"
-
+	.string "her boyfriend in FORTREE.\p"
 # 60 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth:
+	.string "I don't envy her one bit at all.$"
 # 61 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "Even though I can't see my friend in\n"
-# 62 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "FORTREE, my POKéMON carries MAIL\l"
-# 63 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "back and forth for us.\p"
-# 64 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "I'm not lonesome, even though we're\n"
-# 65 "data/maps/MossdeepCity_House2/scripts.pory"
-	.string "apart.$"
-# 66 "data/maps/MossdeepCity_House2/scripts.pory"
 
+# 62 "data/maps/MossdeepCity_House2/scripts.pory"
+MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth:
+# 63 "data/maps/MossdeepCity_House2/scripts.pory"
+	.string "Even though I can't see my friend in\n"
+# 64 "data/maps/MossdeepCity_House2/scripts.pory"
+	.string "FORTREE, my POKéMON carries MAIL\l"
+# 65 "data/maps/MossdeepCity_House2/scripts.pory"
+	.string "back and forth for us.\p"
+# 66 "data/maps/MossdeepCity_House2/scripts.pory"
+	.string "I'm not lonesome, even though we're\n"
 # 67 "data/maps/MossdeepCity_House2/scripts.pory"
-MossdeepCity_House2_Text_Wingull:
+	.string "apart.$"
 # 68 "data/maps/MossdeepCity_House2/scripts.pory"
+
+# 69 "data/maps/MossdeepCity_House2/scripts.pory"
+MossdeepCity_House2_Text_Wingull:
+# 70 "data/maps/MossdeepCity_House2/scripts.pory"
 	.string "WINGULL: Pihyoh!$"

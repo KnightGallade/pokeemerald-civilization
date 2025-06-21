@@ -1,110 +1,91 @@
-# 1 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 2 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 @ On this map the player will automatically walk into the room, but the camera is supposed to remain still.
-# 3 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 @ To do this GF sets the player (LOCALID_PLAYER) invisible and creates a fake player object (LOCALID_SLATEPORT_TENT_BATTLE_PLAYER).
-# 4 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 @ The graphics of this fake player object are represented with VAR_OBJ_GFX_ID_1.
-# 5 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 @ The graphics of the opponent are represented with VAR_OBJ_GFX_ID_0, which will ultimately be set by factory_setopponentgfx.
-# 6 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 
-# 7 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 5 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 SlateportCity_BattleTentBattleRoom_MapScripts::
-# 8 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 6 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_BattleTentBattleRoom_OnTransition
-# 9 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 7 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SlateportCity_BattleTentBattleRoom_OnWarp
-# 10 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 8 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SlateportCity_BattleTentBattleRoom_OnFrame
-# 11 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 9 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	.byte 0
-# 12 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 10 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 
-# 13 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 SlateportCity_BattleTentBattleRoom_OnTransition:
-# 14 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	call SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfx
 # 15 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	end
+	call SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfx
 # 16 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 17 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfx::
-# 18 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	checkplayergender
-# 19 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	goto_if_eq VAR_RESULT, MALE, SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxMale
-# 20 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	goto_if_eq VAR_RESULT, FEMALE, SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale
-# 21 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	return
-# 22 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 23 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxMale::
-# 24 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
-# 25 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	return
-# 26 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 27 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale::
-# 28 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
-# 29 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	return
-# 30 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 31 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_OnWarp:
-# 32 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	map_script_2 VAR_TEMP_1, 0, SlateportCity_BattleTentBattleRoom_EventScript_SetUpObjects
-# 33 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	.2byte 0
-# 34 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-
-# 35 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_EventScript_SetUpObjects::
-# 36 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	setvar VAR_TEMP_1, 1
-# 37 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	hideobjectat LOCALID_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
-# 38 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	hideobjectat LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM
-# 39 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	end
-# 40 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 17 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 
-# 41 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_OnFrame:
-# 42 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	map_script_2 VAR_TEMP_0, 0, SlateportCity_BattleTentBattleRoom_EventScript_EnterRoom
-# 43 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 18 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfx::
+# 19 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	checkplayergender
+# 20 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	goto_if_eq VAR_RESULT, MALE, SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxMale
+# 21 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	goto_if_eq VAR_RESULT, FEMALE, SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale
+# 22 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	return
+# 23 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+
+# 24 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxMale::
+# 25 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
+# 26 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	return
+# 27 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+
+# 28 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale::
+# 29 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
+# 30 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	return
+# 31 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+
+# 32 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_OnWarp:
+# 33 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	map_script_2 VAR_TEMP_1, 0, SlateportCity_BattleTentBattleRoom_EventScript_SetUpObjects
+# 34 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	.2byte 0
-# 44 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+# 35 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 
+# 36 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_EventScript_SetUpObjects::
+# 37 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	setvar VAR_TEMP_1, 1
+	hideobjectat LOCALID_PLAYER, MAP_FALLARBOR_TOWN_BATTLE_TENT_BATTLE_ROOM
+	hideobjectat LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM
+	end
+# 41 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+
+# 42 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_OnFrame:
+# 43 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	map_script_2 VAR_TEMP_0, 0, SlateportCity_BattleTentBattleRoom_EventScript_EnterRoom
+# 44 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	.2byte 0
 # 45 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-SlateportCity_BattleTentBattleRoom_EventScript_EnterRoom::
+
 # 46 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+SlateportCity_BattleTentBattleRoom_EventScript_EnterRoom::
 	applymovement LOCALID_SLATEPORT_TENT_BATTLE_PLAYER, SlateportCity_BattleTentBattleRoom_Movement_PlayerEnter
-# 47 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	waitmovement 0
-# 48 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
-	factory_setopponentgfx
 # 49 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
+	factory_setopponentgfx
 	setobjectxyperm LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, 5, 1
-# 50 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	removeobject LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT
-# 51 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	delay 1
-# 52 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	addobject LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT
-# 53 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	applymovement LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, SlateportCity_BattleTentBattleRoom_Movement_OpponentEnter
-# 54 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	waitmovement 0
 # 55 "data/maps/SlateportCity_BattleTentBattleRoom/scripts.pory"
 	battletent_getopponentintro

@@ -1,640 +1,609 @@
-# 1 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
-# 2 "data/maps/SeafloorCavern_Room9/scripts.pory"
 SeafloorCavern_Room9_MapScripts::
-# 3 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.byte 0
-# 4 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
-# 5 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
-# 6 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	lockall
-# 7 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8004, LOCALID_SEAFLOOR_CAVERN_ARCHIE
-# 8 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8005, LOCALID_SEAFLOOR_CAVERN_MAXIE
-# 9 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8006, LOCALID_SEAFLOOR_CAVERN_GRUNT_1
 # 10 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8007, LOCALID_SEAFLOOR_CAVERN_GRUNT_2
+	.byte 0
 # 11 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+
 # 12 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
+SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 # 13 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_PLAYER, SeafloorCavern_Room9_Movement_Delay32
-# 14 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 15 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
-# 16 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieHoldItRightThere, MSGBOX_DEFAULT
-# 17 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 18 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	addobject VAR_0x8004
-# 19 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 20 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 21 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieApproachPlayer
-# 22 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 23 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieSoItWasYou, MSGBOX_DEFAULT
-# 24 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
-# 25 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 26 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieBeholdKyogre, MSGBOX_DEFAULT
-# 27 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_FacePlayer
-# 28 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 29 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieYouMustDisappear, MSGBOX_DEFAULT
-# 30 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat
-# 31 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieWithThisRedOrb, MSGBOX_DEFAULT
-# 32 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setweather WEATHER_NONE
-# 33 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	doweather
-# 34 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	special Script_FadeOutMapMusic
-# 35 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
-# 36 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_RedOrbShinesByItself, MSGBOX_DEFAULT
-# 37 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	special WaitWeather
-# 38 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
-# 39 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_RESULT, 1
-# 40 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playse SE_M_DETECT
-# 41 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	dofieldeffectsparkle 16, 42, 0
-# 42 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitfieldeffect FLDEFF_SPARKLE
-# 43 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 44 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_RESULT, 0
-# 45 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playfanfare MUS_AWAKEN_LEGEND
-# 46 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playse SE_ORB
-# 47 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	special DoOrbEffect
-# 48 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
-# 49 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	lockall
+	setvar VAR_0x8004, LOCALID_SEAFLOOR_CAVERN_ARCHIE
+	setvar VAR_0x8005, LOCALID_SEAFLOOR_CAVERN_MAXIE
+	setvar VAR_0x8006, LOCALID_SEAFLOOR_CAVERN_GRUNT_1
+	setvar VAR_0x8007, LOCALID_SEAFLOOR_CAVERN_GRUNT_2
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 50 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	waitmovement 0
-# 51 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay 150
-# 52 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	removeobject LOCALID_SEAFLOOR_CAVERN_KYOGRE_SLEEPING
-# 53 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	addobject LOCALID_SEAFLOOR_CAVERN_KYOGRE
-# 54 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement LOCALID_PLAYER, SeafloorCavern_Room9_Movement_Delay32
+	waitmovement 0
+# 22 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playbgm MUS_ENCOUNTER_AQUA, FALSE
+# 23 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieHoldItRightThere, MSGBOX_DEFAULT
+# 24 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 25 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	addobject VAR_0x8004
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+# 28 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieApproachPlayer
+# 29 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 30 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieSoItWasYou, MSGBOX_DEFAULT
+# 31 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+# 32 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 33 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieBeholdKyogre, MSGBOX_DEFAULT
+# 34 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_FacePlayer
+# 35 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 36 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieYouMustDisappear, MSGBOX_DEFAULT
+# 37 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat
+# 38 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieWithThisRedOrb, MSGBOX_DEFAULT
+# 39 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setweather WEATHER_NONE
+# 40 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	doweather
+# 41 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	special Script_FadeOutMapMusic
+# 42 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	waitstate
+# 43 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_RedOrbShinesByItself, MSGBOX_DEFAULT
+# 44 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	special WaitWeather
+# 45 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitstate
+# 46 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_RESULT, 1
+# 47 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playse SE_M_DETECT
+# 48 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	dofieldeffectsparkle 16, 42, 0
+# 49 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitfieldeffect FLDEFF_SPARKLE
+# 50 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 51 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_RESULT, 0
+# 52 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playfanfare MUS_AWAKEN_LEGEND
+# 53 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playse SE_ORB
+# 54 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	special DoOrbEffect
 # 55 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay 60
-# 56 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_SEAFLOOR_CAVERN_KYOGRE, SeafloorCavern_Room9_Movement_KyogreApproach
-# 57 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 # 58 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	special FadeOutOrbEffect
-# 59 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	delay 150
+	removeobject LOCALID_SEAFLOOR_CAVERN_KYOGRE_SLEEPING
+	addobject LOCALID_SEAFLOOR_CAVERN_KYOGRE
 	waitstate
-# 60 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8004, 1  @ vertical pan
-# 61 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8005, 1  @ horizontal pan
 # 62 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8006, 8  @ num shakes
-# 63 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8007, 5  @ shake delay
-# 64 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	special ShakeCamera
+	delay 60
+	applymovement LOCALID_SEAFLOOR_CAVERN_KYOGRE, SeafloorCavern_Room9_Movement_KyogreApproach
+	waitmovement 0
 # 65 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitstate
+	special FadeOutOrbEffect
 # 66 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_SEAFLOOR_CAVERN_KYOGRE, SeafloorCavern_Room9_Movement_KyogreExit
+	waitstate
 # 67 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
+	setvar VAR_0x8004, 1  @ vertical pan
 # 68 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	removeobject LOCALID_SEAFLOOR_CAVERN_KYOGRE
+	setvar VAR_0x8005, 1  @ horizontal pan
 # 69 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay 4
-# 70 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8004, 2  @ vertical pan
-# 71 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8005, 2  @ horizontal pan
-# 72 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	setvar VAR_0x8006, 8  @ num shakes
-# 73 "data/maps/SeafloorCavern_Room9/scripts.pory"
+# 70 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	setvar VAR_0x8007, 5  @ shake delay
-# 74 "data/maps/SeafloorCavern_Room9/scripts.pory"
+# 71 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	special ShakeCamera
-# 75 "data/maps/SeafloorCavern_Room9/scripts.pory"
+# 72 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	waitstate
-# 76 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay 30
+	applymovement LOCALID_SEAFLOOR_CAVERN_KYOGRE, SeafloorCavern_Room9_Movement_KyogreExit
+	waitmovement 0
+	removeobject LOCALID_SEAFLOOR_CAVERN_KYOGRE
+	delay 4
 # 77 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8004, LOCALID_SEAFLOOR_CAVERN_ARCHIE
+	setvar VAR_0x8004, 2  @ vertical pan
 # 78 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8005, LOCALID_SEAFLOOR_CAVERN_MAXIE
+	setvar VAR_0x8005, 2  @ horizontal pan
 # 79 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8006, LOCALID_SEAFLOOR_CAVERN_GRUNT_1
+	setvar VAR_0x8006, 8  @ num shakes
 # 80 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_0x8007, LOCALID_SEAFLOOR_CAVERN_GRUNT_2
+	setvar VAR_0x8007, 5  @ shake delay
 # 81 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo, MSGBOX_DEFAULT
+	special ShakeCamera
 # 82 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playse SE_PC_LOGIN
-# 83 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-# 84 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 85 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieAMessageFromOutside, MSGBOX_DEFAULT
-# 86 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 87 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieListenMessage
-# 88 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 89 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard, MSGBOX_DEFAULT
-# 90 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 91 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playse SE_PC_OFF
-# 92 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay 20
-# 93 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterDown
-# 94 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 95 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear, MSGBOX_DEFAULT
-# 96 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 97 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	addobject VAR_0x8005
-# 98 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	addobject VAR_0x8006
-# 99 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	addobject VAR_0x8007
-# 100 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8007, SeafloorCavern_Room9_Movement_MagmaGruntArrive
-# 101 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8006, SeafloorCavern_Room9_Movement_MagmaGruntArrive
-# 102 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8005, SeafloorCavern_Room9_Movement_MaxieArrive
-# 103 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 104 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
-# 105 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 106 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought, MSGBOX_DEFAULT
-# 107 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	playse SE_PIN
-# 108 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_ExclamationMark
-# 109 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 110 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, Common_Movement_Delay48
-# 111 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 112 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty, MSGBOX_DEFAULT
-# 113 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue, MSGBOX_DEFAULT
-# 114 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	closemessage
-# 115 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8005, SeafloorCavern_Room9_Movement_MaxieExit
-# 116 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieExit
-# 117 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	waitmovement 0
-# 118 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	msgbox SeafloorCavern_Room9_Text_MaxieComeOnPlayer, MSGBOX_DEFAULT
-# 119 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_ROUTE128_STATE, 1
-# 120 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_SOOTOPOLIS_CITY_STATE, 1
-# 121 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
-# 122 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_ARCHIE
-# 123 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE
-# 124 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
-# 125 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON
-# 126 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE
-# 127 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
-# 128 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_LEGENDARIES_IN_SOOTOPOLIS
-# 129 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_ROUTE_128_ARCHIE
-# 130 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	clearflag FLAG_HIDE_ROUTE_128_MAXIE
-# 131 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_SYS_WEATHER_CTRL
-# 132 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN
-# 133 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
-# 134 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_STEVENS_HOUSE_STATE, 2
-# 135 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setvar VAR_SEAFLOOR_CAVERN_STATE, 1
-# 136 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE
-# 137 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE
-# 138 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS
-# 139 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE
-# 140 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS
-# 141 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	setflag FLAG_HIDE_MAP_NAME_POPUP
-# 142 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	warp MAP_ROUTE128, 38, 22
-# 143 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	waitstate
+# 83 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	delay 30
+	setvar VAR_0x8004, LOCALID_SEAFLOOR_CAVERN_ARCHIE
+	setvar VAR_0x8005, LOCALID_SEAFLOOR_CAVERN_MAXIE
+	setvar VAR_0x8006, LOCALID_SEAFLOOR_CAVERN_GRUNT_1
+	setvar VAR_0x8007, LOCALID_SEAFLOOR_CAVERN_GRUNT_2
+	msgbox SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo, MSGBOX_DEFAULT
+# 89 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playse SE_PC_LOGIN
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+# 92 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieAMessageFromOutside, MSGBOX_DEFAULT
+# 93 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 94 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieListenMessage
+# 95 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 96 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard, MSGBOX_DEFAULT
+# 97 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 98 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playse SE_PC_OFF
+# 99 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	delay 20
+# 100 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterDown
+# 101 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 102 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear, MSGBOX_DEFAULT
+# 103 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 104 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	addobject VAR_0x8005
+# 105 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	addobject VAR_0x8006
+# 106 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	addobject VAR_0x8007
+# 107 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8007, SeafloorCavern_Room9_Movement_MagmaGruntArrive
+# 108 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8006, SeafloorCavern_Room9_Movement_MagmaGruntArrive
+# 109 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8005, SeafloorCavern_Room9_Movement_MaxieArrive
+# 110 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 111 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
+# 112 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 113 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought, MSGBOX_DEFAULT
+# 114 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	playse SE_PIN
+# 115 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_ExclamationMark
+# 116 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 117 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, Common_Movement_Delay48
+# 118 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 119 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty, MSGBOX_DEFAULT
+# 120 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue, MSGBOX_DEFAULT
+# 121 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	closemessage
+# 122 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8005, SeafloorCavern_Room9_Movement_MaxieExit
+# 123 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieExit
+# 124 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	waitmovement 0
+# 125 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	msgbox SeafloorCavern_Room9_Text_MaxieComeOnPlayer, MSGBOX_DEFAULT
+# 126 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_ROUTE128_STATE, 1
+# 127 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 1
+# 128 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
+# 129 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_ARCHIE
+# 130 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE
+# 131 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
+# 132 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON
+# 133 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE
+# 134 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
+# 135 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_LEGENDARIES_IN_SOOTOPOLIS
+# 136 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_ROUTE_128_ARCHIE
+# 137 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	clearflag FLAG_HIDE_ROUTE_128_MAXIE
+# 138 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_SYS_WEATHER_CTRL
+# 139 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN
+# 140 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
+# 141 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_STEVENS_HOUSE_STATE, 2
+# 142 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setvar VAR_SEAFLOOR_CAVERN_STATE, 1
+# 143 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE
 # 144 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	releaseall
+	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE
 # 145 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	end
+	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS
 # 146 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	setflag FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE
 # 147 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_ArchieApproachPlayer:
+	setflag FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS
 # 148 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	setflag FLAG_HIDE_MAP_NAME_POPUP
 # 149 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	warp MAP_ROUTE128, 38, 22
 # 150 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	waitstate
 # 151 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	releaseall
 # 152 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	end
 # 153 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+
 # 154 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+SeafloorCavern_Room9_Movement_ArchieApproachPlayer:
 # 155 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
-# 156 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
-# 157 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_Unused1:
-# 158 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_left
-# 159 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_left
-# 160 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
-# 161 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
-# 162 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_ArchieListenMessage:
-# 163 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_left
-# 164 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
-# 165 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
-# 166 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
-# 167 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_Unused2:
-# 168 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	walk_right
+# 156 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 157 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 158 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 159 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 160 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 161 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 162 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	step_end
+# 163 "data/maps/SeafloorCavern_Room9/scripts.pory"
+
+# 164 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Movement_Unused1:
+# 165 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_left
+# 166 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_left
+# 167 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	step_end
+# 168 "data/maps/SeafloorCavern_Room9/scripts.pory"
+
 # 169 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+SeafloorCavern_Room9_Movement_ArchieListenMessage:
 # 170 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	walk_left
 # 171 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_ArchieExit:
+	delay_16
 # 172 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	face_up
-# 173 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	lock_facing_direction
-# 174 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_down
-# 175 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	unlock_facing_direction
-# 176 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_in_place_faster_right
-# 177 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	step_end
-# 178 "data/maps/SeafloorCavern_Room9/scripts.pory"
+# 173 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
+# 174 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Movement_Unused2:
+# 175 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	walk_right
+# 176 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	step_end
+# 177 "data/maps/SeafloorCavern_Room9/scripts.pory"
+
+# 178 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Movement_ArchieExit:
 # 179 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_KyogreApproach:
+	face_up
 # 180 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	lock_facing_direction
 # 181 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	walk_down
 # 182 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_slow_down
+	unlock_facing_direction
 # 183 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	walk_in_place_faster_right
 # 184 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	step_end
 # 185 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+
 # 186 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_slow_down
+SeafloorCavern_Room9_Movement_KyogreApproach:
 # 187 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	delay_16
 # 188 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	delay_16
 # 189 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	walk_slow_down
 # 190 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+	delay_16
 # 191 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	delay_16
 # 192 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_KyogreExit:
+	delay_16
 # 193 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	slide_up
+	walk_slow_down
 # 194 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	slide_up
+	delay_16
 # 195 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+	delay_16
 # 196 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	delay_16
 # 197 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_MaxieArrive:
+	step_end
 # 198 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+
 # 199 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+SeafloorCavern_Room9_Movement_KyogreExit:
 # 200 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+	slide_up
 # 201 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+	slide_up
 # 202 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+	step_end
 # 203 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+
 # 204 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+SeafloorCavern_Room9_Movement_MaxieArrive:
 # 205 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_MaxieExit:
+	walk_fast_right
 # 206 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	walk_fast_right
 # 207 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_right
+	walk_fast_right
 # 208 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+	walk_fast_right
 # 209 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	walk_fast_right
 # 210 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_MagmaGruntArrive:
+	step_end
 # 211 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+
 # 212 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+SeafloorCavern_Room9_Movement_MaxieExit:
 # 213 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+	walk_right
 # 214 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	walk_fast_right
+	walk_right
 # 215 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	step_end
 # 216 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
 # 217 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Movement_Delay32:
+SeafloorCavern_Room9_Movement_MagmaGruntArrive:
 # 218 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	walk_fast_right
 # 219 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	delay_16
+	walk_fast_right
 # 220 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	step_end
+	walk_fast_right
 # 221 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	walk_fast_right
 # 222 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieHoldItRightThere:
+	step_end
 # 223 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Hold it right there.$"
-# 224 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
+# 224 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Movement_Delay32:
 # 225 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieSoItWasYou:
+	delay_16
 # 226 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Fufufu…\n"
+	delay_16
 # 227 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "So it was you, after all.$"
+	step_end
 # 228 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
 # 229 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
+SeafloorCavern_Room9_Text_ArchieHoldItRightThere:
 # 230 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Behold!\p"
+	.string "ARCHIE: Hold it right there.$"
 # 231 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "See how beautiful it is, the sleeping\n"
+
 # 232 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "form of the ancient POKéMON KYOGRE!\p"
+SeafloorCavern_Room9_Text_ArchieSoItWasYou:
 # 233 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I have waited so long for this day to\n"
+	.string "ARCHIE: Fufufu…\n"
 # 234 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "come…$"
+	.string "So it was you, after all.$"
 # 235 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
 # 236 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieYouMustDisappear:
+SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 # 237 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: It surprises me, how you've\n"
+	.string "ARCHIE: Behold!\p"
 # 238 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "managed to chase me here.\p"
+	.string "See how beautiful it is, the sleeping\n"
 # 239 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "But that's all over now.\p"
+	.string "form of the ancient POKéMON KYOGRE!\p"
 # 240 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "For the realization of my dream,\n"
+	.string "I have waited so long for this day to\n"
 # 241 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "you must disappear now!$"
+	.string "come…$"
 # 242 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
 # 243 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieDefeat:
+SeafloorCavern_Room9_Text_ArchieYouMustDisappear:
 # 244 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "What?!\n"
+	.string "ARCHIE: It surprises me, how you've\n"
 # 245 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I lost to a mere child like you?!$"
+	.string "managed to chase me here.\p"
 # 246 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "But that's all over now.\p"
 # 247 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
+	.string "For the realization of my dream,\n"
 # 248 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Fufufu…\p"
+	.string "you must disappear now!$"
 # 249 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I commend you. I must recognize that\n"
+
 # 250 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "you are truly gifted.\p"
+SeafloorCavern_Room9_Text_ArchieDefeat:
 # 251 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "But!\n"
+	.string "What?!\n"
 # 252 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I have this in my possession!\p"
+	.string "I lost to a mere child like you?!$"
 # 253 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "With this RED ORB, I can make KYOGRE…$"
+
 # 254 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
 # 255 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_RedOrbShinesByItself:
+	.string "ARCHIE: Fufufu…\p"
 # 256 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "The RED ORB suddenly began shining\n"
+	.string "I commend you. I must recognize that\n"
 # 257 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "by itself!$"
+	.string "you are truly gifted.\p"
 # 258 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "But!\n"
 # 259 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:
+	.string "I have this in my possession!\p"
 # 260 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: What?!\p"
+	.string "With this RED ORB, I can make KYOGRE…$"
 # 261 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I didn't do anything.\n"
+
 # 262 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Why did the RED ORB…\p"
+SeafloorCavern_Room9_Text_RedOrbShinesByItself:
 # 263 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Where did KYOGRE go?$"
+	.string "The RED ORB suddenly began shining\n"
 # 264 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "by itself!$"
 # 265 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieAMessageFromOutside:
+
 # 266 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Hm? It's a message from our\n"
+SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:
 # 267 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "members outside…$"
+	.string "ARCHIE: What?!\p"
 # 268 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "I didn't do anything.\n"
 # 269 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
+	.string "Why did the RED ORB…\p"
 # 270 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: Yes, what is it?\p"
+	.string "Where did KYOGRE go?$"
 # 271 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Hm…\n"
+
 # 272 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "It's raining heavily?\p"
+SeafloorCavern_Room9_Text_ArchieAMessageFromOutside:
 # 273 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Good… That should have happened.\n"
+	.string "ARCHIE: Hm? It's a message from our\n"
 # 274 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "That is why we awakened KYOGRE,\l"
+	.string "members outside…$"
 # 275 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "to realize TEAM AQUA's vision of\l"
+
 # 276 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "expanding the sea.\p"
+SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 # 277 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "What?!\p"
+	.string "ARCHIE: Yes, what is it?\p"
 # 278 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "It's raining far harder than we\n"
+	.string "Hm…\n"
 # 279 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "envisioned? You're in danger?\p"
+	.string "It's raining heavily?\p"
 # 280 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "That can't be…\n"
+	.string "Good… That should have happened.\n"
 # 281 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "That's just not possible…\p"
+	.string "That is why we awakened KYOGRE,\l"
 # 282 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Hold your position and monitor\n"
+	.string "to realize TEAM AQUA's vision of\l"
 # 283 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "the situation!$"
+	.string "expanding the sea.\p"
 # 284 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "What?!\p"
 # 285 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
+	.string "It's raining far harder than we\n"
 # 286 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: There's something wrong…\p"
+	.string "envisioned? You're in danger?\p"
 # 287 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "The RED ORB is supposed to awaken\n"
+	.string "That can't be…\n"
 # 288 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "and control KYOGRE…\p"
+	.string "That's just not possible…\p"
 # 289 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "But… Why?\n"
+	.string "Hold your position and monitor\n"
 # 290 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Why did KYOGRE disappear?\p"
+	.string "the situation!$"
 # 291 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Why?!$"
+
 # 292 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
 # 293 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought:
+	.string "ARCHIE: There's something wrong…\p"
 # 294 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "MAXIE: What have you wrought?\p"
+	.string "The RED ORB is supposed to awaken\n"
 # 295 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE… You've finally awoken KYOGRE,\n"
+	.string "and control KYOGRE…\p"
 # 296 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "haven't you?\p"
+	.string "But… Why?\n"
 # 297 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "What will happen to the world if this\n"
+	.string "Why did KYOGRE disappear?\p"
 # 298 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "downpour continues for all eternity?\p"
+	.string "Why?!$"
 # 299 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "The world's landmass will drown in\n"
+
 # 300 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "the deepening sea…$"
+SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought:
 # 301 "data/maps/SeafloorCavern_Room9/scripts.pory"
-
+	.string "MAXIE: What have you wrought?\p"
 # 302 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
+	.string "ARCHIE… You've finally awoken KYOGRE,\n"
 # 303 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "ARCHIE: W-what?!\n"
+	.string "haven't you?\p"
 # 304 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Don't get all high and mighty with me!\p"
+	.string "What will happen to the world if this\n"
 # 305 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Wasn't it you, TEAM MAGMA, that\n"
+	.string "downpour continues for all eternity?\p"
 # 306 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "infuriated GROUDON?\p"
+	.string "The world's landmass will drown in\n"
 # 307 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "So long as I have this RED ORB,\n"
+	.string "the deepening sea…$"
 # 308 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I should be able to control KYOGRE…\p"
-# 309 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "I should be able to control it…$"
-# 310 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
+# 309 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
+# 310 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "ARCHIE: W-what?!\n"
 # 311 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue:
+	.string "Don't get all high and mighty with me!\p"
 # 312 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "MAXIE: We don't have the time to\n"
+	.string "Wasn't it you, TEAM MAGMA, that\n"
 # 313 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "argue about it here!\p"
+	.string "infuriated GROUDON?\p"
 # 314 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "Get outside and see for yourself!\p"
+	.string "So long as I have this RED ORB,\n"
 # 315 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "See if what you've wrought is the\n"
+	.string "I should be able to control KYOGRE…\p"
 # 316 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "world that we desired!$"
+	.string "I should be able to control it…$"
 # 317 "data/maps/SeafloorCavern_Room9/scripts.pory"
 
 # 318 "data/maps/SeafloorCavern_Room9/scripts.pory"
-SeafloorCavern_Room9_Text_MaxieComeOnPlayer:
+SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue:
 # 319 "data/maps/SeafloorCavern_Room9/scripts.pory"
-	.string "MAXIE: {PLAYER}, come on, you have\n"
+	.string "MAXIE: We don't have the time to\n"
 # 320 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "argue about it here!\p"
+# 321 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "Get outside and see for yourself!\p"
+# 322 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "See if what you've wrought is the\n"
+# 323 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "world that we desired!$"
+# 324 "data/maps/SeafloorCavern_Room9/scripts.pory"
+
+# 325 "data/maps/SeafloorCavern_Room9/scripts.pory"
+SeafloorCavern_Room9_Text_MaxieComeOnPlayer:
+# 326 "data/maps/SeafloorCavern_Room9/scripts.pory"
+	.string "MAXIE: {PLAYER}, come on, you have\n"
+# 327 "data/maps/SeafloorCavern_Room9/scripts.pory"
 	.string "to get out of here, too!$"
