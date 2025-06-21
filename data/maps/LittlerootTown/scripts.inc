@@ -2075,7 +2075,7 @@ LittlerootTown_EventScript_Celebi_Back_In_Time::
 # 1042 "data/maps/LittlerootTown/scripts.pory"
 	setrespawn HEAL_LOCATION_PALLET_TOWN
 # 1043 "data/maps/LittlerootTown/scripts.pory"
-	warpteleport MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 5
+	warpteleport MAP_HQ_MAIN_ROOM, 9, 12
 # 1044 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	end

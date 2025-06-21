@@ -5030,6 +5030,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/PewterCity_House2/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HQ_MAIN_ROOM",
+      "name": "HQ_MainRoom_Layout",
+      "width": 19,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HQ_MainRoom/border.bin",
+      "blockdata_filepath": "data/layouts/HQ_MainRoom/map.bin"
     }
   ]
 }
